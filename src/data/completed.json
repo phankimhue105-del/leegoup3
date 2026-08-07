@@ -1,0 +1,261 @@
+{
+  "unit1_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 1: Things to Eat - Lesson 1: Snacks",
+    "badgeImage": "/images/badges/u1l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã nắm vững 6 từ vựng đồ ăn vặt và mẫu câu 'I want some...'!",
+    "unlockedNext": "Lesson 2: Vegetables"
+  },
+  "unit1_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 1: Things to Eat - Lesson 2: Vegetables",
+    "badgeImage": "/images/badges/u1l2_star.png",
+    "encouragementVi": "Xuất sắc! Bạn đã học xong từ vựng rau củ và cách hỏi nhu cầu 'Do you need any...?'!",
+    "unlockedNext": "Lesson 3: Story - Just Try It!"
+  },
+  "unit1_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 1: Things to Eat - Lesson 3: Story",
+    "badgeImage": "/images/badges/u1l3_star.png",
+    "encouragementVi": "Cực kỳ giỏi! Bạn đã đọc xong câu chuyện 'Just Try It!' và học cách ăn uống lành mạnh!",
+    "unlockedNext": "Lesson 4: Cooking"
+  },
+  "unit1_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 1: Things to Eat - Lesson 4: Cooking",
+    "badgeImage": "/images/badges/u1l4_star.png",
+    "encouragementVi": "Hoàn hảo! Bạn đã hoàn thành toàn bộ Unit 1 về Đồ ăn & Thức uống!",
+    "unlockedNext": "Unit 2 - Lesson 1: Places to Go"
+  },
+  "unit2_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 2: Around Town - Lesson 1: Places to Go",
+    "badgeImage": "/images/badges/u2l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã làm quen với các địa điểm trong thị trấn và giới từ chỉ vị trí!",
+    "unlockedNext": "Lesson 2: Things to Do"
+  },
+  "unit2_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 2: Around Town - Lesson 2: Things to Do",
+    "badgeImage": "/images/badges/u2l2_star.png",
+    "encouragementVi": "Rất xuất sắc! Bạn đã làm chủ mẫu câu thì hiện tại tiếp diễn 'What is he/she doing...?'!",
+    "unlockedNext": "Lesson 3: Story - It's Over There!"
+  },
+  "unit2_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 2: Around Town - Lesson 3: Story",
+    "badgeImage": "/images/badges/u2l3_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã biết cách hỏi đường lịch sự với 'Excuse me' và chỉ vị trí!",
+    "unlockedNext": "Lesson 4: Activities"
+  },
+  "unit2_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 2: Around Town - Lesson 4: Activities",
+    "badgeImage": "/images/badges/u2l4_star.png",
+    "encouragementVi": "Xuất sắc! Bạn đã học cách dùng các từ liên kết 'First', 'Next', 'Then' để hướng dẫn thủ công!",
+    "unlockedNext": "Check Up 1: Review Units 1 & 2"
+  },
+  "checkup_1": {
+    "title": "Chúc mừng bạn đã hoàn thành Check Up 1!",
+    "subtitle": "Review Units 1 & 2",
+    "badgeImage": "/images/badges/checkup1_trophy.png",
+    "encouragementVi": "Chúc mừng bạn đã hoàn thành xuất sắc bài Ôn tập Check Up 1 toàn bộ Unit 1 và Unit 2!",
+    "unlockedNext": "Unit 3 - Lesson 1: Occupations"
+  },
+  "unit3_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 3: People in Town - Lesson 1: Occupations",
+    "badgeImage": "/images/badges/u3l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã thuộc 6 từ vựng nghề nghiệp và cách hỏi nơi làm việc!",
+    "unlockedNext": "Lesson 2: What People Do"
+  },
+  "unit3_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 3: People in Town - Lesson 2: What People Do",
+    "badgeImage": "/images/badges/u3l2_star.png",
+    "encouragementVi": "Xuất sắc! Bạn đã học xong các hành động công việc và mẫu câu 'What does the... do?'!",
+    "unlockedNext": "Lesson 3: Story - Mom's Present"
+  },
+  "unit3_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 3: People in Town - Lesson 3: Story",
+    "badgeImage": "/images/badges/u3l3_star.png",
+    "encouragementVi": "Cực kỳ giỏi! Bạn đã đọc xong câu chuyện 'Mom's Present' và biết cách hỏi giá tiền!",
+    "unlockedNext": "Lesson 4: Illnesses"
+  },
+  "unit3_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 3: People in Town - Lesson 4: Illnesses",
+    "badgeImage": "/images/badges/u3l4_star.png",
+    "encouragementVi": "Hoàn hảo! Bạn đã hoàn thành toàn bộ Unit 3 về Mọi Người Trong Thị Trấn!",
+    "unlockedNext": "Unit 4 - Lesson 1: Family"
+  },
+  "unit4_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 4: Getting Together - Lesson 1: Family",
+    "badgeImage": "/images/badges/u4l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã nắm vững từ vựng thành viên gia đình và mẫu câu xưng hô!",
+    "unlockedNext": "Lesson 2: Things on the Table"
+  },
+  "unit4_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 4: Getting Together - Lesson 2: Things on the Table",
+    "badgeImage": "/images/badges/u4l2_star.png",
+    "encouragementVi": "Rất xuất sắc! Bạn đã học xong đồ dùng trên bàn ăn và sở hữu từ 'mine'!",
+    "unlockedNext": "Lesson 3: Story - Chopsticks"
+  },
+  "unit4_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 4: Getting Together - Lesson 3: Story",
+    "badgeImage": "/images/badges/u4l3_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã đọc xong câu chuyện 'Chopsticks' và biết cách giúp đỡ mọi người!",
+    "unlockedNext": "Lesson 4: Countries"
+  },
+  "unit4_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 4: Getting Together - Lesson 4: Countries",
+    "badgeImage": "/images/badges/u4l4_star.png",
+    "encouragementVi": "Xuất sắc! Bạn đã học về các quốc gia và đại từ sở hữu 'ours' & 'theirs'!",
+    "unlockedNext": "Check Up 2: Review Units 3 & 4"
+  },
+  "checkup_2": {
+    "title": "Chúc mừng bạn đã hoàn thành Check Up 2!",
+    "subtitle": "Review Units 3 & 4",
+    "badgeImage": "/images/badges/checkup2_trophy.png",
+    "encouragementVi": "Chúc mừng bạn đã hoàn thành xuất sắc bài Ôn tập Check Up 2 toàn bộ Unit 3 và Unit 4!",
+    "unlockedNext": "Hoàn thành giai đoạn học Units 3 & 4"
+  },
+  "unit5_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 5: Fun in the Park - Lesson 1: Adjectives",
+    "badgeImage": "/images/badges/u5l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã thuộc các tính từ miêu tả người và mẫu câu so sánh hơn 'taller'!",
+    "unlockedNext": "Lesson 2: Adjectives (Things)"
+  },
+  "unit5_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 5: Fun in the Park - Lesson 2: Adjectives",
+    "badgeImage": "/images/badges/u5l2_star.png",
+    "encouragementVi": "Xuất sắc! Bạn đã học xong tính từ miêu tả đồ vật và cách so sánh 'thicker than'!",
+    "unlockedNext": "Lesson 3: Story - Cool Shirt"
+  },
+  "unit5_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 5: Fun in the Park - Lesson 3: Story",
+    "badgeImage": "/images/badges/u5l3_star.png",
+    "encouragementVi": "Cực kỳ giỏi! Bạn đã đọc xong câu chuyện 'Cool Shirt' và biết cách khen ngợi bạn bè!",
+    "unlockedNext": "Lesson 4: Science (Hard / Soft)"
+  },
+  "unit5_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 5: Fun in the Park - Lesson 4: Science",
+    "badgeImage": "/images/badges/u5l4_star.png",
+    "encouragementVi": "Hoàn hảo! Bạn đã hoàn thành toàn bộ Unit 5 về Vui Chơi Ở Công Viên!",
+    "unlockedNext": "Unit 6 - Lesson 1: Chores"
+  },
+  "unit6_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 6: Helping Out - Lesson 1: Chores",
+    "badgeImage": "/images/badges/u6l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã thuộc từ vựng việc nhà và mẫu câu 'before school'!",
+    "unlockedNext": "Lesson 2: Chores & Frequency"
+  },
+  "unit6_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 6: Helping Out - Lesson 2: Chores & Frequency",
+    "badgeImage": "/images/badges/u6l2_star.png",
+    "encouragementVi": "Rất xuất sắc! Bạn đã làm chủ các việc nhà nâng cao và trạng từ tần suất 'always'!",
+    "unlockedNext": "Lesson 3: Story - Come Over"
+  },
+  "unit6_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 6: Helping Out - Lesson 3: Story",
+    "badgeImage": "/images/badges/u6l3_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã đọc xong câu chuyện 'Come Over' và biết cách mời bạn bè sang nhà chơi!",
+    "unlockedNext": "Lesson 4: Social Studies (Farm Chores)"
+  },
+  "unit6_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 6: Helping Out - Lesson 4: Social Studies",
+    "badgeImage": "/images/badges/u6l4_star.png",
+    "encouragementVi": "Hoàn hảo! Bạn đã hoàn thành toàn bộ Unit 6 về Giúp Đỡ Việc Nhà!",
+    "unlockedNext": "Check Up 3: Review Units 5 & 6"
+  },
+  "checkup_3": {
+    "title": "Chúc mừng bạn đã hoàn thành Check Up 3!",
+    "subtitle": "Review Units 5 & 6",
+    "badgeImage": "/images/badges/checkup3_trophy.png",
+    "encouragementVi": "Chúc mừng bạn đã hoàn thành xuất sắc bài Ôn tập Check Up 3 toàn bộ Unit 5 và Unit 6!",
+    "unlockedNext": "Hoàn thành giai đoạn học Units 5 & 6"
+  },
+  "unit7_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 7: Out and About - Lesson 1: Places to Go",
+    "badgeImage": "/images/badges/u7l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã thuộc các địa điểm giải trí và câu hỏi 'Where was he/she yesterday?'!",
+    "unlockedNext": "Lesson 2: Places to Go (Cửa hàng & dịch vụ)"
+  },
+  "unit7_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 7: Out and About - Lesson 2: Places to Go",
+    "badgeImage": "/images/badges/u7l2_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã thành thạo mẫu câu hỏi vị trí số nhiều 'Where were they yesterday?'!",
+    "unlockedNext": "Lesson 3: Story (Mike's Watch)"
+  },
+  "unit7_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 7: Out and About - Lesson 3: Story (Mike's Watch)",
+    "badgeImage": "/images/badges/u7l3_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã học được bài học 'Be on time' và cách hẹn giờ gặp bạn bè!",
+    "unlockedNext": "Lesson 4: Science (Weather)"
+  },
+  "unit7_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 7: Out and About - Lesson 4: Science (Weather)",
+    "badgeImage": "/images/badges/u7l4_star.png",
+    "encouragementVi": "Xuất sắc! Bạn đã hoàn thành toàn bộ Unit 7 về các địa điểm và thời tiết!",
+    "unlockedNext": "Unit 8: Things We Use"
+  },
+  "unit8_lesson1": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 1!",
+    "subtitle": "Unit 8: Things We Use - Lesson 1: School Supplies",
+    "badgeImage": "/images/badges/u8l1_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã nhớ được các dụng cụ học tập và mẫu câu hỏi vị trí 'Where was the...?'!",
+    "unlockedNext": "Lesson 2: Art Supplies"
+  },
+  "unit8_lesson2": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 2!",
+    "subtitle": "Unit 8: Things We Use - Lesson 2: Art Supplies",
+    "badgeImage": "/images/badges/u8l2_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã nắm vững cấu trúc 'There were some / weren't any'!",
+    "unlockedNext": "Lesson 3: Story (Let's Clean Up!)"
+  },
+  "unit8_lesson3": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 3!",
+    "subtitle": "Unit 8: Things We Use - Lesson 3: Story (Let's Clean Up!)",
+    "badgeImage": "/images/badges/u8l3_star.png",
+    "encouragementVi": "Tuyệt vời! Bạn đã biết cách hỏi đánh vần từ vựng trong tiếng Anh!",
+    "unlockedNext": "Lesson 4: Social Studies (Technology)"
+  },
+  "unit8_lesson4": {
+    "title": "Chúc mừng bạn đã hoàn thành Bài 4!",
+    "subtitle": "Unit 8: Things We Use - Lesson 4: Social Studies (Technology)",
+    "badgeImage": "/images/badges/u8l4_star.png",
+    "encouragementVi": "Xuất sắc! Bạn đã hoàn thành toàn bộ chương trình Unit 8!",
+    "unlockedNext": "Check Up 4 (Review Units 7 & 8)"
+  },
+  "checkup_4": {
+    "title": "Chúc mừng bạn đã hoàn thành Check Up 4!",
+    "subtitle": "Check Up 4 - Ôn tập Units 7 & 8",
+    "badgeImage": "/images/badges/checkup4_trophy.png",
+    "encouragementVi": "Xuất sắc! Bạn đã vượt qua bài Check Up 4 ôn tập Units 7 & 8!",
+    "unlockedNext": "YLE Practice (Cambridge Movers Test)"
+  },
+  "yle_practice": {
+    "title": "Chúc mừng bạn đã hoàn thành YLE Practice Test!",
+    "subtitle": "Cambridge Movers Practice Test (Units 1 - 8)",
+    "badgeImage": "/images/badges/yle_trophy.png",
+    "encouragementVi": "Xuất sắc! Bạn đã hoàn thành toàn bộ khóa học Everybody Up 3!",
+    "unlockedNext": "Hoàn thành khóa học"
+  }
+}

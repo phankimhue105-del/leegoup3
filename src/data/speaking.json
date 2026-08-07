@@ -1,0 +1,3327 @@
+{
+  "unit1_lesson1": {
+    "id": "u1l1-s",
+    "promptText": "1. Read: gum | 2. Read: popcorn | 3. Read: I want some gum. | 4. Answer: What do you want? -> I want some popcorn. | 5. Dialogue: Does she want soda? -> No, she wants chocolate.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ vựng, đọc câu và hội thoại phân vai.",
+    "image": "/images/unit1/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit1/lesson1/speaking.mp3",
+    "sampleAnswer": "gum. popcorn. I want some gum. I want some popcorn. No, she wants chocolate.",
+    "keywordsToDetect": [
+      "gum",
+      "popcorn",
+      "want",
+      "some",
+      "chocolate"
+    ],
+    "tasks": [
+      {
+        "id": "u1l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'gum'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'gum'",
+        "image": "/images/unit1/lesson1/gum.png",
+        "referenceAudioUrl": "/audio/unit1/lesson1/gum.mp3",
+        "sampleAnswer": "gum",
+        "keywordsToDetect": [
+          "gum"
+        ]
+      },
+      {
+        "id": "u1l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'popcorn'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'popcorn'",
+        "image": "/images/unit1/lesson1/popcorn.png",
+        "referenceAudioUrl": "/audio/unit1/lesson1/popcorn.mp3",
+        "sampleAnswer": "popcorn",
+        "keywordsToDetect": [
+          "popcorn"
+        ]
+      },
+      {
+        "id": "u1l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the complete sentence: 'I want some gum.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'I want some gum.'",
+        "image": "/images/unit1/lesson1/speaking.png",
+        "referenceAudioUrl": "/audio/unit1/lesson1/sentence.mp3",
+        "sampleAnswer": "I want some gum.",
+        "keywordsToDetect": [
+          "want",
+          "some",
+          "gum"
+        ]
+      },
+      {
+        "id": "u1l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'What do you want?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời câu hỏi 'What do you want?'",
+        "image": "/images/unit1/lesson1/popcorn.png",
+        "referenceAudioUrl": "/audio/unit1/lesson1/question.mp3",
+        "sampleAnswer": "I want some popcorn.",
+        "keywordsToDetect": [
+          "want",
+          "some",
+          "popcorn"
+        ]
+      },
+      {
+        "id": "u1l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Does she want soda?' -> 'No, she wants chocolate.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'No, she wants chocolate.'",
+        "image": "/images/unit1/lesson1/chocolate.png",
+        "referenceAudioUrl": "/audio/unit1/lesson1/roleplay.mp3",
+        "sampleAnswer": "No, she wants chocolate.",
+        "keywordsToDetect": [
+          "wants",
+          "chocolate"
+        ]
+      }
+    ]
+  },
+  "unit1_lesson2": {
+    "id": "u1l2-s",
+    "promptText": "1. Read: carrot | 2. Read: tomato | 3. Read: They need some onions. | 4. Answer: Do you need any peppers? -> Yes, we do. | 5. Dialogue: What do they need? -> They need some cabbages.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Từ vựng, mẫu câu nhu cầu và hội thoại mua rau củ.",
+    "image": "/images/unit1/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit1/lesson2/speaking.mp3",
+    "sampleAnswer": "carrot. tomato. They need some onions. Yes, we do. They need some cabbages.",
+    "keywordsToDetect": [
+      "carrot",
+      "tomato",
+      "need",
+      "onions",
+      "cabbages"
+    ],
+    "tasks": [
+      {
+        "id": "u1l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'carrot'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'carrot'",
+        "image": "/images/unit1/lesson2/carrot.png",
+        "referenceAudioUrl": "/audio/unit1/lesson2/carrot.mp3",
+        "sampleAnswer": "carrot",
+        "keywordsToDetect": [
+          "carrot"
+        ]
+      },
+      {
+        "id": "u1l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'tomato'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'tomato'",
+        "image": "/images/unit1/lesson2/tomato.png",
+        "referenceAudioUrl": "/audio/unit1/lesson2/tomato.mp3",
+        "sampleAnswer": "tomato",
+        "keywordsToDetect": [
+          "tomato"
+        ]
+      },
+      {
+        "id": "u1l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the complete sentence: 'They need some onions.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'They need some onions.'",
+        "image": "/images/unit1/lesson2/speaking.png",
+        "referenceAudioUrl": "/audio/unit1/lesson2/sentence.mp3",
+        "sampleAnswer": "They need some onions.",
+        "keywordsToDetect": [
+          "need",
+          "some",
+          "onions"
+        ]
+      },
+      {
+        "id": "u1l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'Do you need any peppers?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'Do you need any peppers?'",
+        "image": "/images/unit1/lesson2/pepper.png",
+        "referenceAudioUrl": "/audio/unit1/lesson2/question.mp3",
+        "sampleAnswer": "Yes, we do.",
+        "keywordsToDetect": [
+          "yes",
+          "we",
+          "do"
+        ]
+      },
+      {
+        "id": "u1l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'What do they need?' -> 'They need some cabbages.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'They need some cabbages.'",
+        "image": "/images/unit1/lesson2/cabbage.png",
+        "referenceAudioUrl": "/audio/unit1/lesson2/roleplay.mp3",
+        "sampleAnswer": "They need some cabbages.",
+        "keywordsToDetect": [
+          "need",
+          "some",
+          "cabbages"
+        ]
+      }
+    ]
+  },
+  "unit1_lesson3": {
+    "id": "u1l3-s",
+    "promptText": "1. Read: soup | 2. Read: spaghetti | 3. Read: That sounds good! | 4. Answer: What's for lunch? -> Soup and salad. | 5. Dialogue: Is it healthy? -> Yes, it is healthy.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc món ăn, mẫu câu khen ngợi và hội thoại bữa trưa.",
+    "image": "/images/unit1/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit1/lesson3/speaking.mp3",
+    "sampleAnswer": "soup. spaghetti. That sounds good. Soup and salad. Yes, it is healthy.",
+    "keywordsToDetect": [
+      "soup",
+      "spaghetti",
+      "sounds",
+      "good",
+      "healthy"
+    ],
+    "tasks": [
+      {
+        "id": "u1l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'soup'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'soup'",
+        "image": "/images/unit1/lesson3/soup.png",
+        "referenceAudioUrl": "/audio/unit1/lesson3/soup.mp3",
+        "sampleAnswer": "soup",
+        "keywordsToDetect": [
+          "soup"
+        ]
+      },
+      {
+        "id": "u1l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'spaghetti'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'spaghetti'",
+        "image": "/images/unit1/lesson3/spaghetti.png",
+        "referenceAudioUrl": "/audio/unit1/lesson3/spaghetti.mp3",
+        "sampleAnswer": "spaghetti",
+        "keywordsToDetect": [
+          "spaghetti"
+        ]
+      },
+      {
+        "id": "u1l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the complete sentence: 'That sounds good!'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'That sounds good!'",
+        "image": "/images/unit1/lesson3/speaking.png",
+        "referenceAudioUrl": "/audio/unit1/lesson3/sentence.mp3",
+        "sampleAnswer": "That sounds good!",
+        "keywordsToDetect": [
+          "that",
+          "sounds",
+          "good"
+        ]
+      },
+      {
+        "id": "u1l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'What's for lunch?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'What's for lunch?'",
+        "image": "/images/unit1/lesson3/lunch.png",
+        "referenceAudioUrl": "/audio/unit1/lesson3/question.mp3",
+        "sampleAnswer": "Soup and salad.",
+        "keywordsToDetect": [
+          "soup",
+          "salad"
+        ]
+      },
+      {
+        "id": "u1l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Is it healthy?' -> 'Yes, it is healthy.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'Yes, it is healthy.'",
+        "image": "/images/unit1/lesson3/healthy.png",
+        "referenceAudioUrl": "/audio/unit1/lesson3/roleplay.mp3",
+        "sampleAnswer": "Yes, it is healthy.",
+        "keywordsToDetect": [
+          "yes",
+          "healthy"
+        ]
+      }
+    ]
+  },
+  "unit1_lesson4": {
+    "id": "u1l4-s",
+    "promptText": "1. Read: omelet | 2. Read: smoothie | 3. Read: I want to make an omelet. | 4. Answer: What do you want to make? -> I want to make fruit salad. | 5. Dialogue: Does she want to make a milkshake? -> Yes, she does.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Từ vựng chế biến món ăn và mẫu câu 'I want to make...'.",
+    "image": "/images/unit1/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit1/lesson4/speaking.mp3",
+    "sampleAnswer": "omelet. smoothie. I want to make an omelet. I want to make fruit salad. Yes, she does.",
+    "keywordsToDetect": [
+      "omelet",
+      "smoothie",
+      "want",
+      "make",
+      "milkshake"
+    ],
+    "tasks": [
+      {
+        "id": "u1l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'omelet'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'omelet'",
+        "image": "/images/unit1/lesson4/omelet.png",
+        "referenceAudioUrl": "/audio/unit1/lesson4/omelet.mp3",
+        "sampleAnswer": "omelet",
+        "keywordsToDetect": [
+          "omelet"
+        ]
+      },
+      {
+        "id": "u1l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'smoothie'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'smoothie'",
+        "image": "/images/unit1/lesson4/smoothie.png",
+        "referenceAudioUrl": "/audio/unit1/lesson4/smoothie.mp3",
+        "sampleAnswer": "smoothie",
+        "keywordsToDetect": [
+          "smoothie"
+        ]
+      },
+      {
+        "id": "u1l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the complete sentence: 'I want to make an omelet.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'I want to make an omelet.'",
+        "image": "/images/unit1/lesson4/speaking.png",
+        "referenceAudioUrl": "/audio/unit1/lesson4/sentence.mp3",
+        "sampleAnswer": "I want to make an omelet.",
+        "keywordsToDetect": [
+          "want",
+          "make",
+          "omelet"
+        ]
+      },
+      {
+        "id": "u1l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'What do you want to make?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'What do you want to make?'",
+        "image": "/images/unit1/lesson4/fruit_salad.png",
+        "referenceAudioUrl": "/audio/unit1/lesson4/question.mp3",
+        "sampleAnswer": "I want to make fruit salad.",
+        "keywordsToDetect": [
+          "want",
+          "make",
+          "fruit",
+          "salad"
+        ]
+      },
+      {
+        "id": "u1l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Does she want to make a milkshake?' -> 'Yes, she does.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'Yes, she does.'",
+        "image": "/images/unit1/lesson4/milkshake.png",
+        "referenceAudioUrl": "/audio/unit1/lesson4/roleplay.mp3",
+        "sampleAnswer": "Yes, she does.",
+        "keywordsToDetect": [
+          "yes",
+          "she",
+          "does"
+        ]
+      }
+    ]
+  },
+  "unit2_lesson1": {
+    "id": "u2l1-s",
+    "promptText": "1. Read: park | 2. Read: supermarket | 3. Read: Where's the library? | 4. Answer: Where's the park? -> It's across from the movie theater. | 5. Dialogue: Is the post office between the school and park? -> Yes, it is.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc địa điểm, hỏi vị trí và trả lời bằng giới từ.",
+    "image": "/images/unit2/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit2/lesson1/speaking.mp3",
+    "sampleAnswer": "park. supermarket. Where's the library? It's across from the movie theater. Yes, it is.",
+    "keywordsToDetect": [
+      "park",
+      "supermarket",
+      "library",
+      "across",
+      "movie"
+    ],
+    "tasks": [
+      {
+        "id": "u2l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'park'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'park'",
+        "image": "/images/unit2/lesson1/park.png",
+        "referenceAudioUrl": "/audio/unit2/lesson1/park.mp3",
+        "sampleAnswer": "park",
+        "keywordsToDetect": [
+          "park"
+        ]
+      },
+      {
+        "id": "u2l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'supermarket'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'supermarket'",
+        "image": "/images/unit2/lesson1/supermarket.png",
+        "referenceAudioUrl": "/audio/unit2/lesson1/supermarket.mp3",
+        "sampleAnswer": "supermarket",
+        "keywordsToDetect": [
+          "supermarket"
+        ]
+      },
+      {
+        "id": "u2l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the sentence: 'Where's the library?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu hỏi 'Where's the library?'",
+        "image": "/images/unit2/lesson1/speaking.png",
+        "referenceAudioUrl": "/audio/unit2/lesson1/sentence.mp3",
+        "sampleAnswer": "Where's the library?",
+        "keywordsToDetect": [
+          "where",
+          "library"
+        ]
+      },
+      {
+        "id": "u2l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'Where's the park?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời vị trí công viên",
+        "image": "/images/unit2/lesson1/movie_theater.png",
+        "referenceAudioUrl": "/audio/unit2/lesson1/question.mp3",
+        "sampleAnswer": "It's across from the movie theater.",
+        "keywordsToDetect": [
+          "across",
+          "movie",
+          "theater"
+        ]
+      },
+      {
+        "id": "u2l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Is the post office between the school and park?' -> 'Yes, it is.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'Yes, it is.'",
+        "image": "/images/unit2/lesson1/post_office.png",
+        "referenceAudioUrl": "/audio/unit2/lesson1/roleplay.mp3",
+        "sampleAnswer": "Yes, it is.",
+        "keywordsToDetect": [
+          "yes",
+          "it",
+          "is"
+        ]
+      }
+    ]
+  },
+  "unit2_lesson2": {
+    "id": "u2l2-s",
+    "promptText": "1. Read: borrow books | 2. Read: mail letters | 3. Read: He's buying groceries at the supermarket. | 4. Answer: What's she doing at the library? -> She's borrowing books. | 5. Dialogue: What are they doing at the park? -> They're kicking a ball.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Cụm từ hành động và mẫu câu hiện tại tiếp diễn.",
+    "image": "/images/unit2/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit2/lesson2/speaking.mp3",
+    "sampleAnswer": "borrow books. mail letters. He's buying groceries at the supermarket. She's borrowing books. They're kicking a ball.",
+    "keywordsToDetect": [
+      "borrow",
+      "books",
+      "mail",
+      "buying",
+      "kicking"
+    ],
+    "tasks": [
+      {
+        "id": "u2l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the action phrase: 'borrow books'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc cụm từ 'borrow books'",
+        "image": "/images/unit2/lesson2/borrow_books.png",
+        "referenceAudioUrl": "/audio/unit2/lesson2/borrow_books.mp3",
+        "sampleAnswer": "borrow books",
+        "keywordsToDetect": [
+          "borrow",
+          "books"
+        ]
+      },
+      {
+        "id": "u2l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the action phrase: 'mail letters'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc cụm từ 'mail letters'",
+        "image": "/images/unit2/lesson2/mail_letters.png",
+        "referenceAudioUrl": "/audio/unit2/lesson2/mail_letters.mp3",
+        "sampleAnswer": "mail letters",
+        "keywordsToDetect": [
+          "mail",
+          "letters"
+        ]
+      },
+      {
+        "id": "u2l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'He's buying groceries at the supermarket.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu miêu tả hành động",
+        "image": "/images/unit2/lesson2/speaking.png",
+        "referenceAudioUrl": "/audio/unit2/lesson2/sentence.mp3",
+        "sampleAnswer": "He's buying groceries at the supermarket.",
+        "keywordsToDetect": [
+          "buying",
+          "groceries",
+          "supermarket"
+        ]
+      },
+      {
+        "id": "u2l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'What's she doing at the library?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời cô ấy đang mượn sách",
+        "image": "/images/unit2/lesson2/borrow_books.png",
+        "referenceAudioUrl": "/audio/unit2/lesson2/question.mp3",
+        "sampleAnswer": "She's borrowing books.",
+        "keywordsToDetect": [
+          "borrowing",
+          "books"
+        ]
+      },
+      {
+        "id": "u2l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'What are they doing at the park?' -> 'They're kicking a ball.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'They're kicking a ball.'",
+        "image": "/images/unit2/lesson2/kick_ball.png",
+        "referenceAudioUrl": "/audio/unit2/lesson2/roleplay.mp3",
+        "sampleAnswer": "They're kicking a ball.",
+        "keywordsToDetect": [
+          "kicking",
+          "ball"
+        ]
+      }
+    ]
+  },
+  "unit2_lesson3": {
+    "id": "u2l3-s",
+    "promptText": "1. Read: map | 2. Read: street | 3. Read: Excuse me, where's the post office? | 4. Answer: Where's the library? -> It's over there. | 5. Dialogue: Thank you for helping me. -> You're welcome! Be helpful.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ chỉ hướng, hỏi đường lịch sự và đóng vai.",
+    "image": "/images/unit2/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit2/lesson3/speaking.mp3",
+    "sampleAnswer": "map. street. Excuse me, where's the post office? It's over there. You're welcome! Be helpful.",
+    "keywordsToDetect": [
+      "map",
+      "street",
+      "excuse",
+      "post",
+      "helpful"
+    ],
+    "tasks": [
+      {
+        "id": "u2l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'map'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'map'",
+        "image": "/images/unit2/lesson3/map.png",
+        "referenceAudioUrl": "/audio/unit2/lesson3/map.mp3",
+        "sampleAnswer": "map",
+        "keywordsToDetect": [
+          "map"
+        ]
+      },
+      {
+        "id": "u2l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'street'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'street'",
+        "image": "/images/unit2/lesson3/street.png",
+        "referenceAudioUrl": "/audio/unit2/lesson3/street.mp3",
+        "sampleAnswer": "street",
+        "keywordsToDetect": [
+          "street"
+        ]
+      },
+      {
+        "id": "u2l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'Excuse me, where's the post office?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu hỏi đường lịch sự",
+        "image": "/images/unit2/lesson3/speaking.png",
+        "referenceAudioUrl": "/audio/unit2/lesson3/sentence.mp3",
+        "sampleAnswer": "Excuse me, where's the post office?",
+        "keywordsToDetect": [
+          "excuse",
+          "where",
+          "post",
+          "office"
+        ]
+      },
+      {
+        "id": "u2l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Where's the library?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'It's over there.'",
+        "image": "/images/unit2/lesson3/over_there.png",
+        "referenceAudioUrl": "/audio/unit2/lesson3/question.mp3",
+        "sampleAnswer": "It's over there.",
+        "keywordsToDetect": [
+          "over",
+          "there"
+        ]
+      },
+      {
+        "id": "u2l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Thank you for helping me.' -> 'You're welcome! Be helpful.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'You're welcome! Be helpful.'",
+        "image": "/images/unit2/lesson3/helpful.png",
+        "referenceAudioUrl": "/audio/unit2/lesson3/roleplay.mp3",
+        "sampleAnswer": "You're welcome! Be helpful.",
+        "keywordsToDetect": [
+          "welcome",
+          "helpful"
+        ]
+      }
+    ]
+  },
+  "unit2_lesson4": {
+    "id": "u2l4-s",
+    "promptText": "1. Read: color | 2. Read: fold | 3. Read: First, color the house. | 4. Answer: What do I do first? -> First, color the house. | 5. Dialogue: What do I do next? -> Next, cut and fold the paper.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Động từ làm đồ thủ công và hướng dẫn từng bước.",
+    "image": "/images/unit2/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit2/lesson4/speaking.mp3",
+    "sampleAnswer": "color. fold. First, color the house. First, color the house. Next, cut and fold the paper.",
+    "keywordsToDetect": [
+      "color",
+      "fold",
+      "first",
+      "house",
+      "cut"
+    ],
+    "tasks": [
+      {
+        "id": "u2l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the action word: 'color'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ chỉ thao tác 'color'",
+        "image": "/images/unit2/lesson4/color.png",
+        "referenceAudioUrl": "/audio/unit2/lesson4/color.mp3",
+        "sampleAnswer": "color",
+        "keywordsToDetect": [
+          "color"
+        ]
+      },
+      {
+        "id": "u2l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the action word: 'fold'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ chỉ thao tác 'fold'",
+        "image": "/images/unit2/lesson4/fold.png",
+        "referenceAudioUrl": "/audio/unit2/lesson4/fold.mp3",
+        "sampleAnswer": "fold",
+        "keywordsToDetect": [
+          "fold"
+        ]
+      },
+      {
+        "id": "u2l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read step: 'First, color the house.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc bước thứ nhất 'First, color the house.'",
+        "image": "/images/unit2/lesson4/speaking.png",
+        "referenceAudioUrl": "/audio/unit2/lesson4/sentence.mp3",
+        "sampleAnswer": "First, color the house.",
+        "keywordsToDetect": [
+          "first",
+          "color",
+          "house"
+        ]
+      },
+      {
+        "id": "u2l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'What do I do first?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'First, color the house.'",
+        "image": "/images/unit2/lesson4/color.png",
+        "referenceAudioUrl": "/audio/unit2/lesson4/question.mp3",
+        "sampleAnswer": "First, color the house.",
+        "keywordsToDetect": [
+          "first",
+          "color",
+          "house"
+        ]
+      },
+      {
+        "id": "u2l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'What do I do next?' -> 'Next, cut and fold the paper.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'Next, cut and fold the paper.'",
+        "image": "/images/unit2/lesson4/cut.png",
+        "referenceAudioUrl": "/audio/unit2/lesson4/roleplay.mp3",
+        "sampleAnswer": "Next, cut and fold the paper.",
+        "keywordsToDetect": [
+          "next",
+          "cut",
+          "fold"
+        ]
+      }
+    ]
+  },
+  "checkup_1": {
+    "id": "cu1-s",
+    "promptText": "1. Vocabulary: chocolate | 2. Sentence: He wants some popcorn. | 3. Question: Where's the park? -> It's across from the movie theater. | 4. Dialogue: Do you need any carrots? -> Yes, we do. | 5. Role-play: Excuse me. Where's the post office? -> It's over there.",
+    "vietnamesePrompt": "Ôn tập tổng hợp 5 bài tập nói từ Unit 1 và Unit 2.",
+    "image": "/images/checkup1/speaking.png",
+    "referenceAudioUrl": "/audio/checkup1/speaking.mp3",
+    "sampleAnswer": "chocolate. He wants some popcorn. It's across from the movie theater. Yes, we do. It's over there.",
+    "keywordsToDetect": [
+      "chocolate",
+      "popcorn",
+      "across",
+      "carrots",
+      "there"
+    ],
+    "tasks": [
+      {
+        "id": "cu1-s1",
+        "taskNumber": 1,
+        "type": "vocabulary-review",
+        "promptText": "Read review word: 'chocolate'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'chocolate'",
+        "image": "/images/checkup1/chocolate.png",
+        "referenceAudioUrl": "/audio/checkup1/chocolate.mp3",
+        "sampleAnswer": "chocolate",
+        "keywordsToDetect": [
+          "chocolate"
+        ]
+      },
+      {
+        "id": "cu1-s2",
+        "taskNumber": 2,
+        "type": "sentence-review",
+        "promptText": "Read sentence: 'He wants some popcorn.'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu 'He wants some popcorn.'",
+        "image": "/images/checkup1/speaking.png",
+        "referenceAudioUrl": "/audio/checkup1/sentence.mp3",
+        "sampleAnswer": "He wants some popcorn.",
+        "keywordsToDetect": [
+          "wants",
+          "some",
+          "popcorn"
+        ]
+      },
+      {
+        "id": "cu1-s3",
+        "taskNumber": 3,
+        "type": "answer-review",
+        "promptText": "Answer: 'Where's the park?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Trả lời vị trí công viên",
+        "image": "/images/checkup1/park.png",
+        "referenceAudioUrl": "/audio/checkup1/question.mp3",
+        "sampleAnswer": "It's across from the movie theater.",
+        "keywordsToDetect": [
+          "across",
+          "movie",
+          "theater"
+        ]
+      },
+      {
+        "id": "cu1-s4",
+        "taskNumber": 4,
+        "type": "dialogue-review",
+        "promptText": "Dialogue: 'Do you need any carrots?' -> 'Yes, we do.'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'Yes, we do.'",
+        "image": "/images/checkup1/carrot.png",
+        "referenceAudioUrl": "/audio/checkup1/dialogue.mp3",
+        "sampleAnswer": "Yes, we do.",
+        "keywordsToDetect": [
+          "yes",
+          "we",
+          "do"
+        ]
+      },
+      {
+        "id": "cu1-s5",
+        "taskNumber": 5,
+        "type": "roleplay-review",
+        "promptText": "Role-play: 'Excuse me. Where's the post office?' -> 'It's over there.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai chỉ đường 'It's over there.'",
+        "image": "/images/checkup1/post_office.png",
+        "referenceAudioUrl": "/audio/checkup1/roleplay.mp3",
+        "sampleAnswer": "It's over there.",
+        "keywordsToDetect": [
+          "over",
+          "there"
+        ]
+      }
+    ]
+  },
+  "unit3_lesson1": {
+    "id": "u3l1-s",
+    "promptText": "1. Read: cashier | 2. Read: librarian | 3. Read: The cashier works at the supermarket. | 4. Answer: Where does the postal worker work? -> The postal worker works at the post office. | 5. Dialogue: Who works at the restaurant? -> The server works at the restaurant.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ vựng nghề nghiệp và trả lời nơi làm việc.",
+    "image": "/images/unit3/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit3/lesson1/speaking.mp3",
+    "sampleAnswer": "cashier. librarian. The cashier works at the supermarket. The postal worker works at the post office. The server works at the restaurant.",
+    "keywordsToDetect": [
+      "cashier",
+      "librarian",
+      "works",
+      "supermarket",
+      "office",
+      "server"
+    ],
+    "tasks": [
+      {
+        "id": "u3l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'cashier'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'cashier'",
+        "image": "/images/unit3/lesson1/cashier.png",
+        "referenceAudioUrl": "/audio/unit3/lesson1/cashier.mp3",
+        "sampleAnswer": "cashier",
+        "keywordsToDetect": [
+          "cashier"
+        ]
+      },
+      {
+        "id": "u3l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'librarian'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'librarian'",
+        "image": "/images/unit3/lesson1/librarian.png",
+        "referenceAudioUrl": "/audio/unit3/lesson1/librarian.mp3",
+        "sampleAnswer": "librarian",
+        "keywordsToDetect": [
+          "librarian"
+        ]
+      },
+      {
+        "id": "u3l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'The cashier works at the supermarket.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'The cashier works at the supermarket.'",
+        "image": "/images/unit3/lesson1/speaking.png",
+        "referenceAudioUrl": "/audio/unit3/lesson1/sentence.mp3",
+        "sampleAnswer": "The cashier works at the supermarket.",
+        "keywordsToDetect": [
+          "cashier",
+          "works",
+          "supermarket"
+        ]
+      },
+      {
+        "id": "u3l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Where does the postal worker work?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời nơi làm việc của postal worker",
+        "image": "/images/unit3/lesson1/postal_worker.png",
+        "referenceAudioUrl": "/audio/unit3/lesson1/question.mp3",
+        "sampleAnswer": "The postal worker works at the post office.",
+        "keywordsToDetect": [
+          "postal",
+          "worker",
+          "post",
+          "office"
+        ]
+      },
+      {
+        "id": "u3l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Who works at the restaurant?' -> 'The server works at the restaurant.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'The server works at the restaurant.'",
+        "image": "/images/unit3/lesson1/server.png",
+        "referenceAudioUrl": "/audio/unit3/lesson1/roleplay.mp3",
+        "sampleAnswer": "The server works at the restaurant.",
+        "keywordsToDetect": [
+          "server",
+          "works",
+          "restaurant"
+        ]
+      }
+    ]
+  },
+  "unit3_lesson2": {
+    "id": "u3l2-s",
+    "promptText": "1. Read: fly planes | 2. Read: fight fires | 3. Read: The cook makes food. | 4. Answer: What does the vet do? -> The vet helps sick animals. | 5. Dialogue: Does the firefighter fight fires? -> Yes, he does.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc hành động công việc và nói câu mô tả công việc.",
+    "image": "/images/unit3/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit3/lesson2/speaking.mp3",
+    "sampleAnswer": "fly planes. fight fires. The cook makes food. The vet helps sick animals. Yes, he does.",
+    "keywordsToDetect": [
+      "fly",
+      "planes",
+      "fight",
+      "fires",
+      "cook",
+      "makes",
+      "vet",
+      "helps"
+    ],
+    "tasks": [
+      {
+        "id": "u3l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the phrase: 'fly planes'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc cụm từ 'fly planes'",
+        "image": "/images/unit3/lesson2/fly_planes.png",
+        "referenceAudioUrl": "/audio/unit3/lesson2/fly_planes.mp3",
+        "sampleAnswer": "fly planes",
+        "keywordsToDetect": [
+          "fly",
+          "planes"
+        ]
+      },
+      {
+        "id": "u3l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the phrase: 'fight fires'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc cụm từ 'fight fires'",
+        "image": "/images/unit3/lesson2/fight_fires.png",
+        "referenceAudioUrl": "/audio/unit3/lesson2/fight_fires.mp3",
+        "sampleAnswer": "fight fires",
+        "keywordsToDetect": [
+          "fight",
+          "fires"
+        ]
+      },
+      {
+        "id": "u3l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'The cook makes food.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'The cook makes food.'",
+        "image": "/images/unit3/lesson2/speaking.png",
+        "referenceAudioUrl": "/audio/unit3/lesson2/sentence.mp3",
+        "sampleAnswer": "The cook makes food.",
+        "keywordsToDetect": [
+          "cook",
+          "makes",
+          "food"
+        ]
+      },
+      {
+        "id": "u3l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'What does the vet do?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời công việc của bác sĩ thú y",
+        "image": "/images/unit3/lesson2/help_sick_animals.png",
+        "referenceAudioUrl": "/audio/unit3/lesson2/question.mp3",
+        "sampleAnswer": "The vet helps sick animals.",
+        "keywordsToDetect": [
+          "vet",
+          "helps",
+          "sick",
+          "animals"
+        ]
+      },
+      {
+        "id": "u3l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Does the firefighter fight fires?' -> 'Yes, he does.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'Yes, he does.'",
+        "image": "/images/unit3/lesson2/fight_fires.png",
+        "referenceAudioUrl": "/audio/unit3/lesson2/roleplay.mp3",
+        "sampleAnswer": "Yes, he does.",
+        "keywordsToDetect": [
+          "yes",
+          "he",
+          "does"
+        ]
+      }
+    ]
+  },
+  "unit3_lesson3": {
+    "id": "u3l3-s",
+    "promptText": "1. Read: sweater | 2. Read: present | 3. Read: How much is this sweater? | 4. Answer: How much is the sweater? -> It's thirty dollars. | 5. Dialogue: Excuse me. How much is this sweater? -> It's $30. Be thoughtful.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ vựng mua sắm và hỏi đáp giá tiền.",
+    "image": "/images/unit3/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit3/lesson3/speaking.mp3",
+    "sampleAnswer": "sweater. present. How much is this sweater? It's thirty dollars. It's thirty dollars. Be thoughtful.",
+    "keywordsToDetect": [
+      "sweater",
+      "present",
+      "how",
+      "much",
+      "thirty",
+      "dollars",
+      "thoughtful"
+    ],
+    "tasks": [
+      {
+        "id": "u3l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the word: 'sweater'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'sweater'",
+        "image": "/images/unit3/lesson3/sweater.png",
+        "referenceAudioUrl": "/audio/unit3/lesson3/sweater.mp3",
+        "sampleAnswer": "sweater",
+        "keywordsToDetect": [
+          "sweater"
+        ]
+      },
+      {
+        "id": "u3l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the word: 'present'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'present'",
+        "image": "/images/unit3/lesson3/present.png",
+        "referenceAudioUrl": "/audio/unit3/lesson3/present.mp3",
+        "sampleAnswer": "present",
+        "keywordsToDetect": [
+          "present"
+        ]
+      },
+      {
+        "id": "u3l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'How much is this sweater?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu hỏi 'How much is this sweater?'",
+        "image": "/images/unit3/lesson3/speaking.png",
+        "referenceAudioUrl": "/audio/unit3/lesson3/sentence.mp3",
+        "sampleAnswer": "How much is this sweater?",
+        "keywordsToDetect": [
+          "how",
+          "much",
+          "sweater"
+        ]
+      },
+      {
+        "id": "u3l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'How much is the sweater?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'It's thirty dollars.'",
+        "image": "/images/unit3/lesson3/dollar.png",
+        "referenceAudioUrl": "/audio/unit3/lesson3/question.mp3",
+        "sampleAnswer": "It's thirty dollars.",
+        "keywordsToDetect": [
+          "thirty",
+          "dollars"
+        ]
+      },
+      {
+        "id": "u3l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Excuse me. How much is this sweater?' -> 'It's thirty dollars. Be thoughtful.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai mua quà cho mẹ 'It's thirty dollars. Be thoughtful.'",
+        "image": "/images/unit3/lesson3/thoughtful.png",
+        "referenceAudioUrl": "/audio/unit3/lesson3/roleplay.mp3",
+        "sampleAnswer": "It's thirty dollars. Be thoughtful.",
+        "keywordsToDetect": [
+          "thirty",
+          "dollars",
+          "thoughtful"
+        ]
+      }
+    ]
+  },
+  "unit3_lesson4": {
+    "id": "u3l4-s",
+    "promptText": "1. Read: fever | 2. Read: headache | 3. Read: What's the matter with him? | 4. Answer: What's the matter with her? -> She has a stomachache. | 5. Dialogue: What's the matter with him? -> He has a cold.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc tên các bệnh và hỏi thăm sức khỏe.",
+    "image": "/images/unit3/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit3/lesson4/speaking.mp3",
+    "sampleAnswer": "fever. headache. What's the matter with him? She has a stomachache. He has a cold.",
+    "keywordsToDetect": [
+      "fever",
+      "headache",
+      "matter",
+      "stomachache",
+      "cold"
+    ],
+    "tasks": [
+      {
+        "id": "u3l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the word: 'fever'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'fever'",
+        "image": "/images/unit3/lesson4/fever.png",
+        "referenceAudioUrl": "/audio/unit3/lesson4/fever.mp3",
+        "sampleAnswer": "fever",
+        "keywordsToDetect": [
+          "fever"
+        ]
+      },
+      {
+        "id": "u3l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the word: 'headache'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'headache'",
+        "image": "/images/unit3/lesson4/headache.png",
+        "referenceAudioUrl": "/audio/unit3/lesson4/headache.mp3",
+        "sampleAnswer": "headache",
+        "keywordsToDetect": [
+          "headache"
+        ]
+      },
+      {
+        "id": "u3l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'What's the matter with him?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu hỏi 'What's the matter with him?'",
+        "image": "/images/unit3/lesson4/speaking.png",
+        "referenceAudioUrl": "/audio/unit3/lesson4/sentence.mp3",
+        "sampleAnswer": "What's the matter with him?",
+        "keywordsToDetect": [
+          "what's",
+          "matter",
+          "him"
+        ]
+      },
+      {
+        "id": "u3l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'What's the matter with her?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời triệu chứng 'She has a stomachache.'",
+        "image": "/images/unit3/lesson4/stomachache.png",
+        "referenceAudioUrl": "/audio/unit3/lesson4/question.mp3",
+        "sampleAnswer": "She has a stomachache.",
+        "keywordsToDetect": [
+          "she",
+          "has",
+          "stomachache"
+        ]
+      },
+      {
+        "id": "u3l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'What's the matter with him?' -> 'He has a cold.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'He has a cold.'",
+        "image": "/images/unit3/lesson4/cold.png",
+        "referenceAudioUrl": "/audio/unit3/lesson4/roleplay.mp3",
+        "sampleAnswer": "He has a cold.",
+        "keywordsToDetect": [
+          "he",
+          "has",
+          "cold"
+        ]
+      }
+    ]
+  },
+  "unit4_lesson1": {
+    "id": "u4l1-s",
+    "promptText": "1. Read: parents | 2. Read: grandparents | 3. Read: They're Danny's parents. | 4. Answer: Who's he? -> He's his uncle. | 5. Dialogue: Who are they? -> They're her grandparents.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Giới thiệu người thân trong gia đình.",
+    "image": "/images/unit4/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit4/lesson1/speaking.mp3",
+    "sampleAnswer": "parents. grandparents. They're Danny's parents. He's his uncle. They're her grandparents.",
+    "keywordsToDetect": [
+      "parents",
+      "grandparents",
+      "danny's",
+      "uncle"
+    ],
+    "tasks": [
+      {
+        "id": "u4l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read word: 'parents'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'parents'",
+        "image": "/images/unit4/lesson1/parents.png",
+        "referenceAudioUrl": "/audio/unit4/lesson1/parents.mp3",
+        "sampleAnswer": "parents",
+        "keywordsToDetect": [
+          "parents"
+        ]
+      },
+      {
+        "id": "u4l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read word: 'grandparents'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'grandparents'",
+        "image": "/images/unit4/lesson1/grandparents.png",
+        "referenceAudioUrl": "/audio/unit4/lesson1/grandparents.mp3",
+        "sampleAnswer": "grandparents",
+        "keywordsToDetect": [
+          "grandparents"
+        ]
+      },
+      {
+        "id": "u4l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'They're Danny's parents.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'They're Danny's parents.'",
+        "image": "/images/unit4/lesson1/speaking.png",
+        "referenceAudioUrl": "/audio/unit4/lesson1/sentence.mp3",
+        "sampleAnswer": "They're Danny's parents.",
+        "keywordsToDetect": [
+          "they're",
+          "danny's",
+          "parents"
+        ]
+      },
+      {
+        "id": "u4l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Who's he?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'He's his uncle.'",
+        "image": "/images/unit4/lesson1/uncle.png",
+        "referenceAudioUrl": "/audio/unit4/lesson1/question.mp3",
+        "sampleAnswer": "He's his uncle.",
+        "keywordsToDetect": [
+          "he's",
+          "his",
+          "uncle"
+        ]
+      },
+      {
+        "id": "u4l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Who are they?' -> 'They're her grandparents.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'They're her grandparents.'",
+        "image": "/images/unit4/lesson1/grandparents.png",
+        "referenceAudioUrl": "/audio/unit4/lesson1/roleplay.mp3",
+        "sampleAnswer": "They're her grandparents.",
+        "keywordsToDetect": [
+          "they're",
+          "her",
+          "grandparents"
+        ]
+      }
+    ]
+  },
+  "unit4_lesson2": {
+    "id": "u4l2-s",
+    "promptText": "1. Read: fork | 2. Read: spoon | 3. Read: This fork is mine. | 4. Answer: Whose plate is that? -> It's mine. | 5. Dialogue: Whose cup is that? -> It's mine.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đồ dùng trên bàn ăn và sở hữu 'mine'.",
+    "image": "/images/unit4/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit4/lesson2/speaking.mp3",
+    "sampleAnswer": "fork. spoon. This fork is mine. It's mine. It's mine.",
+    "keywordsToDetect": [
+      "fork",
+      "spoon",
+      "this",
+      "mine",
+      "plate",
+      "cup"
+    ],
+    "tasks": [
+      {
+        "id": "u4l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read word: 'fork'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'fork'",
+        "image": "/images/unit4/lesson2/fork.png",
+        "referenceAudioUrl": "/audio/unit4/lesson2/fork.mp3",
+        "sampleAnswer": "fork",
+        "keywordsToDetect": [
+          "fork"
+        ]
+      },
+      {
+        "id": "u4l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read word: 'spoon'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'spoon'",
+        "image": "/images/unit4/lesson2/spoon.png",
+        "referenceAudioUrl": "/audio/unit4/lesson2/spoon.mp3",
+        "sampleAnswer": "spoon",
+        "keywordsToDetect": [
+          "spoon"
+        ]
+      },
+      {
+        "id": "u4l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'This fork is mine.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'This fork is mine.'",
+        "image": "/images/unit4/lesson2/speaking.png",
+        "referenceAudioUrl": "/audio/unit4/lesson2/sentence.mp3",
+        "sampleAnswer": "This fork is mine.",
+        "keywordsToDetect": [
+          "this",
+          "fork",
+          "mine"
+        ]
+      },
+      {
+        "id": "u4l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Whose plate is that?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'It's mine.'",
+        "image": "/images/unit4/lesson2/plate.png",
+        "referenceAudioUrl": "/audio/unit4/lesson2/question.mp3",
+        "sampleAnswer": "It's mine.",
+        "keywordsToDetect": [
+          "it's",
+          "mine"
+        ]
+      },
+      {
+        "id": "u4l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Whose cup is that?' -> 'It's mine.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'It's mine.'",
+        "image": "/images/unit4/lesson2/cup.png",
+        "referenceAudioUrl": "/audio/unit4/lesson2/roleplay.mp3",
+        "sampleAnswer": "It's mine.",
+        "keywordsToDetect": [
+          "it's",
+          "mine"
+        ]
+      }
+    ]
+  },
+  "unit4_lesson3": {
+    "id": "u4l3-s",
+    "promptText": "1. Read: chopsticks | 2. Read: noodles | 3. Read: How do you use chopsticks? | 4. Answer: How do you use chopsticks? -> Like this. | 5. Dialogue: Can you help me? -> Sure! Like this. Be helpful.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ vựng ăn uống và hướng dẫn dùng đũa.",
+    "image": "/images/unit4/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit4/lesson3/speaking.mp3",
+    "sampleAnswer": "chopsticks. noodles. How do you use chopsticks? Like this. Like this. Be helpful.",
+    "keywordsToDetect": [
+      "chopsticks",
+      "noodles",
+      "how",
+      "use",
+      "like",
+      "this",
+      "helpful"
+    ],
+    "tasks": [
+      {
+        "id": "u4l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read word: 'chopsticks'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'chopsticks'",
+        "image": "/images/unit4/lesson3/chopsticks.png",
+        "referenceAudioUrl": "/audio/unit4/lesson3/chopsticks.mp3",
+        "sampleAnswer": "chopsticks",
+        "keywordsToDetect": [
+          "chopsticks"
+        ]
+      },
+      {
+        "id": "u4l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read word: 'noodles'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'noodles'",
+        "image": "/images/unit4/lesson3/noodles.png",
+        "referenceAudioUrl": "/audio/unit4/lesson3/noodles.mp3",
+        "sampleAnswer": "noodles",
+        "keywordsToDetect": [
+          "noodles"
+        ]
+      },
+      {
+        "id": "u4l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'How do you use chopsticks?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu hỏi 'How do you use chopsticks?'",
+        "image": "/images/unit4/lesson3/speaking.png",
+        "referenceAudioUrl": "/audio/unit4/lesson3/sentence.mp3",
+        "sampleAnswer": "How do you use chopsticks?",
+        "keywordsToDetect": [
+          "how",
+          "use",
+          "chopsticks"
+        ]
+      },
+      {
+        "id": "u4l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'How do you use chopsticks?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Hướng dẫn 'Like this.'",
+        "image": "/images/unit4/lesson3/easy.png",
+        "referenceAudioUrl": "/audio/unit4/lesson3/question.mp3",
+        "sampleAnswer": "Like this.",
+        "keywordsToDetect": [
+          "like",
+          "this"
+        ]
+      },
+      {
+        "id": "u4l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Can you help me?' -> 'Sure! Like this. Be helpful.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'Sure! Like this. Be helpful.'",
+        "image": "/images/unit4/lesson3/helpful.png",
+        "referenceAudioUrl": "/audio/unit4/lesson3/roleplay.mp3",
+        "sampleAnswer": "Sure! Like this. Be helpful.",
+        "keywordsToDetect": [
+          "sure",
+          "like",
+          "this",
+          "helpful"
+        ]
+      }
+    ]
+  },
+  "unit4_lesson4": {
+    "id": "u4l4-s",
+    "promptText": "1. Read: Mexico | 2. Read: Japan | 3. Read: This is our flag. | 4. Answer: Whose flag is that? -> It's ours. | 5. Dialogue: Is this their flag? -> Yes, it's theirs.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Tên các nước và đại từ sở hữu 'ours' / 'theirs'.",
+    "image": "/images/unit4/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit4/lesson4/speaking.mp3",
+    "sampleAnswer": "Mexico. Japan. This is our flag. It's ours. Yes, it's theirs.",
+    "keywordsToDetect": [
+      "mexico",
+      "japan",
+      "flag",
+      "ours",
+      "theirs"
+    ],
+    "tasks": [
+      {
+        "id": "u4l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read country name: 'Mexico'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc tên nước 'Mexico'",
+        "image": "/images/unit4/lesson4/mexico.png",
+        "referenceAudioUrl": "/audio/unit4/lesson4/mexico.mp3",
+        "sampleAnswer": "Mexico",
+        "keywordsToDetect": [
+          "mexico"
+        ]
+      },
+      {
+        "id": "u4l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read country name: 'Japan'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc tên nước 'Japan'",
+        "image": "/images/unit4/lesson4/japan.png",
+        "referenceAudioUrl": "/audio/unit4/lesson4/japan.mp3",
+        "sampleAnswer": "Japan",
+        "keywordsToDetect": [
+          "japan"
+        ]
+      },
+      {
+        "id": "u4l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'This is our flag.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc nguyên câu 'This is our flag.'",
+        "image": "/images/unit4/lesson4/speaking.png",
+        "referenceAudioUrl": "/audio/unit4/lesson4/sentence.mp3",
+        "sampleAnswer": "This is our flag.",
+        "keywordsToDetect": [
+          "this",
+          "our",
+          "flag"
+        ]
+      },
+      {
+        "id": "u4l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Whose flag is that?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời đại từ sở hữu 'It's ours.'",
+        "image": "/images/unit4/lesson4/russia.png",
+        "referenceAudioUrl": "/audio/unit4/lesson4/question.mp3",
+        "sampleAnswer": "It's ours.",
+        "keywordsToDetect": [
+          "it's",
+          "ours"
+        ]
+      },
+      {
+        "id": "u4l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Is this their flag?' -> 'Yes, it's theirs.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'Yes, it's theirs.'",
+        "image": "/images/unit4/lesson4/turkey.png",
+        "referenceAudioUrl": "/audio/unit4/lesson4/roleplay.mp3",
+        "sampleAnswer": "Yes, it's theirs.",
+        "keywordsToDetect": [
+          "yes",
+          "it's",
+          "theirs"
+        ]
+      }
+    ]
+  },
+  "checkup_2": {
+    "id": "cu2-s",
+    "promptText": "1. Vocabulary: cashier | 2. Sentence: The cashier works at the supermarket. | 3. Question: What's the matter with him? -> He has a cold. | 4. Dialogue: How much is this sweater? -> It's $30. | 5. Role-play: Whose fork is that? -> It's mine.",
+    "vietnamesePrompt": "Ôn tập tổng hợp 5 bài tập nói từ Unit 3 và Unit 4.",
+    "image": "/images/checkup2/speaking.png",
+    "referenceAudioUrl": "/audio/checkup2/speaking.mp3",
+    "sampleAnswer": "cashier. The cashier works at the supermarket. He has a cold. It's thirty dollars. It's mine.",
+    "keywordsToDetect": [
+      "cashier",
+      "works",
+      "supermarket",
+      "cold",
+      "thirty",
+      "dollars",
+      "mine"
+    ],
+    "tasks": [
+      {
+        "id": "cu2-s1",
+        "taskNumber": 1,
+        "type": "read-review",
+        "promptText": "Read vocabulary word: 'cashier'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'cashier'",
+        "image": "/images/checkup2/cashier.png",
+        "referenceAudioUrl": "/audio/checkup2/cashier.mp3",
+        "sampleAnswer": "cashier",
+        "keywordsToDetect": [
+          "cashier"
+        ]
+      },
+      {
+        "id": "cu2-s2",
+        "taskNumber": 2,
+        "type": "sentence-review",
+        "promptText": "Read sentence: 'The cashier works at the supermarket.'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu 'The cashier works at the supermarket.'",
+        "image": "/images/checkup2/speaking.png",
+        "referenceAudioUrl": "/audio/checkup2/sentence.mp3",
+        "sampleAnswer": "The cashier works at the supermarket.",
+        "keywordsToDetect": [
+          "cashier",
+          "works",
+          "supermarket"
+        ]
+      },
+      {
+        "id": "cu2-s3",
+        "taskNumber": 3,
+        "type": "answer-review",
+        "promptText": "Answer: 'What's the matter with him?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Trả lời 'He has a cold.'",
+        "image": "/images/checkup2/cold.png",
+        "referenceAudioUrl": "/audio/checkup2/question.mp3",
+        "sampleAnswer": "He has a cold.",
+        "keywordsToDetect": [
+          "he",
+          "has",
+          "cold"
+        ]
+      },
+      {
+        "id": "cu2-s4",
+        "taskNumber": 4,
+        "type": "dialogue-review",
+        "promptText": "Dialogue: 'How much is this sweater?' -> 'It's $30.'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'It's thirty dollars.'",
+        "image": "/images/checkup2/sweater.png",
+        "referenceAudioUrl": "/audio/checkup2/dialogue.mp3",
+        "sampleAnswer": "It's thirty dollars.",
+        "keywordsToDetect": [
+          "thirty",
+          "dollars"
+        ]
+      },
+      {
+        "id": "cu2-s5",
+        "taskNumber": 5,
+        "type": "roleplay-review",
+        "promptText": "Role-play: 'Whose fork is that?' -> 'It's mine.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'It's mine.'",
+        "image": "/images/checkup2/fork.png",
+        "referenceAudioUrl": "/audio/checkup2/roleplay.mp3",
+        "sampleAnswer": "It's mine.",
+        "keywordsToDetect": [
+          "it's",
+          "mine"
+        ]
+      }
+    ]
+  },
+  "unit5_lesson1": {
+    "id": "u5l1-s",
+    "promptText": "1. Read: tall | 2. Read: strong | 3. Read: The boy is taller. | 4. Answer: Who's taller, Danny or Julie? -> Danny is taller. | 5. Role-play: Is the man strong? -> Yes, he is.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ vựng, đọc câu và đóng vai trả lời.",
+    "image": "/images/unit5/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit5/lesson1/speaking.mp3",
+    "sampleAnswer": "tall. strong. The boy is taller. Danny is taller. Yes, he is.",
+    "keywordsToDetect": [
+      "tall",
+      "strong",
+      "taller",
+      "Danny",
+      "yes"
+    ],
+    "tasks": [
+      {
+        "id": "u5l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'tall'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'tall'",
+        "image": "/images/unit5/lesson1/tall.png",
+        "referenceAudioUrl": "/audio/unit5/lesson1/tall.mp3",
+        "sampleAnswer": "tall",
+        "keywordsToDetect": [
+          "tall"
+        ]
+      },
+      {
+        "id": "u5l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'strong'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'strong'",
+        "image": "/images/unit5/lesson1/strong.png",
+        "referenceAudioUrl": "/audio/unit5/lesson1/strong.mp3",
+        "sampleAnswer": "strong",
+        "keywordsToDetect": [
+          "strong"
+        ]
+      },
+      {
+        "id": "u5l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the sentence: 'The boy is taller than the girl.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'The boy is taller than the girl.'",
+        "image": "/images/unit5/lesson1/speaking.png",
+        "referenceAudioUrl": "/audio/unit5/lesson1/sentence.mp3",
+        "sampleAnswer": "The boy is taller than the girl.",
+        "keywordsToDetect": [
+          "boy",
+          "taller",
+          "girl"
+        ]
+      },
+      {
+        "id": "u5l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'Who's taller, Danny or Julie?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời câu hỏi 'Who's taller, Danny or Julie?'",
+        "image": "/images/unit5/lesson1/pattern.png",
+        "referenceAudioUrl": "/audio/unit5/lesson1/question.mp3",
+        "sampleAnswer": "Danny is taller.",
+        "keywordsToDetect": [
+          "Danny",
+          "taller"
+        ]
+      },
+      {
+        "id": "u5l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Is the man strong?' -> 'Yes, he is. The man is strong.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'Yes, he is. The man is strong.'",
+        "image": "/images/unit5/lesson1/strong.png",
+        "referenceAudioUrl": "/audio/unit5/lesson1/roleplay.mp3",
+        "sampleAnswer": "Yes, he is. The man is strong.",
+        "keywordsToDetect": [
+          "yes",
+          "man",
+          "strong"
+        ]
+      }
+    ]
+  },
+  "unit5_lesson2": {
+    "id": "u5l2-s",
+    "promptText": "1. Read: thick | 2. Read: clean | 3. Read: The red socks are thicker than the blue socks. | 4. Answer: Is the red sweater thicker? -> Yes, it is. | 5. Role-play: Are these shoes clean? -> No, they are dirty.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc tính từ đồ vật, câu so sánh và trả lời hội thoại.",
+    "image": "/images/unit5/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit5/lesson2/speaking.mp3",
+    "sampleAnswer": "thick. clean. The red socks are thicker than the blue socks. Yes, it is. No, they are dirty.",
+    "keywordsToDetect": [
+      "thick",
+      "clean",
+      "thicker",
+      "yes",
+      "dirty"
+    ],
+    "tasks": [
+      {
+        "id": "u5l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'thick'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'thick'",
+        "image": "/images/unit5/lesson2/thick.png",
+        "referenceAudioUrl": "/audio/unit5/lesson2/thick.mp3",
+        "sampleAnswer": "thick",
+        "keywordsToDetect": [
+          "thick"
+        ]
+      },
+      {
+        "id": "u5l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'clean'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'clean'",
+        "image": "/images/unit5/lesson2/clean.png",
+        "referenceAudioUrl": "/audio/unit5/lesson2/clean.mp3",
+        "sampleAnswer": "clean",
+        "keywordsToDetect": [
+          "clean"
+        ]
+      },
+      {
+        "id": "u5l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the sentence: 'The red socks are thicker than the blue socks.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'The red socks are thicker than the blue socks.'",
+        "image": "/images/unit5/lesson2/speaking.png",
+        "referenceAudioUrl": "/audio/unit5/lesson2/sentence.mp3",
+        "sampleAnswer": "The red socks are thicker than the blue socks.",
+        "keywordsToDetect": [
+          "red",
+          "socks",
+          "thicker",
+          "blue"
+        ]
+      },
+      {
+        "id": "u5l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'Is the red sweater thicker than the blue sweater?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'Is the red sweater thicker than the blue sweater?'",
+        "image": "/images/unit5/lesson2/pattern.png",
+        "referenceAudioUrl": "/audio/unit5/lesson2/question.mp3",
+        "sampleAnswer": "Yes, it is.",
+        "keywordsToDetect": [
+          "yes"
+        ]
+      },
+      {
+        "id": "u5l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Are these shoes clean?' -> 'No, they are dirty.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'No, they are dirty.'",
+        "image": "/images/unit5/lesson2/dirty.png",
+        "referenceAudioUrl": "/audio/unit5/lesson2/roleplay.mp3",
+        "sampleAnswer": "No, they are dirty.",
+        "keywordsToDetect": [
+          "no",
+          "dirty"
+        ]
+      }
+    ]
+  },
+  "unit5_lesson3": {
+    "id": "u5l3-s",
+    "promptText": "1. Read: shirt | 2. Read: cool | 3. Read: Nice shirt! Thank you. | 4. Answer: What do you say when you like your friend's shirt? -> Nice shirt! | 5. Role-play: Nice shirt! -> Thank you very much.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ vựng, đọc lời khen và đóng vai phản hồi.",
+    "image": "/images/unit5/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit5/lesson3/speaking.mp3",
+    "sampleAnswer": "shirt. cool. Nice shirt! Thank you. Nice shirt! Thank you very much.",
+    "keywordsToDetect": [
+      "shirt",
+      "cool",
+      "nice",
+      "thank",
+      "you"
+    ],
+    "tasks": [
+      {
+        "id": "u5l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'shirt'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'shirt'",
+        "image": "/images/unit5/lesson3/shirt.png",
+        "referenceAudioUrl": "/audio/unit5/lesson3/shirt.mp3",
+        "sampleAnswer": "shirt",
+        "keywordsToDetect": [
+          "shirt"
+        ]
+      },
+      {
+        "id": "u5l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'cool'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'cool'",
+        "image": "/images/unit5/lesson3/cool.png",
+        "referenceAudioUrl": "/audio/unit5/lesson3/cool.mp3",
+        "sampleAnswer": "cool",
+        "keywordsToDetect": [
+          "cool"
+        ]
+      },
+      {
+        "id": "u5l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the dialogue: 'Nice shirt! Thank you.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'Nice shirt! Thank you.'",
+        "image": "/images/unit5/lesson3/speaking.png",
+        "referenceAudioUrl": "/audio/unit5/lesson3/sentence.mp3",
+        "sampleAnswer": "Nice shirt! Thank you.",
+        "keywordsToDetect": [
+          "nice",
+          "shirt",
+          "thank"
+        ]
+      },
+      {
+        "id": "u5l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the prompt: 'What do you say when you like a shirt?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Nói câu khen ngợi khi thích chiếc áo.",
+        "image": "/images/unit5/lesson3/pattern.png",
+        "referenceAudioUrl": "/audio/unit5/lesson3/question.mp3",
+        "sampleAnswer": "Nice shirt!",
+        "keywordsToDetect": [
+          "nice",
+          "shirt"
+        ]
+      },
+      {
+        "id": "u5l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Nice shirt!' -> 'Thank you very much.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai đáp lại 'Thank you very much.'",
+        "image": "/images/unit5/lesson3/nice.png",
+        "referenceAudioUrl": "/audio/unit5/lesson3/roleplay.mp3",
+        "sampleAnswer": "Thank you very much.",
+        "keywordsToDetect": [
+          "thank",
+          "you"
+        ]
+      }
+    ]
+  },
+  "unit5_lesson4": {
+    "id": "u5l4-s",
+    "promptText": "1. Read: hard | 2. Read: heavy | 3. Read: The marble is harder. | 4. Answer: Which one is harder, the marble or the ball? -> The marble is harder. | 5. Role-play: Which one is heavier, the rock or the feather? -> The rock is heavier.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Tính chất vật thể, câu hỏi so sánh và đóng vai trả lời.",
+    "image": "/images/unit5/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit5/lesson4/speaking.mp3",
+    "sampleAnswer": "hard. heavy. The marble is harder. The marble is harder. The rock is heavier.",
+    "keywordsToDetect": [
+      "hard",
+      "heavy",
+      "marble",
+      "harder",
+      "heavier"
+    ],
+    "tasks": [
+      {
+        "id": "u5l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'hard'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'hard'",
+        "image": "/images/unit5/lesson4/hard.png",
+        "referenceAudioUrl": "/audio/unit5/lesson4/hard.mp3",
+        "sampleAnswer": "hard",
+        "keywordsToDetect": [
+          "hard"
+        ]
+      },
+      {
+        "id": "u5l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the vocabulary word: 'heavy'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ vựng 'heavy'",
+        "image": "/images/unit5/lesson4/heavy.png",
+        "referenceAudioUrl": "/audio/unit5/lesson4/heavy.mp3",
+        "sampleAnswer": "heavy",
+        "keywordsToDetect": [
+          "heavy"
+        ]
+      },
+      {
+        "id": "u5l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the sentence: 'The marble is harder than the ball.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'The marble is harder than the ball.'",
+        "image": "/images/unit5/lesson4/speaking.png",
+        "referenceAudioUrl": "/audio/unit5/lesson4/sentence.mp3",
+        "sampleAnswer": "The marble is harder than the ball.",
+        "keywordsToDetect": [
+          "marble",
+          "harder",
+          "ball"
+        ]
+      },
+      {
+        "id": "u5l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'Which one is harder, the marble or the ball?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'Which one is harder, the marble or the ball?'",
+        "image": "/images/unit5/lesson4/pattern.png",
+        "referenceAudioUrl": "/audio/unit5/lesson4/question.mp3",
+        "sampleAnswer": "The marble is harder.",
+        "keywordsToDetect": [
+          "marble",
+          "harder"
+        ]
+      },
+      {
+        "id": "u5l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Which one is heavier, the rock or the feather?' -> 'The rock is heavier.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'The rock is heavier.'",
+        "image": "/images/unit5/lesson4/heavy.png",
+        "referenceAudioUrl": "/audio/unit5/lesson4/roleplay.mp3",
+        "sampleAnswer": "The rock is heavier.",
+        "keywordsToDetect": [
+          "rock",
+          "heavier"
+        ]
+      }
+    ]
+  },
+  "unit6_lesson1": {
+    "id": "u6l1-s",
+    "promptText": "1. Read: make my bed | 2. Read: wash the dishes | 3. Read: I make my bed before school. | 4. Answer: When do you make your bed? -> I make my bed before school. | 5. Role-play: When does she clean her room? -> She cleans her room after school.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc công việc nhà, câu mốc thời gian và đóng vai.",
+    "image": "/images/unit6/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit6/lesson1/speaking.mp3",
+    "sampleAnswer": "make my bed. wash the dishes. I make my bed before school. I make my bed before school. She cleans her room after school.",
+    "keywordsToDetect": [
+      "bed",
+      "dishes",
+      "make",
+      "before",
+      "cleans"
+    ],
+    "tasks": [
+      {
+        "id": "u6l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the chore phrase: 'make my bed'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc cụm từ 'make my bed'",
+        "image": "/images/unit6/lesson1/make_my_bed.png",
+        "referenceAudioUrl": "/audio/unit6/lesson1/make_my_bed.mp3",
+        "sampleAnswer": "make my bed",
+        "keywordsToDetect": [
+          "make",
+          "bed"
+        ]
+      },
+      {
+        "id": "u6l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the chore phrase: 'wash the dishes'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc cụm từ 'wash the dishes'",
+        "image": "/images/unit6/lesson1/wash_the_dishes.png",
+        "referenceAudioUrl": "/audio/unit6/lesson1/wash_the_dishes.mp3",
+        "sampleAnswer": "wash the dishes",
+        "keywordsToDetect": [
+          "wash",
+          "dishes"
+        ]
+      },
+      {
+        "id": "u6l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the sentence: 'I make my bed before school.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'I make my bed before school.'",
+        "image": "/images/unit6/lesson1/speaking.png",
+        "referenceAudioUrl": "/audio/unit6/lesson1/sentence.mp3",
+        "sampleAnswer": "I make my bed before school.",
+        "keywordsToDetect": [
+          "make",
+          "bed",
+          "before",
+          "school"
+        ]
+      },
+      {
+        "id": "u6l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'When do you make your bed?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'When do you make your bed?'",
+        "image": "/images/unit6/lesson1/pattern.png",
+        "referenceAudioUrl": "/audio/unit6/lesson1/question.mp3",
+        "sampleAnswer": "I make my bed before school.",
+        "keywordsToDetect": [
+          "make",
+          "bed",
+          "before"
+        ]
+      },
+      {
+        "id": "u6l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'When does she clean her room?' -> 'She cleans her room after school.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'She cleans her room after school.'",
+        "image": "/images/unit6/lesson1/clean_my_room.png",
+        "referenceAudioUrl": "/audio/unit6/lesson1/roleplay.mp3",
+        "sampleAnswer": "She cleans her room after school.",
+        "keywordsToDetect": [
+          "cleans",
+          "room",
+          "after"
+        ]
+      }
+    ]
+  },
+  "unit6_lesson2": {
+    "id": "u6l2-s",
+    "promptText": "1. Read: sweep the floor | 2. Read: water the plants | 3. Read: I always sweep the floor. | 4. Answer: What are your chores? -> I always water the plants. | 5. Role-play: What are his chores? -> He always takes out the garbage.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc từ vựng việc nhà, trạng từ 'always' và phân vai.",
+    "image": "/images/unit6/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit6/lesson2/speaking.mp3",
+    "sampleAnswer": "sweep the floor. water the plants. I always sweep the floor. I always water the plants. He always takes out the garbage.",
+    "keywordsToDetect": [
+      "sweep",
+      "plants",
+      "always",
+      "water",
+      "garbage"
+    ],
+    "tasks": [
+      {
+        "id": "u6l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the chore phrase: 'sweep the floor'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc cụm từ 'sweep the floor'",
+        "image": "/images/unit6/lesson2/sweep_the_floor.png",
+        "referenceAudioUrl": "/audio/unit6/lesson2/sweep_the_floor.mp3",
+        "sampleAnswer": "sweep the floor",
+        "keywordsToDetect": [
+          "sweep",
+          "floor"
+        ]
+      },
+      {
+        "id": "u6l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the chore phrase: 'water the plants'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc cụm từ 'water the plants'",
+        "image": "/images/unit6/lesson2/water_plants.png",
+        "referenceAudioUrl": "/audio/unit6/lesson2/water_plants.mp3",
+        "sampleAnswer": "water the plants",
+        "keywordsToDetect": [
+          "water",
+          "plants"
+        ]
+      },
+      {
+        "id": "u6l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the sentence: 'I always sweep the floor.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'I always sweep the floor.'",
+        "image": "/images/unit6/lesson2/speaking.png",
+        "referenceAudioUrl": "/audio/unit6/lesson2/sentence.mp3",
+        "sampleAnswer": "I always sweep the floor.",
+        "keywordsToDetect": [
+          "always",
+          "sweep",
+          "floor"
+        ]
+      },
+      {
+        "id": "u6l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'What are your chores?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'What are your chores?'",
+        "image": "/images/unit6/lesson2/pattern.png",
+        "referenceAudioUrl": "/audio/unit6/lesson2/question.mp3",
+        "sampleAnswer": "I always water the plants.",
+        "keywordsToDetect": [
+          "always",
+          "water",
+          "plants"
+        ]
+      },
+      {
+        "id": "u6l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'What are his chores?' -> 'He always takes out the garbage.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'He always takes out the garbage.'",
+        "image": "/images/unit6/lesson2/take_out_garbage.png",
+        "referenceAudioUrl": "/audio/unit6/lesson2/roleplay.mp3",
+        "sampleAnswer": "He always takes out the garbage.",
+        "keywordsToDetect": [
+          "always",
+          "takes",
+          "garbage"
+        ]
+      }
+    ]
+  },
+  "unit6_lesson3": {
+    "id": "u6l3-s",
+    "promptText": "1. Read: come over | 2. Read: after school | 3. Read: Do you want to come over? Sure. When? | 4. Answer: When do you want to play? -> After school. | 5. Role-play: Do you want to come over? -> Sure! When?",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Lời mời sang nhà chơi và phản hồi thân thiện.",
+    "image": "/images/unit6/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit6/lesson3/speaking.mp3",
+    "sampleAnswer": "come over. after school. Do you want to come over? Sure. When? After school. Sure! When?",
+    "keywordsToDetect": [
+      "come",
+      "over",
+      "after",
+      "school",
+      "sure"
+    ],
+    "tasks": [
+      {
+        "id": "u6l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the phrase: 'come over'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc cụm từ 'come over'",
+        "image": "/images/unit6/lesson3/come_over.png",
+        "referenceAudioUrl": "/audio/unit6/lesson3/come_over.mp3",
+        "sampleAnswer": "come over",
+        "keywordsToDetect": [
+          "come",
+          "over"
+        ]
+      },
+      {
+        "id": "u6l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the phrase: 'after school'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc cụm từ 'after school'",
+        "image": "/images/unit6/lesson3/after_school.png",
+        "referenceAudioUrl": "/audio/unit6/lesson3/after_school.mp3",
+        "sampleAnswer": "after school",
+        "keywordsToDetect": [
+          "after",
+          "school"
+        ]
+      },
+      {
+        "id": "u6l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the invitation: 'Do you want to come over? Sure. When?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc đoạn đối thoại ngắn 'Do you want to come over? Sure. When?'",
+        "image": "/images/unit6/lesson3/speaking.png",
+        "referenceAudioUrl": "/audio/unit6/lesson3/sentence.mp3",
+        "sampleAnswer": "Do you want to come over? Sure. When?",
+        "keywordsToDetect": [
+          "want",
+          "come",
+          "over",
+          "sure"
+        ]
+      },
+      {
+        "id": "u6l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'When do you want to play?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'When do you want to play?'",
+        "image": "/images/unit6/lesson3/pattern.png",
+        "referenceAudioUrl": "/audio/unit6/lesson3/question.mp3",
+        "sampleAnswer": "After school.",
+        "keywordsToDetect": [
+          "after",
+          "school"
+        ]
+      },
+      {
+        "id": "u6l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Do you want to come over?' -> 'Sure! When?'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'Sure! When?'",
+        "image": "/images/unit6/lesson3/sure.png",
+        "referenceAudioUrl": "/audio/unit6/lesson3/roleplay.mp3",
+        "sampleAnswer": "Sure! When?",
+        "keywordsToDetect": [
+          "sure",
+          "when"
+        ]
+      }
+    ]
+  },
+  "unit6_lesson4": {
+    "id": "u6l4-s",
+    "promptText": "1. Read: milk the cows | 2. Read: collect eggs | 3. Read: I always milk the cows in the morning. | 4. Answer: What do you do on the farm in the morning? -> I always feed the chickens. | 5. Role-play: When do you pick vegetables? -> Before school.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói: Đọc công việc trang trại, trả lời thói quen buổi sáng.",
+    "image": "/images/unit6/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit6/lesson4/speaking.mp3",
+    "sampleAnswer": "milk the cows. collect eggs. I always milk the cows in the morning. I always feed the chickens. Before school.",
+    "keywordsToDetect": [
+      "cows",
+      "eggs",
+      "milk",
+      "chickens",
+      "before"
+    ],
+    "tasks": [
+      {
+        "id": "u6l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read the phrase: 'milk the cows'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc cụm từ 'milk the cows'",
+        "image": "/images/unit6/lesson4/milk_cows.png",
+        "referenceAudioUrl": "/audio/unit6/lesson4/milk_cows.mp3",
+        "sampleAnswer": "milk the cows",
+        "keywordsToDetect": [
+          "milk",
+          "cows"
+        ]
+      },
+      {
+        "id": "u6l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read the phrase: 'collect eggs'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc cụm từ 'collect eggs'",
+        "image": "/images/unit6/lesson4/collect_eggs.png",
+        "referenceAudioUrl": "/audio/unit6/lesson4/collect_eggs.mp3",
+        "sampleAnswer": "collect eggs",
+        "keywordsToDetect": [
+          "collect",
+          "eggs"
+        ]
+      },
+      {
+        "id": "u6l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read the sentence: 'I always milk the cows in the morning.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu 'I always milk the cows in the morning.'",
+        "image": "/images/unit6/lesson4/speaking.png",
+        "referenceAudioUrl": "/audio/unit6/lesson4/sentence.mp3",
+        "sampleAnswer": "I always milk the cows in the morning.",
+        "keywordsToDetect": [
+          "always",
+          "milk",
+          "cows",
+          "morning"
+        ]
+      },
+      {
+        "id": "u6l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer the question: 'What do you do on the farm in the morning?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'What do you do on the farm in the morning?'",
+        "image": "/images/unit6/lesson4/pattern.png",
+        "referenceAudioUrl": "/audio/unit6/lesson4/question.mp3",
+        "sampleAnswer": "I always feed the chickens.",
+        "keywordsToDetect": [
+          "always",
+          "feed",
+          "chickens"
+        ]
+      },
+      {
+        "id": "u6l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'When do you pick vegetables?' -> 'Before school.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời 'Before school.'",
+        "image": "/images/unit6/lesson4/pick_vegetables.png",
+        "referenceAudioUrl": "/audio/unit6/lesson4/roleplay.mp3",
+        "sampleAnswer": "Before school.",
+        "keywordsToDetect": [
+          "before",
+          "school"
+        ]
+      }
+    ]
+  },
+  "checkup_3": {
+    "id": "cu3-s",
+    "promptText": "1. Vocabulary: taller | 2. Sentence: The boy is taller than the girl. | 3. Question: When do you make your bed? -> Before school. | 4. Dialogue: Do you want to come over? -> Sure. After school. | 5. Role-play: Which one is harder? -> The marble is harder.",
+    "vietnamesePrompt": "Ôn tập tổng hợp 5 bài tập nói từ Unit 5 và Unit 6.",
+    "image": "/images/checkup3/speaking.png",
+    "referenceAudioUrl": "/audio/checkup3/speaking.mp3",
+    "sampleAnswer": "taller. The boy is taller than the girl. Before school. Sure. After school. The marble is harder.",
+    "keywordsToDetect": [
+      "taller",
+      "boy",
+      "before",
+      "sure",
+      "marble"
+    ],
+    "tasks": [
+      {
+        "id": "cu3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'taller'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'taller'",
+        "image": "/images/checkup3/taller.png",
+        "referenceAudioUrl": "/audio/checkup3/taller.mp3",
+        "sampleAnswer": "taller",
+        "keywordsToDetect": [
+          "taller"
+        ]
+      },
+      {
+        "id": "cu3-s2",
+        "taskNumber": 2,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'The boy is taller than the girl.'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu so sánh",
+        "image": "/images/checkup3/speaking.png",
+        "referenceAudioUrl": "/audio/checkup3/sentence.mp3",
+        "sampleAnswer": "The boy is taller than the girl.",
+        "keywordsToDetect": [
+          "boy",
+          "taller",
+          "girl"
+        ]
+      },
+      {
+        "id": "cu3-s3",
+        "taskNumber": 3,
+        "type": "answer-question",
+        "promptText": "Answer: 'When do you make your bed?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Trả lời thời điểm dọn giường",
+        "image": "/images/unit6/lesson1/make_my_bed.png",
+        "referenceAudioUrl": "/audio/checkup3/question.mp3",
+        "sampleAnswer": "Before school.",
+        "keywordsToDetect": [
+          "before",
+          "school"
+        ]
+      },
+      {
+        "id": "cu3-s4",
+        "taskNumber": 4,
+        "type": "role-play",
+        "promptText": "Role-play: 'Do you want to come over?' -> 'Sure. After school.'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Đóng vai trả lời lời mời",
+        "image": "/images/unit6/lesson3/come_over.png",
+        "referenceAudioUrl": "/audio/checkup3/roleplay.mp3",
+        "sampleAnswer": "Sure. After school.",
+        "keywordsToDetect": [
+          "sure",
+          "after",
+          "school"
+        ]
+      },
+      {
+        "id": "cu3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Which one is harder?' -> 'The marble is harder.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Trả lời so sánh độ cứng",
+        "image": "/images/unit5/lesson4/hard.png",
+        "referenceAudioUrl": "/audio/checkup3/roleplay2.mp3",
+        "sampleAnswer": "The marble is harder.",
+        "keywordsToDetect": [
+          "marble",
+          "harder"
+        ]
+      }
+    ]
+  },
+  "unit7_lesson1": {
+    "id": "u7l1-s",
+    "promptText": "1. Read: beach | 2. Read: aquarium | 3. Read: He was at the beach yesterday. | 4. Answer: Where was she yesterday? -> She was at the museum. | 5. Role-play: Was he at the pool? -> No, he wasn't.",
+    "vietnamesePrompt": "Thực hành 5 nhiệm vụ nói: Đọc từ vựng, đọc câu và đóng vai trả lời.",
+    "image": "/images/unit7/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit7/lesson1/speaking.mp3",
+    "sampleAnswer": "beach. aquarium. He was at the beach yesterday. She was at the museum. No, he wasn't.",
+    "keywordsToDetect": [
+      "beach",
+      "aquarium",
+      "museum",
+      "was",
+      "no"
+    ],
+    "tasks": [
+      {
+        "id": "u7l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'beach'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'beach'",
+        "image": "/images/unit7/lesson1/beach.png",
+        "referenceAudioUrl": "/audio/unit7/lesson1/beach.mp3",
+        "sampleAnswer": "beach",
+        "keywordsToDetect": [
+          "beach"
+        ]
+      },
+      {
+        "id": "u7l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'aquarium'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'aquarium'",
+        "image": "/images/unit7/lesson1/aquarium.png",
+        "referenceAudioUrl": "/audio/unit7/lesson1/aquarium.mp3",
+        "sampleAnswer": "aquarium",
+        "keywordsToDetect": [
+          "aquarium"
+        ]
+      },
+      {
+        "id": "u7l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'He was at the beach yesterday.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu về vị trí quá khứ",
+        "image": "/images/unit7/lesson1/speaking.png",
+        "referenceAudioUrl": "/audio/unit7/lesson1/sentence.mp3",
+        "sampleAnswer": "He was at the beach yesterday.",
+        "keywordsToDetect": [
+          "beach",
+          "yesterday"
+        ]
+      },
+      {
+        "id": "u7l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Where was she yesterday?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời câu hỏi nơi chốn",
+        "image": "/images/unit7/lesson1/museum.png",
+        "referenceAudioUrl": "/audio/unit7/lesson1/question.mp3",
+        "sampleAnswer": "She was at the museum.",
+        "keywordsToDetect": [
+          "museum",
+          "was"
+        ]
+      },
+      {
+        "id": "u7l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Was he at the pool yesterday?' -> 'No, he wasn't.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời phủ định",
+        "image": "/images/unit7/lesson1/hotel.png",
+        "referenceAudioUrl": "/audio/unit7/lesson1/roleplay.mp3",
+        "sampleAnswer": "No, he wasn't. He was at the hotel.",
+        "keywordsToDetect": [
+          "no",
+          "wasn't",
+          "hotel"
+        ]
+      }
+    ]
+  },
+  "unit7_lesson2": {
+    "id": "u7l2-s",
+    "promptText": "1. Read: bookstore | 2. Read: pharmacy | 3. Read: They were at the coffee shop yesterday. | 4. Answer: Where were they yesterday? -> They were at the toy store. | 5. Role-play: Were they at the hair salon? -> Yes, they were.",
+    "vietnamesePrompt": "Luyện nói 5 bài tập: Đọc từ, đọc câu và đóng vai.",
+    "image": "/images/unit7/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit7/lesson2/speaking.mp3",
+    "sampleAnswer": "bookstore. pharmacy. They were at the coffee shop yesterday. They were at the toy store. Yes, they were.",
+    "keywordsToDetect": [
+      "bookstore",
+      "pharmacy",
+      "coffee",
+      "toy",
+      "were"
+    ],
+    "tasks": [
+      {
+        "id": "u7l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'bookstore'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'bookstore'",
+        "image": "/images/unit7/lesson2/bookstore.png",
+        "referenceAudioUrl": "/audio/unit7/lesson2/bookstore.mp3",
+        "sampleAnswer": "bookstore",
+        "keywordsToDetect": [
+          "bookstore"
+        ]
+      },
+      {
+        "id": "u7l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'pharmacy'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'pharmacy'",
+        "image": "/images/unit7/lesson2/pharmacy.png",
+        "referenceAudioUrl": "/audio/unit7/lesson2/pharmacy.mp3",
+        "sampleAnswer": "pharmacy",
+        "keywordsToDetect": [
+          "pharmacy"
+        ]
+      },
+      {
+        "id": "u7l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'They were at the coffee shop yesterday.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu về vị trí số nhiều",
+        "image": "/images/unit7/lesson2/coffee_shop.png",
+        "referenceAudioUrl": "/audio/unit7/lesson2/sentence.mp3",
+        "sampleAnswer": "They were at the coffee shop yesterday.",
+        "keywordsToDetect": [
+          "coffee",
+          "shop",
+          "yesterday"
+        ]
+      },
+      {
+        "id": "u7l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Where were they yesterday?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời câu hỏi nơi chốn",
+        "image": "/images/unit7/lesson2/toy_store.png",
+        "referenceAudioUrl": "/audio/unit7/lesson2/question.mp3",
+        "sampleAnswer": "They were at the toy store.",
+        "keywordsToDetect": [
+          "toy",
+          "store",
+          "were"
+        ]
+      },
+      {
+        "id": "u7l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Were they at the hair salon yesterday?' -> 'Yes, they were.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời khẳng định",
+        "image": "/images/unit7/lesson2/hair_salon.png",
+        "referenceAudioUrl": "/audio/unit7/lesson2/roleplay.mp3",
+        "sampleAnswer": "Yes, they were.",
+        "keywordsToDetect": [
+          "yes",
+          "were"
+        ]
+      }
+    ]
+  },
+  "unit7_lesson3": {
+    "id": "u7l3-s",
+    "promptText": "1. Read: watch | 2. Read: meet | 3. Read: Let's meet here at five o'clock. | 4. Answer: What time should we meet? -> At five o'clock. | 5. Role-play: Let's meet here at five o'clock. -> OK. See you then.",
+    "vietnamesePrompt": "Luyện nói 5 bài tập theo cốt truyện.",
+    "image": "/images/unit7/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit7/lesson3/speaking.mp3",
+    "sampleAnswer": "watch. meet. Let's meet here at five o'clock. At five o'clock. OK. See you then.",
+    "keywordsToDetect": [
+      "watch",
+      "meet",
+      "five",
+      "clock",
+      "then"
+    ],
+    "tasks": [
+      {
+        "id": "u7l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'watch'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'watch'",
+        "image": "/images/unit7/lesson3/watch.png",
+        "referenceAudioUrl": "/audio/unit7/lesson3/watch.mp3",
+        "sampleAnswer": "watch",
+        "keywordsToDetect": [
+          "watch"
+        ]
+      },
+      {
+        "id": "u7l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'meet'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'meet'",
+        "image": "/images/unit7/lesson3/meet.png",
+        "referenceAudioUrl": "/audio/unit7/lesson3/meet.mp3",
+        "sampleAnswer": "meet",
+        "keywordsToDetect": [
+          "meet"
+        ]
+      },
+      {
+        "id": "u7l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'Let's meet here at five o'clock.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu hẹn gặp",
+        "image": "/images/unit7/lesson3/five_oclock.png",
+        "referenceAudioUrl": "/audio/unit7/lesson3/sentence.mp3",
+        "sampleAnswer": "Let's meet here at five o'clock.",
+        "keywordsToDetect": [
+          "meet",
+          "five",
+          "clock"
+        ]
+      },
+      {
+        "id": "u7l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'What time should we meet?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời giờ hẹn",
+        "image": "/images/unit7/lesson3/five_oclock.png",
+        "referenceAudioUrl": "/audio/unit7/lesson3/question.mp3",
+        "sampleAnswer": "At five o'clock.",
+        "keywordsToDetect": [
+          "five",
+          "clock"
+        ]
+      },
+      {
+        "id": "u7l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Let's meet here at five o'clock.' -> 'OK. See you then.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời hẹn giờ",
+        "image": "/images/unit7/lesson3/speaking.png",
+        "referenceAudioUrl": "/audio/unit7/lesson3/roleplay.mp3",
+        "sampleAnswer": "OK. See you then.",
+        "keywordsToDetect": [
+          "ok",
+          "see",
+          "then"
+        ]
+      }
+    ]
+  },
+  "unit7_lesson4": {
+    "id": "u7l4-s",
+    "promptText": "1. Read: sunny | 2. Read: stormy | 3. Read: How was the weather on Monday? It was windy. | 4. Answer: How's the weather today? -> It's cloudy. | 5. Role-play: How was the weather yesterday? -> It was rainy.",
+    "vietnamesePrompt": "Thực hành 5 bài tập luyện nói chủ đề thời tiết.",
+    "image": "/images/unit7/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit7/lesson4/speaking.mp3",
+    "sampleAnswer": "sunny. stormy. How was the weather on Monday? It was windy. It's cloudy. It was rainy.",
+    "keywordsToDetect": [
+      "sunny",
+      "stormy",
+      "windy",
+      "cloudy",
+      "rainy"
+    ],
+    "tasks": [
+      {
+        "id": "u7l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'sunny'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'sunny'",
+        "image": "/images/unit7/lesson4/sunny.png",
+        "referenceAudioUrl": "/audio/unit7/lesson4/sunny.mp3",
+        "sampleAnswer": "sunny",
+        "keywordsToDetect": [
+          "sunny"
+        ]
+      },
+      {
+        "id": "u7l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'stormy'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'stormy'",
+        "image": "/images/unit7/lesson4/stormy.png",
+        "referenceAudioUrl": "/audio/unit7/lesson4/stormy.mp3",
+        "sampleAnswer": "stormy",
+        "keywordsToDetect": [
+          "stormy"
+        ]
+      },
+      {
+        "id": "u7l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'How was the weather on Monday? It was windy.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu thời tiết quá khứ",
+        "image": "/images/unit7/lesson4/windy.png",
+        "referenceAudioUrl": "/audio/unit7/lesson4/sentence.mp3",
+        "sampleAnswer": "How was the weather on Monday? It was windy.",
+        "keywordsToDetect": [
+          "weather",
+          "Monday",
+          "windy"
+        ]
+      },
+      {
+        "id": "u7l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'How's the weather today?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời thời tiết hôm nay",
+        "image": "/images/unit7/lesson4/cloudy.png",
+        "referenceAudioUrl": "/audio/unit7/lesson4/question.mp3",
+        "sampleAnswer": "It's cloudy.",
+        "keywordsToDetect": [
+          "cloudy"
+        ]
+      },
+      {
+        "id": "u7l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'How was the weather yesterday?' -> 'It was rainy.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời thời tiết hôm qua",
+        "image": "/images/unit7/lesson4/rainy.png",
+        "referenceAudioUrl": "/audio/unit7/lesson4/roleplay.mp3",
+        "sampleAnswer": "It was rainy.",
+        "keywordsToDetect": [
+          "rainy"
+        ]
+      }
+    ]
+  },
+  "unit8_lesson1": {
+    "id": "u8l1-s",
+    "promptText": "1. Read: folder | 2. Read: calculator | 3. Read: Where was the water bottle? It was on the table. | 4. Answer: What was on the table? -> A dictionary was on the table. | 5. Role-play: Where was the stapler? -> It was on the desk.",
+    "vietnamesePrompt": "Luyện nói 5 bài tập chủ đề dụng cụ học tập.",
+    "image": "/images/unit8/lesson1/speaking.png",
+    "referenceAudioUrl": "/audio/unit8/lesson1/speaking.mp3",
+    "sampleAnswer": "folder. calculator. Where was the water bottle? It was on the table. A dictionary was on the table. It was on the desk.",
+    "keywordsToDetect": [
+      "folder",
+      "calculator",
+      "bottle",
+      "dictionary",
+      "stapler"
+    ],
+    "tasks": [
+      {
+        "id": "u8l1-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'folder'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'folder'",
+        "image": "/images/unit8/lesson1/folder.png",
+        "referenceAudioUrl": "/audio/unit8/lesson1/folder.mp3",
+        "sampleAnswer": "folder",
+        "keywordsToDetect": [
+          "folder"
+        ]
+      },
+      {
+        "id": "u8l1-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'calculator'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'calculator'",
+        "image": "/images/unit8/lesson1/calculator.png",
+        "referenceAudioUrl": "/audio/unit8/lesson1/calculator.mp3",
+        "sampleAnswer": "calculator",
+        "keywordsToDetect": [
+          "calculator"
+        ]
+      },
+      {
+        "id": "u8l1-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'Where was the water bottle? It was on the table.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc hỏi đáp vị trí",
+        "image": "/images/unit8/lesson1/water_bottle.png",
+        "referenceAudioUrl": "/audio/unit8/lesson1/sentence.mp3",
+        "sampleAnswer": "Where was the water bottle? It was on the table.",
+        "keywordsToDetect": [
+          "water",
+          "bottle",
+          "table"
+        ]
+      },
+      {
+        "id": "u8l1-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'What was on the table?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời đồ vật trên bàn",
+        "image": "/images/unit8/lesson1/dictionary.png",
+        "referenceAudioUrl": "/audio/unit8/lesson1/question.mp3",
+        "sampleAnswer": "A dictionary was on the table.",
+        "keywordsToDetect": [
+          "dictionary",
+          "table"
+        ]
+      },
+      {
+        "id": "u8l1-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Where was the stapler?' -> 'It was on the desk.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời vị trí cái dập ghim",
+        "image": "/images/unit8/lesson1/stapler.png",
+        "referenceAudioUrl": "/audio/unit8/lesson1/roleplay.mp3",
+        "sampleAnswer": "It was on the desk.",
+        "keywordsToDetect": [
+          "desk",
+          "stapler"
+        ]
+      }
+    ]
+  },
+  "unit8_lesson2": {
+    "id": "u8l2-s",
+    "promptText": "1. Read: scissors | 2. Read: paintbrush | 3. Read: There were some posters on the wall. | 4. Answer: Were there any magazines on the table? -> Yes, there were. | 5. Role-play: Were there any pencil sharpeners? -> No, there weren't.",
+    "vietnamesePrompt": "Thực hành 5 nhiệm vụ luyện nói dụng cụ mỹ thuật.",
+    "image": "/images/unit8/lesson2/speaking.png",
+    "referenceAudioUrl": "/audio/unit8/lesson2/speaking.mp3",
+    "sampleAnswer": "scissors. paintbrush. There were some posters on the wall. Yes, there were. No, there weren't.",
+    "keywordsToDetect": [
+      "scissors",
+      "paintbrush",
+      "posters",
+      "yes",
+      "no"
+    ],
+    "tasks": [
+      {
+        "id": "u8l2-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'scissors'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'scissors'",
+        "image": "/images/unit8/lesson2/scissors.png",
+        "referenceAudioUrl": "/audio/unit8/lesson2/scissors.mp3",
+        "sampleAnswer": "scissors",
+        "keywordsToDetect": [
+          "scissors"
+        ]
+      },
+      {
+        "id": "u8l2-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'paintbrush'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'paintbrush'",
+        "image": "/images/unit8/lesson2/paintbrush.png",
+        "referenceAudioUrl": "/audio/unit8/lesson2/paintbrush.mp3",
+        "sampleAnswer": "paintbrush",
+        "keywordsToDetect": [
+          "paintbrush"
+        ]
+      },
+      {
+        "id": "u8l2-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'There were some posters on the wall.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu có 'there were some'",
+        "image": "/images/unit8/lesson2/poster.png",
+        "referenceAudioUrl": "/audio/unit8/lesson2/sentence.mp3",
+        "sampleAnswer": "There were some posters on the wall.",
+        "keywordsToDetect": [
+          "posters",
+          "wall"
+        ]
+      },
+      {
+        "id": "u8l2-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Were there any magazines on the table?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời câu hỏi có tạp chí không",
+        "image": "/images/unit8/lesson2/magazine.png",
+        "referenceAudioUrl": "/audio/unit8/lesson2/question.mp3",
+        "sampleAnswer": "Yes, there were.",
+        "keywordsToDetect": [
+          "yes",
+          "were"
+        ]
+      },
+      {
+        "id": "u8l2-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Were there any pencil sharpeners?' -> 'No, there weren't.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời phủ định",
+        "image": "/images/unit8/lesson2/pencil_sharpener.png",
+        "referenceAudioUrl": "/audio/unit8/lesson2/roleplay.mp3",
+        "sampleAnswer": "No, there weren't.",
+        "keywordsToDetect": [
+          "no",
+          "weren't"
+        ]
+      }
+    ]
+  },
+  "unit8_lesson3": {
+    "id": "u8l3-s",
+    "promptText": "1. Read: spell | 2. Read: Saturday | 3. Read: How do you spell 'Saturday'? | 4. Answer: How do you spell 'Saturday'? -> S-A-T-U-R-D-A-Y. | 5. Role-play: Let's clean up! -> OK. Be helpful.",
+    "vietnamesePrompt": "Luyện nói 5 bài tập đánh vần và giao tiếp câu chuyện.",
+    "image": "/images/unit8/lesson3/speaking.png",
+    "referenceAudioUrl": "/audio/unit8/lesson3/speaking.mp3",
+    "sampleAnswer": "spell. Saturday. How do you spell Saturday? S-A-T-U-R-D-A-Y. OK. Be helpful.",
+    "keywordsToDetect": [
+      "spell",
+      "Saturday",
+      "S",
+      "helpful"
+    ],
+    "tasks": [
+      {
+        "id": "u8l3-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'spell'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'spell'",
+        "image": "/images/unit8/lesson3/spell.png",
+        "referenceAudioUrl": "/audio/unit8/lesson3/spell.mp3",
+        "sampleAnswer": "spell",
+        "keywordsToDetect": [
+          "spell"
+        ]
+      },
+      {
+        "id": "u8l3-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'Saturday'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'Saturday'",
+        "image": "/images/unit8/lesson3/saturday.png",
+        "referenceAudioUrl": "/audio/unit8/lesson3/saturday.mp3",
+        "sampleAnswer": "Saturday",
+        "keywordsToDetect": [
+          "Saturday"
+        ]
+      },
+      {
+        "id": "u8l3-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'How do you spell Saturday?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu hỏi đánh vần",
+        "image": "/images/unit8/lesson3/pattern.png",
+        "referenceAudioUrl": "/audio/unit8/lesson3/sentence.mp3",
+        "sampleAnswer": "How do you spell Saturday?",
+        "keywordsToDetect": [
+          "spell",
+          "Saturday"
+        ]
+      },
+      {
+        "id": "u8l3-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'How do you spell Saturday?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Đánh vần chữ cái",
+        "image": "/images/unit8/lesson3/saturday.png",
+        "referenceAudioUrl": "/audio/unit8/lesson3/question.mp3",
+        "sampleAnswer": "S-A-T-U-R-D-A-Y",
+        "keywordsToDetect": [
+          "S",
+          "A",
+          "T",
+          "U",
+          "R",
+          "D",
+          "Y"
+        ]
+      },
+      {
+        "id": "u8l3-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'Let's clean up!' -> 'OK. Be helpful.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai dọn dẹp phòng",
+        "image": "/images/unit8/lesson3/clean_up.png",
+        "referenceAudioUrl": "/audio/unit8/lesson3/roleplay.mp3",
+        "sampleAnswer": "OK. Be helpful.",
+        "keywordsToDetect": [
+          "ok",
+          "helpful"
+        ]
+      }
+    ]
+  },
+  "unit8_lesson4": {
+    "id": "u8l4-s",
+    "promptText": "1. Read: cell phone | 2. Read: laptop | 3. Read: There weren't any cell phones in 1940. | 4. Answer: Were there laptops in 1940? -> No, there weren't. | 5. Role-play: There were phones like this.",
+    "vietnamesePrompt": "Thực hành 5 bài tập luyện nói về lịch sử công nghệ.",
+    "image": "/images/unit8/lesson4/speaking.png",
+    "referenceAudioUrl": "/audio/unit8/lesson4/speaking.mp3",
+    "sampleAnswer": "cell phone. laptop. There weren't any cell phones in 1940. No, there weren't. There were phones like this.",
+    "keywordsToDetect": [
+      "cell",
+      "phone",
+      "laptop",
+      "1940",
+      "phones"
+    ],
+    "tasks": [
+      {
+        "id": "u8l4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'cell phone'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'cell phone'",
+        "image": "/images/unit8/lesson4/cell_phone.png",
+        "referenceAudioUrl": "/audio/unit8/lesson4/cell_phone.mp3",
+        "sampleAnswer": "cell phone",
+        "keywordsToDetect": [
+          "cell",
+          "phone"
+        ]
+      },
+      {
+        "id": "u8l4-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'laptop'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'laptop'",
+        "image": "/images/unit8/lesson4/laptop.png",
+        "referenceAudioUrl": "/audio/unit8/lesson4/laptop.mp3",
+        "sampleAnswer": "laptop",
+        "keywordsToDetect": [
+          "laptop"
+        ]
+      },
+      {
+        "id": "u8l4-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'There weren't any cell phones in 1940.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu công nghệ quá khứ",
+        "image": "/images/unit8/lesson4/pattern.png",
+        "referenceAudioUrl": "/audio/unit8/lesson4/sentence.mp3",
+        "sampleAnswer": "There weren't any cell phones in 1940.",
+        "keywordsToDetect": [
+          "cell",
+          "phones",
+          "1940"
+        ]
+      },
+      {
+        "id": "u8l4-s4",
+        "taskNumber": 4,
+        "type": "answer-question",
+        "promptText": "Answer: 'Were there laptops in 1940?'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Trả lời câu hỏi có laptop không",
+        "image": "/images/unit8/lesson4/laptop.png",
+        "referenceAudioUrl": "/audio/unit8/lesson4/question.mp3",
+        "sampleAnswer": "No, there weren't.",
+        "keywordsToDetect": [
+          "no",
+          "weren't"
+        ]
+      },
+      {
+        "id": "u8l4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'There were phones like this.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai giới thiệu điện thoại cổ",
+        "image": "/images/unit8/lesson4/speaking.png",
+        "referenceAudioUrl": "/audio/unit8/lesson4/roleplay.mp3",
+        "sampleAnswer": "There were phones like this.",
+        "keywordsToDetect": [
+          "phones",
+          "like",
+          "this"
+        ]
+      }
+    ]
+  },
+  "checkup_4": {
+    "id": "cu4-s",
+    "promptText": "1. Vocabulary: amusement park | 2. Sentence Pattern: They were at the bookstore yesterday. | 3. Question & Answer: Where was the calculator? -> It was on the desk. | 4. Dialogue: Were there any scissors? -> Yes, there were. | 5. Role-play: How was the weather yesterday? -> It was sunny.",
+    "vietnamesePrompt": "Thực hành 5 bài tập nói tổng hợp cho Check Up 4.",
+    "image": "/images/checkup4/speaking.png",
+    "referenceAudioUrl": "/audio/checkup4/speaking.mp3",
+    "sampleAnswer": "amusement park. They were at the bookstore yesterday. It was on the desk. Yes, there were. It was sunny.",
+    "keywordsToDetect": [
+      "park",
+      "bookstore",
+      "desk",
+      "were",
+      "sunny"
+    ],
+    "tasks": [
+      {
+        "id": "cu4-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'amusement park'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'amusement park'",
+        "image": "/images/checkup4/amusement_park.png",
+        "referenceAudioUrl": "/audio/checkup4/amusement_park.mp3",
+        "sampleAnswer": "amusement park",
+        "keywordsToDetect": [
+          "amusement",
+          "park"
+        ]
+      },
+      {
+        "id": "cu4-s2",
+        "taskNumber": 2,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'They were at the bookstore yesterday.'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu vị trí quá khứ",
+        "image": "/images/checkup4/bookstore.png",
+        "referenceAudioUrl": "/audio/checkup4/sentence.mp3",
+        "sampleAnswer": "They were at the bookstore yesterday.",
+        "keywordsToDetect": [
+          "bookstore",
+          "yesterday"
+        ]
+      },
+      {
+        "id": "cu4-s3",
+        "taskNumber": 3,
+        "type": "answer-question",
+        "promptText": "Answer: 'Where was the calculator?'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Trả lời vị trí máy tính",
+        "image": "/images/checkup4/calculator.png",
+        "referenceAudioUrl": "/audio/checkup4/question.mp3",
+        "sampleAnswer": "It was on the desk.",
+        "keywordsToDetect": [
+          "desk",
+          "was"
+        ]
+      },
+      {
+        "id": "cu4-s4",
+        "taskNumber": 4,
+        "type": "role-play",
+        "promptText": "Role-play: 'Were there any scissors?' -> 'Yes, there were.'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Đóng vai trả lời sự tồn tại đồ vật",
+        "image": "/images/checkup4/scissors.png",
+        "referenceAudioUrl": "/audio/checkup4/roleplay.mp3",
+        "sampleAnswer": "Yes, there were.",
+        "keywordsToDetect": [
+          "yes",
+          "were"
+        ]
+      },
+      {
+        "id": "cu4-s5",
+        "taskNumber": 5,
+        "type": "role-play",
+        "promptText": "Role-play: 'How was the weather yesterday?' -> 'It was sunny.'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời thời tiết",
+        "image": "/images/checkup4/sunny.png",
+        "referenceAudioUrl": "/audio/checkup4/roleplay2.mp3",
+        "sampleAnswer": "It was sunny.",
+        "keywordsToDetect": [
+          "sunny",
+          "was"
+        ]
+      }
+    ]
+  },
+  "yle_practice": {
+    "id": "yle-s",
+    "promptText": "10 Cambridge Movers Speaking Tasks reviewing Units 1 to 8.",
+    "vietnamesePrompt": "10 nhiệm vụ kiểm tra kỹ năng nói chuẩn Cambridge Movers.",
+    "image": "/images/yle/speaking.png",
+    "referenceAudioUrl": "/audio/yle/speaking.mp3",
+    "sampleAnswer": "Complete response covering all 10 tasks.",
+    "keywordsToDetect": [
+      "popcorn",
+      "dictionary",
+      "cashier",
+      "marble",
+      "beach",
+      "taller",
+      "five",
+      "school"
+    ],
+    "tasks": [
+      {
+        "id": "yle-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'popcorn'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'popcorn'",
+        "image": "/images/yle/popcorn.png",
+        "referenceAudioUrl": "/audio/yle/s1.mp3",
+        "sampleAnswer": "popcorn",
+        "keywordsToDetect": [
+          "popcorn"
+        ]
+      },
+      {
+        "id": "yle-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'dictionary'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'dictionary'",
+        "image": "/images/yle/dictionary.png",
+        "referenceAudioUrl": "/audio/yle/s2.mp3",
+        "sampleAnswer": "dictionary",
+        "keywordsToDetect": [
+          "dictionary"
+        ]
+      },
+      {
+        "id": "yle-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'The cashier works at the supermarket.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu nơi làm việc",
+        "image": "/images/yle/cashier.png",
+        "referenceAudioUrl": "/audio/yle/s3.mp3",
+        "sampleAnswer": "The cashier works at the supermarket.",
+        "keywordsToDetect": [
+          "cashier",
+          "supermarket"
+        ]
+      },
+      {
+        "id": "yle-s4",
+        "taskNumber": 4,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'The marble is harder than the ball.'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Đọc câu so sánh",
+        "image": "/images/yle/marble.png",
+        "referenceAudioUrl": "/audio/yle/s4.mp3",
+        "sampleAnswer": "The marble is harder than the ball.",
+        "keywordsToDetect": [
+          "marble",
+          "harder"
+        ]
+      },
+      {
+        "id": "yle-s5",
+        "taskNumber": 5,
+        "type": "answer-question",
+        "promptText": "Answer question: 'What do you want?'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Trả lời đồ muốn ăn",
+        "image": "/images/yle/gum.png",
+        "referenceAudioUrl": "/audio/yle/s5.mp3",
+        "sampleAnswer": "I want some gum.",
+        "keywordsToDetect": [
+          "want",
+          "gum"
+        ]
+      },
+      {
+        "id": "yle-s6",
+        "taskNumber": 6,
+        "type": "answer-question",
+        "promptText": "Answer question: 'Where was he yesterday?'",
+        "vietnamesePrompt": "Nhiệm vụ 6: Trả lời địa điểm quá khứ",
+        "image": "/images/yle/beach.png",
+        "referenceAudioUrl": "/audio/yle/s6.mp3",
+        "sampleAnswer": "He was at the beach.",
+        "keywordsToDetect": [
+          "beach",
+          "was"
+        ]
+      },
+      {
+        "id": "yle-s7",
+        "taskNumber": 7,
+        "type": "describe-picture",
+        "promptText": "Describe picture: 'In this picture, the boy is taller than the girl.'",
+        "vietnamesePrompt": "Nhiệm vụ 7: Miêu tả bức tranh so sánh chiều cao",
+        "image": "/images/yle/taller.png",
+        "referenceAudioUrl": "/audio/yle/s7.mp3",
+        "sampleAnswer": "The boy is taller than the girl.",
+        "keywordsToDetect": [
+          "boy",
+          "taller",
+          "girl"
+        ]
+      },
+      {
+        "id": "yle-s8",
+        "taskNumber": 8,
+        "type": "complete-dialogue",
+        "promptText": "Complete dialogue: 'Let's meet here at five o'clock.' -> 'OK. See you then.'",
+        "vietnamesePrompt": "Nhiệm vụ 8: Hoàn thành hội thoại hẹn giờ",
+        "image": "/images/yle/clock.png",
+        "referenceAudioUrl": "/audio/yle/s8.mp3",
+        "sampleAnswer": "OK. See you then.",
+        "keywordsToDetect": [
+          "ok",
+          "see",
+          "then"
+        ]
+      },
+      {
+        "id": "yle-s9",
+        "taskNumber": 9,
+        "type": "role-play",
+        "promptText": "Role-play: 'Do you want to come over?' -> 'Sure. After school.'",
+        "vietnamesePrompt": "Nhiệm vụ 9: Đóng vai trả lời lời mời",
+        "image": "/images/yle/come_over.png",
+        "referenceAudioUrl": "/audio/yle/s9.mp3",
+        "sampleAnswer": "Sure. After school.",
+        "keywordsToDetect": [
+          "sure",
+          "after",
+          "school"
+        ]
+      },
+      {
+        "id": "yle-s10",
+        "taskNumber": 10,
+        "type": "free-speaking",
+        "promptText": "Free speaking: 'Tell me about your favorite school supply.'",
+        "vietnamesePrompt": "Nhiệm vụ 10: Nói tự do về dụng cụ học tập yêu thích",
+        "image": "/images/yle/pencil_sharpener.png",
+        "referenceAudioUrl": "/audio/yle/s10.mp3",
+        "sampleAnswer": "My favorite school supply is my pencil sharpener.",
+        "keywordsToDetect": [
+          "favorite",
+          "pencil",
+          "sharpener"
+        ]
+      }
+    ]
+  }
+}

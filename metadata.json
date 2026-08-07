@@ -1,0 +1,6 @@
+{
+  "name": "Everybody Up 3 - English Learning App",
+  "description": "Interactive AI English learning platform for primary students based on Everybody Up 3",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

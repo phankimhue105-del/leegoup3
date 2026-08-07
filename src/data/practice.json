@@ -1,0 +1,5579 @@
+{
+  "unit1_lesson1": [
+    {
+      "id": "u1l1-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the correct word:",
+      "options": [
+        "popcorn",
+        "gum",
+        "chocolate"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson1/popcorn.png",
+        "/images/unit1/lesson1/gum.png",
+        "/images/unit1/lesson1/chocolate.png"
+      ],
+      "correctAnswer": "popcorn",
+      "explanation_vi": "Đúng. Bức tranh thể hiện món 'popcorn' (bỏng ngô).",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện món 'popcorn' (bỏng ngô)."
+    },
+    {
+      "id": "u1l1-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'chocolate':",
+      "options": [
+        "chocolate",
+        "peanuts",
+        "soda"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson1/chocolate.png",
+        "/images/unit1/lesson1/peanuts.png",
+        "/images/unit1/lesson1/soda.png"
+      ],
+      "correctAnswer": "chocolate",
+      "explanation_vi": "Đúng. Đây là hình ảnh thanh sô-cô-la ('chocolate').",
+      "vietnameseExplanation": "Đúng. Đây là hình ảnh thanh sô-cô-la ('chocolate')."
+    },
+    {
+      "id": "u1l1-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'soda' mean in Vietnamese?",
+      "options": [
+        "Nước ngọt có ga",
+        "Sữa tươi",
+        "Nước ép táo",
+        "Trà sữa"
+      ],
+      "correctAnswer": "Nước ngọt có ga",
+      "explanation_vi": "Đúng. 'soda' dịch sang tiếng Việt là nước ngọt có ga.",
+      "vietnameseExplanation": "Đúng. 'soda' dịch sang tiếng Việt là nước ngọt có ga."
+    },
+    {
+      "id": "u1l1-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/unit1/lesson1/gum.mp3",
+      "options": [
+        "gum",
+        "peanuts",
+        "potato chips"
+      ],
+      "correctAnswer": "gum",
+      "explanation_vi": "Đúng. Đoạn băng âm thanh phát từ 'gum'.",
+      "vietnameseExplanation": "Đúng. Đoạn băng âm thanh phát từ 'gum'."
+    },
+    {
+      "id": "u1l1-q5",
+      "type": "matching",
+      "questionText": "Match the words with their Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "gum",
+          "rightId": "r1",
+          "rightText": "kẹo cao su"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "peanuts",
+          "rightId": "r2",
+          "rightText": "đậu phộng"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "popcorn",
+          "rightId": "r3",
+          "rightText": "bỏng ngô"
+        }
+      ],
+      "correctAnswer": "gum-kẹo cao su, peanuts-đậu phộng, popcorn-bỏng ngô",
+      "explanation_vi": "Đúng. Bạn đã ghép chính xác từ vựng và nghĩa tiếng Việt.",
+      "vietnameseExplanation": "Đúng. Bạn đã ghép chính xác từ vựng và nghĩa tiếng Việt."
+    },
+    {
+      "id": "u1l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete the sentence: 'He _____ some potato chips.'",
+      "correctAnswer": "wants",
+      "explanation_vi": "Đúng. Ngôi thứ ba số ít 'He' đi với động từ chia 'wants'.",
+      "vietnameseExplanation": "Đúng. Ngôi thứ ba số ít 'He' đi với động từ chia 'wants'."
+    },
+    {
+      "id": "u1l1-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct answer for the dialogue: A: 'What do you want?' B: '_____'",
+      "options": [
+        "I want some peanuts.",
+        "Yes, I do.",
+        "No, thanks.",
+        "He wants soda."
+      ],
+      "correctAnswer": "I want some peanuts.",
+      "explanation_vi": "Đúng. Hỏi 'What do you want?' trả lời 'I want some...'.",
+      "vietnameseExplanation": "Đúng. Hỏi 'What do you want?' trả lời 'I want some...'."
+    },
+    {
+      "id": "u1l1-q8",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct word: 'She doesn't want _____ soda.'",
+      "options": [
+        "any",
+        "some",
+        "a",
+        "an"
+      ],
+      "correctAnswer": "any",
+      "explanation_vi": "Đúng. Dùng 'any' trong câu phủ định với 'doesn't want'.",
+      "vietnameseExplanation": "Đúng. Dùng 'any' trong câu phủ định với 'doesn't want'."
+    },
+    {
+      "id": "u1l1-q9",
+      "type": "picture-select",
+      "questionText": "Choose the sentence matching the picture of peanuts:",
+      "options": [
+        "They want some peanuts.",
+        "They want some popcorn.",
+        "They want some gum."
+      ],
+      "optionImages": [
+        "/images/unit1/lesson1/peanuts.png",
+        "/images/unit1/lesson1/popcorn.png",
+        "/images/unit1/lesson1/gum.png"
+      ],
+      "correctAnswer": "They want some peanuts.",
+      "explanation_vi": "Đúng. Hình ảnh hiển thị món đậu phộng ('peanuts').",
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị món đậu phộng ('peanuts')."
+    },
+    {
+      "id": "u1l1-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Which sentence is grammatically correct?",
+      "options": [
+        "He wants some chocolate.",
+        "He want some chocolate.",
+        "He wanting some chocolate.",
+        "He is want some chocolate."
+      ],
+      "correctAnswer": "He wants some chocolate.",
+      "explanation_vi": "Đúng. Chủ ngữ 'He' cần động từ thêm -s ('wants').",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' cần động từ thêm -s ('wants')."
+    }
+  ],
+  "unit1_lesson2": [
+    {
+      "id": "u1l2-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the correct word:",
+      "options": [
+        "carrot",
+        "onion",
+        "cabbage"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson2/carrot.png",
+        "/images/unit1/lesson2/onion.png",
+        "/images/unit1/lesson2/cabbage.png"
+      ],
+      "correctAnswer": "carrot",
+      "explanation_vi": "Đúng. Đây là củ cà rốt ('carrot').",
+      "vietnameseExplanation": "Đúng. Đây là củ cà rốt ('carrot')."
+    },
+    {
+      "id": "u1l2-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'cabbage':",
+      "options": [
+        "cabbage",
+        "potato",
+        "tomato"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson2/cabbage.png",
+        "/images/unit1/lesson2/potato.png",
+        "/images/unit1/lesson2/tomato.png"
+      ],
+      "correctAnswer": "cabbage",
+      "explanation_vi": "Đúng. Đây là hình ảnh bắp cải ('cabbage').",
+      "vietnameseExplanation": "Đúng. Đây là hình ảnh bắp cải ('cabbage')."
+    },
+    {
+      "id": "u1l2-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'onion' mean in Vietnamese?",
+      "options": [
+        "Củ hành tây",
+        "Củ tỏi",
+        "Bắp cải",
+        "Quả cà chua"
+      ],
+      "correctAnswer": "Củ hành tây",
+      "explanation_vi": "Đúng. 'onion' nghĩa là củ hành tây.",
+      "vietnameseExplanation": "Đúng. 'onion' nghĩa là củ hành tây."
+    },
+    {
+      "id": "u1l2-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/unit1/lesson2/tomato.mp3",
+      "options": [
+        "tomato",
+        "potato",
+        "pepper"
+      ],
+      "correctAnswer": "tomato",
+      "explanation_vi": "Đúng. Từ được đọc là 'tomato'.",
+      "vietnameseExplanation": "Đúng. Từ được đọc là 'tomato'."
+    },
+    {
+      "id": "u1l2-q5",
+      "type": "matching",
+      "questionText": "Match the words with their meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "pepper",
+          "rightId": "r1",
+          "rightText": "ớt chuông"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "potato",
+          "rightId": "r2",
+          "rightText": "khoai tây"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "tomato",
+          "rightId": "r3",
+          "rightText": "cà chua"
+        }
+      ],
+      "correctAnswer": "pepper-ớt chuông, potato-khoai tây, tomato-cà chua",
+      "explanation_vi": "Đúng. Các cặp từ ghép nối chính xác.",
+      "vietnameseExplanation": "Đúng. Các cặp từ ghép nối chính xác."
+    },
+    {
+      "id": "u1l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete the sentence: 'Do you need _____ peppers?'",
+      "correctAnswer": "any",
+      "explanation_vi": "Đúng. Dùng 'any' trong câu hỏi nghi vấn.",
+      "vietnameseExplanation": "Đúng. Dùng 'any' trong câu hỏi nghi vấn."
+    },
+    {
+      "id": "u1l2-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the response: A: 'Do you need any carrots?' B: '_____' ",
+      "options": [
+        "Yes, we do.",
+        "Yes, I am.",
+        "No, it isn't.",
+        "They need carrots."
+      ],
+      "correctAnswer": "Yes, we do.",
+      "explanation_vi": "Đúng. Câu hỏi 'Do you need...?' trả lời 'Yes, we do.'.",
+      "vietnameseExplanation": "Đúng. Câu hỏi 'Do you need...?' trả lời 'Yes, we do.'."
+    },
+    {
+      "id": "u1l2-q8",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct word: 'What _____ they need?'",
+      "options": [
+        "do",
+        "does",
+        "are",
+        "is"
+      ],
+      "correctAnswer": "do",
+      "explanation_vi": "Đúng. Chủ ngữ 'they' đi với trợ động từ 'do'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'they' đi với trợ động từ 'do'."
+    },
+    {
+      "id": "u1l2-q9",
+      "type": "picture-select",
+      "questionText": "Choose the sentence for the picture of potatoes:",
+      "options": [
+        "They need some potatoes.",
+        "They need some carrots.",
+        "They need some onions."
+      ],
+      "optionImages": [
+        "/images/unit1/lesson2/potato.png",
+        "/images/unit1/lesson2/carrot.png",
+        "/images/unit1/lesson2/onion.png"
+      ],
+      "correctAnswer": "They need some potatoes.",
+      "explanation_vi": "Đúng. Bức tranh miêu tả những củ khoai tây.",
+      "vietnameseExplanation": "Đúng. Bức tranh miêu tả những củ khoai tây."
+    },
+    {
+      "id": "u1l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Choose the correct article: 'They need _____ carrot.'",
+      "options": [
+        "a",
+        "an",
+        "some",
+        "any"
+      ],
+      "correctAnswer": "a",
+      "explanation_vi": "Đúng. 'carrot' số ít bắt đầu bằng phụ âm nên đi với 'a'.",
+      "vietnameseExplanation": "Đúng. 'carrot' số ít bắt đầu bằng phụ âm nên đi với 'a'."
+    }
+  ],
+  "unit1_lesson3": [
+    {
+      "id": "u1l3-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the correct word:",
+      "options": [
+        "soup",
+        "salad",
+        "spaghetti"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson3/soup.png",
+        "/images/unit1/lesson3/salad.png",
+        "/images/unit1/lesson3/spaghetti.png"
+      ],
+      "correctAnswer": "soup",
+      "explanation_vi": "Đúng. Đây là món súp ('soup').",
+      "vietnameseExplanation": "Đúng. Đây là món súp ('soup')."
+    },
+    {
+      "id": "u1l3-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'spaghetti':",
+      "options": [
+        "spaghetti",
+        "soup",
+        "salad"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson3/spaghetti.png",
+        "/images/unit1/lesson3/soup.png",
+        "/images/unit1/lesson3/salad.png"
+      ],
+      "correctAnswer": "spaghetti",
+      "explanation_vi": "Đúng. Đây là món mỳ Ý ('spaghetti').",
+      "vietnameseExplanation": "Đúng. Đây là món mỳ Ý ('spaghetti')."
+    },
+    {
+      "id": "u1l3-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'healthy' mean?",
+      "options": [
+        "Lành mạnh / Tốt cho sức khỏe",
+        "Ngon miệng",
+        "Nóng hổi",
+        "Đắt tiền"
+      ],
+      "correctAnswer": "Lành mạnh / Tốt cho sức khỏe",
+      "explanation_vi": "Đúng. 'healthy' nghĩa là lành mạnh.",
+      "vietnameseExplanation": "Đúng. 'healthy' nghĩa là lành mạnh."
+    },
+    {
+      "id": "u1l3-q4",
+      "type": "listening",
+      "questionText": "Listen and choose what is asked for lunch:",
+      "promptAudioUrl": "/audio/unit1/lesson3/lunch.mp3",
+      "options": [
+        "lunch",
+        "breakfast",
+        "dinner"
+      ],
+      "correctAnswer": "lunch",
+      "explanation_vi": "Đúng. Băng thu âm nói về bữa trưa ('lunch').",
+      "vietnameseExplanation": "Đúng. Băng thu âm nói về bữa trưa ('lunch')."
+    },
+    {
+      "id": "u1l3-q5",
+      "type": "matching",
+      "questionText": "Match story words with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "lunch",
+          "rightId": "r1",
+          "rightText": "bữa ăn trưa"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "healthy",
+          "rightId": "r2",
+          "rightText": "lành mạnh"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "try",
+          "rightId": "r3",
+          "rightText": "thử"
+        }
+      ],
+      "correctAnswer": "lunch-bữa ăn trưa, healthy-lành mạnh, try-thử",
+      "explanation_vi": "Đúng. Đã nối đúng các từ vựng trong câu chuyện.",
+      "vietnameseExplanation": "Đúng. Đã nối đúng các từ vựng trong câu chuyện."
+    },
+    {
+      "id": "u1l3-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete the phrase: 'That _____ good!'",
+      "correctAnswer": "sounds",
+      "explanation_vi": "Đúng. Cụm từ chuẩn khen ngợi là 'That sounds good!'.",
+      "vietnameseExplanation": "Đúng. Cụm từ chuẩn khen ngợi là 'That sounds good!'."
+    },
+    {
+      "id": "u1l3-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the response: A: 'What's for lunch?' B: '_____'",
+      "options": [
+        "Soup and salad.",
+        "I like blue.",
+        "Yes, please.",
+        "It's a dog."
+      ],
+      "correctAnswer": "Soup and salad.",
+      "explanation_vi": "Đúng. Trả lời tên các món ăn cho bữa trưa.",
+      "vietnameseExplanation": "Đúng. Trả lời tên các món ăn cho bữa trưa."
+    },
+    {
+      "id": "u1l3-q8",
+      "type": "multiple-choice",
+      "questionText": "Complete the value sentence: 'Be _____!'",
+      "options": [
+        "healthy",
+        "angry",
+        "sad",
+        "fast"
+      ],
+      "correctAnswer": "healthy",
+      "explanation_vi": "Đúng. Thông điệp sức khỏe là 'Be healthy!'.",
+      "vietnameseExplanation": "Đúng. Thông điệp sức khỏe là 'Be healthy!'."
+    },
+    {
+      "id": "u1l3-q9",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'salad':",
+      "options": [
+        "salad",
+        "soup",
+        "spaghetti"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson3/salad.png",
+        "/images/unit1/lesson3/soup.png",
+        "/images/unit1/lesson3/spaghetti.png"
+      ],
+      "correctAnswer": "salad",
+      "explanation_vi": "Đúng. Bức tranh miêu tả món rau trộn salad.",
+      "vietnameseExplanation": "Đúng. Bức tranh miêu tả món rau trộn salad."
+    },
+    {
+      "id": "u1l3-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: What does the story encourage you to do?",
+      "options": [
+        "Just try it!",
+        "Don't eat it!",
+        "Go away!",
+        "Sleep now!"
+      ],
+      "correctAnswer": "Just try it!",
+      "explanation_vi": "Đúng. Tên truyện là 'Just try it!' khuyên ta thử món mới.",
+      "vietnameseExplanation": "Đúng. Tên truyện là 'Just try it!' khuyên ta thử món mới."
+    }
+  ],
+  "unit1_lesson4": [
+    {
+      "id": "u1l4-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the correct word:",
+      "options": [
+        "omelet",
+        "smoothie",
+        "milkshake"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson4/omelet.png",
+        "/images/unit1/lesson4/smoothie.png",
+        "/images/unit1/lesson4/milkshake.png"
+      ],
+      "correctAnswer": "omelet",
+      "explanation_vi": "Đúng. Đây là món trứng ốp lết ('omelet').",
+      "vietnameseExplanation": "Đúng. Đây là món trứng ốp lết ('omelet')."
+    },
+    {
+      "id": "u1l4-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'smoothie':",
+      "options": [
+        "smoothie",
+        "fruit salad",
+        "omelet"
+      ],
+      "optionImages": [
+        "/images/unit1/lesson4/smoothie.png",
+        "/images/unit1/lesson4/fruit_salad.png",
+        "/images/unit1/lesson4/omelet.png"
+      ],
+      "correctAnswer": "smoothie",
+      "explanation_vi": "Đúng. Đây là món sinh tố ('smoothie').",
+      "vietnameseExplanation": "Đúng. Đây là món sinh tố ('smoothie')."
+    },
+    {
+      "id": "u1l4-q3",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct article: '_____ omelet'",
+      "options": [
+        "an",
+        "a",
+        "some",
+        "the"
+      ],
+      "correctAnswer": "an",
+      "explanation_vi": "Đúng. 'omelet' bắt đầu bằng nguyên âm 'o' nên dùng mạo từ 'an'.",
+      "vietnameseExplanation": "Đúng. 'omelet' bắt đầu bằng nguyên âm 'o' nên dùng mạo từ 'an'."
+    },
+    {
+      "id": "u1l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the drink mentioned:",
+      "promptAudioUrl": "/audio/unit1/lesson4/milkshake.mp3",
+      "options": [
+        "milkshake",
+        "smoothie",
+        "soda"
+      ],
+      "correctAnswer": "milkshake",
+      "explanation_vi": "Đúng. Tên thức uống được đọc là 'milkshake'.",
+      "vietnameseExplanation": "Đúng. Tên thức uống được đọc là 'milkshake'."
+    },
+    {
+      "id": "u1l4-q5",
+      "type": "matching",
+      "questionText": "Match the cooking terms:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "omelet",
+          "rightId": "r1",
+          "rightText": "trứng rán"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "smoothie",
+          "rightId": "r2",
+          "rightText": "sinh tố"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "milkshake",
+          "rightId": "r3",
+          "rightText": "sữa lắc"
+        }
+      ],
+      "correctAnswer": "omelet-trứng rán, smoothie-sinh tố, milkshake-sữa lắc",
+      "explanation_vi": "Đúng. Các món ăn và nghĩa ghép đúng hoàn toàn.",
+      "vietnameseExplanation": "Đúng. Các món ăn và nghĩa ghép đúng hoàn toàn."
+    },
+    {
+      "id": "u1l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'I want to _____ a smoothie.'",
+      "correctAnswer": "make",
+      "explanation_vi": "Đúng. Cấu trúc là 'I want to make...'.",
+      "vietnameseExplanation": "Đúng. Cấu trúc là 'I want to make...'."
+    },
+    {
+      "id": "u1l4-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the response: A: 'What do you want to make?' B: '_____'",
+      "options": [
+        "I want to make fruit salad.",
+        "I like fruit.",
+        "Yes, I do.",
+        "No, thanks."
+      ],
+      "correctAnswer": "I want to make fruit salad.",
+      "explanation_vi": "Đúng. Trả lời đúng cấu trúc 'I want to make...'.",
+      "vietnameseExplanation": "Đúng. Trả lời đúng cấu trúc 'I want to make...'."
+    },
+    {
+      "id": "u1l4-q8",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct form: 'She _____ to make a milkshake.'",
+      "options": [
+        "wants",
+        "want",
+        "wanting",
+        "is want"
+      ],
+      "correctAnswer": "wants",
+      "explanation_vi": "Đúng. Ngôi 'She' đi với 'wants'.",
+      "vietnameseExplanation": "Đúng. Ngôi 'She' đi với 'wants'."
+    },
+    {
+      "id": "u1l4-q9",
+      "type": "picture-select",
+      "questionText": "Choose the sentence for fruit salad picture:",
+      "options": [
+        "We want to make fruit salad.",
+        "We want to make an omelet.",
+        "We want to make a smoothie."
+      ],
+      "optionImages": [
+        "/images/unit1/lesson4/fruit_salad.png",
+        "/images/unit1/lesson4/omelet.png",
+        "/images/unit1/lesson4/smoothie.png"
+      ],
+      "correctAnswer": "We want to make fruit salad.",
+      "explanation_vi": "Đúng. Hình ảnh hiển thị đĩa salad trái cây.",
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị đĩa salad trái cây."
+    },
+    {
+      "id": "u1l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Fill in the subject: '_____ want to make an omelet.'",
+      "options": [
+        "I",
+        "He",
+        "She",
+        "It"
+      ],
+      "correctAnswer": "I",
+      "explanation_vi": "Đúng. Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'.",
+      "vietnameseExplanation": "Đúng. Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'."
+    }
+  ],
+  "unit2_lesson1": [
+    {
+      "id": "u2l1-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the place:",
+      "options": [
+        "park",
+        "library",
+        "supermarket"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson1/park.png",
+        "/images/unit2/lesson1/library.png",
+        "/images/unit2/lesson1/supermarket.png"
+      ],
+      "correctAnswer": "park",
+      "explanation_vi": "Đúng. Bức tranh miêu tả công viên ('park').",
+      "vietnameseExplanation": "Đúng. Bức tranh miêu tả công viên ('park')."
+    },
+    {
+      "id": "u2l1-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'library':",
+      "options": [
+        "library",
+        "movie theater",
+        "post office"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson1/library.png",
+        "/images/unit2/lesson1/movie_theater.png",
+        "/images/unit2/lesson1/post_office.png"
+      ],
+      "correctAnswer": "library",
+      "explanation_vi": "Đúng. Đây là thư viện ('library').",
+      "vietnameseExplanation": "Đúng. Đây là thư viện ('library')."
+    },
+    {
+      "id": "u2l1-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'across from' mean?",
+      "options": [
+        "Đối diện",
+        "Ở giữa",
+        "Phía sau",
+        "Bên cạnh"
+      ],
+      "correctAnswer": "Đối diện",
+      "explanation_vi": "Đúng. 'across from' nghĩa là ở đối diện.",
+      "vietnameseExplanation": "Đúng. 'across from' nghĩa là ở đối diện."
+    },
+    {
+      "id": "u2l1-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the location:",
+      "promptAudioUrl": "/audio/unit2/lesson1/post_office.mp3",
+      "options": [
+        "post office",
+        "supermarket",
+        "department store"
+      ],
+      "correctAnswer": "post office",
+      "explanation_vi": "Đúng. Đoạn băng đọc tên 'post office'.",
+      "vietnameseExplanation": "Đúng. Đoạn băng đọc tên 'post office'."
+    },
+    {
+      "id": "u2l1-q5",
+      "type": "matching",
+      "questionText": "Match places with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "movie theater",
+          "rightId": "r1",
+          "rightText": "rạp chiếu phim"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "supermarket",
+          "rightId": "r2",
+          "rightText": "siêu thị"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "department store",
+          "rightId": "r3",
+          "rightText": "cửa hàng bách hóa"
+        }
+      ],
+      "correctAnswer": "movie theater-rạp chiếu phim, supermarket-siêu thị, department store-cửa hàng bách hóa",
+      "explanation_vi": "Đúng. Bạn nối địa điểm và nghĩa tiếng Việt rất chính xác.",
+      "vietnameseExplanation": "Đúng. Bạn nối địa điểm và nghĩa tiếng Việt rất chính xác."
+    },
+    {
+      "id": "u2l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'It's _____ the school and the library.'",
+      "correctAnswer": "between",
+      "explanation_vi": "Đúng. Ở giữa 2 điểm dùng giới từ 'between'.",
+      "vietnameseExplanation": "Đúng. Ở giữa 2 điểm dùng giới từ 'between'."
+    },
+    {
+      "id": "u2l1-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the response: A: 'Where's the park?' B: '_____'",
+      "options": [
+        "It's across from the library.",
+        "Yes, it is.",
+        "I like park.",
+        "It's a cat."
+      ],
+      "correctAnswer": "It's across from the library.",
+      "explanation_vi": "Đúng. Trả lời vị trí bằng 'It's across from...'.",
+      "vietnameseExplanation": "Đúng. Trả lời vị trí bằng 'It's across from...'."
+    },
+    {
+      "id": "u2l1-q8",
+      "type": "multiple-choice",
+      "questionText": "Choose the verb: 'Where _____ the movie theater?'",
+      "options": [
+        "is",
+        "are",
+        "do",
+        "does"
+      ],
+      "correctAnswer": "is",
+      "explanation_vi": "Đúng. Danh từ số ít đi với động từ 'is'.",
+      "vietnameseExplanation": "Đúng. Danh từ số ít đi với động từ 'is'."
+    },
+    {
+      "id": "u2l1-q9",
+      "type": "picture-select",
+      "questionText": "Choose the sentence for department store:",
+      "options": [
+        "They are at the department store.",
+        "They are at the park.",
+        "They are at the library."
+      ],
+      "optionImages": [
+        "/images/unit2/lesson1/department_store.png",
+        "/images/unit2/lesson1/park.png",
+        "/images/unit2/lesson1/library.png"
+      ],
+      "correctAnswer": "They are at the department store.",
+      "explanation_vi": "Đúng. Hình ảnh hiển thị cửa hàng bách hóa.",
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị cửa hàng bách hóa."
+    },
+    {
+      "id": "u2l1-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Complete: 'between the bank _____ the park'",
+      "options": [
+        "and",
+        "or",
+        "but",
+        "in"
+      ],
+      "correctAnswer": "and",
+      "explanation_vi": "Đúng. Cấu trúc chuẩn là 'between A and B'.",
+      "vietnameseExplanation": "Đúng. Cấu trúc chuẩn là 'between A and B'."
+    }
+  ],
+  "unit2_lesson2": [
+    {
+      "id": "u2l2-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the activity:",
+      "options": [
+        "borrow books",
+        "mail letters",
+        "shop"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson2/borrow_books.png",
+        "/images/unit2/lesson2/mail_letters.png",
+        "/images/unit2/lesson2/shop.png"
+      ],
+      "correctAnswer": "borrow books",
+      "explanation_vi": "Đúng. Đây là hoạt động mượn sách ('borrow books').",
+      "vietnameseExplanation": "Đúng. Đây là hoạt động mượn sách ('borrow books')."
+    },
+    {
+      "id": "u2l2-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'kick a ball':",
+      "options": [
+        "kick a ball",
+        "watch a movie",
+        "buy groceries"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson2/kick_ball.png",
+        "/images/unit2/lesson2/watch_movie.png",
+        "/images/unit2/lesson2/buy_groceries.png"
+      ],
+      "correctAnswer": "kick a ball",
+      "explanation_vi": "Đúng. Bức tranh tả hoạt động đá bóng.",
+      "vietnameseExplanation": "Đúng. Bức tranh tả hoạt động đá bóng."
+    },
+    {
+      "id": "u2l2-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'buy groceries' mean?",
+      "options": [
+        "Mua thực phẩm / tạp hóa",
+        "Gửi thư",
+        "Mượn sách",
+        "Xem phim"
+      ],
+      "correctAnswer": "Mua thực phẩm / tạp hóa",
+      "explanation_vi": "Đúng. 'buy groceries' là mua thực phẩm.",
+      "vietnameseExplanation": "Đúng. 'buy groceries' là mua thực phẩm."
+    },
+    {
+      "id": "u2l2-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the action:",
+      "promptAudioUrl": "/audio/unit2/lesson2/mail_letters.mp3",
+      "options": [
+        "mail letters",
+        "borrow books",
+        "kick a ball"
+      ],
+      "correctAnswer": "mail letters",
+      "explanation_vi": "Đúng. Âm thanh mô tả hành động gửi thư.",
+      "vietnameseExplanation": "Đúng. Âm thanh mô tả hành động gửi thư."
+    },
+    {
+      "id": "u2l2-q5",
+      "type": "matching",
+      "questionText": "Match actions with Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "shop",
+          "rightId": "r1",
+          "rightText": "mua sắm"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "watch a movie",
+          "rightId": "r2",
+          "rightText": "xem phim"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "kick a ball",
+          "rightId": "r3",
+          "rightText": "đá bóng"
+        }
+      ],
+      "correctAnswer": "shop-mua sắm, watch a movie-xem phim, kick a ball-đá bóng",
+      "explanation_vi": "Đúng. Các hành động ghép với nghĩa chuẩn xác.",
+      "vietnameseExplanation": "Đúng. Các hành động ghép với nghĩa chuẩn xác."
+    },
+    {
+      "id": "u2l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'What is she _____ at the library?'",
+      "correctAnswer": "doing",
+      "explanation_vi": "Đúng. Thì hiện tại tiếp diễn dùng 'doing'.",
+      "vietnameseExplanation": "Đúng. Thì hiện tại tiếp diễn dùng 'doing'."
+    },
+    {
+      "id": "u2l2-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the response: A: 'What are they doing at the park?' B: '_____'",
+      "options": [
+        "They're kicking a ball.",
+        "She's reading.",
+        "He is sleeping.",
+        "Yes, they are."
+      ],
+      "correctAnswer": "They're kicking a ball.",
+      "explanation_vi": "Đúng. Trả lời đúng chủ ngữ 'They're...'.",
+      "vietnameseExplanation": "Đúng. Trả lời đúng chủ ngữ 'They're...'."
+    },
+    {
+      "id": "u2l2-q8",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct form: 'He's _____ books at the library.'",
+      "options": [
+        "borrowing",
+        "borrow",
+        "borrows",
+        "borrowed"
+      ],
+      "correctAnswer": "borrowing",
+      "explanation_vi": "Đúng. Sau 'He's' dùng động từ đuôi -ing ('borrowing').",
+      "vietnameseExplanation": "Đúng. Sau 'He's' dùng động từ đuôi -ing ('borrowing')."
+    },
+    {
+      "id": "u2l2-q9",
+      "type": "picture-select",
+      "questionText": "Choose sentence for shopping picture:",
+      "options": [
+        "She's shopping.",
+        "She's mailing letters.",
+        "She's borrowing books."
+      ],
+      "optionImages": [
+        "/images/unit2/lesson2/shop.png",
+        "/images/unit2/lesson2/mail_letters.png",
+        "/images/unit2/lesson2/borrow_books.png"
+      ],
+      "correctAnswer": "She's shopping.",
+      "explanation_vi": "Đúng. Bức tranh miêu tả cô ấy đang mua sắm.",
+      "vietnameseExplanation": "Đúng. Bức tranh miêu tả cô ấy đang mua sắm."
+    },
+    {
+      "id": "u2l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Complete: 'What _____ he doing at the post office?'",
+      "options": [
+        "is",
+        "are",
+        "do",
+        "does"
+      ],
+      "correctAnswer": "is",
+      "explanation_vi": "Đúng. Ngôi 'he' đi với 'is' trong thì hiện tại tiếp diễn.",
+      "vietnameseExplanation": "Đúng. Ngôi 'he' đi với 'is' trong thì hiện tại tiếp diễn."
+    }
+  ],
+  "unit2_lesson3": [
+    {
+      "id": "u2l3-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the word:",
+      "options": [
+        "map",
+        "street",
+        "behind"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson3/map.png",
+        "/images/unit2/lesson3/street.png",
+        "/images/unit2/lesson3/behind.png"
+      ],
+      "correctAnswer": "map",
+      "explanation_vi": "Đúng. Bức tranh là hình tấm bản đồ ('map').",
+      "vietnameseExplanation": "Đúng. Bức tranh là hình tấm bản đồ ('map')."
+    },
+    {
+      "id": "u2l3-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'street':",
+      "options": [
+        "street",
+        "map",
+        "over there"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson3/street.png",
+        "/images/unit2/lesson3/map.png",
+        "/images/unit2/lesson3/over_there.png"
+      ],
+      "correctAnswer": "street",
+      "explanation_vi": "Đúng. Đây là hình ảnh con đường ('street').",
+      "vietnameseExplanation": "Đúng. Đây là hình ảnh con đường ('street')."
+    },
+    {
+      "id": "u2l3-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'over there' mean?",
+      "options": [
+        "Ở đằng kia",
+        "Ở trong này",
+        "Phía sau",
+        "Phía trước"
+      ],
+      "correctAnswer": "Ở đằng kia",
+      "explanation_vi": "Đúng. 'over there' có nghĩa là ở đằng kia.",
+      "vietnameseExplanation": "Đúng. 'over there' có nghĩa là ở đằng kia."
+    },
+    {
+      "id": "u2l3-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the polite phrase:",
+      "promptAudioUrl": "/audio/unit2/lesson3/excuse_me.mp3",
+      "options": [
+        "Excuse me",
+        "Thank you",
+        "Goodbye"
+      ],
+      "correctAnswer": "Excuse me",
+      "explanation_vi": "Đúng. Cụm từ hỏi lịch sự là 'Excuse me'.",
+      "vietnameseExplanation": "Đúng. Cụm từ hỏi lịch sự là 'Excuse me'."
+    },
+    {
+      "id": "u2l3-q5",
+      "type": "matching",
+      "questionText": "Match story terms:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "map",
+          "rightId": "r1",
+          "rightText": "bản đồ"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "behind",
+          "rightId": "r2",
+          "rightText": "phía sau"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "helpful",
+          "rightId": "r3",
+          "rightText": "hay giúp đỡ"
+        }
+      ],
+      "correctAnswer": "map-bản đồ, behind-phía sau, helpful-hay giúp đỡ",
+      "explanation_vi": "Đúng. Bạn ghép nối từ vựng rất chuẩn xác.",
+      "vietnameseExplanation": "Đúng. Bạn ghép nối từ vựng rất chuẩn xác."
+    },
+    {
+      "id": "u2l3-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'It's _____ there.'",
+      "correctAnswer": "over",
+      "explanation_vi": "Đúng. Từ còn thiếu là 'over' trong cụm 'over there'.",
+      "vietnameseExplanation": "Đúng. Từ còn thiếu là 'over' trong cụm 'over there'."
+    },
+    {
+      "id": "u2l3-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose response: A: 'Excuse me. Where's the post office?' B: '_____'",
+      "options": [
+        "It's over there.",
+        "I like pizza.",
+        "It's 5 o'clock.",
+        "No, thanks."
+      ],
+      "correctAnswer": "It's over there.",
+      "explanation_vi": "Đúng. Trả lời chỉ hướng 'It's over there.'.",
+      "vietnameseExplanation": "Đúng. Trả lời chỉ hướng 'It's over there.'."
+    },
+    {
+      "id": "u2l3-q8",
+      "type": "multiple-choice",
+      "questionText": "Complete value: 'Be _____ to everyone!'",
+      "options": [
+        "helpful",
+        "lazy",
+        "loud",
+        "late"
+      ],
+      "correctAnswer": "helpful",
+      "explanation_vi": "Đúng. Giá trị bài học khuyên ta 'Be helpful'.",
+      "vietnameseExplanation": "Đúng. Giá trị bài học khuyên ta 'Be helpful'."
+    },
+    {
+      "id": "u2l3-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'behind':",
+      "options": [
+        "behind",
+        "map",
+        "street"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson3/behind.png",
+        "/images/unit2/lesson3/map.png",
+        "/images/unit2/lesson3/street.png"
+      ],
+      "correctAnswer": "behind",
+      "explanation_vi": "Đúng. Hình ảnh vị trí nằm ở phía sau.",
+      "vietnameseExplanation": "Đúng. Hình ảnh vị trí nằm ở phía sau."
+    },
+    {
+      "id": "u2l3-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Complete: '_____ me, where is the station?'",
+      "options": [
+        "Excuse",
+        "Help",
+        "Tell",
+        "Look"
+      ],
+      "correctAnswer": "Excuse",
+      "explanation_vi": "Đúng. Cụm mở đầu lịch sự là 'Excuse me'.",
+      "vietnameseExplanation": "Đúng. Cụm mở đầu lịch sự là 'Excuse me'."
+    }
+  ],
+  "unit2_lesson4": [
+    {
+      "id": "u2l4-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the art action:",
+      "options": [
+        "cut",
+        "color",
+        "glue"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson4/cut.png",
+        "/images/unit2/lesson4/color.png",
+        "/images/unit2/lesson4/glue.png"
+      ],
+      "correctAnswer": "cut",
+      "explanation_vi": "Đúng. Bức tranh tả hành động cắt giấy ('cut').",
+      "vietnameseExplanation": "Đúng. Bức tranh tả hành động cắt giấy ('cut')."
+    },
+    {
+      "id": "u2l4-q2",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'fold':",
+      "options": [
+        "fold",
+        "glue",
+        "color"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson4/fold.png",
+        "/images/unit2/lesson4/glue.png",
+        "/images/unit2/lesson4/color.png"
+      ],
+      "correctAnswer": "fold",
+      "explanation_vi": "Đúng. Bức tranh tả hành động gấp giấy ('fold').",
+      "vietnameseExplanation": "Đúng. Bức tranh tả hành động gấp giấy ('fold')."
+    },
+    {
+      "id": "u2l4-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'glue' mean?",
+      "options": [
+        "Dán bằng hồ",
+        "Tô màu",
+        "Cắt bằng kéo",
+        "Gấp giấy"
+      ],
+      "correctAnswer": "Dán bằng hồ",
+      "explanation_vi": "Đúng. 'glue' nghĩa là dán hồ.",
+      "vietnameseExplanation": "Đúng. 'glue' nghĩa là dán hồ."
+    },
+    {
+      "id": "u2l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the step action:",
+      "promptAudioUrl": "/audio/unit2/lesson4/color.mp3",
+      "options": [
+        "color",
+        "fold",
+        "cut"
+      ],
+      "correctAnswer": "color",
+      "explanation_vi": "Đúng. Từ nghe được là 'color'.",
+      "vietnameseExplanation": "Đúng. Từ nghe được là 'color'."
+    },
+    {
+      "id": "u2l4-q5",
+      "type": "matching",
+      "questionText": "Match art actions with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "color",
+          "rightId": "r1",
+          "rightText": "tô màu"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "cut",
+          "rightId": "r2",
+          "rightText": "cắt"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "fold",
+          "rightId": "r3",
+          "rightText": "gấp"
+        }
+      ],
+      "correctAnswer": "color-tô màu, cut-cắt, fold-gấp",
+      "explanation_vi": "Đúng. Đã nối đúng các từ chỉ thao tác thủ công.",
+      "vietnameseExplanation": "Đúng. Đã nối đúng các từ chỉ thao tác thủ công."
+    },
+    {
+      "id": "u2l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: '_____, color the house.'",
+      "correctAnswer": "First",
+      "explanation_vi": "Đúng. Bước đầu tiên trong quy trình dùng 'First'.",
+      "vietnameseExplanation": "Đúng. Bước đầu tiên trong quy trình dùng 'First'."
+    },
+    {
+      "id": "u2l4-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose response: A: 'What do we do first?' B: '_____'",
+      "options": [
+        "First, color the house.",
+        "Yes, we do.",
+        "It's blue.",
+        "I like paper."
+      ],
+      "correctAnswer": "First, color the house.",
+      "explanation_vi": "Đúng. Hướng dẫn bước thực hiện đầu tiên.",
+      "vietnameseExplanation": "Đúng. Hướng dẫn bước thực hiện đầu tiên."
+    },
+    {
+      "id": "u2l4-q8",
+      "type": "multiple-choice",
+      "questionText": "Choose action: 'Next, _____ the paper with scissors.'",
+      "options": [
+        "cut",
+        "eat",
+        "listen",
+        "run"
+      ],
+      "correctAnswer": "cut",
+      "explanation_vi": "Đúng. Dùng kéo để 'cut' (cắt) giấy.",
+      "vietnameseExplanation": "Đúng. Dùng kéo để 'cut' (cắt) giấy."
+    },
+    {
+      "id": "u2l4-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'glue':",
+      "options": [
+        "glue",
+        "fold",
+        "color"
+      ],
+      "optionImages": [
+        "/images/unit2/lesson4/glue.png",
+        "/images/unit2/lesson4/fold.png",
+        "/images/unit2/lesson4/color.png"
+      ],
+      "correctAnswer": "glue",
+      "explanation_vi": "Đúng. Đây là hình ảnh dán bằng hồ ('glue').",
+      "vietnameseExplanation": "Đúng. Đây là hình ảnh dán bằng hồ ('glue')."
+    },
+    {
+      "id": "u2l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Order word: 'Next, cut the paper. _____, fold it.'",
+      "options": [
+        "Then",
+        "First",
+        "Because",
+        "Or"
+      ],
+      "correctAnswer": "Then",
+      "explanation_vi": "Đúng. Từ nối trình tự tiếp theo là 'Then'.",
+      "vietnameseExplanation": "Đúng. Từ nối trình tự tiếp theo là 'Then'."
+    }
+  ],
+  "checkup_1": [
+    {
+      "id": "cu1-q1",
+      "type": "multiple-choice",
+      "questionText": "Unit 1 Vocabulary: What does 'popcorn' mean?",
+      "options": [
+        "Bỏng ngô",
+        "Sô-cô-la",
+        "Kẹo cao su",
+        "Đậu phộng"
+      ],
+      "correctAnswer": "Bỏng ngô",
+      "explanation_vi": "Đúng. 'popcorn' nghĩa là bỏng ngô.",
+      "vietnameseExplanation": "Đúng. 'popcorn' nghĩa là bỏng ngô."
+    },
+    {
+      "id": "cu1-q2",
+      "type": "multiple-choice",
+      "questionText": "Unit 2 Vocabulary: Where do you borrow books?",
+      "options": [
+        "Library",
+        "Park",
+        "Supermarket",
+        "Movie theater"
+      ],
+      "correctAnswer": "Library",
+      "explanation_vi": "Đúng. Bạn mượn sách ở 'library' (thư viện).",
+      "vietnameseExplanation": "Đúng. Bạn mượn sách ở 'library' (thư viện)."
+    },
+    {
+      "id": "cu1-q3",
+      "type": "multiple-choice",
+      "questionText": "Unit 1 Grammar: Choose the correct verb form: 'He _____ some chocolate.'",
+      "options": [
+        "wants",
+        "want",
+        "wanting",
+        "is want"
+      ],
+      "correctAnswer": "wants",
+      "explanation_vi": "Đúng. Chủ ngữ 'He' cần động từ 'wants'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' cần động từ 'wants'."
+    },
+    {
+      "id": "cu1-q4",
+      "type": "multiple-choice",
+      "questionText": "Unit 2 Grammar: Choose the verb: 'Where _____ the park?'",
+      "options": [
+        "is",
+        "are",
+        "do",
+        "does"
+      ],
+      "correctAnswer": "is",
+      "explanation_vi": "Đúng. 'park' là danh từ số ít nên dùng 'is'.",
+      "vietnameseExplanation": "Đúng. 'park' là danh từ số ít nên dùng 'is'."
+    },
+    {
+      "id": "cu1-q5",
+      "type": "listening",
+      "questionText": "Listen and choose the food item:",
+      "promptAudioUrl": "/audio/checkup1/omelet.mp3",
+      "options": [
+        "omelet",
+        "smoothie",
+        "spaghetti"
+      ],
+      "correctAnswer": "omelet",
+      "explanation_vi": "Đúng. Đoạn băng đọc tên món 'omelet'.",
+      "vietnameseExplanation": "Đúng. Đoạn băng đọc tên món 'omelet'."
+    },
+    {
+      "id": "cu1-q6",
+      "type": "multiple-choice",
+      "questionText": "Reading: 'Tom is at the park. He is kicking a ball. The park is across from the library.' Where is Tom?",
+      "options": [
+        "At the park",
+        "At the library",
+        "At the supermarket",
+        "At home"
+      ],
+      "correctAnswer": "At the park",
+      "explanation_vi": "Đúng. Theo bài đọc, Tom đang ở 'park'.",
+      "vietnameseExplanation": "Đúng. Theo bài đọc, Tom đang ở 'park'."
+    },
+    {
+      "id": "cu1-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'What do they need?' B: '_____' ",
+      "options": [
+        "They need some carrots.",
+        "Yes, they do.",
+        "I want soda.",
+        "It's over there."
+      ],
+      "correctAnswer": "They need some carrots.",
+      "explanation_vi": "Đúng. Câu trả lời đúng cấu trúc 'They need...'.",
+      "vietnameseExplanation": "Đúng. Câu trả lời đúng cấu trúc 'They need...'."
+    },
+    {
+      "id": "cu1-q8",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Complete instructions: 'First, color the picture. Next, _____ the paper.'",
+      "options": [
+        "cut",
+        "eat",
+        "run",
+        "sleep"
+      ],
+      "correctAnswer": "cut",
+      "explanation_vi": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy.",
+      "vietnameseExplanation": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy."
+    }
+  ],
+  "unit3_lesson1": [
+    {
+      "id": "u3l1-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the correct job word:",
+      "options": [
+        "cashier",
+        "librarian",
+        "server"
+      ],
+      "optionImages": [
+        "/images/unit3/lesson1/cashier.png",
+        "/images/unit3/lesson1/librarian.png",
+        "/images/unit3/lesson1/server.png"
+      ],
+      "correctAnswer": "cashier",
+      "explanation_vi": "Đúng. Bức tranh thể hiện nhân viên thu ngân ('cashier').",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện nhân viên thu ngân ('cashier')."
+    },
+    {
+      "id": "u3l1-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'librarian':",
+      "options": [
+        "librarian",
+        "postal worker",
+        "vet"
+      ],
+      "optionImages": [
+        "/images/unit3/lesson1/librarian.png",
+        "/images/unit3/lesson1/postal_worker.png",
+        "/images/unit3/lesson1/vet.png"
+      ],
+      "correctAnswer": "librarian",
+      "explanation_vi": "Đúng. Đây là hình ảnh thủ thư ('librarian').",
+      "vietnameseExplanation": "Đúng. Đây là hình ảnh thủ thư ('librarian')."
+    },
+    {
+      "id": "u3l1-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'postal worker' mean in Vietnamese?",
+      "options": [
+        "Nhân viên bưu điện",
+        "Bác sĩ thú y",
+        "Thủ thư",
+        "Đầu bếp"
+      ],
+      "correctAnswer": "Nhân viên bưu điện",
+      "explanation_vi": "Đúng. 'postal worker' nghĩa là nhân viên bưu điện.",
+      "vietnameseExplanation": "Đúng. 'postal worker' nghĩa là nhân viên bưu điện."
+    },
+    {
+      "id": "u3l1-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/unit3/lesson1/salesperson.mp3",
+      "options": [
+        "salesperson",
+        "server",
+        "cashier"
+      ],
+      "correctAnswer": "salesperson",
+      "explanation_vi": "Đúng. Đoạn băng đọc từ 'salesperson'.",
+      "vietnameseExplanation": "Đúng. Đoạn băng đọc từ 'salesperson'."
+    },
+    {
+      "id": "u3l1-q5",
+      "type": "matching",
+      "questionText": "Match occupations with their Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "cashier",
+          "rightId": "r1",
+          "rightText": "nhân viên thu ngân"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "vet",
+          "rightId": "r2",
+          "rightText": "bác sĩ thú y"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "server",
+          "rightId": "r3",
+          "rightText": "nhân viên phục vụ"
+        }
+      ],
+      "correctAnswer": "cashier-nhân viên thu ngân, vet-bác sĩ thú y, server-nhân viên phục vụ",
+      "explanation_vi": "Đúng. Bạn đã nối chính xác tên nghề nghiệp.",
+      "vietnameseExplanation": "Đúng. Bạn đã nối chính xác tên nghề nghiệp."
+    },
+    {
+      "id": "u3l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete the question: 'Where does the _____ work?' (thủ thư)",
+      "correctAnswer": "librarian",
+      "explanation_vi": "Đúng. Thủ thư trong tiếng Anh là 'librarian'.",
+      "vietnameseExplanation": "Đúng. Thủ thư trong tiếng Anh là 'librarian'."
+    },
+    {
+      "id": "u3l1-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the response: A: 'Who works at the supermarket?' B: '_____'",
+      "options": [
+        "The cashier works at the supermarket.",
+        "Yes, he does.",
+        "I want popcorn.",
+        "It's next to the park."
+      ],
+      "correctAnswer": "The cashier works at the supermarket.",
+      "explanation_vi": "Đúng. Hỏi 'Who works at...' trả lời chỉ người làm việc.",
+      "vietnameseExplanation": "Đúng. Hỏi 'Who works at...' trả lời chỉ người làm việc."
+    },
+    {
+      "id": "u3l1-q8",
+      "type": "multiple-choice",
+      "questionText": "Where does the vet work?",
+      "options": [
+        "The vet works at the animal hospital.",
+        "The vet works at the library.",
+        "The vet works at the bank.",
+        "The vet works at the store."
+      ],
+      "correctAnswer": "The vet works at the animal hospital.",
+      "explanation_vi": "Đúng. Bác sĩ thú y làm việc tại 'animal hospital'.",
+      "vietnameseExplanation": "Đúng. Bác sĩ thú y làm việc tại 'animal hospital'."
+    },
+    {
+      "id": "u3l1-q9",
+      "type": "picture-select",
+      "questionText": "Choose the sentence matching the postal worker picture:",
+      "options": [
+        "The postal worker works at the post office.",
+        "The server works at the restaurant.",
+        "The cashier works at the supermarket."
+      ],
+      "optionImages": [
+        "/images/unit3/lesson1/postal_worker.png",
+        "/images/unit3/lesson1/server.png",
+        "/images/unit3/lesson1/cashier.png"
+      ],
+      "correctAnswer": "The postal worker works at the post office.",
+      "explanation_vi": "Đúng. Nhân viên bưu điện làm tại 'post office'.",
+      "vietnameseExplanation": "Đúng. Nhân viên bưu điện làm tại 'post office'."
+    },
+    {
+      "id": "u3l1-q10",
+      "type": "multiple-choice",
+      "questionText": "Grammar: Choose the correct word: 'Where _____ the server work?'",
+      "options": [
+        "does",
+        "do",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "does",
+      "explanation_vi": "Đúng. Ngôi thứ ba số ít dùng trợ động từ 'does'.",
+      "vietnameseExplanation": "Đúng. Ngôi thứ ba số ít dùng trợ động từ 'does'."
+    }
+  ],
+  "unit3_lesson2": [
+    {
+      "id": "u3l2-q1",
+      "type": "multiple-choice",
+      "questionText": "What does 'make food' mean in Vietnamese?",
+      "options": [
+        "Nấu ăn / làm thức ăn",
+        "Lái máy bay",
+        "Chữa cháy",
+        "Bán hàng"
+      ],
+      "correctAnswer": "Nấu ăn / làm thức ăn",
+      "explanation_vi": "Đúng. 'make food' nghĩa là nấu ăn / làm thức ăn.",
+      "vietnameseExplanation": "Đúng. 'make food' nghĩa là nấu ăn / làm thức ăn."
+    },
+    {
+      "id": "u3l2-q2",
+      "type": "multiple-choice",
+      "questionText": "What does the cook do?",
+      "options": [
+        "The cook makes food.",
+        "The cook flies planes.",
+        "The cook fights fires.",
+        "The cook drives buses."
+      ],
+      "correctAnswer": "The cook makes food.",
+      "explanation_vi": "Đúng. Đầu bếp ('cook') nấu thức ăn ('makes food').",
+      "vietnameseExplanation": "Đúng. Đầu bếp ('cook') nấu thức ăn ('makes food')."
+    },
+    {
+      "id": "u3l2-q3",
+      "type": "multiple-choice",
+      "questionText": "Does the firefighter fight fires?",
+      "options": [
+        "Yes, he does.",
+        "No, he doesn't.",
+        "Yes, he is.",
+        "No, he can't."
+      ],
+      "correctAnswer": "Yes, he does.",
+      "explanation_vi": "Đúng. Lính chữa cháy thì chữa cháy ('Yes, he does').",
+      "vietnameseExplanation": "Đúng. Lính chữa cháy thì chữa cháy ('Yes, he does')."
+    },
+    {
+      "id": "u3l2-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the action:",
+      "promptAudioUrl": "/audio/unit3/lesson2/help_sick_animals.mp3",
+      "options": [
+        "help sick animals",
+        "drive buses",
+        "fly planes"
+      ],
+      "correctAnswer": "help sick animals",
+      "explanation_vi": "Đúng. Đoạn băng đọc 'help sick animals'.",
+      "vietnameseExplanation": "Đúng. Đoạn băng đọc 'help sick animals'."
+    },
+    {
+      "id": "u3l2-q5",
+      "type": "matching",
+      "questionText": "Match actions with their Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "drive buses",
+          "rightId": "r1",
+          "rightText": "lái xe buýt"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "fly planes",
+          "rightId": "r2",
+          "rightText": "lái máy bay"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "sell things",
+          "rightId": "r3",
+          "rightText": "bán hàng"
+        }
+      ],
+      "correctAnswer": "drive buses-lái xe buýt, fly planes-lái máy bay, sell things-bán hàng",
+      "explanation_vi": "Đúng. Đã nối chính xác các động từ chỉ công việc.",
+      "vietnameseExplanation": "Đúng. Đã nối chính xác các động từ chỉ công việc."
+    },
+    {
+      "id": "u3l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'The pilot _____ planes.'",
+      "correctAnswer": "flies",
+      "explanation_vi": "Đúng. 'pilot' chia động từ ngôi thứ ba số ít là 'flies'.",
+      "vietnameseExplanation": "Đúng. 'pilot' chia động từ ngôi thứ ba số ít là 'flies'."
+    },
+    {
+      "id": "u3l2-q7",
+      "type": "multiple-choice",
+      "questionText": "Does the bus driver fly planes?",
+      "options": [
+        "No, he doesn't.",
+        "Yes, he does.",
+        "No, he isn't.",
+        "Yes, he is."
+      ],
+      "correctAnswer": "No, he doesn't.",
+      "explanation_vi": "Đúng. Tài xế xe buýt không lái máy bay.",
+      "vietnameseExplanation": "Đúng. Tài xế xe buýt không lái máy bay."
+    },
+    {
+      "id": "u3l2-q8",
+      "type": "multiple-choice",
+      "questionText": "What does the salesperson do?",
+      "options": [
+        "The salesperson sells things.",
+        "The salesperson helps sick animals.",
+        "The salesperson fights fires.",
+        "The salesperson makes food."
+      ],
+      "correctAnswer": "The salesperson sells things.",
+      "explanation_vi": "Đúng. Nhân viên bán hàng thì bán đồ ('sells things').",
+      "vietnameseExplanation": "Đúng. Nhân viên bán hàng thì bán đồ ('sells things')."
+    },
+    {
+      "id": "u3l2-q9",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'help sick animals':",
+      "options": [
+        "help sick animals",
+        "fight fires",
+        "drive buses"
+      ],
+      "optionImages": [
+        "/images/unit3/lesson2/help_sick_animals.png",
+        "/images/unit3/lesson2/fight_fires.png",
+        "/images/unit3/lesson2/drive_buses.png"
+      ],
+      "correctAnswer": "help sick animals",
+      "explanation_vi": "Đúng. Đây là bức tranh khám chữa bệnh cho động vật.",
+      "vietnameseExplanation": "Đúng. Đây là bức tranh khám chữa bệnh cho động vật."
+    },
+    {
+      "id": "u3l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'The vet _____ sick animals.'",
+      "options": [
+        "helps",
+        "help",
+        "helping",
+        "is help"
+      ],
+      "correctAnswer": "helps",
+      "explanation_vi": "Đúng. 'vet' là danh từ số ít nên dùng 'helps'.",
+      "vietnameseExplanation": "Đúng. 'vet' là danh từ số ít nên dùng 'helps'."
+    }
+  ],
+  "unit3_lesson3": [
+    {
+      "id": "u3l3-q1",
+      "type": "multiple-choice",
+      "questionText": "What does 'sweater' mean in Vietnamese?",
+      "options": [
+        "Áo len",
+        "Áo sơ mi",
+        "Chiếc quần",
+        "Đôi giày"
+      ],
+      "correctAnswer": "Áo len",
+      "explanation_vi": "Đúng. 'sweater' dịch sang tiếng Việt là áo len.",
+      "vietnameseExplanation": "Đúng. 'sweater' dịch sang tiếng Việt là áo len."
+    },
+    {
+      "id": "u3l3-q2",
+      "type": "multiple-choice",
+      "questionText": "Choose answer for: 'Excuse me. How much is this sweater?'",
+      "options": [
+        "It's $30.",
+        "Yes, please.",
+        "I like blue.",
+        "It's on the table."
+      ],
+      "correctAnswer": "It's $30.",
+      "explanation_vi": "Đúng. Trả lời câu hỏi giá tiền bằng 'It's $30'.",
+      "vietnameseExplanation": "Đúng. Trả lời câu hỏi giá tiền bằng 'It's $30'."
+    },
+    {
+      "id": "u3l3-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'present' mean in Vietnamese?",
+      "options": [
+        "Món quà",
+        "Thành phố",
+        "Bài học",
+        "Thủ thư"
+      ],
+      "correctAnswer": "Món quà",
+      "explanation_vi": "Đúng. 'present' nghĩa là món quà.",
+      "vietnameseExplanation": "Đúng. 'present' nghĩa là món quà."
+    },
+    {
+      "id": "u3l3-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/unit3/lesson3/dollar.mp3",
+      "options": [
+        "dollar",
+        "sweater",
+        "cost"
+      ],
+      "correctAnswer": "dollar",
+      "explanation_vi": "Đúng. Từ phát ra là 'dollar'.",
+      "vietnameseExplanation": "Đúng. Từ phát ra là 'dollar'."
+    },
+    {
+      "id": "u3l3-q5",
+      "type": "matching",
+      "questionText": "Match story words with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "buy",
+          "rightId": "r1",
+          "rightText": "mua"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "cost",
+          "rightId": "r2",
+          "rightText": "có giá tiền"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "thoughtful",
+          "rightId": "r3",
+          "rightText": "chu đáo"
+        }
+      ],
+      "correctAnswer": "buy-mua, cost-có giá tiền, thoughtful-chu đáo",
+      "explanation_vi": "Đúng. Nối từ vựng chính xác.",
+      "vietnameseExplanation": "Đúng. Nối từ vựng chính xác."
+    },
+    {
+      "id": "u3l3-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'How _____ is this sweater?'",
+      "correctAnswer": "much",
+      "explanation_vi": "Đúng. Hỏi giá tiền dùng 'How much'.",
+      "vietnameseExplanation": "Đúng. Hỏi giá tiền dùng 'How much'."
+    },
+    {
+      "id": "u3l3-q7",
+      "type": "multiple-choice",
+      "questionText": "Value: Complete the lesson motto: 'Be _____!'",
+      "options": [
+        "thoughtful",
+        "angry",
+        "sad",
+        "lazy"
+      ],
+      "correctAnswer": "thoughtful",
+      "explanation_vi": "Đúng. Bài học dạy chúng ta biết chu đáo ('thoughtful').",
+      "vietnameseExplanation": "Đúng. Bài học dạy chúng ta biết chu đáo ('thoughtful')."
+    },
+    {
+      "id": "u3l3-q8",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'How much _____ this present?'",
+      "options": [
+        "is",
+        "are",
+        "do",
+        "does"
+      ],
+      "correctAnswer": "is",
+      "explanation_vi": "Đúng. 'this present' là danh từ số ít nên dùng 'is'.",
+      "vietnameseExplanation": "Đúng. 'this present' là danh từ số ít nên dùng 'is'."
+    },
+    {
+      "id": "u3l3-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'sweater':",
+      "options": [
+        "sweater",
+        "present",
+        "dollar"
+      ],
+      "optionImages": [
+        "/images/unit3/lesson3/sweater.png",
+        "/images/unit3/lesson3/present.png",
+        "/images/unit3/lesson3/dollar.png"
+      ],
+      "correctAnswer": "sweater",
+      "explanation_vi": "Đúng. Bức tranh hiển thị áo len.",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị áo len."
+    },
+    {
+      "id": "u3l3-q10",
+      "type": "multiple-choice",
+      "questionText": "Complete sentence: 'It costs thirty _____.'",
+      "options": [
+        "dollars",
+        "cents",
+        "books",
+        "cats"
+      ],
+      "correctAnswer": "dollars",
+      "explanation_vi": "Đúng. Đơn vị tiền tệ là 'dollars'.",
+      "vietnameseExplanation": "Đúng. Đơn vị tiền tệ là 'dollars'."
+    }
+  ],
+  "unit3_lesson4": [
+    {
+      "id": "u3l4-q1",
+      "type": "multiple-choice",
+      "questionText": "What does 'fever' mean in Vietnamese?",
+      "options": [
+        "Sốt",
+        "Cảm lạnh",
+        "Đau bụng",
+        "Đau đầu"
+      ],
+      "correctAnswer": "Sốt",
+      "explanation_vi": "Đúng. 'fever' nghĩa là sốt.",
+      "vietnameseExplanation": "Đúng. 'fever' nghĩa là sốt."
+    },
+    {
+      "id": "u3l4-q2",
+      "type": "multiple-choice",
+      "questionText": "Question: 'What's the matter with him?' Answer: '_____'",
+      "options": [
+        "He has a cold.",
+        "He wants soda.",
+        "He works at the library.",
+        "He is ten."
+      ],
+      "correctAnswer": "He has a cold.",
+      "explanation_vi": "Đúng. 'He has a cold' trả lời về triệu chứng bị cảm.",
+      "vietnameseExplanation": "Đúng. 'He has a cold' trả lời về triệu chứng bị cảm."
+    },
+    {
+      "id": "u3l4-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'stomachache' mean?",
+      "options": [
+        "Đau bụng",
+        "Đau đầu",
+        "Đau răng",
+        "Cảm cúm"
+      ],
+      "correctAnswer": "Đau bụng",
+      "explanation_vi": "Đúng. 'stomachache' là đau bụng.",
+      "vietnameseExplanation": "Đúng. 'stomachache' là đau bụng."
+    },
+    {
+      "id": "u3l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the illness:",
+      "promptAudioUrl": "/audio/unit3/lesson4/headache.mp3",
+      "options": [
+        "headache",
+        "fever",
+        "cold"
+      ],
+      "correctAnswer": "headache",
+      "explanation_vi": "Đúng. Từ nghe được là 'headache'.",
+      "vietnameseExplanation": "Đúng. Từ nghe được là 'headache'."
+    },
+    {
+      "id": "u3l4-q5",
+      "type": "matching",
+      "questionText": "Match illnesses with Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "cold",
+          "rightId": "r1",
+          "rightText": "cảm lạnh"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "fever",
+          "rightId": "r2",
+          "rightText": "sốt"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "headache",
+          "rightId": "r3",
+          "rightText": "đau đầu"
+        }
+      ],
+      "correctAnswer": "cold-cảm lạnh, fever-sốt, headache-đau đầu",
+      "explanation_vi": "Đúng. Ghép đúng từ vựng triệu chứng sức khỏe.",
+      "vietnameseExplanation": "Đúng. Ghép đúng từ vựng triệu chứng sức khỏe."
+    },
+    {
+      "id": "u3l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'What's the _____ with her?'",
+      "correctAnswer": "matter",
+      "explanation_vi": "Đúng. Mẫu câu hỏi sức khỏe 'What's the matter with...'.",
+      "vietnameseExplanation": "Đúng. Mẫu câu hỏi sức khỏe 'What's the matter with...'."
+    },
+    {
+      "id": "u3l4-q7",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'She _____ a headache.'",
+      "options": [
+        "has",
+        "have",
+        "is",
+        "does"
+      ],
+      "correctAnswer": "has",
+      "explanation_vi": "Đúng. Ngôi 'She' đi với động từ 'has'.",
+      "vietnameseExplanation": "Đúng. Ngôi 'She' đi với động từ 'has'."
+    },
+    {
+      "id": "u3l4-q8",
+      "type": "multiple-choice",
+      "questionText": "A: 'What's the matter with Danny?' B: '_____'",
+      "options": [
+        "He has a fever.",
+        "Yes, he is.",
+        "He works at a bank.",
+        "He likes apples."
+      ],
+      "correctAnswer": "He has a fever.",
+      "explanation_vi": "Đúng. Trả lời đúng cấu trúc sức khỏe 'He has a fever'.",
+      "vietnameseExplanation": "Đúng. Trả lời đúng cấu trúc sức khỏe 'He has a fever'."
+    },
+    {
+      "id": "u3l4-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'cold':",
+      "options": [
+        "cold",
+        "fever",
+        "stomachache"
+      ],
+      "optionImages": [
+        "/images/unit3/lesson4/cold.png",
+        "/images/unit3/lesson4/fever.png",
+        "/images/unit3/lesson4/stomachache.png"
+      ],
+      "correctAnswer": "cold",
+      "explanation_vi": "Đúng. Bức tranh thể hiện bị cảm lạnh.",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện bị cảm lạnh."
+    },
+    {
+      "id": "u3l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Choose correct preposition: 'What's the matter _____ him?'",
+      "options": [
+        "with",
+        "for",
+        "to",
+        "at"
+      ],
+      "correctAnswer": "with",
+      "explanation_vi": "Đúng. Đi với giới từ 'with'.",
+      "vietnameseExplanation": "Đúng. Đi với giới từ 'with'."
+    }
+  ],
+  "unit4_lesson1": [
+    {
+      "id": "u4l1-q1",
+      "type": "picture-select",
+      "questionText": "Look at picture and choose correct family word:",
+      "options": [
+        "parents",
+        "grandparents",
+        "aunt"
+      ],
+      "optionImages": [
+        "/images/unit4/lesson1/parents.png",
+        "/images/unit4/lesson1/grandparents.png",
+        "/images/unit4/lesson1/aunt.png"
+      ],
+      "correctAnswer": "parents",
+      "explanation_vi": "Đúng. Bức tranh hiển thị bố mẹ ('parents').",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị bố mẹ ('parents')."
+    },
+    {
+      "id": "u4l1-q2",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'grandparents':",
+      "options": [
+        "grandparents",
+        "parents",
+        "uncle"
+      ],
+      "optionImages": [
+        "/images/unit4/lesson1/grandparents.png",
+        "/images/unit4/lesson1/parents.png",
+        "/images/unit4/lesson1/uncle.png"
+      ],
+      "correctAnswer": "grandparents",
+      "explanation_vi": "Đúng. Bức tranh hiển thị ông bà ('grandparents').",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị ông bà ('grandparents')."
+    },
+    {
+      "id": "u4l1-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'uncle' mean in Vietnamese?",
+      "options": [
+        "Chú / bác / cậu",
+        "Cô / dì / bác gái",
+        "Anh chị em họ",
+        "Ông bà"
+      ],
+      "correctAnswer": "Chú / bác / cậu",
+      "explanation_vi": "Đúng. 'uncle' dịch là chú / bác / cậu.",
+      "vietnameseExplanation": "Đúng. 'uncle' dịch là chú / bác / cậu."
+    },
+    {
+      "id": "u4l1-q4",
+      "type": "listening",
+      "questionText": "Listen and choose word:",
+      "promptAudioUrl": "/audio/unit4/lesson1/aunt.mp3",
+      "options": [
+        "aunt",
+        "uncle",
+        "cousin"
+      ],
+      "correctAnswer": "aunt",
+      "explanation_vi": "Đúng. Từ phát ra trong đoạn băng là 'aunt'.",
+      "vietnameseExplanation": "Đúng. Từ phát ra trong đoạn băng là 'aunt'."
+    },
+    {
+      "id": "u4l1-q5",
+      "type": "matching",
+      "questionText": "Match family words with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "parents",
+          "rightId": "r1",
+          "rightText": "bố mẹ"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "uncle",
+          "rightId": "r2",
+          "rightText": "chú/bác/cậu"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "cousin",
+          "rightId": "r3",
+          "rightText": "anh chị em họ"
+        }
+      ],
+      "correctAnswer": "parents-bố mẹ, uncle-chú/bác/cậu, cousin-anh chị em họ",
+      "explanation_vi": "Đúng. Nối chính xác các từ chỉ người thân.",
+      "vietnameseExplanation": "Đúng. Nối chính xác các từ chỉ người thân."
+    },
+    {
+      "id": "u4l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'Who _____ they? They're my parents.'",
+      "correctAnswer": "are",
+      "explanation_vi": "Đúng. Danh từ số nhiều 'they' đi với 'are'.",
+      "vietnameseExplanation": "Đúng. Danh từ số nhiều 'they' đi với 'are'."
+    },
+    {
+      "id": "u4l1-q7",
+      "type": "multiple-choice",
+      "questionText": "A: 'Who's he?' B: '_____'",
+      "options": [
+        "He's her uncle.",
+        "They're my parents.",
+        "She's my cousin.",
+        "It's on the table."
+      ],
+      "correctAnswer": "He's her uncle.",
+      "explanation_vi": "Đúng. Hỏi 'Who's he?' trả lời 'He's...'.",
+      "vietnameseExplanation": "Đúng. Hỏi 'Who's he?' trả lời 'He's...'."
+    },
+    {
+      "id": "u4l1-q8",
+      "type": "multiple-choice",
+      "questionText": "Complete sentence: 'They're _____ parents.'",
+      "options": [
+        "Danny's",
+        "Danny",
+        "Dannys'",
+        "he"
+      ],
+      "correctAnswer": "Danny's",
+      "explanation_vi": "Đúng. Sở hữu cách tên riêng dùng 'Danny's'.",
+      "vietnameseExplanation": "Đúng. Sở hữu cách tên riêng dùng 'Danny's'."
+    },
+    {
+      "id": "u4l1-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'cousin':",
+      "options": [
+        "cousin",
+        "parents",
+        "grandparents"
+      ],
+      "optionImages": [
+        "/images/unit4/lesson1/cousin.png",
+        "/images/unit4/lesson1/parents.png",
+        "/images/unit4/lesson1/grandparents.png"
+      ],
+      "correctAnswer": "cousin",
+      "explanation_vi": "Đúng. Bức tranh chỉ người anh chị em họ.",
+      "vietnameseExplanation": "Đúng. Bức tranh chỉ người anh chị em họ."
+    },
+    {
+      "id": "u4l1-q10",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'Who's she?' -> 'She's _____ aunt.'",
+      "options": [
+        "his",
+        "he",
+        "him",
+        "they"
+      ],
+      "correctAnswer": "his",
+      "explanation_vi": "Đúng. Tính từ sở hữu chỉ nam là 'his'.",
+      "vietnameseExplanation": "Đúng. Tính từ sở hữu chỉ nam là 'his'."
+    }
+  ],
+  "unit4_lesson2": [
+    {
+      "id": "u4l2-q1",
+      "type": "multiple-choice",
+      "questionText": "What does 'fork' mean in Vietnamese?",
+      "options": [
+        "Cái nĩa / dĩa",
+        "Con dao",
+        "Cái thìa",
+        "Cái đĩa"
+      ],
+      "correctAnswer": "Cái nĩa / dĩa",
+      "explanation_vi": "Đúng. 'fork' nghĩa là cái nĩa.",
+      "vietnameseExplanation": "Đúng. 'fork' nghĩa là cái nĩa."
+    },
+    {
+      "id": "u4l2-q2",
+      "type": "multiple-choice",
+      "questionText": "Question: 'Whose fork is that?' Answer: '_____'",
+      "options": [
+        "It's mine.",
+        "Yes, it is.",
+        "No, thanks.",
+        "I like pizza."
+      ],
+      "correctAnswer": "It's mine.",
+      "explanation_vi": "Đúng. Hỏi 'Whose...' trả lời 'It's mine.'",
+      "vietnameseExplanation": "Đúng. Hỏi 'Whose...' trả lời 'It's mine.'"
+    },
+    {
+      "id": "u4l2-q3",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'This spoon is _____.' (của tớ)",
+      "options": [
+        "mine",
+        "my",
+        "me",
+        "I"
+      ],
+      "correctAnswer": "mine",
+      "explanation_vi": "Đúng. Đại từ sở hữu đứng cuối câu là 'mine'.",
+      "vietnameseExplanation": "Đúng. Đại từ sở hữu đứng cuối câu là 'mine'."
+    },
+    {
+      "id": "u4l2-q4",
+      "type": "listening",
+      "questionText": "Listen and choose word:",
+      "promptAudioUrl": "/audio/unit4/lesson2/knife.mp3",
+      "options": [
+        "knife",
+        "fork",
+        "spoon"
+      ],
+      "correctAnswer": "knife",
+      "explanation_vi": "Đúng. Từ phát ra là 'knife'.",
+      "vietnameseExplanation": "Đúng. Từ phát ra là 'knife'."
+    },
+    {
+      "id": "u4l2-q5",
+      "type": "matching",
+      "questionText": "Match tableware items with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "plate",
+          "rightId": "r1",
+          "rightText": "cái đĩa"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "bowl",
+          "rightId": "r2",
+          "rightText": "cái bát"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "cup",
+          "rightId": "r3",
+          "rightText": "cái cốc"
+        }
+      ],
+      "correctAnswer": "plate-cái đĩa, bowl-cái bát, cup-cái cốc",
+      "explanation_vi": "Đúng. Đã ghép đúng đồ dùng ăn uống.",
+      "vietnameseExplanation": "Đúng. Đã ghép đúng đồ dùng ăn uống."
+    },
+    {
+      "id": "u4l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: '_____ fork is that? It's mine.'",
+      "correctAnswer": "Whose",
+      "explanation_vi": "Đúng. Từ hỏi sở hữu đồ vật là 'Whose'.",
+      "vietnameseExplanation": "Đúng. Từ hỏi sở hữu đồ vật là 'Whose'."
+    },
+    {
+      "id": "u4l2-q7",
+      "type": "multiple-choice",
+      "questionText": "A: 'Whose cup is that?' B: '_____'",
+      "options": [
+        "It's mine.",
+        "It's red.",
+        "Yes, I have.",
+        "Under the bed."
+      ],
+      "correctAnswer": "It's mine.",
+      "explanation_vi": "Đúng. Trả lời sở hữu bằng 'It's mine'.",
+      "vietnameseExplanation": "Đúng. Trả lời sở hữu bằng 'It's mine'."
+    },
+    {
+      "id": "u4l2-q8",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'This bowl _____ mine.'",
+      "options": [
+        "is",
+        "are",
+        "do",
+        "have"
+      ],
+      "correctAnswer": "is",
+      "explanation_vi": "Đúng. 'This bowl' là danh từ số ít nên dùng 'is'.",
+      "vietnameseExplanation": "Đúng. 'This bowl' là danh từ số ít nên dùng 'is'."
+    },
+    {
+      "id": "u4l2-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'plate':",
+      "options": [
+        "plate",
+        "bowl",
+        "cup"
+      ],
+      "optionImages": [
+        "/images/unit4/lesson2/plate.png",
+        "/images/unit4/lesson2/bowl.png",
+        "/images/unit4/lesson2/cup.png"
+      ],
+      "correctAnswer": "plate",
+      "explanation_vi": "Đúng. Bức tranh hiển thị chiếc đĩa.",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị chiếc đĩa."
+    },
+    {
+      "id": "u4l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Complete dialogue: A: 'Whose knife is that?' B: 'It's _____.'",
+      "options": [
+        "mine",
+        "my",
+        "I",
+        "me"
+      ],
+      "correctAnswer": "mine",
+      "explanation_vi": "Đúng. Dùng 'mine' ở vị trí vị ngữ.",
+      "vietnameseExplanation": "Đúng. Dùng 'mine' ở vị trí vị ngữ."
+    }
+  ],
+  "unit4_lesson3": [
+    {
+      "id": "u4l3-q1",
+      "type": "multiple-choice",
+      "questionText": "What does 'chopsticks' mean in Vietnamese?",
+      "options": [
+        "Đôi đũa",
+        "Cái thìa",
+        "Cái nĩa",
+        "Con dao"
+      ],
+      "correctAnswer": "Đôi đũa",
+      "explanation_vi": "Đúng. 'chopsticks' nghĩa là đôi đũa.",
+      "vietnameseExplanation": "Đúng. 'chopsticks' nghĩa là đôi đũa."
+    },
+    {
+      "id": "u4l3-q2",
+      "type": "multiple-choice",
+      "questionText": "Question: 'How do you use chopsticks?' Answer: '_____'",
+      "options": [
+        "Like this.",
+        "Yes, I do.",
+        "At 12 o'clock.",
+        "It's $10."
+      ],
+      "correctAnswer": "Like this.",
+      "explanation_vi": "Đúng. Hướng dẫn thực hành bằng 'Like this'.",
+      "vietnameseExplanation": "Đúng. Hướng dẫn thực hành bằng 'Like this'."
+    },
+    {
+      "id": "u4l3-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'noodles' mean?",
+      "options": [
+        "Mỳ / hủ tiếu",
+        "Cơm",
+        "Bánh mì",
+        "Trứng"
+      ],
+      "correctAnswer": "Mỳ / hủ tiếu",
+      "explanation_vi": "Đúng. 'noodles' là món mỳ.",
+      "vietnameseExplanation": "Đúng. 'noodles' là món mỳ."
+    },
+    {
+      "id": "u4l3-q4",
+      "type": "listening",
+      "questionText": "Listen and choose word:",
+      "promptAudioUrl": "/audio/unit4/lesson3/learn.mp3",
+      "options": [
+        "learn",
+        "practice",
+        "easy"
+      ],
+      "correctAnswer": "learn",
+      "explanation_vi": "Đúng. Đoạn băng đọc từ 'learn'.",
+      "vietnameseExplanation": "Đúng. Đoạn băng đọc từ 'learn'."
+    },
+    {
+      "id": "u4l3-q5",
+      "type": "matching",
+      "questionText": "Match story words with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "practice",
+          "rightId": "r1",
+          "rightText": "thực hành"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "easy",
+          "rightId": "r2",
+          "rightText": "dễ dàng"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "helpful",
+          "rightId": "r3",
+          "rightText": "hay giúp đỡ"
+        }
+      ],
+      "correctAnswer": "practice-thực hành, easy-dễ dàng, helpful-hay giúp đỡ",
+      "explanation_vi": "Đúng. Nối từ vựng chính xác.",
+      "vietnameseExplanation": "Đúng. Nối từ vựng chính xác."
+    },
+    {
+      "id": "u4l3-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'How do you _____ chopsticks?'",
+      "correctAnswer": "use",
+      "explanation_vi": "Đúng. Động từ sử dụng là 'use'.",
+      "vietnameseExplanation": "Đúng. Động từ sử dụng là 'use'."
+    },
+    {
+      "id": "u4l3-q7",
+      "type": "multiple-choice",
+      "questionText": "Value: Complete story value: 'Be _____!'",
+      "options": [
+        "helpful",
+        "lazy",
+        "sad",
+        "rude"
+      ],
+      "correctAnswer": "helpful",
+      "explanation_vi": "Đúng. Giá trị bài học dạy ta hay giúp đỡ ('helpful').",
+      "vietnameseExplanation": "Đúng. Giá trị bài học dạy ta hay giúp đỡ ('helpful')."
+    },
+    {
+      "id": "u4l3-q8",
+      "type": "multiple-choice",
+      "questionText": "Complete phrase: 'It's easy with _____.'",
+      "options": [
+        "practice",
+        "play",
+        "sleep",
+        "sing"
+      ],
+      "correctAnswer": "practice",
+      "explanation_vi": "Đúng. Mọi thứ trở nên dễ dàng nhờ luyện tập ('practice').",
+      "vietnameseExplanation": "Đúng. Mọi thứ trở nên dễ dàng nhờ luyện tập ('practice')."
+    },
+    {
+      "id": "u4l3-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'chopsticks':",
+      "options": [
+        "chopsticks",
+        "noodles",
+        "easy"
+      ],
+      "optionImages": [
+        "/images/unit4/lesson3/chopsticks.png",
+        "/images/unit4/lesson3/noodles.png",
+        "/images/unit4/lesson3/easy.png"
+      ],
+      "correctAnswer": "chopsticks",
+      "explanation_vi": "Đúng. Hình ảnh hiển thị đôi đũa.",
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị đôi đũa."
+    },
+    {
+      "id": "u4l3-q10",
+      "type": "multiple-choice",
+      "questionText": "A: 'How do you use chopsticks?' B: '_____'",
+      "options": [
+        "Like this.",
+        "Yes, please.",
+        "I am nine.",
+        "In the kitchen."
+      ],
+      "correctAnswer": "Like this.",
+      "explanation_vi": "Đúng. Trả lời hướng dẫn 'Like this'.",
+      "vietnameseExplanation": "Đúng. Trả lời hướng dẫn 'Like this'."
+    }
+  ],
+  "unit4_lesson4": [
+    {
+      "id": "u4l4-q1",
+      "type": "multiple-choice",
+      "questionText": "What country is 'Mexico'?",
+      "options": [
+        "Nước Mê-hi-cô",
+        "Nước Nhật Bản",
+        "Nước Nga",
+        "Nước Thổ Nhĩ Kỳ"
+      ],
+      "correctAnswer": "Nước Mê-hi-cô",
+      "explanation_vi": "Đúng. 'Mexico' là nước Mê-hi-cô.",
+      "vietnameseExplanation": "Đúng. 'Mexico' là nước Mê-hi-cô."
+    },
+    {
+      "id": "u4l4-q2",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'This is our flag. It's _____.'",
+      "options": [
+        "ours",
+        "our",
+        "us",
+        "we"
+      ],
+      "correctAnswer": "ours",
+      "explanation_vi": "Đúng. Đại từ sở hữu tương ứng với 'our' là 'ours'.",
+      "vietnameseExplanation": "Đúng. Đại từ sở hữu tương ứng với 'our' là 'ours'."
+    },
+    {
+      "id": "u4l4-q3",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'This is their flag. It's _____.'",
+      "options": [
+        "theirs",
+        "their",
+        "them",
+        "they"
+      ],
+      "correctAnswer": "theirs",
+      "explanation_vi": "Đúng. Đại từ sở hữu tương ứng với 'their' là 'theirs'.",
+      "vietnameseExplanation": "Đúng. Đại từ sở hữu tương ứng với 'their' là 'theirs'."
+    },
+    {
+      "id": "u4l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose country name:",
+      "promptAudioUrl": "/audio/unit4/lesson4/japan.mp3",
+      "options": [
+        "Japan",
+        "Mexico",
+        "Russia"
+      ],
+      "correctAnswer": "Japan",
+      "explanation_vi": "Đúng. Đoạn băng phát âm tên nước 'Japan'.",
+      "vietnameseExplanation": "Đúng. Đoạn băng phát âm tên nước 'Japan'."
+    },
+    {
+      "id": "u4l4-q5",
+      "type": "matching",
+      "questionText": "Match country names in English and Vietnamese:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "Russia",
+          "rightId": "r1",
+          "rightText": "nước Nga"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "Turkey",
+          "rightId": "r2",
+          "rightText": "Thổ Nhĩ Kỳ"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "Mexico",
+          "rightId": "r3",
+          "rightText": "Mê-hi-cô"
+        }
+      ],
+      "correctAnswer": "Russia-nước Nga, Turkey-Thổ Nhĩ Kỳ, Mexico-Mê-hi-cô",
+      "explanation_vi": "Đúng. Nối tên các quốc gia chính xác.",
+      "vietnameseExplanation": "Đúng. Nối tên các quốc gia chính xác."
+    },
+    {
+      "id": "u4l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'This is our flag. It's _____.'",
+      "correctAnswer": "ours",
+      "explanation_vi": "Đúng. Dùng đại từ sở hữu 'ours'.",
+      "vietnameseExplanation": "Đúng. Dùng đại từ sở hữu 'ours'."
+    },
+    {
+      "id": "u4l4-q7",
+      "type": "multiple-choice",
+      "questionText": "A: 'Whose flag is this?' B: 'It's _____.'",
+      "options": [
+        "ours",
+        "we",
+        "us",
+        "our"
+      ],
+      "correctAnswer": "ours",
+      "explanation_vi": "Đúng. 'It's ours' nghĩa là 'Nó là của chúng tớ'.",
+      "vietnameseExplanation": "Đúng. 'It's ours' nghĩa là 'Nó là của chúng tớ'."
+    },
+    {
+      "id": "u4l4-q8",
+      "type": "multiple-choice",
+      "questionText": "A: 'Is this their flag?' B: 'Yes, it's _____.'",
+      "options": [
+        "theirs",
+        "their",
+        "them",
+        "they"
+      ],
+      "correctAnswer": "theirs",
+      "explanation_vi": "Đúng. Dùng 'theirs' để khẳng định sở hữu của họ.",
+      "vietnameseExplanation": "Đúng. Dùng 'theirs' để khẳng định sở hữu của họ."
+    },
+    {
+      "id": "u4l4-q9",
+      "type": "picture-select",
+      "questionText": "Choose picture for 'Japan':",
+      "options": [
+        "Japan",
+        "Russia",
+        "Turkey"
+      ],
+      "optionImages": [
+        "/images/unit4/lesson4/japan.png",
+        "/images/unit4/lesson4/russia.png",
+        "/images/unit4/lesson4/turkey.png"
+      ],
+      "correctAnswer": "Japan",
+      "explanation_vi": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản.",
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản."
+    },
+    {
+      "id": "u4l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: 'This is their flag. It's _____.'",
+      "options": [
+        "theirs",
+        "ours",
+        "mine",
+        "his"
+      ],
+      "correctAnswer": "theirs",
+      "explanation_vi": "Đúng. 'their flag' chuyển thành đại từ 'theirs'.",
+      "vietnameseExplanation": "Đúng. 'their flag' chuyển thành đại từ 'theirs'."
+    }
+  ],
+  "checkup_2": [
+    {
+      "id": "cu2-q1",
+      "type": "multiple-choice",
+      "questionText": "Unit 3 Vocabulary: What does 'cashier' mean?",
+      "options": [
+        "Nhân viên thu ngân",
+        "Bác sĩ thú y",
+        "Đầu bếp",
+        "Thủ thư"
+      ],
+      "correctAnswer": "Nhân viên thu ngân",
+      "explanation_vi": "Đúng. 'cashier' là nhân viên thu ngân.",
+      "vietnameseExplanation": "Đúng. 'cashier' là nhân viên thu ngân."
+    },
+    {
+      "id": "cu2-q2",
+      "type": "multiple-choice",
+      "questionText": "Unit 4 Vocabulary: What are 'chopsticks'?",
+      "options": [
+        "Đôi đũa",
+        "Cái thìa",
+        "Cái đĩa",
+        "Cái bát"
+      ],
+      "correctAnswer": "Đôi đũa",
+      "explanation_vi": "Đúng. 'chopsticks' nghĩa là đôi đũa.",
+      "vietnameseExplanation": "Đúng. 'chopsticks' nghĩa là đôi đũa."
+    },
+    {
+      "id": "cu2-q3",
+      "type": "multiple-choice",
+      "questionText": "Unit 3 Grammar: 'Where does the cashier work? He _____ at the supermarket.'",
+      "options": [
+        "works",
+        "work",
+        "working",
+        "is work"
+      ],
+      "correctAnswer": "works",
+      "explanation_vi": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'."
+    },
+    {
+      "id": "cu2-q4",
+      "type": "multiple-choice",
+      "questionText": "Unit 4 Grammar: 'Whose fork is that? It's _____.'",
+      "options": [
+        "mine",
+        "my",
+        "I",
+        "me"
+      ],
+      "correctAnswer": "mine",
+      "explanation_vi": "Đúng. Đại từ sở hữu thích hợp là 'mine'.",
+      "vietnameseExplanation": "Đúng. Đại từ sở hữu thích hợp là 'mine'."
+    },
+    {
+      "id": "cu2-q5",
+      "type": "listening",
+      "questionText": "Listen and choose the illness:",
+      "promptAudioUrl": "/audio/checkup2/headache.mp3",
+      "options": [
+        "headache",
+        "fever",
+        "cold"
+      ],
+      "correctAnswer": "headache",
+      "explanation_vi": "Đúng. Băng phát âm từ 'headache'.",
+      "vietnameseExplanation": "Đúng. Băng phát âm từ 'headache'."
+    },
+    {
+      "id": "cu2-q6",
+      "type": "multiple-choice",
+      "questionText": "Reading: 'Excuse me. How much is this sweater? It's $30.' How much is the sweater?",
+      "options": [
+        "Thirty dollars",
+        "Twenty dollars",
+        "Ten dollars",
+        "Fifty dollars"
+      ],
+      "correctAnswer": "Thirty dollars",
+      "explanation_vi": "Đúng. Theo đoạn đối thoại, giá là $30 (thirty dollars).",
+      "vietnameseExplanation": "Đúng. Theo đoạn đối thoại, giá là $30 (thirty dollars)."
+    },
+    {
+      "id": "cu2-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'What's the matter with him?' B: '_____' ",
+      "options": [
+        "He has a cold.",
+        "Yes, he is.",
+        "The cashier works here.",
+        "It's mine."
+      ],
+      "correctAnswer": "He has a cold.",
+      "explanation_vi": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'",
+      "vietnameseExplanation": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'"
+    },
+    {
+      "id": "cu2-q8",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: 'This is our flag. It's _____.'",
+      "options": [
+        "ours",
+        "theirs",
+        "mine",
+        "his"
+      ],
+      "correctAnswer": "ours",
+      "explanation_vi": "Đúng. 'our flag' tương ứng với 'ours'.",
+      "vietnameseExplanation": "Đúng. 'our flag' tương ứng với 'ours'."
+    }
+  ],
+  "unit5_lesson1": [
+    {
+      "id": "u5l1-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the correct word for high stature:",
+      "options": [
+        "tall",
+        "short",
+        "weak"
+      ],
+      "optionImages": [
+        "/images/unit5/lesson1/tall.png",
+        "/images/unit5/lesson1/short.png",
+        "/images/unit5/lesson1/weak.png"
+      ],
+      "correctAnswer": "tall",
+      "explanation_vi": "Đúng. Bức tranh thể hiện tính từ 'tall' (cao).",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện tính từ 'tall' (cao)."
+    },
+    {
+      "id": "u5l1-q2",
+      "type": "picture-select",
+      "questionText": "Choose the picture for 'strong':",
+      "options": [
+        "strong",
+        "weak",
+        "old"
+      ],
+      "optionImages": [
+        "/images/unit5/lesson1/strong.png",
+        "/images/unit5/lesson1/weak.png",
+        "/images/unit5/lesson1/old.png"
+      ],
+      "correctAnswer": "strong",
+      "explanation_vi": "Đúng. Bức tranh thể hiện người khỏe mạnh ('strong').",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện người khỏe mạnh ('strong')."
+    },
+    {
+      "id": "u5l1-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'weak' mean in Vietnamese?",
+      "options": [
+        "Yếu",
+        "Khỏe",
+        "Trẻ",
+        "Thấp"
+      ],
+      "correctAnswer": "Yếu",
+      "explanation_vi": "Đúng. 'weak' dịch sang tiếng Việt là yếu.",
+      "vietnameseExplanation": "Đúng. 'weak' dịch sang tiếng Việt là yếu."
+    },
+    {
+      "id": "u5l1-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/unit5/lesson1/young.mp3",
+      "options": [
+        "young",
+        "old",
+        "short"
+      ],
+      "correctAnswer": "young",
+      "explanation_vi": "Đúng. Băng phát âm từ 'young' (trẻ).",
+      "vietnameseExplanation": "Đúng. Băng phát âm từ 'young' (trẻ)."
+    },
+    {
+      "id": "u5l1-q5",
+      "type": "matching",
+      "questionText": "Match the words with their Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "tall",
+          "rightId": "r1",
+          "rightText": "cao"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "strong",
+          "rightId": "r2",
+          "rightText": "khỏe"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "young",
+          "rightId": "r3",
+          "rightText": "trẻ"
+        }
+      ],
+      "correctAnswer": "tall-cao, strong-khỏe, young-trẻ",
+      "explanation_vi": "Đúng. Bạn đã ghép chính xác từ và nghĩa.",
+      "vietnameseExplanation": "Đúng. Bạn đã ghép chính xác từ và nghĩa."
+    },
+    {
+      "id": "u5l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete the sentence: 'The girl is tall. The boy is _____.'",
+      "correctAnswer": "taller",
+      "explanation_vi": "Đúng. Dạng so sánh hơn của 'tall' là 'taller'.",
+      "vietnameseExplanation": "Đúng. Dạng so sánh hơn của 'tall' là 'taller'."
+    },
+    {
+      "id": "u5l1-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue MCQ: A: 'Who's taller, Danny or Julie?' B: '_____'",
+      "options": [
+        "Danny is taller.",
+        "Yes, he is.",
+        "No, she isn't.",
+        "He is young."
+      ],
+      "correctAnswer": "Danny is taller.",
+      "explanation_vi": "Đúng. Trả lời câu hỏi so sánh ai cao hơn bằng 'Danny is taller.'",
+      "vietnameseExplanation": "Đúng. Trả lời câu hỏi so sánh ai cao hơn bằng 'Danny is taller.'"
+    },
+    {
+      "id": "u5l1-q8",
+      "type": "multiple-choice",
+      "questionText": "Sentence MCQ: 'The man is strong, but the boy is _____.'",
+      "options": [
+        "weak",
+        "tall",
+        "taller",
+        "old"
+      ],
+      "correctAnswer": "weak",
+      "explanation_vi": "Đúng. Trái nghĩa với 'strong' là 'weak'.",
+      "vietnameseExplanation": "Đúng. Trái nghĩa với 'strong' là 'weak'."
+    },
+    {
+      "id": "u5l1-q9",
+      "type": "picture-select",
+      "questionText": "Choose the sentence matching the picture of an old man:",
+      "options": [
+        "The man is old.",
+        "The man is young.",
+        "The girl is tall."
+      ],
+      "optionImages": [
+        "/images/unit5/lesson1/old.png",
+        "/images/unit5/lesson1/young.png",
+        "/images/unit5/lesson1/tall.png"
+      ],
+      "correctAnswer": "The man is old.",
+      "explanation_vi": "Đúng. Hình ảnh miêu tả người đàn ông đã già ('old').",
+      "vietnameseExplanation": "Đúng. Hình ảnh miêu tả người đàn ông đã già ('old')."
+    },
+    {
+      "id": "u5l1-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Which sentence is grammatically correct?",
+      "options": [
+        "The boy is taller than the girl.",
+        "The boy is tall than the girl.",
+        "The boy is more tall than the girl.",
+        "The boy tall than the girl."
+      ],
+      "correctAnswer": "The boy is taller than the girl.",
+      "explanation_vi": "Đúng. Cấu trúc so sánh hơn: 'is taller than'.",
+      "vietnameseExplanation": "Đúng. Cấu trúc so sánh hơn: 'is taller than'."
+    }
+  ],
+  "unit5_lesson2": [
+    {
+      "id": "u5l2-q1",
+      "type": "picture-select",
+      "questionText": "Vocabulary Review: Choose the picture for 'clean':",
+      "options": [
+        "clean",
+        "dirty",
+        "ugly"
+      ],
+      "optionImages": [
+        "/images/unit5/lesson2/clean.png",
+        "/images/unit5/lesson2/dirty.png",
+        "/images/unit5/lesson2/ugly.png"
+      ],
+      "correctAnswer": "clean",
+      "explanation_vi": "Đúng. Bức tranh chỉ đồ vật sạch sẽ ('clean').",
+      "vietnameseExplanation": "Đúng. Bức tranh chỉ đồ vật sạch sẽ ('clean')."
+    },
+    {
+      "id": "u5l2-q2",
+      "type": "multiple-choice",
+      "questionText": "Grammar MCQ: 'The red socks are _____ than the blue socks.'",
+      "options": [
+        "thicker",
+        "thick",
+        "more thick",
+        "thickest"
+      ],
+      "correctAnswer": "thicker",
+      "explanation_vi": "Đúng. So sánh hơn của 'thick' là 'thicker'.",
+      "vietnameseExplanation": "Đúng. So sánh hơn của 'thick' là 'thicker'."
+    },
+    {
+      "id": "u5l2-q3",
+      "type": "multiple-choice",
+      "questionText": "Grammar MCQ: 'Is the red sweater thinner than the blue sweater? Yes, _____.'",
+      "options": [
+        "it is",
+        "it isn't",
+        "they are",
+        "it does"
+      ],
+      "correctAnswer": "it is",
+      "explanation_vi": "Đúng. Câu trả lời khẳng định là 'Yes, it is.'",
+      "vietnameseExplanation": "Đúng. Câu trả lời khẳng định là 'Yes, it is.'"
+    },
+    {
+      "id": "u5l2-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/unit5/lesson2/dirty.mp3",
+      "options": [
+        "dirty",
+        "clean",
+        "pretty"
+      ],
+      "correctAnswer": "dirty",
+      "explanation_vi": "Đúng. Băng phát âm từ 'dirty' (bẩn).",
+      "vietnameseExplanation": "Đúng. Băng phát âm từ 'dirty' (bẩn)."
+    },
+    {
+      "id": "u5l2-q5",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'Is the blue sock thicker than the red sock?' B: '_____'",
+      "options": [
+        "No, it isn't.",
+        "Yes, they are.",
+        "No, it is.",
+        "Yes, it isn't."
+      ],
+      "correctAnswer": "No, it isn't.",
+      "explanation_vi": "Đúng. Trả lời phủ định 'No, it isn't.'",
+      "vietnameseExplanation": "Đúng. Trả lời phủ định 'No, it isn't.'"
+    },
+    {
+      "id": "u5l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "Complete: 'This shirt is dirty, but that shirt is _____.'",
+      "correctAnswer": "clean",
+      "explanation_vi": "Đúng. Từ trái nghĩa với 'dirty' là 'clean'.",
+      "vietnameseExplanation": "Đúng. Từ trái nghĩa với 'dirty' là 'clean'."
+    },
+    {
+      "id": "u5l2-q7",
+      "type": "multiple-choice",
+      "questionText": "Sentence Order: Choose the correct sentence:",
+      "options": [
+        "The red sweater is thicker than the blue sweater.",
+        "The red sweater thicker is than blue sweater.",
+        "Red sweater is than thicker blue sweater.",
+        "The red sweater is thick than blue sweater."
+      ],
+      "correctAnswer": "The red sweater is thicker than the blue sweater.",
+      "explanation_vi": "Đúng. Trật tự câu so sánh hơn hoàn chỉnh.",
+      "vietnameseExplanation": "Đúng. Trật tự câu so sánh hơn hoàn chỉnh."
+    },
+    {
+      "id": "u5l2-q8",
+      "type": "multiple-choice",
+      "questionText": "Conversation: A: 'Which dress is prettier?' B: '_____'",
+      "options": [
+        "The pink dress is prettier.",
+        "Yes, it is pretty.",
+        "No, it is ugly.",
+        "The dress is clean."
+      ],
+      "correctAnswer": "The pink dress is prettier.",
+      "explanation_vi": "Đúng. Trả lời chiếc váy hồng đẹp hơn ('prettier').",
+      "vietnameseExplanation": "Đúng. Trả lời chiếc váy hồng đẹp hơn ('prettier')."
+    },
+    {
+      "id": "u5l2-q9",
+      "type": "picture-select",
+      "questionText": "Picture Application: Choose the picture matching 'dirty shirt':",
+      "options": [
+        "dirty",
+        "clean",
+        "pretty"
+      ],
+      "optionImages": [
+        "/images/unit5/lesson2/dirty.png",
+        "/images/unit5/lesson2/clean.png",
+        "/images/unit5/lesson2/pretty.png"
+      ],
+      "correctAnswer": "dirty",
+      "explanation_vi": "Đúng. Bức tranh hiển thị chiếc áo bẩn ('dirty').",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị chiếc áo bẩn ('dirty')."
+    },
+    {
+      "id": "u5l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Which word is opposite to 'thick'?",
+      "options": [
+        "thin",
+        "clean",
+        "dirty",
+        "ugly"
+      ],
+      "correctAnswer": "thin",
+      "explanation_vi": "Đúng. 'thin' (mỏng) là từ trái nghĩa của 'thick' (dày).",
+      "vietnameseExplanation": "Đúng. 'thin' (mỏng) là từ trái nghĩa của 'thick' (dày)."
+    }
+  ],
+  "unit5_lesson3": [
+    {
+      "id": "u5l3-q1",
+      "type": "multiple-choice",
+      "questionText": "Story Comprehension: What does Danny say when he sees Leo's shirt?",
+      "options": [
+        "Nice shirt!",
+        "Where is it?",
+        "How much is it?",
+        "It's dirty."
+      ],
+      "correctAnswer": "Nice shirt!",
+      "explanation_vi": "Đúng. Danny dành lời khen 'Nice shirt!'.",
+      "vietnameseExplanation": "Đúng. Danny dành lời khen 'Nice shirt!'."
+    },
+    {
+      "id": "u5l3-q2",
+      "type": "multiple-choice",
+      "questionText": "Story Comprehension: How does Leo reply to Danny's compliment?",
+      "options": [
+        "Thank you.",
+        "No, thanks.",
+        "You're welcome.",
+        "It's thick."
+      ],
+      "correctAnswer": "Thank you.",
+      "explanation_vi": "Đúng. Leo cảm ơn lịch sự bằng 'Thank you.'.",
+      "vietnameseExplanation": "Đúng. Leo cảm ơn lịch sự bằng 'Thank you.'."
+    },
+    {
+      "id": "u5l3-q3",
+      "type": "picture-select",
+      "questionText": "Vocabulary: Choose the picture for 'shirt':",
+      "options": [
+        "shirt",
+        "socks",
+        "hat"
+      ],
+      "optionImages": [
+        "/images/unit5/lesson3/shirt.png",
+        "/images/unit5/lesson2/thick.png",
+        "/images/unit5/lesson2/ugly.png"
+      ],
+      "correctAnswer": "shirt",
+      "explanation_vi": "Đúng. Hình ảnh chiếc áo sơ mi ('shirt').",
+      "vietnameseExplanation": "Đúng. Hình ảnh chiếc áo sơ mi ('shirt')."
+    },
+    {
+      "id": "u5l3-q4",
+      "type": "multiple-choice",
+      "questionText": "Vocabulary: What does 'cool' mean in the story?",
+      "options": [
+        "Ngầu / Đẹp mắt",
+        "Lạnh lẽo",
+        "Cũ kỹ",
+        "Xấu xí"
+      ],
+      "correctAnswer": "Ngầu / Đẹp mắt",
+      "explanation_vi": "Đúng. 'cool' ở đây có nghĩa là ngầu, đẹp mắt.",
+      "vietnameseExplanation": "Đúng. 'cool' ở đây có nghĩa là ngầu, đẹp mắt."
+    },
+    {
+      "id": "u5l3-q5",
+      "type": "multiple-choice",
+      "questionText": "Reference Question: What value do we learn from the story?",
+      "options": [
+        "Be nice.",
+        "Be healthy.",
+        "Be careful.",
+        "Be quiet."
+      ],
+      "correctAnswer": "Be nice.",
+      "explanation_vi": "Đúng. Bài học đạo đức của bài là 'Be nice' (Hãy tử tế).",
+      "vietnameseExplanation": "Đúng. Bài học đạo đức của bài là 'Be nice' (Hãy tử tế)."
+    },
+    {
+      "id": "u5l3-q6",
+      "type": "multiple-choice",
+      "questionText": "True / False: Danny says 'Nice shirt!' to Leo. Is this statement true or false?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation_vi": "Đúng. Danny thực sự đã nói 'Nice shirt!' trong truyện.",
+      "vietnameseExplanation": "Đúng. Danny thực sự đã nói 'Nice shirt!' trong truyện."
+    },
+    {
+      "id": "u5l3-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'Nice shirt!' B: '_____'",
+      "options": [
+        "Thank you.",
+        "Yes, I am.",
+        "It is green.",
+        "No, it isn't."
+      ],
+      "correctAnswer": "Thank you.",
+      "explanation_vi": "Đúng. Trả lời cho lời khen là 'Thank you.'",
+      "vietnameseExplanation": "Đúng. Trả lời cho lời khen là 'Thank you.'"
+    },
+    {
+      "id": "u5l3-q8",
+      "type": "fill-in-blank",
+      "questionText": "Complete the lesson value: 'Be _____.'",
+      "correctAnswer": "nice",
+      "explanation_vi": "Đúng. Giá trị bài học là 'Be nice'.",
+      "vietnameseExplanation": "Đúng. Giá trị bài học là 'Be nice'."
+    },
+    {
+      "id": "u5l3-q9",
+      "type": "listening",
+      "questionText": "Listen and choose what you hear:",
+      "promptAudioUrl": "/audio/unit5/lesson3/nice_shirt.mp3",
+      "options": [
+        "Nice shirt!",
+        "Nice shoes!",
+        "Nice hat!"
+      ],
+      "correctAnswer": "Nice shirt!",
+      "explanation_vi": "Đúng. Đoạn âm thanh phát câu 'Nice shirt!'.",
+      "vietnameseExplanation": "Đúng. Đoạn âm thanh phát câu 'Nice shirt!'."
+    },
+    {
+      "id": "u5l3-q10",
+      "type": "multiple-choice",
+      "questionText": "Story Review: When someone compliments your shirt, what should you say?",
+      "options": [
+        "Thank you.",
+        "No.",
+        "Be nice.",
+        "It's cool."
+      ],
+      "correctAnswer": "Thank you.",
+      "explanation_vi": "Đúng. Ta luôn nói 'Thank you' khi được khen.",
+      "vietnameseExplanation": "Đúng. Ta luôn nói 'Thank you' khi được khen."
+    }
+  ],
+  "unit5_lesson4": [
+    {
+      "id": "u5l4-q1",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'Which one is _____, the marble or the ball?'",
+      "options": [
+        "harder",
+        "hard",
+        "more hard",
+        "hardest"
+      ],
+      "correctAnswer": "harder",
+      "explanation_vi": "Đúng. Dạng so sánh hơn của 'hard' là 'harder'.",
+      "vietnameseExplanation": "Đúng. Dạng so sánh hơn của 'hard' là 'harder'."
+    },
+    {
+      "id": "u5l4-q2",
+      "type": "picture-select",
+      "questionText": "Vocabulary: Choose the picture for 'heavy':",
+      "options": [
+        "heavy",
+        "light",
+        "soft"
+      ],
+      "optionImages": [
+        "/images/unit5/lesson4/heavy.png",
+        "/images/unit5/lesson4/light.png",
+        "/images/unit5/lesson4/soft.png"
+      ],
+      "correctAnswer": "heavy",
+      "explanation_vi": "Đúng. Bức tranh thể hiện khối đá nặng ('heavy').",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện khối đá nặng ('heavy')."
+    },
+    {
+      "id": "u5l4-q3",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'Which one is softer, the pillow or the stone?' B: '_____'",
+      "options": [
+        "The pillow is softer.",
+        "The stone is softer.",
+        "Yes, it is.",
+        "It is heavy."
+      ],
+      "correctAnswer": "The pillow is softer.",
+      "explanation_vi": "Đúng. Chiếc gối mềm hơn hòn đá ('softer').",
+      "vietnameseExplanation": "Đúng. Chiếc gối mềm hơn hòn đá ('softer')."
+    },
+    {
+      "id": "u5l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/unit5/lesson4/light.mp3",
+      "options": [
+        "light",
+        "heavy",
+        "hard"
+      ],
+      "correctAnswer": "light",
+      "explanation_vi": "Đúng. Đoạn âm thanh phát từ 'light' (nhẹ).",
+      "vietnameseExplanation": "Đúng. Đoạn âm thanh phát từ 'light' (nhẹ)."
+    },
+    {
+      "id": "u5l4-q5",
+      "type": "picture-select",
+      "questionText": "Picture: Choose the picture for 'hard marble':",
+      "options": [
+        "hard",
+        "soft",
+        "light"
+      ],
+      "optionImages": [
+        "/images/unit5/lesson4/hard.png",
+        "/images/unit5/lesson4/soft.png",
+        "/images/unit5/lesson4/light.png"
+      ],
+      "correctAnswer": "hard",
+      "explanation_vi": "Đúng. Bức tranh viên bi cứng ('hard').",
+      "vietnameseExplanation": "Đúng. Bức tranh viên bi cứng ('hard')."
+    },
+    {
+      "id": "u5l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "Fill in the Blank: 'The rock is heavy, but the feather is _____.'",
+      "correctAnswer": "light",
+      "explanation_vi": "Đúng. 'light' (nhẹ) trái nghĩa với 'heavy' (nặng).",
+      "vietnameseExplanation": "Đúng. 'light' (nhẹ) trái nghĩa với 'heavy' (nặng)."
+    },
+    {
+      "id": "u5l4-q7",
+      "type": "multiple-choice",
+      "questionText": "Sentence Completion: 'The marble is _____ than the ball.'",
+      "options": [
+        "harder",
+        "hard",
+        "soft",
+        "softer"
+      ],
+      "correctAnswer": "harder",
+      "explanation_vi": "Đúng. Viên bi cứng hơn ('harder') quả bóng.",
+      "vietnameseExplanation": "Đúng. Viên bi cứng hơn ('harder') quả bóng."
+    },
+    {
+      "id": "u5l4-q8",
+      "type": "multiple-choice",
+      "questionText": "Conversation: A: 'Is the feather lighter than the rock?' B: '_____'",
+      "options": [
+        "Yes, it is.",
+        "No, it isn't.",
+        "The rock is light.",
+        "Feather is heavy."
+      ],
+      "correctAnswer": "Yes, it is.",
+      "explanation_vi": "Đúng. Trả lời khẳng định 'Yes, it is.'",
+      "vietnameseExplanation": "Đúng. Trả lời khẳng định 'Yes, it is.'"
+    },
+    {
+      "id": "u5l4-q9",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Which object is soft?",
+      "options": [
+        "pillow",
+        "marble",
+        "rock",
+        "stone"
+      ],
+      "correctAnswer": "pillow",
+      "explanation_vi": "Đúng. Gối ('pillow') là vật thể mềm.",
+      "vietnameseExplanation": "Đúng. Gối ('pillow') là vật thể mềm."
+    },
+    {
+      "id": "u5l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Unit Review: Complete: 'Which one is heavier?' 'The rock is _____.'",
+      "options": [
+        "heavier",
+        "heavy",
+        "light",
+        "hard"
+      ],
+      "correctAnswer": "heavier",
+      "explanation_vi": "Đúng. Hòn đá nặng hơn ('heavier').",
+      "vietnameseExplanation": "Đúng. Hòn đá nặng hơn ('heavier')."
+    }
+  ],
+  "unit6_lesson1": [
+    {
+      "id": "u6l1-q1",
+      "type": "picture-select",
+      "questionText": "Picture -> Word: Choose the correct word for making bed:",
+      "options": [
+        "make my bed",
+        "clean my room",
+        "do laundry"
+      ],
+      "optionImages": [
+        "/images/unit6/lesson1/make_my_bed.png",
+        "/images/unit6/lesson1/clean_my_room.png",
+        "/images/unit6/lesson1/do_laundry.png"
+      ],
+      "correctAnswer": "make my bed",
+      "explanation_vi": "Đúng. Bức tranh miêu tả dọn giường ('make my bed').",
+      "vietnameseExplanation": "Đúng. Bức tranh miêu tả dọn giường ('make my bed')."
+    },
+    {
+      "id": "u6l1-q2",
+      "type": "picture-select",
+      "questionText": "Word -> Picture: Choose the picture for 'wash the dishes':",
+      "options": [
+        "wash the dishes",
+        "set the table",
+        "walk the dog"
+      ],
+      "optionImages": [
+        "/images/unit6/lesson1/wash_the_dishes.png",
+        "/images/unit6/lesson1/set_the_table.png",
+        "/images/unit6/lesson1/walk_the_dog.png"
+      ],
+      "correctAnswer": "wash the dishes",
+      "explanation_vi": "Đúng. Bức tranh thể hiện rửa bát đĩa ('wash the dishes').",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện rửa bát đĩa ('wash the dishes')."
+    },
+    {
+      "id": "u6l1-q3",
+      "type": "multiple-choice",
+      "questionText": "Vocabulary Meaning: What does 'set the table' mean?",
+      "options": [
+        "Dọn bàn ăn",
+        "Rửa bát đĩa",
+        "Lau phòng",
+        "Gấp chăn mền"
+      ],
+      "correctAnswer": "Dọn bàn ăn",
+      "explanation_vi": "Đúng. 'set the table' nghĩa là dọn bàn ăn.",
+      "vietnameseExplanation": "Đúng. 'set the table' nghĩa là dọn bàn ăn."
+    },
+    {
+      "id": "u6l1-q4",
+      "type": "listening",
+      "questionText": "Listening: Listen and choose the chore:",
+      "promptAudioUrl": "/audio/unit6/lesson1/walk_the_dog.mp3",
+      "options": [
+        "walk the dog",
+        "do laundry",
+        "make my bed"
+      ],
+      "correctAnswer": "walk the dog",
+      "explanation_vi": "Đúng. Âm thanh phát cụm 'walk the dog' (dắt chó đi dạo).",
+      "vietnameseExplanation": "Đúng. Âm thanh phát cụm 'walk the dog' (dắt chó đi dạo)."
+    },
+    {
+      "id": "u6l1-q5",
+      "type": "matching",
+      "questionText": "Matching: Match chores with meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "make my bed",
+          "rightId": "r1",
+          "rightText": "dọn giường"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "do laundry",
+          "rightId": "r2",
+          "rightText": "giặt quần áo"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "set the table",
+          "rightId": "r3",
+          "rightText": "dọn bàn ăn"
+        }
+      ],
+      "correctAnswer": "make my bed-dọn giường, do laundry-giặt quần áo, set the table-dọn bàn ăn",
+      "explanation_vi": "Đúng. Ghép chính xác tên việc nhà và nghĩa.",
+      "vietnameseExplanation": "Đúng. Ghép chính xác tên việc nhà và nghĩa."
+    },
+    {
+      "id": "u6l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "Fill in the Blank: 'I make my bed _____ school.'",
+      "correctAnswer": "before",
+      "explanation_vi": "Đúng. Điền từ 'before' (trước khi đi học).",
+      "vietnameseExplanation": "Đúng. Điền từ 'before' (trước khi đi học)."
+    },
+    {
+      "id": "u6l1-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue MCQ: A: 'When does she clean her room?' B: '_____'",
+      "options": [
+        "She cleans her room before school.",
+        "Yes, she does.",
+        "No, she doesn't.",
+        "She make her bed."
+      ],
+      "correctAnswer": "She cleans her room before school.",
+      "explanation_vi": "Đúng. Trả lời mốc thời gian 'before school'.",
+      "vietnameseExplanation": "Đúng. Trả lời mốc thời gian 'before school'."
+    },
+    {
+      "id": "u6l1-q8",
+      "type": "multiple-choice",
+      "questionText": "Sentence MCQ: 'He _____ his bed before school.'",
+      "options": [
+        "makes",
+        "make",
+        "making",
+        "is make"
+      ],
+      "correctAnswer": "makes",
+      "explanation_vi": "Đúng. Chủ ngữ 'He' đi với động từ thêm -s ('makes').",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ thêm -s ('makes')."
+    },
+    {
+      "id": "u6l1-q9",
+      "type": "picture-select",
+      "questionText": "Picture MCQ: Choose the sentence matching 'doing laundry':",
+      "options": [
+        "He does laundry.",
+        "He walks the dog.",
+        "He sets the table."
+      ],
+      "optionImages": [
+        "/images/unit6/lesson1/do_laundry.png",
+        "/images/unit6/lesson1/walk_the_dog.png",
+        "/images/unit6/lesson1/set_the_table.png"
+      ],
+      "correctAnswer": "He does laundry.",
+      "explanation_vi": "Đúng. Bức tranh miêu tả giặt quần áo ('does laundry').",
+      "vietnameseExplanation": "Đúng. Bức tranh miêu tả giặt quần áo ('does laundry')."
+    },
+    {
+      "id": "u6l1-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Which question is correct?",
+      "options": [
+        "When does he make his bed?",
+        "When do he make his bed?",
+        "When he makes his bed?",
+        "When is he make his bed?"
+      ],
+      "correctAnswer": "When does he make his bed?",
+      "explanation_vi": "Đúng. Cấu trúc câu hỏi: 'When + does + he + V-bare...?'.",
+      "vietnameseExplanation": "Đúng. Cấu trúc câu hỏi: 'When + does + he + V-bare...?'."
+    }
+  ],
+  "unit6_lesson2": [
+    {
+      "id": "u6l2-q1",
+      "type": "picture-select",
+      "questionText": "Vocabulary Review: Choose the picture for 'water the plants':",
+      "options": [
+        "water the plants",
+        "sweep the floor",
+        "wash the car"
+      ],
+      "optionImages": [
+        "/images/unit6/lesson2/water_plants.png",
+        "/images/unit6/lesson2/sweep_the_floor.png",
+        "/images/unit6/lesson2/wash_car.png"
+      ],
+      "correctAnswer": "water the plants",
+      "explanation_vi": "Đúng. Bức tranh miêu tả tưới cây ('water the plants').",
+      "vietnameseExplanation": "Đúng. Bức tranh miêu tả tưới cây ('water the plants')."
+    },
+    {
+      "id": "u6l2-q2",
+      "type": "multiple-choice",
+      "questionText": "Grammar MCQ: 'I always _____ the floor.'",
+      "options": [
+        "sweep",
+        "sweeps",
+        "sweeping",
+        "sweept"
+      ],
+      "correctAnswer": "sweep",
+      "explanation_vi": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'sweep'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'sweep'."
+    },
+    {
+      "id": "u6l2-q3",
+      "type": "multiple-choice",
+      "questionText": "Grammar MCQ: 'What are his chores? He always _____ out the garbage.'",
+      "options": [
+        "takes",
+        "take",
+        "taking",
+        "is take"
+      ],
+      "correctAnswer": "takes",
+      "explanation_vi": "Đúng. Chủ ngữ 'He' đi với động từ chia 'takes'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ chia 'takes'."
+    },
+    {
+      "id": "u6l2-q4",
+      "type": "listening",
+      "questionText": "Listening: Listen and choose the chore:",
+      "promptAudioUrl": "/audio/unit6/lesson2/vacuum_carpet.mp3",
+      "options": [
+        "vacuum the carpet",
+        "clean the bathroom",
+        "wash the car"
+      ],
+      "correctAnswer": "vacuum the carpet",
+      "explanation_vi": "Đúng. Băng phát âm cụm 'vacuum the carpet' (hút bụi thảm).",
+      "vietnameseExplanation": "Đúng. Băng phát âm cụm 'vacuum the carpet' (hút bụi thảm)."
+    },
+    {
+      "id": "u6l2-q5",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'What are her chores?' B: '_____'",
+      "options": [
+        "She always waters the plants.",
+        "Yes, she does.",
+        "No, she doesn't.",
+        "She is at home."
+      ],
+      "correctAnswer": "She always waters the plants.",
+      "explanation_vi": "Đúng. Trả lời việc nhà thường xuyên 'She always waters the plants.'",
+      "vietnameseExplanation": "Đúng. Trả lời việc nhà thường xuyên 'She always waters the plants.'"
+    },
+    {
+      "id": "u6l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "Fill in the Blank: 'He always _____ the car on weekends.'",
+      "correctAnswer": "washes",
+      "explanation_vi": "Đúng. Chủ ngữ 'He' đi với động từ chia 'washes'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ chia 'washes'."
+    },
+    {
+      "id": "u6l2-q7",
+      "type": "multiple-choice",
+      "questionText": "Sentence Order: Choose the correct sentence:",
+      "options": [
+        "He always cleans the bathroom.",
+        "He cleans always the bathroom.",
+        "Always he cleans the bathroom.",
+        "He cleans the bathroom always."
+      ],
+      "correctAnswer": "He always cleans the bathroom.",
+      "explanation_vi": "Đúng. Trạng từ 'always' đứng trước động từ chính.",
+      "vietnameseExplanation": "Đúng. Trạng từ 'always' đứng trước động từ chính."
+    },
+    {
+      "id": "u6l2-q8",
+      "type": "multiple-choice",
+      "questionText": "Conversation: A: 'Do you sweep the floor?' B: 'Yes, I _____ sweep the floor.'",
+      "options": [
+        "always",
+        "is",
+        "never",
+        "am"
+      ],
+      "correctAnswer": "always",
+      "explanation_vi": "Đúng. Trạng từ tần suất phù hợp là 'always'.",
+      "vietnameseExplanation": "Đúng. Trạng từ tần suất phù hợp là 'always'."
+    },
+    {
+      "id": "u6l2-q9",
+      "type": "picture-select",
+      "questionText": "Picture Application: Choose the picture for 'clean the bathroom':",
+      "options": [
+        "clean the bathroom",
+        "vacuum the carpet",
+        "water the plants"
+      ],
+      "optionImages": [
+        "/images/unit6/lesson2/clean_bathroom.png",
+        "/images/unit6/lesson2/vacuum_carpet.png",
+        "/images/unit6/lesson2/water_plants.png"
+      ],
+      "correctAnswer": "clean the bathroom",
+      "explanation_vi": "Đúng. Hình ảnh dọn phòng tắm ('clean the bathroom').",
+      "vietnameseExplanation": "Đúng. Hình ảnh dọn phòng tắm ('clean the bathroom')."
+    },
+    {
+      "id": "u6l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Which verb goes with 'the carpet'?",
+      "options": [
+        "vacuum",
+        "wash",
+        "sweep",
+        "water"
+      ],
+      "correctAnswer": "vacuum",
+      "explanation_vi": "Đúng. Động từ 'vacuum' đi với 'the carpet'.",
+      "vietnameseExplanation": "Đúng. Động từ 'vacuum' đi với 'the carpet'."
+    }
+  ],
+  "unit6_lesson3": [
+    {
+      "id": "u6l3-q1",
+      "type": "multiple-choice",
+      "questionText": "Story Comprehension: What does Danny ask Mike in the story?",
+      "options": [
+        "Do you want to come over?",
+        "Where is your house?",
+        "Do you do laundry?",
+        "What time is it?"
+      ],
+      "correctAnswer": "Do you want to come over?",
+      "explanation_vi": "Đúng. Danny mời Mike bằng câu 'Do you want to come over?'.",
+      "vietnameseExplanation": "Đúng. Danny mời Mike bằng câu 'Do you want to come over?'."
+    },
+    {
+      "id": "u6l3-q2",
+      "type": "multiple-choice",
+      "questionText": "Story Comprehension: When do they agree to hang out?",
+      "options": [
+        "After school",
+        "Before school",
+        "In the morning",
+        "At midnight"
+      ],
+      "correctAnswer": "After school",
+      "explanation_vi": "Đúng. Họ hẹn nhau sang chơi sau giờ học ('After school').",
+      "vietnameseExplanation": "Đúng. Họ hẹn nhau sang chơi sau giờ học ('After school')."
+    },
+    {
+      "id": "u6l3-q3",
+      "type": "picture-select",
+      "questionText": "Vocabulary: Choose the picture for 'come over':",
+      "options": [
+        "come over",
+        "after school",
+        "friendly"
+      ],
+      "optionImages": [
+        "/images/unit6/lesson3/come_over.png",
+        "/images/unit6/lesson3/after_school.png",
+        "/images/unit6/lesson3/friendly.png"
+      ],
+      "correctAnswer": "come over",
+      "explanation_vi": "Đúng. Hình ảnh sang nhà bạn chơi ('come over').",
+      "vietnameseExplanation": "Đúng. Hình ảnh sang nhà bạn chơi ('come over')."
+    },
+    {
+      "id": "u6l3-q4",
+      "type": "multiple-choice",
+      "questionText": "Vocabulary: What does 'sure' mean in the dialogue?",
+      "options": [
+        "Chắc chắn / Đồng ý",
+        "Không đời nào",
+        "Tạm biệt",
+        "Cảm ơn"
+      ],
+      "correctAnswer": "Chắc chắn / Đồng ý",
+      "explanation_vi": "Đúng. 'sure' thể hiện sự đồng ý hào hứng.",
+      "vietnameseExplanation": "Đúng. 'sure' thể hiện sự đồng ý hào hứng."
+    },
+    {
+      "id": "u6l3-q5",
+      "type": "multiple-choice",
+      "questionText": "Reference Question: What value do we learn from Lesson 3?",
+      "options": [
+        "Be friendly.",
+        "Be quiet.",
+        "Be strong.",
+        "Be clean."
+      ],
+      "correctAnswer": "Be friendly.",
+      "explanation_vi": "Đúng. Giá trị bài học 'Be friendly' (Hãy thân thiện).",
+      "vietnameseExplanation": "Đúng. Giá trị bài học 'Be friendly' (Hãy thân thiện)."
+    },
+    {
+      "id": "u6l3-q6",
+      "type": "multiple-choice",
+      "questionText": "True / False: Mike accepts Danny's invitation. Is this statement true or false?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation_vi": "Đúng. Mike hào hứng nhận lời 'Sure! When?'.",
+      "vietnameseExplanation": "Đúng. Mike hào hứng nhận lời 'Sure! When?'."
+    },
+    {
+      "id": "u6l3-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'Do you want to come over?' B: '_____'",
+      "options": [
+        "Sure. When?",
+        "Yes, I am.",
+        "No, it isn't.",
+        "I am tall."
+      ],
+      "correctAnswer": "Sure. When?",
+      "explanation_vi": "Đúng. Phản hồi lời mời 'Sure. When?'.",
+      "vietnameseExplanation": "Đúng. Phản hồi lời mời 'Sure. When?'."
+    },
+    {
+      "id": "u6l3-q8",
+      "type": "fill-in-blank",
+      "questionText": "Fill in the Blank: 'Let's play _____ school.'",
+      "correctAnswer": "after",
+      "explanation_vi": "Đúng. Điền từ 'after' trong 'after school'.",
+      "vietnameseExplanation": "Đúng. Điền từ 'after' trong 'after school'."
+    },
+    {
+      "id": "u6l3-q9",
+      "type": "listening",
+      "questionText": "Listening: Listen and choose what you hear:",
+      "promptAudioUrl": "/audio/unit6/lesson3/come_over.mp3",
+      "options": [
+        "Do you want to come over?",
+        "Do you want to play games?",
+        "Do you make your bed?"
+      ],
+      "correctAnswer": "Do you want to come over?",
+      "explanation_vi": "Đúng. Băng phát âm câu 'Do you want to come over?'.",
+      "vietnameseExplanation": "Đúng. Băng phát âm câu 'Do you want to come over?'."
+    },
+    {
+      "id": "u6l3-q10",
+      "type": "multiple-choice",
+      "questionText": "Story Review: Complete the invitation: 'Do you want to _____ over?'",
+      "options": [
+        "come",
+        "go",
+        "make",
+        "take"
+      ],
+      "correctAnswer": "come",
+      "explanation_vi": "Đúng. Cụm từ là 'come over'.",
+      "vietnameseExplanation": "Đúng. Cụm từ là 'come over'."
+    }
+  ],
+  "unit6_lesson4": [
+    {
+      "id": "u6l4-q1",
+      "type": "multiple-choice",
+      "questionText": "Grammar: 'I always _____ the cows before school.'",
+      "options": [
+        "milk",
+        "milks",
+        "milking",
+        "is milk"
+      ],
+      "correctAnswer": "milk",
+      "explanation_vi": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'."
+    },
+    {
+      "id": "u6l4-q2",
+      "type": "picture-select",
+      "questionText": "Vocabulary: Choose the picture for 'feed the chickens':",
+      "options": [
+        "feed the chickens",
+        "milk the cows",
+        "collect eggs"
+      ],
+      "optionImages": [
+        "/images/unit6/lesson4/feed_chickens.png",
+        "/images/unit6/lesson4/milk_cows.png",
+        "/images/unit6/lesson4/collect_eggs.png"
+      ],
+      "correctAnswer": "feed the chickens",
+      "explanation_vi": "Đúng. Bức tranh cho gà ăn ('feed the chickens').",
+      "vietnameseExplanation": "Đúng. Bức tranh cho gà ăn ('feed the chickens')."
+    },
+    {
+      "id": "u6l4-q3",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'What do you do in the morning?' B: '_____'",
+      "options": [
+        "I always collect eggs.",
+        "Yes, I am.",
+        "She is a farmer.",
+        "It's milk."
+      ],
+      "correctAnswer": "I always collect eggs.",
+      "explanation_vi": "Đúng. Trả lời việc làm vào buổi sáng 'I always collect eggs.'",
+      "vietnameseExplanation": "Đúng. Trả lời việc làm vào buổi sáng 'I always collect eggs.'"
+    },
+    {
+      "id": "u6l4-q4",
+      "type": "listening",
+      "questionText": "Listening: Listen and choose the farm chore:",
+      "promptAudioUrl": "/audio/unit6/lesson4/pick_vegetables.mp3",
+      "options": [
+        "pick vegetables",
+        "feed the chickens",
+        "milk the cows"
+      ],
+      "correctAnswer": "pick vegetables",
+      "explanation_vi": "Đúng. Âm thanh phát cụm 'pick vegetables' (hái rau).",
+      "vietnameseExplanation": "Đúng. Âm thanh phát cụm 'pick vegetables' (hái rau)."
+    },
+    {
+      "id": "u6l4-q5",
+      "type": "picture-select",
+      "questionText": "Picture: Choose the picture for 'collecting eggs':",
+      "options": [
+        "collect eggs",
+        "pick vegetables",
+        "milk the cows"
+      ],
+      "optionImages": [
+        "/images/unit6/lesson4/collect_eggs.png",
+        "/images/unit6/lesson4/pick_vegetables.png",
+        "/images/unit6/lesson4/milk_cows.png"
+      ],
+      "correctAnswer": "collect eggs",
+      "explanation_vi": "Đúng. Hình ảnh thu gom trứng ('collect eggs').",
+      "vietnameseExplanation": "Đúng. Hình ảnh thu gom trứng ('collect eggs')."
+    },
+    {
+      "id": "u6l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "Fill in the Blank: 'She always _____ vegetables in the morning.'",
+      "correctAnswer": "picks",
+      "explanation_vi": "Đúng. Chủ ngữ 'She' đi với động từ chia 'picks'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'She' đi với động từ chia 'picks'."
+    },
+    {
+      "id": "u6l4-q7",
+      "type": "multiple-choice",
+      "questionText": "Sentence Completion: 'He always feeds the _____ in the morning.'",
+      "options": [
+        "chickens",
+        "cows",
+        "vegetables",
+        "eggs"
+      ],
+      "correctAnswer": "chickens",
+      "explanation_vi": "Đúng. 'feed' đi với 'chickens' (cho gà ăn).",
+      "vietnameseExplanation": "Đúng. 'feed' đi với 'chickens' (cho gà ăn)."
+    },
+    {
+      "id": "u6l4-q8",
+      "type": "multiple-choice",
+      "questionText": "Conversation: A: 'When do you milk the cows?' B: '_____'",
+      "options": [
+        "In the morning.",
+        "Yes, I do.",
+        "No, I don't.",
+        "Because I am tall."
+      ],
+      "correctAnswer": "In the morning.",
+      "explanation_vi": "Đúng. Trả lời mốc thời gian 'In the morning.'",
+      "vietnameseExplanation": "Đúng. Trả lời mốc thời gian 'In the morning.'"
+    },
+    {
+      "id": "u6l4-q9",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Which action means gathering eggs from hens?",
+      "options": [
+        "collect eggs",
+        "milk cows",
+        "feed chickens",
+        "pick vegetables"
+      ],
+      "correctAnswer": "collect eggs",
+      "explanation_vi": "Đúng. 'collect eggs' có nghĩa là thu gom trứng.",
+      "vietnameseExplanation": "Đúng. 'collect eggs' có nghĩa là thu gom trứng."
+    },
+    {
+      "id": "u6l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Unit Review: 'I always milk the cows _____ school.'",
+      "options": [
+        "before",
+        "under",
+        "next",
+        "between"
+      ],
+      "correctAnswer": "before",
+      "explanation_vi": "Đúng. 'before school' có nghĩa là trước khi đi học.",
+      "vietnameseExplanation": "Đúng. 'before school' có nghĩa là trước khi đi học."
+    }
+  ],
+  "checkup_3": [
+    {
+      "id": "cu3-q1",
+      "type": "multiple-choice",
+      "questionText": "Unit 5 Vocabulary: What does 'strong' mean?",
+      "options": [
+        "Khỏe mạnh",
+        "Yếu ớt",
+        "Cao lớn",
+        "Xinh đẹp"
+      ],
+      "correctAnswer": "Khỏe mạnh",
+      "explanation_vi": "Đúng. 'strong' có nghĩa là khỏe mạnh.",
+      "vietnameseExplanation": "Đúng. 'strong' có nghĩa là khỏe mạnh."
+    },
+    {
+      "id": "cu3-q2",
+      "type": "multiple-choice",
+      "questionText": "Unit 6 Vocabulary: What does 'vacuum the carpet' mean?",
+      "options": [
+        "Hút bụi thảm",
+        "Rửa xe ô tô",
+        "Tưới cây cảnh",
+        "Đi đổ rác"
+      ],
+      "correctAnswer": "Hút bụi thảm",
+      "explanation_vi": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm.",
+      "vietnameseExplanation": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm."
+    },
+    {
+      "id": "cu3-q3",
+      "type": "multiple-choice",
+      "questionText": "Unit 5 Grammar: 'The red socks are _____ than the blue socks.'",
+      "options": [
+        "thicker",
+        "thick",
+        "thinnest",
+        "more thick"
+      ],
+      "correctAnswer": "thicker",
+      "explanation_vi": "Đúng. So sánh hơn tính từ ngắn 'thicker'.",
+      "vietnameseExplanation": "Đúng. So sánh hơn tính từ ngắn 'thicker'."
+    },
+    {
+      "id": "cu3-q4",
+      "type": "multiple-choice",
+      "questionText": "Unit 6 Grammar: 'When _____ he make his bed?'",
+      "options": [
+        "does",
+        "do",
+        "is",
+        "doing"
+      ],
+      "correctAnswer": "does",
+      "explanation_vi": "Đúng. Trợ động từ đi với 'he' là 'does'.",
+      "vietnameseExplanation": "Đúng. Trợ động từ đi với 'he' là 'does'."
+    },
+    {
+      "id": "cu3-q5",
+      "type": "listening",
+      "questionText": "Listen and choose the word you hear:",
+      "promptAudioUrl": "/audio/checkup3/taller.mp3",
+      "options": [
+        "taller",
+        "shorter",
+        "stronger"
+      ],
+      "correctAnswer": "taller",
+      "explanation_vi": "Đúng. Đoạn âm thanh phát từ 'taller'.",
+      "vietnameseExplanation": "Đúng. Đoạn âm thanh phát từ 'taller'."
+    },
+    {
+      "id": "cu3-q6",
+      "type": "multiple-choice",
+      "questionText": "Reading: 'Which one is harder, the marble or the ball? The marble is harder.' Which item is harder?",
+      "options": [
+        "The marble",
+        "The ball",
+        "The rock",
+        "The pillow"
+      ],
+      "correctAnswer": "The marble",
+      "explanation_vi": "Đúng. Theo đoạn văn, viên bi ('marble') cứng hơn.",
+      "vietnameseExplanation": "Đúng. Theo đoạn văn, viên bi ('marble') cứng hơn."
+    },
+    {
+      "id": "cu3-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'Do you want to come over?' B: '_____'",
+      "options": [
+        "Sure. When?",
+        "Yes, I do laundry.",
+        "No, it is thick.",
+        "I am taller."
+      ],
+      "correctAnswer": "Sure. When?",
+      "explanation_vi": "Đúng. Phản hồi lời mời 'Sure. When?'.",
+      "vietnameseExplanation": "Đúng. Phản hồi lời mời 'Sure. When?'."
+    },
+    {
+      "id": "cu3-q8",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: 'I always _____ the cows in the morning.'",
+      "options": [
+        "milk",
+        "milks",
+        "milking",
+        "is milk"
+      ],
+      "correctAnswer": "milk",
+      "explanation_vi": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'."
+    }
+  ],
+  "unit7_lesson1": [
+    {
+      "id": "u7l1-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose the word for 'bãi biển':",
+      "options": [
+        "beach",
+        "aquarium",
+        "museum"
+      ],
+      "optionImages": [
+        "/images/unit7/lesson1/beach.png",
+        "/images/unit7/lesson1/aquarium.png",
+        "/images/unit7/lesson1/museum.png"
+      ],
+      "correctAnswer": "beach",
+      "explanation_vi": "Đúng. 'beach' nghĩa là bãi biển.",
+      "vietnameseExplanation": "Đúng. 'beach' nghĩa là bãi biển."
+    },
+    {
+      "id": "u7l1-q2",
+      "type": "picture-select",
+      "questionText": "Select the correct picture for 'aquarium':",
+      "options": [
+        "aquarium",
+        "pool",
+        "hotel"
+      ],
+      "optionImages": [
+        "/images/unit7/lesson1/aquarium.png",
+        "/images/unit7/lesson1/pool.png",
+        "/images/unit7/lesson1/hotel.png"
+      ],
+      "correctAnswer": "aquarium",
+      "explanation_vi": "Đúng. 'aquarium' nghĩa là thủy cung.",
+      "vietnameseExplanation": "Đúng. 'aquarium' nghĩa là thủy cung."
+    },
+    {
+      "id": "u7l1-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'amusement park' mean?",
+      "options": [
+        "Công viên giải trí",
+        "Bãi biển",
+        "Bảo tàng",
+        "Khách sạn"
+      ],
+      "correctAnswer": "Công viên giải trí",
+      "explanation_vi": "Đúng. 'amusement park' có nghĩa là công viên giải trí.",
+      "vietnameseExplanation": "Đúng. 'amusement park' có nghĩa là công viên giải trí."
+    },
+    {
+      "id": "u7l1-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the location you hear:",
+      "promptAudioUrl": "/audio/unit7/lesson1/museum.mp3",
+      "options": [
+        "museum",
+        "hotel",
+        "pool"
+      ],
+      "correctAnswer": "museum",
+      "explanation_vi": "Đúng. Âm thanh đọc từ 'museum'.",
+      "vietnameseExplanation": "Đúng. Âm thanh đọc từ 'museum'."
+    },
+    {
+      "id": "u7l1-q5",
+      "type": "matching",
+      "questionText": "Match the words with their Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "beach",
+          "rightId": "r1",
+          "rightText": "bãi biển"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "aquarium",
+          "rightId": "r2",
+          "rightText": "thủy cung"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "pool",
+          "rightId": "r3",
+          "rightText": "bể bơi"
+        }
+      ],
+      "correctAnswer": "beach-bãi biển, aquarium-thủy cung, pool-bể bơi",
+      "explanation_vi": "Đúng. Bạn đã ghép đúng từ vựng.",
+      "vietnameseExplanation": "Đúng. Bạn đã ghép đúng từ vựng."
+    },
+    {
+      "id": "u7l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "He was at the _____ (bảo tàng) yesterday.",
+      "correctAnswer": "museum",
+      "explanation_vi": "Đúng. 'museum' nghĩa là bảo tàng.",
+      "vietnameseExplanation": "Đúng. 'museum' nghĩa là bảo tàng."
+    },
+    {
+      "id": "u7l1-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'Where was she yesterday?' B: '_____' (ở bể bơi)",
+      "options": [
+        "She was at the pool.",
+        "She is at the pool.",
+        "He was at the pool."
+      ],
+      "correctAnswer": "She was at the pool.",
+      "explanation_vi": "Đúng. Câu trả lời quá khứ cho 'she' là 'She was at the pool.'",
+      "vietnameseExplanation": "Đúng. Câu trả lời quá khứ cho 'she' là 'She was at the pool.'"
+    },
+    {
+      "id": "u7l1-q8",
+      "type": "multiple-choice",
+      "questionText": "Was he at the hotel yesterday? No, he _____.",
+      "options": [
+        "wasn't",
+        "isn't",
+        "don't"
+      ],
+      "correctAnswer": "wasn't",
+      "explanation_vi": "Đúng. Phủ định quá khứ của 'was' là 'wasn't'.",
+      "vietnameseExplanation": "Đúng. Phủ định quá khứ của 'was' là 'wasn't'."
+    },
+    {
+      "id": "u7l1-q9",
+      "type": "multiple-choice",
+      "questionText": "Where was he yesterday? (Bãi biển)",
+      "options": [
+        "He was at the beach.",
+        "He was at the museum.",
+        "She was at the beach."
+      ],
+      "correctAnswer": "He was at the beach.",
+      "explanation_vi": "Đúng. 'He was at the beach' nghĩa là cậu ấy đã ở bãi biển.",
+      "vietnameseExplanation": "Đúng. 'He was at the beach' nghĩa là cậu ấy đã ở bãi biển."
+    },
+    {
+      "id": "u7l1-q10",
+      "type": "multiple-choice",
+      "questionText": "Was she at the aquarium yesterday? Yes, she _____.",
+      "options": [
+        "was",
+        "is",
+        "were"
+      ],
+      "correctAnswer": "was",
+      "explanation_vi": "Đúng. Trả lời khẳng định ngắn 'Yes, she was.'",
+      "vietnameseExplanation": "Đúng. Trả lời khẳng định ngắn 'Yes, she was.'"
+    }
+  ],
+  "unit7_lesson2": [
+    {
+      "id": "u7l2-q1",
+      "type": "multiple-choice",
+      "questionText": "What is 'pharmacy' in Vietnamese?",
+      "options": [
+        "Hiệu thuốc",
+        "Cửa hàng đồ chơi",
+        "Quán cà phê",
+        "Hiệu sách"
+      ],
+      "correctAnswer": "Hiệu thuốc",
+      "explanation_vi": "Đúng. 'pharmacy' có nghĩa là hiệu thuốc.",
+      "vietnameseExplanation": "Đúng. 'pharmacy' có nghĩa là hiệu thuốc."
+    },
+    {
+      "id": "u7l2-q2",
+      "type": "multiple-choice",
+      "questionText": "Where _____ they yesterday?",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. Chủ ngữ 'they' ở quá khứ đi với động từ 'were'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'they' ở quá khứ đi với động từ 'were'."
+    },
+    {
+      "id": "u7l2-q3",
+      "type": "multiple-choice",
+      "questionText": "They _____ at the coffee shop yesterday.",
+      "options": [
+        "were",
+        "was",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. 'They' đi với 'were' ở thì quá khứ.",
+      "vietnameseExplanation": "Đúng. 'They' đi với 'were' ở thì quá khứ."
+    },
+    {
+      "id": "u7l2-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the store name:",
+      "promptAudioUrl": "/audio/unit7/lesson2/toy_store.mp3",
+      "options": [
+        "toy store",
+        "hair salon",
+        "flower shop"
+      ],
+      "correctAnswer": "toy store",
+      "explanation_vi": "Đúng. Bạn nghe thấy từ 'toy store'.",
+      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'toy store'."
+    },
+    {
+      "id": "u7l2-q5",
+      "type": "multiple-choice",
+      "questionText": "Were they at the hair salon? Yes, they _____.",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "do"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. Khẳng định ngắn số nhiều: 'Yes, they were.'",
+      "vietnameseExplanation": "Đúng. Khẳng định ngắn số nhiều: 'Yes, they were.'"
+    },
+    {
+      "id": "u7l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "They were at the _____ (cửa hàng hoa) yesterday.",
+      "correctAnswer": "flower shop",
+      "explanation_vi": "Đúng. 'flower shop' nghĩa là cửa hàng hoa.",
+      "vietnameseExplanation": "Đúng. 'flower shop' nghĩa là cửa hàng hoa."
+    },
+    {
+      "id": "u7l2-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct sentence structure:",
+      "options": [
+        "They were at the bookstore.",
+        "They at the bookstore were.",
+        "Were they at bookstore."
+      ],
+      "correctAnswer": "They were at the bookstore.",
+      "explanation_vi": "Đúng. Cấu trúc câu khẳng định đúng ngữ pháp.",
+      "vietnameseExplanation": "Đúng. Cấu trúc câu khẳng định đúng ngữ pháp."
+    },
+    {
+      "id": "u7l2-q8",
+      "type": "multiple-choice",
+      "questionText": "A: Were they at the toy store yesterday? B: No, they _____.",
+      "options": [
+        "weren't. They were at the pharmacy.",
+        "wasn't.",
+        "don't."
+      ],
+      "correctAnswer": "weren't. They were at the pharmacy.",
+      "explanation_vi": "Đúng. Phủ định quá khứ số nhiều là 'weren't'.",
+      "vietnameseExplanation": "Đúng. Phủ định quá khứ số nhiều là 'weren't'."
+    },
+    {
+      "id": "u7l2-q9",
+      "type": "picture-select",
+      "questionText": "Select the picture for 'coffee shop':",
+      "options": [
+        "coffee shop",
+        "bookstore",
+        "pharmacy"
+      ],
+      "optionImages": [
+        "/images/unit7/lesson2/coffee_shop.png",
+        "/images/unit7/lesson2/bookstore.png",
+        "/images/unit7/lesson2/pharmacy.png"
+      ],
+      "correctAnswer": "coffee shop",
+      "explanation_vi": "Đúng. Hình ảnh thể hiện 'coffee shop'.",
+      "vietnameseExplanation": "Đúng. Hình ảnh thể hiện 'coffee shop'."
+    },
+    {
+      "id": "u7l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Where were they yesterday? They _____ at the hair salon.",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "don't"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. 'They' đi với 'were' trong câu miêu tả quá khứ.",
+      "vietnameseExplanation": "Đúng. 'They' đi với 'were' trong câu miêu tả quá khứ."
+    }
+  ],
+  "unit7_lesson3": [
+    {
+      "id": "u7l3-q1",
+      "type": "multiple-choice",
+      "questionText": "What time do Mike and Danny agree to meet?",
+      "options": [
+        "At five o'clock",
+        "At four o'clock",
+        "At six o'clock"
+      ],
+      "correctAnswer": "At five o'clock",
+      "explanation_vi": "Đúng. Mike và Danny hẹn gặp lúc 5 giờ (five o'clock).",
+      "vietnameseExplanation": "Đúng. Mike và Danny hẹn gặp lúc 5 giờ (five o'clock)."
+    },
+    {
+      "id": "u7l3-q2",
+      "type": "multiple-choice",
+      "questionText": "What value does Lesson 3 teach?",
+      "options": [
+        "Be on time.",
+        "Be helpful.",
+        "Be friendly."
+      ],
+      "correctAnswer": "Be on time.",
+      "explanation_vi": "Đúng. Bài học khuyên chúng ta hãy luôn đúng giờ (Be on time).",
+      "vietnameseExplanation": "Đúng. Bài học khuyên chúng ta hãy luôn đúng giờ (Be on time)."
+    },
+    {
+      "id": "u7l3-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'watch' mean in this lesson?",
+      "options": [
+        "Đồng hồ đeo tay",
+        "Tivi",
+        "Máy ảnh"
+      ],
+      "correctAnswer": "Đồng hồ đeo tay",
+      "explanation_vi": "Đúng. 'watch' nghĩa là đồng hồ đeo tay.",
+      "vietnameseExplanation": "Đúng. 'watch' nghĩa là đồng hồ đeo tay."
+    },
+    {
+      "id": "u7l3-q4",
+      "type": "multiple-choice",
+      "questionText": "What does 'meet' mean?",
+      "options": [
+        "Gặp mặt",
+        "Chạy bộ",
+        "Ăn uống"
+      ],
+      "correctAnswer": "Gặp mặt",
+      "explanation_vi": "Đúng. 'meet' nghĩa là gặp mặt.",
+      "vietnameseExplanation": "Đúng. 'meet' nghĩa là gặp mặt."
+    },
+    {
+      "id": "u7l3-q5",
+      "type": "multiple-choice",
+      "questionText": "What does 'See you then' mean?",
+      "options": [
+        "Hẹn gặp lại bạn lúc đó.",
+        "Rất vui gặp bạn.",
+        "Chào buổi sáng."
+      ],
+      "correctAnswer": "Hẹn gặp lại bạn lúc đó.",
+      "explanation_vi": "Đúng. 'See you then' nghĩa là hẹn gặp lại lúc đó.",
+      "vietnameseExplanation": "Đúng. 'See you then' nghĩa là hẹn gặp lại lúc đó."
+    },
+    {
+      "id": "u7l3-q6",
+      "type": "multiple-choice",
+      "questionText": "'Let's meet here at five o'clock.' - Is this making an appointment?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation_vi": "Đúng. Đây là câu đưa ra lời hẹn gặp.",
+      "vietnameseExplanation": "Đúng. Đây là câu đưa ra lời hẹn gặp."
+    },
+    {
+      "id": "u7l3-q7",
+      "type": "multiple-choice",
+      "questionText": "A: Let's meet here at five o'clock. B: _____",
+      "options": [
+        "OK. See you then.",
+        "Thank you.",
+        "You're welcome."
+      ],
+      "correctAnswer": "OK. See you then.",
+      "explanation_vi": "Đúng. Phản hồi lời hẹn: 'OK. See you then.'",
+      "vietnameseExplanation": "Đúng. Phản hồi lời hẹn: 'OK. See you then.'"
+    },
+    {
+      "id": "u7l3-q8",
+      "type": "fill-in-blank",
+      "questionText": "Let's _____ (gặp) at five o'clock.",
+      "correctAnswer": "meet",
+      "explanation_vi": "Đúng. 'meet' nghĩa là gặp mặt.",
+      "vietnameseExplanation": "Đúng. 'meet' nghĩa là gặp mặt."
+    },
+    {
+      "id": "u7l3-q9",
+      "type": "listening",
+      "questionText": "Listen to the response line:",
+      "promptAudioUrl": "/audio/unit7/lesson3/see_you_then.mp3",
+      "options": [
+        "See you then",
+        "See you tomorrow",
+        "Good night"
+      ],
+      "correctAnswer": "See you then",
+      "explanation_vi": "Đúng. Mẫu câu phát ra là 'See you then'.",
+      "vietnameseExplanation": "Đúng. Mẫu câu phát ra là 'See you then'."
+    },
+    {
+      "id": "u7l3-q10",
+      "type": "multiple-choice",
+      "questionText": "Why is it good to be on time?",
+      "options": [
+        "It shows respect and responsibility.",
+        "Because we have a watch.",
+        "Because it's sunny."
+      ],
+      "correctAnswer": "It shows respect and responsibility.",
+      "explanation_vi": "Đúng. Đúng giờ thể hiện sự tôn trọng và trách nhiệm.",
+      "vietnameseExplanation": "Đúng. Đúng giờ thể hiện sự tôn trọng và trách nhiệm."
+    }
+  ],
+  "unit7_lesson4": [
+    {
+      "id": "u7l4-q1",
+      "type": "multiple-choice",
+      "questionText": "How _____ the weather yesterday?",
+      "options": [
+        "was",
+        "is",
+        "were"
+      ],
+      "correctAnswer": "was",
+      "explanation_vi": "Đúng. Thì quá khứ hỏi thời tiết số ít dùng 'was'.",
+      "vietnameseExplanation": "Đúng. Thì quá khứ hỏi thời tiết số ít dùng 'was'."
+    },
+    {
+      "id": "u7l4-q2",
+      "type": "multiple-choice",
+      "questionText": "What is 'stormy' in Vietnamese?",
+      "options": [
+        "Có bão",
+        "Có tuyết",
+        "Có nắng"
+      ],
+      "correctAnswer": "Có bão",
+      "explanation_vi": "Đúng. 'stormy' nghĩa là có bão.",
+      "vietnameseExplanation": "Đúng. 'stormy' nghĩa là có bão."
+    },
+    {
+      "id": "u7l4-q3",
+      "type": "multiple-choice",
+      "questionText": "How's the weather today? It _____ sunny.",
+      "options": [
+        "is",
+        "was",
+        "were"
+      ],
+      "correctAnswer": "is",
+      "explanation_vi": "Đúng. Hỏi hiện tại 'today' trả lời dùng 'is'.",
+      "vietnameseExplanation": "Đúng. Hỏi hiện tại 'today' trả lời dùng 'is'."
+    },
+    {
+      "id": "u7l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the weather type:",
+      "promptAudioUrl": "/audio/unit7/lesson4/snowy.mp3",
+      "options": [
+        "snowy",
+        "rainy",
+        "windy"
+      ],
+      "correctAnswer": "snowy",
+      "explanation_vi": "Đúng. Bạn nghe thấy từ 'snowy'.",
+      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'snowy'."
+    },
+    {
+      "id": "u7l4-q5",
+      "type": "picture-select",
+      "questionText": "Select the picture for 'windy':",
+      "options": [
+        "windy",
+        "sunny",
+        "stormy"
+      ],
+      "optionImages": [
+        "/images/unit7/lesson4/windy.png",
+        "/images/unit7/lesson4/sunny.png",
+        "/images/unit7/lesson4/stormy.png"
+      ],
+      "correctAnswer": "windy",
+      "explanation_vi": "Đúng. Bức tranh thể hiện thời tiết nhiều gió.",
+      "vietnameseExplanation": "Đúng. Bức tranh thể hiện thời tiết nhiều gió."
+    },
+    {
+      "id": "u7l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "How was the weather on Monday? It was _____ (nhiều mây).",
+      "correctAnswer": "cloudy",
+      "explanation_vi": "Đúng. 'cloudy' nghĩa là nhiều mây.",
+      "vietnameseExplanation": "Đúng. 'cloudy' nghĩa là nhiều mây."
+    },
+    {
+      "id": "u7l4-q7",
+      "type": "multiple-choice",
+      "questionText": "How was the weather _____? It was rainy.",
+      "options": [
+        "yesterday",
+        "today",
+        "now"
+      ],
+      "correctAnswer": "yesterday",
+      "explanation_vi": "Đúng. 'was' đi với từ chỉ quá khứ 'yesterday'.",
+      "vietnameseExplanation": "Đúng. 'was' đi với từ chỉ quá khứ 'yesterday'."
+    },
+    {
+      "id": "u7l4-q8",
+      "type": "multiple-choice",
+      "questionText": "A: How's the weather today? B: It's _____.",
+      "options": [
+        "sunny",
+        "was sunny",
+        "were sunny"
+      ],
+      "correctAnswer": "sunny",
+      "explanation_vi": "Đúng. Cấu trúc trả lời hiện tại 'It's + tính từ thời tiết'.",
+      "vietnameseExplanation": "Đúng. Cấu trúc trả lời hiện tại 'It's + tính từ thời tiết'."
+    },
+    {
+      "id": "u7l4-q9",
+      "type": "multiple-choice",
+      "questionText": "Yesterday it was _____, so I took an umbrella.",
+      "options": [
+        "rainy",
+        "sunny",
+        "dry"
+      ],
+      "correctAnswer": "rainy",
+      "explanation_vi": "Đúng. 'rainy' (có mưa) nên cần mang dù.",
+      "vietnameseExplanation": "Đúng. 'rainy' (có mưa) nên cần mang dù."
+    },
+    {
+      "id": "u7l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Unit Review: Which pair is opposite in weather temperature?",
+      "options": [
+        "sunny and snowy",
+        "cloudy and windy",
+        "rainy and stormy"
+      ],
+      "correctAnswer": "sunny and snowy",
+      "explanation_vi": "Đúng. 'sunny' (nắng) và 'snowy' (tuyết) đối lập khí hậu.",
+      "vietnameseExplanation": "Đúng. 'sunny' (nắng) và 'snowy' (tuyết) đối lập khí hậu."
+    }
+  ],
+  "unit8_lesson1": [
+    {
+      "id": "u8l1-q1",
+      "type": "picture-select",
+      "questionText": "Look at the picture and choose 'calculator':",
+      "options": [
+        "calculator",
+        "dictionary",
+        "stapler"
+      ],
+      "optionImages": [
+        "/images/unit8/lesson1/calculator.png",
+        "/images/unit8/lesson1/dictionary.png",
+        "/images/unit8/lesson1/stapler.png"
+      ],
+      "correctAnswer": "calculator",
+      "explanation_vi": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
+      "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay."
+    },
+    {
+      "id": "u8l1-q2",
+      "type": "picture-select",
+      "questionText": "Select the picture for 'lunchbox':",
+      "options": [
+        "lunchbox",
+        "folder",
+        "water bottle"
+      ],
+      "optionImages": [
+        "/images/unit8/lesson1/lunchbox.png",
+        "/images/unit8/lesson1/folder.png",
+        "/images/unit8/lesson1/water_bottle.png"
+      ],
+      "correctAnswer": "lunchbox",
+      "explanation_vi": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa.",
+      "vietnameseExplanation": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa."
+    },
+    {
+      "id": "u8l1-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'dictionary' mean in Vietnamese?",
+      "options": [
+        "Từ điển",
+        "Hộp cơm",
+        "Cái dập ghim",
+        "Bình nước"
+      ],
+      "correctAnswer": "Từ điển",
+      "explanation_vi": "Đúng. 'dictionary' nghĩa là từ điển.",
+      "vietnameseExplanation": "Đúng. 'dictionary' nghĩa là từ điển."
+    },
+    {
+      "id": "u8l1-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the school supply:",
+      "promptAudioUrl": "/audio/unit8/lesson1/water_bottle.mp3",
+      "options": [
+        "water bottle",
+        "folder",
+        "stapler"
+      ],
+      "correctAnswer": "water bottle",
+      "explanation_vi": "Đúng. Âm thanh đọc từ 'water bottle'.",
+      "vietnameseExplanation": "Đúng. Âm thanh đọc từ 'water bottle'."
+    },
+    {
+      "id": "u8l1-q5",
+      "type": "matching",
+      "questionText": "Match items with Vietnamese meanings:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "folder",
+          "rightId": "r1",
+          "rightText": "kẹp tài liệu"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "lunchbox",
+          "rightId": "r2",
+          "rightText": "hộp cơm trưa"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "stapler",
+          "rightId": "r3",
+          "rightText": "cái dập ghim"
+        }
+      ],
+      "correctAnswer": "folder-kẹp tài liệu, lunchbox-hộp cơm trưa, stapler-cái dập ghim",
+      "explanation_vi": "Đúng. Nối chính xác các dụng cụ học tập.",
+      "vietnameseExplanation": "Đúng. Nối chính xác các dụng cụ học tập."
+    },
+    {
+      "id": "u8l1-q6",
+      "type": "fill-in-blank",
+      "questionText": "Where was the _____ (bình nước)?",
+      "correctAnswer": "water bottle",
+      "explanation_vi": "Đúng. 'water bottle' nghĩa là bình nước.",
+      "vietnameseExplanation": "Đúng. 'water bottle' nghĩa là bình nước."
+    },
+    {
+      "id": "u8l1-q7",
+      "type": "multiple-choice",
+      "questionText": "A: Where was the folder? B: It _____ on the desk.",
+      "options": [
+        "was",
+        "is",
+        "were"
+      ],
+      "correctAnswer": "was",
+      "explanation_vi": "Đúng. Quá khứ danh từ số ít dùng 'was'.",
+      "vietnameseExplanation": "Đúng. Quá khứ danh từ số ít dùng 'was'."
+    },
+    {
+      "id": "u8l1-q8",
+      "type": "multiple-choice",
+      "questionText": "What was on the table? A _____ was on the table.",
+      "options": [
+        "calculator",
+        "calculators",
+        "calculating"
+      ],
+      "correctAnswer": "calculator",
+      "explanation_vi": "Đúng. Sau 'A' cần danh từ số ít 'calculator'.",
+      "vietnameseExplanation": "Đúng. Sau 'A' cần danh từ số ít 'calculator'."
+    },
+    {
+      "id": "u8l1-q9",
+      "type": "multiple-choice",
+      "questionText": "Where was the stapler? It was on the desk.",
+      "options": [
+        "It was on the desk.",
+        "It is on the desk.",
+        "It were on the desk."
+      ],
+      "correctAnswer": "It was on the desk.",
+      "explanation_vi": "Đúng. Cấu trúc câu trả lời vị trí quá khứ đúng.",
+      "vietnameseExplanation": "Đúng. Cấu trúc câu trả lời vị trí quá khứ đúng."
+    },
+    {
+      "id": "u8l1-q10",
+      "type": "multiple-choice",
+      "questionText": "A dictionary _____ on the chair yesterday.",
+      "options": [
+        "was",
+        "were",
+        "are"
+      ],
+      "correctAnswer": "was",
+      "explanation_vi": "Đúng. 'A dictionary' là số ít nên đi với 'was'.",
+      "vietnameseExplanation": "Đúng. 'A dictionary' là số ít nên đi với 'was'."
+    }
+  ],
+  "unit8_lesson2": [
+    {
+      "id": "u8l2-q1",
+      "type": "multiple-choice",
+      "questionText": "What does 'scissors' mean?",
+      "options": [
+        "Cái kéo",
+        "Cọ vẽ",
+        "Keo dán thỏi",
+        "Tranh áp phích"
+      ],
+      "correctAnswer": "Cái kéo",
+      "explanation_vi": "Đúng. 'scissors' nghĩa là cái kéo.",
+      "vietnameseExplanation": "Đúng. 'scissors' nghĩa là cái kéo."
+    },
+    {
+      "id": "u8l2-q2",
+      "type": "multiple-choice",
+      "questionText": "There _____ some posters on the wall yesterday.",
+      "options": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. 'posters' là số nhiều quá khứ nên đi với 'were'.",
+      "vietnameseExplanation": "Đúng. 'posters' là số nhiều quá khứ nên đi với 'were'."
+    },
+    {
+      "id": "u8l2-q3",
+      "type": "multiple-choice",
+      "questionText": "There weren't _____ magazines on the table.",
+      "options": [
+        "any",
+        "some",
+        "a"
+      ],
+      "correctAnswer": "any",
+      "explanation_vi": "Đúng. Trong câu phủ định dùng 'any'.",
+      "vietnameseExplanation": "Đúng. Trong câu phủ định dùng 'any'."
+    },
+    {
+      "id": "u8l2-q4",
+      "type": "listening",
+      "questionText": "Listen and select art supply:",
+      "promptAudioUrl": "/audio/unit8/lesson2/paintbrush.mp3",
+      "options": [
+        "paintbrush",
+        "glue stick",
+        "scissors"
+      ],
+      "correctAnswer": "paintbrush",
+      "explanation_vi": "Đúng. Bạn nghe thấy từ 'paintbrush'.",
+      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'paintbrush'."
+    },
+    {
+      "id": "u8l2-q5",
+      "type": "multiple-choice",
+      "questionText": "Were there any glue sticks? Yes, there _____.",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. Khẳng định số nhiều ngắn là 'Yes, there were.'",
+      "vietnameseExplanation": "Đúng. Khẳng định số nhiều ngắn là 'Yes, there were.'"
+    },
+    {
+      "id": "u8l2-q6",
+      "type": "fill-in-blank",
+      "questionText": "There were some _____ (cái kéo) on the desk.",
+      "correctAnswer": "scissors",
+      "explanation_vi": "Đúng. 'scissors' nghĩa là cái kéo.",
+      "vietnameseExplanation": "Đúng. 'scissors' nghĩa là cái kéo."
+    },
+    {
+      "id": "u8l2-q7",
+      "type": "multiple-choice",
+      "questionText": "Arrange correctly: 'There / magazines / were / some / table / on / the'",
+      "options": [
+        "There were some magazines on the table.",
+        "There magazines were some on table.",
+        "Were some magazines there on table."
+      ],
+      "correctAnswer": "There were some magazines on the table.",
+      "explanation_vi": "Đúng. Thứ tự câu khẳng định 'There were some + N_plural + place'.",
+      "vietnameseExplanation": "Đúng. Thứ tự câu khẳng định 'There were some + N_plural + place'."
+    },
+    {
+      "id": "u8l2-q8",
+      "type": "multiple-choice",
+      "questionText": "A: Were there any pencil sharpeners? B: No, there _____.",
+      "options": [
+        "weren't.",
+        "wasn't.",
+        "don't."
+      ],
+      "correctAnswer": "weren't.",
+      "explanation_vi": "Đúng. Phủ định số nhiều ngắn là 'No, there weren't.'",
+      "vietnameseExplanation": "Đúng. Phủ định số nhiều ngắn là 'No, there weren't.'"
+    },
+    {
+      "id": "u8l2-q9",
+      "type": "picture-select",
+      "questionText": "Select picture for 'paintbrush':",
+      "options": [
+        "paintbrush",
+        "poster",
+        "magazine"
+      ],
+      "optionImages": [
+        "/images/unit8/lesson2/paintbrush.png",
+        "/images/unit8/lesson2/poster.png",
+        "/images/unit8/lesson2/magazine.png"
+      ],
+      "correctAnswer": "paintbrush",
+      "explanation_vi": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ.",
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ."
+    },
+    {
+      "id": "u8l2-q10",
+      "type": "multiple-choice",
+      "questionText": "Were there any posters on the wall? Yes, _____.",
+      "options": [
+        "there were",
+        "they were",
+        "it was"
+      ],
+      "correctAnswer": "there were",
+      "explanation_vi": "Đúng. Trả lời đầy đủ 'Yes, there were.'",
+      "vietnameseExplanation": "Đúng. Trả lời đầy đủ 'Yes, there were.'"
+    }
+  ],
+  "unit8_lesson3": [
+    {
+      "id": "u8l3-q1",
+      "type": "multiple-choice",
+      "questionText": "How do you spell 'Saturday'?",
+      "options": [
+        "S-A-T-U-R-D-A-Y",
+        "S-U-N-D-A-Y",
+        "M-O-N-D-A-Y"
+      ],
+      "correctAnswer": "S-A-T-U-R-D-A-Y",
+      "explanation_vi": "Đúng. Đánh vần từng chữ cái từ 'Saturday'.",
+      "vietnameseExplanation": "Đúng. Đánh vần từng chữ cái từ 'Saturday'."
+    },
+    {
+      "id": "u8l3-q2",
+      "type": "multiple-choice",
+      "questionText": "What value is emphasized in Lesson 3?",
+      "options": [
+        "Be helpful.",
+        "Be quiet.",
+        "Be brave."
+      ],
+      "correctAnswer": "Be helpful.",
+      "explanation_vi": "Đúng. Giá trị bài học mang lại là hãy biết giúp đỡ (Be helpful).",
+      "vietnameseExplanation": "Đúng. Giá trị bài học mang lại là hãy biết giúp đỡ (Be helpful)."
+    },
+    {
+      "id": "u8l3-q3",
+      "type": "multiple-choice",
+      "questionText": "What does 'spell' mean?",
+      "options": [
+        "Đánh vần",
+        "Viết thư",
+        "Đọc sách"
+      ],
+      "correctAnswer": "Đánh vần",
+      "explanation_vi": "Đúng. 'spell' nghĩa là đánh vần.",
+      "vietnameseExplanation": "Đúng. 'spell' nghĩa là đánh vần."
+    },
+    {
+      "id": "u8l3-q4",
+      "type": "multiple-choice",
+      "questionText": "What does 'clean up' mean?",
+      "options": [
+        "Dọn dẹp",
+        "Làm bẩn",
+        "Sơn tường"
+      ],
+      "correctAnswer": "Dọn dẹp",
+      "explanation_vi": "Đúng. 'clean up' nghĩa là dọn dẹp.",
+      "vietnameseExplanation": "Đúng. 'clean up' nghĩa là dọn dẹp."
+    },
+    {
+      "id": "u8l3-q5",
+      "type": "multiple-choice",
+      "questionText": "What day is 'Saturday'?",
+      "options": [
+        "Thứ Bảy",
+        "Chủ Nhật",
+        "Thứ Hai"
+      ],
+      "correctAnswer": "Thứ Bảy",
+      "explanation_vi": "Đúng. 'Saturday' nghĩa là Thứ Bảy.",
+      "vietnameseExplanation": "Đúng. 'Saturday' nghĩa là Thứ Bảy."
+    },
+    {
+      "id": "u8l3-q6",
+      "type": "multiple-choice",
+      "questionText": "'How do you spell...' is used to ask for letters of a word. True or False?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation_vi": "Đúng. Mẫu câu dùng để hỏi các chữ cái cấu thành từ.",
+      "vietnameseExplanation": "Đúng. Mẫu câu dùng để hỏi các chữ cái cấu thành từ."
+    },
+    {
+      "id": "u8l3-q7",
+      "type": "multiple-choice",
+      "questionText": "A: How do you spell 'Saturday'? B: _____",
+      "options": [
+        "S-A-T-U-R-D-A-Y",
+        "It is on Saturday.",
+        "Yes, I can."
+      ],
+      "correctAnswer": "S-A-T-U-R-D-A-Y",
+      "explanation_vi": "Đúng. Trả lời bằng cách đọc các chữ cái.",
+      "vietnameseExplanation": "Đúng. Trả lời bằng cách đọc các chữ cái."
+    },
+    {
+      "id": "u8l3-q8",
+      "type": "fill-in-blank",
+      "questionText": "How do you _____ (đánh vần) 'Saturday'?",
+      "correctAnswer": "spell",
+      "explanation_vi": "Đúng. 'spell' nghĩa là đánh vần.",
+      "vietnameseExplanation": "Đúng. 'spell' nghĩa là đánh vần."
+    },
+    {
+      "id": "u8l3-q9",
+      "type": "listening",
+      "questionText": "Listen to the spelled word:",
+      "promptAudioUrl": "/audio/unit8/lesson3/saturday.mp3",
+      "options": [
+        "Saturday",
+        "Sunday",
+        "Friday"
+      ],
+      "correctAnswer": "Saturday",
+      "explanation_vi": "Đúng. Âm thanh đọc đánh vần từ 'Saturday'.",
+      "vietnameseExplanation": "Đúng. Âm thanh đọc đánh vần từ 'Saturday'."
+    },
+    {
+      "id": "u8l3-q10",
+      "type": "multiple-choice",
+      "questionText": "Being helpful means:",
+      "options": [
+        "Assisting others when they need help",
+        "Sitting alone",
+        "Leaving trash"
+      ],
+      "correctAnswer": "Assisting others when they need help",
+      "explanation_vi": "Đúng. 'helpful' là biết giúp đỡ mọi người.",
+      "vietnameseExplanation": "Đúng. 'helpful' là biết giúp đỡ mọi người."
+    }
+  ],
+  "unit8_lesson4": [
+    {
+      "id": "u8l4-q1",
+      "type": "multiple-choice",
+      "questionText": "There _____ any cell phones in 1940.",
+      "options": [
+        "weren't",
+        "wasn't",
+        "isn't"
+      ],
+      "correctAnswer": "weren't",
+      "explanation_vi": "Đúng. 'cell phones' số nhiều trong quá khứ phủ định là 'weren't'.",
+      "vietnameseExplanation": "Đúng. 'cell phones' số nhiều trong quá khứ phủ định là 'weren't'."
+    },
+    {
+      "id": "u8l4-q2",
+      "type": "multiple-choice",
+      "questionText": "What is 'laptop' in Vietnamese?",
+      "options": [
+        "Máy tính xách tay",
+        "Điện thoại di động",
+        "TV kỹ thuật số"
+      ],
+      "correctAnswer": "Máy tính xách tay",
+      "explanation_vi": "Đúng. 'laptop' nghĩa là máy tính xách tay.",
+      "vietnameseExplanation": "Đúng. 'laptop' nghĩa là máy tính xách tay."
+    },
+    {
+      "id": "u8l4-q3",
+      "type": "multiple-choice",
+      "questionText": "A: Were there laptops in 1940? B: No, there _____.",
+      "options": [
+        "weren't",
+        "wasn't",
+        "don't"
+      ],
+      "correctAnswer": "weren't",
+      "explanation_vi": "Đúng. Phủ định ngắn số nhiều: 'No, there weren't.'",
+      "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều: 'No, there weren't.'"
+    },
+    {
+      "id": "u8l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose device:",
+      "promptAudioUrl": "/audio/unit8/lesson4/digital_camera.mp3",
+      "options": [
+        "digital camera",
+        "digital TV",
+        "laptop"
+      ],
+      "correctAnswer": "digital camera",
+      "explanation_vi": "Đúng. Âm thanh đọc từ 'digital camera'.",
+      "vietnameseExplanation": "Đúng. Âm thanh đọc từ 'digital camera'."
+    },
+    {
+      "id": "u8l4-q5",
+      "type": "picture-select",
+      "questionText": "Select picture for 'cell phone':",
+      "options": [
+        "cell phone",
+        "laptop",
+        "digital TV"
+      ],
+      "optionImages": [
+        "/images/unit8/lesson4/cell_phone.png",
+        "/images/unit8/lesson4/laptop.png",
+        "/images/unit8/lesson4/digital_tv.png"
+      ],
+      "correctAnswer": "cell phone",
+      "explanation_vi": "Đúng. Bức tranh hiển thị điện thoại di động.",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị điện thoại di động."
+    },
+    {
+      "id": "u8l4-q6",
+      "type": "fill-in-blank",
+      "questionText": "There were phones like _____ (như thế này).",
+      "correctAnswer": "this",
+      "explanation_vi": "Đúng. 'like this' nghĩa là như thế này.",
+      "vietnameseExplanation": "Đúng. 'like this' nghĩa là như thế này."
+    },
+    {
+      "id": "u8l4-q7",
+      "type": "multiple-choice",
+      "questionText": "Complete sentence: 'There _____ digital TVs in 1940.'",
+      "options": [
+        "weren't any",
+        "was some",
+        "is no"
+      ],
+      "correctAnswer": "weren't any",
+      "explanation_vi": "Đúng. Chưa có TV kỹ thuật số năm 1940: 'weren't any'.",
+      "vietnameseExplanation": "Đúng. Chưa có TV kỹ thuật số năm 1940: 'weren't any'."
+    },
+    {
+      "id": "u8l4-q8",
+      "type": "multiple-choice",
+      "questionText": "A: Were there phones in 1940? B: Yes, _____.",
+      "options": [
+        "there were",
+        "they were",
+        "there was"
+      ],
+      "correctAnswer": "there were",
+      "explanation_vi": "Đúng. Đã có điện thoại bàn năm 1940: 'Yes, there were.'",
+      "vietnameseExplanation": "Đúng. Đã có điện thoại bàn năm 1940: 'Yes, there were.'"
+    },
+    {
+      "id": "u8l4-q9",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: 'In 1940, there were no laptops, but there _____ books.'",
+      "options": [
+        "were",
+        "was",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. 'books' số nhiều quá khứ dùng 'were'.",
+      "vietnameseExplanation": "Đúng. 'books' số nhiều quá khứ dùng 'were'."
+    },
+    {
+      "id": "u8l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Unit Review: Which device is used to take photos?",
+      "options": [
+        "digital camera",
+        "digital TV",
+        "calculator"
+      ],
+      "correctAnswer": "digital camera",
+      "explanation_vi": "Đúng. 'digital camera' dùng để chụp ảnh.",
+      "vietnameseExplanation": "Đúng. 'digital camera' dùng để chụp ảnh."
+    }
+  ],
+  "checkup_4": [
+    {
+      "id": "cu4-q1",
+      "type": "multiple-choice",
+      "questionText": "Unit 7 Vocabulary: What does 'amusement park' mean?",
+      "options": [
+        "Công viên giải trí",
+        "Bãi biển",
+        "Bảo tàng",
+        "Hiệu thuốc"
+      ],
+      "correctAnswer": "Công viên giải trí",
+      "explanation_vi": "Đúng. 'amusement park' nghĩa là công viên giải trí.",
+      "vietnameseExplanation": "Đúng. 'amusement park' nghĩa là công viên giải trí."
+    },
+    {
+      "id": "cu4-q2",
+      "type": "multiple-choice",
+      "questionText": "Unit 8 Vocabulary: What is 'calculator' in Vietnamese?",
+      "options": [
+        "Máy tính cầm tay",
+        "Từ điển",
+        "Hộp cơm trưa",
+        "Cái dập ghim"
+      ],
+      "correctAnswer": "Máy tính cầm tay",
+      "explanation_vi": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
+      "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay."
+    },
+    {
+      "id": "cu4-q3",
+      "type": "multiple-choice",
+      "questionText": "Unit 7 Grammar: 'Where _____ he yesterday? He was at the museum.'",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "was",
+      "explanation_vi": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'.",
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'."
+    },
+    {
+      "id": "cu4-q4",
+      "type": "multiple-choice",
+      "questionText": "Unit 8 Grammar: 'There _____ some magazines on the table.'",
+      "options": [
+        "were",
+        "was",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'.",
+      "vietnameseExplanation": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'."
+    },
+    {
+      "id": "cu4-q5",
+      "type": "listening",
+      "questionText": "Listen and choose the location:",
+      "promptAudioUrl": "/audio/checkup4/bookstore.mp3",
+      "options": [
+        "bookstore",
+        "pharmacy",
+        "coffee shop"
+      ],
+      "correctAnswer": "bookstore",
+      "explanation_vi": "Đúng. Đoạn âm thanh đọc từ 'bookstore'.",
+      "vietnameseExplanation": "Đúng. Đoạn âm thanh đọc từ 'bookstore'."
+    },
+    {
+      "id": "cu4-q6",
+      "type": "multiple-choice",
+      "questionText": "Reading: 'How was the weather yesterday? It was sunny.' How was the weather yesterday?",
+      "options": [
+        "It was sunny.",
+        "It was rainy.",
+        "It was cloudy.",
+        "It was snowy."
+      ],
+      "correctAnswer": "It was sunny.",
+      "explanation_vi": "Đúng. Theo đoạn văn thời tiết hôm qua trời nắng (sunny).",
+      "vietnameseExplanation": "Đúng. Theo đoạn văn thời tiết hôm qua trời nắng (sunny)."
+    },
+    {
+      "id": "cu4-q7",
+      "type": "multiple-choice",
+      "questionText": "Dialogue: A: 'Were there cell phones in 1940?' B: '_____'",
+      "options": [
+        "No, there weren't.",
+        "Yes, there is.",
+        "No, it wasn't.",
+        "Yes, they do."
+      ],
+      "correctAnswer": "No, there weren't.",
+      "explanation_vi": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'",
+      "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'"
+    },
+    {
+      "id": "cu4-q8",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: 'Where was the stapler yesterday? It _____ on the desk.'",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "was",
+      "explanation_vi": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'.",
+      "vietnameseExplanation": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'."
+    }
+  ],
+  "yle_practice": [
+    {
+      "id": "yle-q1",
+      "type": "multiple-choice",
+      "questionText": "Movers Vocab 1: What snack is made from corn and eaten at movies?",
+      "options": [
+        "popcorn",
+        "gum",
+        "peanuts",
+        "chocolate"
+      ],
+      "correctAnswer": "popcorn",
+      "explanation_vi": "Đúng. 'popcorn' nghĩa là bỏng ngô.",
+      "vietnameseExplanation": "Đúng. 'popcorn' nghĩa là bỏng ngô.",
+      "questionImage": "/images/yle/popcorn.png"
+    },
+    {
+      "id": "yle-q2",
+      "type": "multiple-choice",
+      "questionText": "Movers Vocab 2: Who works at a supermarket taking payments?",
+      "options": [
+        "cashier",
+        "librarian",
+        "server",
+        "vet"
+      ],
+      "correctAnswer": "cashier",
+      "explanation_vi": "Đúng. 'cashier' là nhân viên thu ngân.",
+      "vietnameseExplanation": "Đúng. 'cashier' là nhân viên thu ngân.",
+      "questionImage": "/images/yle/cashier.png"
+    },
+    {
+      "id": "yle-q3",
+      "type": "multiple-choice",
+      "questionText": "Movers Vocab 3: Which chore means cleaning the floor with a broom?",
+      "options": [
+        "sweep the floor",
+        "vacuum the carpet",
+        "wash the dishes",
+        "make my bed"
+      ],
+      "correctAnswer": "sweep the floor",
+      "explanation_vi": "Đúng. 'sweep the floor' nghĩa là quét nhà.",
+      "vietnameseExplanation": "Đúng. 'sweep the floor' nghĩa là quét nhà.",
+      "questionImage": "/images/yle/sweep_floor.png"
+    },
+    {
+      "id": "yle-q4",
+      "type": "multiple-choice",
+      "questionText": "Movers Vocab 4: Where do people go to see marine animals and fish?",
+      "options": [
+        "aquarium",
+        "museum",
+        "hotel",
+        "bookstore"
+      ],
+      "correctAnswer": "aquarium",
+      "explanation_vi": "Đúng. 'aquarium' nghĩa là thủy cung.",
+      "vietnameseExplanation": "Đúng. 'aquarium' nghĩa là thủy cung.",
+      "questionImage": "/images/yle/aquarium.png"
+    },
+    {
+      "id": "yle-q5",
+      "type": "multiple-choice",
+      "questionText": "Movers Vocab 5: Which tool do you use to cut paper?",
+      "options": [
+        "scissors",
+        "stapler",
+        "calculator",
+        "folder"
+      ],
+      "correctAnswer": "scissors",
+      "explanation_vi": "Đúng. 'scissors' nghĩa là cái kéo.",
+      "vietnameseExplanation": "Đúng. 'scissors' nghĩa là cái kéo.",
+      "questionImage": "/images/yle/scissors.png"
+    },
+    {
+      "id": "yle-q6",
+      "type": "multiple-choice",
+      "questionText": "Movers Grammar 1: She _____ some chocolate.",
+      "options": [
+        "wants",
+        "want",
+        "wanting",
+        "is want"
+      ],
+      "correctAnswer": "wants",
+      "explanation_vi": "Đúng. 'She' đi với động từ thêm 's' -> 'wants'.",
+      "vietnameseExplanation": "Đúng. 'She' đi với động từ thêm 's' -> 'wants'.",
+      "questionImage": "/images/yle/grammar1.png"
+    },
+    {
+      "id": "yle-q7",
+      "type": "multiple-choice",
+      "questionText": "Movers Grammar 2: Where _____ the cashier work? The cashier works at the supermarket.",
+      "options": [
+        "does",
+        "do",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "does",
+      "explanation_vi": "Đúng. Trợ động từ hỏi nghề nghiệp số ít là 'does'.",
+      "vietnameseExplanation": "Đúng. Trợ động từ hỏi nghề nghiệp số ít là 'does'.",
+      "questionImage": "/images/yle/grammar2.png"
+    },
+    {
+      "id": "yle-q8",
+      "type": "multiple-choice",
+      "questionText": "Movers Grammar 3: Danny is _____ than Julie.",
+      "options": [
+        "taller",
+        "tall",
+        "tallest",
+        "more tall"
+      ],
+      "correctAnswer": "taller",
+      "explanation_vi": "Đúng. So sánh hơn tính từ ngắn dùng 'taller'.",
+      "vietnameseExplanation": "Đúng. So sánh hơn tính từ ngắn dùng 'taller'.",
+      "questionImage": "/images/yle/grammar3.png"
+    },
+    {
+      "id": "yle-q9",
+      "type": "multiple-choice",
+      "questionText": "Movers Grammar 4: Where _____ they yesterday? They were at the beach.",
+      "options": [
+        "were",
+        "was",
+        "are",
+        "did"
+      ],
+      "correctAnswer": "were",
+      "explanation_vi": "Đúng. 'They' quá khứ đi với 'were'.",
+      "vietnameseExplanation": "Đúng. 'They' quá khứ đi với 'were'.",
+      "questionImage": "/images/yle/grammar4.png"
+    },
+    {
+      "id": "yle-q10",
+      "type": "multiple-choice",
+      "questionText": "Movers Grammar 5: There _____ any laptops in 1940.",
+      "options": [
+        "weren't",
+        "wasn't",
+        "isn't",
+        "don't"
+      ],
+      "correctAnswer": "weren't",
+      "explanation_vi": "Đúng. Phủ định số nhiều quá khứ là 'weren't'.",
+      "vietnameseExplanation": "Đúng. Phủ định số nhiều quá khứ là 'weren't'.",
+      "questionImage": "/images/yle/grammar5.png"
+    },
+    {
+      "id": "yle-q11",
+      "type": "multiple-choice",
+      "questionText": "Movers Reading 1: 'Yesterday was sunny. Anna went to the park and played with her friends.' What was the weather yesterday?",
+      "options": [
+        "sunny",
+        "rainy",
+        "stormy",
+        "snowy"
+      ],
+      "correctAnswer": "sunny",
+      "explanation_vi": "Đúng. Thời tiết được miêu tả là 'sunny' (nắng).",
+      "vietnameseExplanation": "Đúng. Thời tiết được miêu tả là 'sunny' (nắng).",
+      "questionImage": "/images/yle/reading1.png"
+    },
+    {
+      "id": "yle-q12",
+      "type": "multiple-choice",
+      "questionText": "Movers Reading 2: 'Tom is helpful. He always cleans his room before school.' When does Tom clean his room?",
+      "options": [
+        "before school",
+        "after school",
+        "at night",
+        "on Sunday"
+      ],
+      "correctAnswer": "before school",
+      "explanation_vi": "Đúng. Đoạn văn nêu Tom dọn phòng 'before school'.",
+      "vietnameseExplanation": "Đúng. Đoạn văn nêu Tom dọn phòng 'before school'.",
+      "questionImage": "/images/yle/reading2.png"
+    },
+    {
+      "id": "yle-q13",
+      "type": "multiple-choice",
+      "questionText": "Movers Reading 3: 'The marble is harder than the ball.' Which object is harder?",
+      "options": [
+        "The marble",
+        "The ball",
+        "The pillow",
+        "The box"
+      ],
+      "correctAnswer": "The marble",
+      "explanation_vi": "Đúng. 'marble' (viên bi) cứng hơn quả bóng.",
+      "vietnameseExplanation": "Đúng. 'marble' (viên bi) cứng hơn quả bóng.",
+      "questionImage": "/images/yle/reading3.png"
+    },
+    {
+      "id": "yle-q14",
+      "type": "multiple-choice",
+      "questionText": "Movers Reading 4: 'Let's meet at five o'clock at the bookstore.' Where will they meet?",
+      "options": [
+        "at the bookstore",
+        "at the museum",
+        "at the pool",
+        "at the hotel"
+      ],
+      "correctAnswer": "at the bookstore",
+      "explanation_vi": "Đúng. Nơi hẹn gặp là 'at the bookstore' (hiệu sách).",
+      "vietnameseExplanation": "Đúng. Nơi hẹn gặp là 'at the bookstore' (hiệu sách).",
+      "questionImage": "/images/yle/reading4.png"
+    },
+    {
+      "id": "yle-q15",
+      "type": "listening",
+      "questionText": "Movers Listening 1: Listen and choose the correct word:",
+      "promptAudioUrl": "/audio/yle/listening_gum.mp3",
+      "options": [
+        "gum",
+        "popcorn",
+        "peanuts"
+      ],
+      "correctAnswer": "gum",
+      "explanation_vi": "Đúng. Bạn nghe thấy từ 'gum'.",
+      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'gum'.",
+      "questionImage": "/images/yle/listening1.png"
+    },
+    {
+      "id": "yle-q16",
+      "type": "listening",
+      "questionText": "Movers Listening 2: Listen and choose the location:",
+      "promptAudioUrl": "/audio/yle/listening_aquarium.mp3",
+      "options": [
+        "aquarium",
+        "museum",
+        "hotel"
+      ],
+      "correctAnswer": "aquarium",
+      "explanation_vi": "Đúng. Bạn nghe thấy từ 'aquarium'.",
+      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'aquarium'.",
+      "questionImage": "/images/yle/listening2.png"
+    },
+    {
+      "id": "yle-q17",
+      "type": "listening",
+      "questionText": "Movers Listening 3: Listen and choose the school item:",
+      "promptAudioUrl": "/audio/yle/listening_calculator.mp3",
+      "options": [
+        "calculator",
+        "dictionary",
+        "stapler"
+      ],
+      "correctAnswer": "calculator",
+      "explanation_vi": "Đúng. Bạn nghe thấy từ 'calculator'.",
+      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'calculator'.",
+      "questionImage": "/images/yle/listening3.png"
+    },
+    {
+      "id": "yle-q18",
+      "type": "multiple-choice",
+      "questionText": "Movers Review 1: A: 'Do you want to come over?' B: '_____'",
+      "options": [
+        "Sure. When?",
+        "No, I don't want gum.",
+        "It is sunny.",
+        "I was at home."
+      ],
+      "correctAnswer": "Sure. When?",
+      "explanation_vi": "Đúng. Đáp lại lời mời sang nhà chơi: 'Sure. When?'",
+      "vietnameseExplanation": "Đúng. Đáp lại lời mời sang nhà chơi: 'Sure. When?'",
+      "questionImage": "/images/yle/review1.png"
+    },
+    {
+      "id": "yle-q19",
+      "type": "multiple-choice",
+      "questionText": "Movers Review 2: How do you spell 'Saturday'?",
+      "options": [
+        "S-A-T-U-R-D-A-Y",
+        "S-U-N-D-A-Y",
+        "S-A-T-U-R-D-A-I"
+      ],
+      "correctAnswer": "S-A-T-U-R-D-A-Y",
+      "explanation_vi": "Đúng. Đánh vần từ 'Saturday' chính xác.",
+      "vietnameseExplanation": "Đúng. Đánh vần từ 'Saturday' chính xác.",
+      "questionImage": "/images/yle/review2.png"
+    },
+    {
+      "id": "yle-q20",
+      "type": "multiple-choice",
+      "questionText": "Movers Review 3: Which job flies planes?",
+      "options": [
+        "pilot",
+        "cook",
+        "salesperson",
+        "vet"
+      ],
+      "correctAnswer": "pilot",
+      "explanation_vi": "Đúng. 'pilot' (phi công) là người lái máy bay.",
+      "vietnameseExplanation": "Đúng. 'pilot' (phi công) là người lái máy bay.",
+      "questionImage": "/images/yle/review3.png"
+    }
+  ]
+}

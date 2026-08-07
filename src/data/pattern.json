@@ -1,0 +1,883 @@
+{
+  "unit1_lesson1": {
+    "id": "u1l1-m1",
+    "title": "Snacks Pattern",
+    "pattern": "What do you want? I want some gum. / What does he/she want? He/She wants some gum.",
+    "image": "/images/unit1/lesson1/pattern.png",
+    "audio": "/audio/unit1/lesson1/pattern.mp3",
+    "audioUrl": "/audio/unit1/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "What do you want?",
+        "vietnameseMeaning": "Bạn muốn ăn gì?",
+        "audioUrl": "/audio/unit1/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "I want some popcorn. What about you?",
+        "vietnameseMeaning": "Tớ muốn ăn bỏng ngô. Còn bạn thì sao?",
+        "audioUrl": "/audio/unit1/lesson1/d2.mp3"
+      },
+      {
+        "speaker": "Danny",
+        "text": "I want some chocolate.",
+        "vietnameseMeaning": "Tớ muốn ăn sô-cô-la.",
+        "audioUrl": "/audio/unit1/lesson1/d3.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Cấu trúc 'What do you want?' dùng để hỏi về nhu cầu ăn uống. Dùng 'some' cho câu khẳng định và 'any' cho câu phủ định."
+  },
+  "unit1_lesson2": {
+    "id": "u1l2-m1",
+    "title": "Vegetables Pattern",
+    "pattern": "Do you need any carrots? Yes, we do. / No, we don't. What do they need? They need a carrot / some carrots.",
+    "image": "/images/unit1/lesson2/pattern.png",
+    "audio": "/audio/unit1/lesson2/pattern.mp3",
+    "audioUrl": "/audio/unit1/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Teacher",
+        "text": "Do you need any carrots?",
+        "vietnameseMeaning": "Các bạn có cần cà rốt không?",
+        "audioUrl": "/audio/unit1/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "Students",
+        "text": "Yes, we do. We need some carrots and tomatoes.",
+        "vietnameseMeaning": "Có ạ, chúng em cần cà rốt và cà chua.",
+        "audioUrl": "/audio/unit1/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi nhu cầu thực phẩm bằng 'Do you need any...?'. Trả lời 'Yes, we do' hoặc 'No, we don't'."
+  },
+  "unit1_lesson3": {
+    "id": "u1l3-m1",
+    "title": "Story Pattern - Just Try It!",
+    "pattern": "What's for lunch? Soup and salad. That sounds good.",
+    "image": "/images/unit1/lesson3/pattern.png",
+    "audio": "/audio/unit1/lesson3/pattern.mp3",
+    "audioUrl": "/audio/unit1/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "What's for lunch?",
+        "vietnameseMeaning": "Bữa trưa hôm nay có món gì vậy?",
+        "audioUrl": "/audio/unit1/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "Soup and salad.",
+        "vietnameseMeaning": "Có món súp và salad.",
+        "audioUrl": "/audio/unit1/lesson3/d2.mp3"
+      },
+      {
+        "speaker": "Danny",
+        "text": "That sounds good! Just try it! Be healthy.",
+        "vietnameseMeaning": "Nghe ngon tuyệt! Ăn thử đi! Hãy giữ sức khỏe tốt nhé.",
+        "audioUrl": "/audio/unit1/lesson3/d3.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Dùng 'What's for lunch?' để hỏi thực đơn bữa trưa. 'That sounds good' thể hiện sự khen ngợi hào hứng."
+  },
+  "unit1_lesson4": {
+    "id": "u1l4-m1",
+    "title": "Cooking Pattern",
+    "pattern": "I want to make an omelet. / He/She wants to make a smoothie.",
+    "image": "/images/unit1/lesson4/pattern.png",
+    "audio": "/audio/unit1/lesson4/pattern.mp3",
+    "audioUrl": "/audio/unit1/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Mom",
+        "text": "What do you want to make?",
+        "vietnameseMeaning": "Con muốn tự tay làm món gì?",
+        "audioUrl": "/audio/unit1/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "Leo",
+        "text": "I want to make an omelet.",
+        "vietnameseMeaning": "Con muốn làm món trứng ốp lết ạ.",
+        "audioUrl": "/audio/unit1/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Cấu trúc 'I want to make a/an...' dùng để nói về món ăn bạn muốn tự chế biến."
+  },
+  "unit2_lesson1": {
+    "id": "u2l1-m1",
+    "title": "Places to Go Pattern",
+    "pattern": "Where's the park? It's across from the movie theater. / It's between the school and the movie theater.",
+    "image": "/images/unit2/lesson1/pattern.png",
+    "audio": "/audio/unit2/lesson1/pattern.mp3",
+    "audioUrl": "/audio/unit2/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Tourist",
+        "text": "Where's the park?",
+        "vietnameseMeaning": "Công viên nằm ở vị trí nào vậy?",
+        "audioUrl": "/audio/unit2/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "Boy",
+        "text": "It's across from the movie theater.",
+        "vietnameseMeaning": "Nó nằm ở phía đối diện rạp chiếu phim.",
+        "audioUrl": "/audio/unit2/lesson1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi vị trí địa điểm bằng 'Where's...'. Dùng 'across from' cho vị trí đối diện và 'between... and...' cho vị trí ở giữa."
+  },
+  "unit2_lesson2": {
+    "id": "u2l2-m1",
+    "title": "Things to Do Pattern",
+    "pattern": "What's he/she doing at the department store? He's/She's shopping. What are they doing at the department store? They're shopping.",
+    "image": "/images/unit2/lesson2/pattern.png",
+    "audio": "/audio/unit2/lesson2/pattern.mp3",
+    "audioUrl": "/audio/unit2/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Girl",
+        "text": "What's she doing at the library?",
+        "vietnameseMeaning": "Cô ấy đang làm gì ở thư viện?",
+        "audioUrl": "/audio/unit2/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "Boy",
+        "text": "She's borrowing books.",
+        "vietnameseMeaning": "Cô ấy đang mượn sách.",
+        "audioUrl": "/audio/unit2/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi hành động đang diễn ra tại một địa điểm bằng 'What is/are... doing at...?'. Trả lời dùng thì hiện tại tiếp diễn."
+  },
+  "unit2_lesson3": {
+    "id": "u2l3-m1",
+    "title": "Story Pattern - It's Over There!",
+    "pattern": "Excuse me. Where's the post office? It's over there.",
+    "image": "/images/unit2/lesson3/pattern.png",
+    "audio": "/audio/unit2/lesson3/pattern.mp3",
+    "audioUrl": "/audio/unit2/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Alex",
+        "text": "Excuse me. Where's the post office?",
+        "vietnameseMeaning": "Xin lỗi, bưu điện ở đằng nào ạ?",
+        "audioUrl": "/audio/unit2/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Officer",
+        "text": "It's over there, next to the bank.",
+        "vietnameseMeaning": "Nó ở đằng kia, bên cạnh ngân hàng.",
+        "audioUrl": "/audio/unit2/lesson3/d2.mp3"
+      },
+      {
+        "speaker": "Alex",
+        "text": "Thank you very much! Be helpful.",
+        "vietnameseMeaning": "Cháu cảm ơn ông nhiều ạ! Hãy luôn sẵn sàng giúp đỡ mọi người.",
+        "audioUrl": "/audio/unit2/lesson3/d3.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'Excuse me' dùng để mở đầu câu hỏi lịch sự. 'It's over there' dùng để chỉ vị trí ở phía đằng kia."
+  },
+  "unit2_lesson4": {
+    "id": "u2l4-m1",
+    "title": "Activities Pattern",
+    "pattern": "First, color the house. Next, cut the paper. Then, fold the paper.",
+    "image": "/images/unit2/lesson4/pattern.png",
+    "audio": "/audio/unit2/lesson4/pattern.mp3",
+    "audioUrl": "/audio/unit2/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Teacher",
+        "text": "What do we do first?",
+        "vietnameseMeaning": "Bước đầu tiên chúng ta cần làm gì?",
+        "audioUrl": "/audio/unit2/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "Student",
+        "text": "First, color the house. Next, cut the paper.",
+        "vietnameseMeaning": "Đầu tiên tô màu ngôi nhà. Tiếp theo cắt tờ giấy.",
+        "audioUrl": "/audio/unit2/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Dùng các từ liên kết chỉ thứ tự 'First', 'Next', 'Then' để hướng dẫn từng bước làm thủ công."
+  },
+  "checkup_1": {
+    "id": "cu1-m1",
+    "title": "Check Up 1 Pattern Review",
+    "pattern": "Review Units 1 and 2: Wants/Needs and Locations/Activities.",
+    "image": "/images/checkup1/pattern.png",
+    "audio": "/audio/checkup1/pattern.mp3",
+    "audioUrl": "/audio/checkup1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "What do you want?",
+        "vietnameseMeaning": "Bạn muốn gì?",
+        "audioUrl": "/audio/checkup1/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "I want some chocolate. Where's the library?",
+        "vietnameseMeaning": "Tớ muốn ăn sô-cô-la. Thư viện ở đâu thế?",
+        "audioUrl": "/audio/checkup1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Ôn tập tổng hợp mẫu câu nhu cầu (Unit 1) và mẫu câu vị trí, hoạt động (Unit 2)."
+  },
+  "unit3_lesson1": {
+    "id": "u3l1-m1",
+    "title": "Occupations Pattern",
+    "pattern": "Where does the cashier work? The cashier works at the supermarket. / Who works at the supermarket? The cashier works at the supermarket.",
+    "image": "/images/unit3/lesson1/pattern.png",
+    "audio": "/audio/unit3/lesson1/pattern.mp3",
+    "audioUrl": "/audio/unit3/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "Where does the cashier work?",
+        "vietnameseMeaning": "Nhân viên thu ngân làm việc ở đâu?",
+        "audioUrl": "/audio/unit3/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "The cashier works at the supermarket.",
+        "vietnameseMeaning": "Nhân viên thu ngân làm việc ở siêu thị.",
+        "audioUrl": "/audio/unit3/lesson1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi nơi làm việc bằng 'Where does the [nghề nghiệp] work?' và trả lời '[Nghề nghiệp] works at the...'."
+  },
+  "unit3_lesson2": {
+    "id": "u3l2-m1",
+    "title": "What People Do Pattern",
+    "pattern": "What does the cook do? The cook makes food. / Does the cook make food? Yes, he does. / No, he doesn't.",
+    "image": "/images/unit3/lesson2/pattern.png",
+    "audio": "/audio/unit3/lesson2/pattern.mp3",
+    "audioUrl": "/audio/unit3/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "What does the cook do?",
+        "vietnameseMeaning": "Đầu bếp làm công việc gì?",
+        "audioUrl": "/audio/unit3/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "The cook makes food.",
+        "vietnameseMeaning": "Đầu bếp nấu thức ăn.",
+        "audioUrl": "/audio/unit3/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi công việc bằng 'What does the... do?'. Trả lời dùng động từ chia ngôi thứ ba số ít (makes, drives, flies, helps...)."
+  },
+  "unit3_lesson3": {
+    "id": "u3l3-m1",
+    "title": "Story Pattern - Mom's Present",
+    "pattern": "Excuse me. How much is this sweater? It's $30. Be thoughtful.",
+    "image": "/images/unit3/lesson3/pattern.png",
+    "audio": "/audio/unit3/lesson3/pattern.mp3",
+    "audioUrl": "/audio/unit3/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Excuse me. How much is this sweater?",
+        "vietnameseMeaning": "Xin lỗi. Chiếc áo len này giá bao nhiêu ạ?",
+        "audioUrl": "/audio/unit3/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Salesperson",
+        "text": "It's thirty dollars.",
+        "vietnameseMeaning": "Nó có giá 30 đô-la.",
+        "audioUrl": "/audio/unit3/lesson3/d2.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "That's a great present for Mom!",
+        "vietnameseMeaning": "Đó là một món quà tuyệt vời dành cho Mẹ!",
+        "audioUrl": "/audio/unit3/lesson3/d3.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Dùng 'How much is this...?' để hỏi giá tiền một món đồ. Bài học giáo dục tính chu đáo ('Be thoughtful')."
+  },
+  "unit3_lesson4": {
+    "id": "u3l4-m1",
+    "title": "Illnesses Pattern",
+    "pattern": "What's the matter with him/her? He/She has a cold / a fever / a stomachache / a headache.",
+    "image": "/images/unit3/lesson4/pattern.png",
+    "audio": "/audio/unit3/lesson4/pattern.mp3",
+    "audioUrl": "/audio/unit3/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Doctor",
+        "text": "What's the matter with him?",
+        "vietnameseMeaning": "Cậu ấy bị làm sao thế?",
+        "audioUrl": "/audio/unit3/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "Mom",
+        "text": "He has a cold.",
+        "vietnameseMeaning": "Cậu ấy bị cảm lạnh.",
+        "audioUrl": "/audio/unit3/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Dùng 'What's the matter with him/her?' để hỏi thăm sức khỏe. Trả lời 'He/She has a...'."
+  },
+  "unit4_lesson1": {
+    "id": "u4l1-m1",
+    "title": "Family Pattern",
+    "pattern": "Who are they? They're Danny's parents. / Who's he/she? He's/She's his/her uncle/aunt/cousin.",
+    "image": "/images/unit4/lesson1/pattern.png",
+    "audio": "/audio/unit4/lesson1/pattern.mp3",
+    "audioUrl": "/audio/unit4/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "Who are they?",
+        "vietnameseMeaning": "Họ là ai vậy?",
+        "audioUrl": "/audio/unit4/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "They're Danny's parents.",
+        "vietnameseMeaning": "Họ là bố mẹ của Danny.",
+        "audioUrl": "/audio/unit4/lesson1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Dùng 'Who are they?' cho số nhiều và 'Who's he/she?' cho số ít khi hỏi về các thành viên gia đình."
+  },
+  "unit4_lesson2": {
+    "id": "u4l2-m1",
+    "title": "Things on the Table Pattern",
+    "pattern": "This fork is mine. / Whose fork is that? It's mine.",
+    "image": "/images/unit4/lesson2/pattern.png",
+    "audio": "/audio/unit4/lesson2/pattern.mp3",
+    "audioUrl": "/audio/unit4/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "Whose fork is that?",
+        "vietnameseMeaning": "Cái nĩa kia là của ai vậy?",
+        "audioUrl": "/audio/unit4/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "It's mine. This fork is mine.",
+        "vietnameseMeaning": "Nó là của tớ. Cái nĩa này là của tớ.",
+        "audioUrl": "/audio/unit4/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi quyền sở hữu đồ vật bằng 'Whose [đồ vật] is that?'. Trả lời dùng đại từ sở hữu 'mine' (của tớ)."
+  },
+  "unit4_lesson3": {
+    "id": "u4l3-m1",
+    "title": "Story Pattern - Chopsticks",
+    "pattern": "How do you use chopsticks? Like this. Be helpful.",
+    "image": "/images/unit4/lesson3/pattern.png",
+    "audio": "/audio/unit4/lesson3/pattern.mp3",
+    "audioUrl": "/audio/unit4/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Mike",
+        "text": "How do you use chopsticks?",
+        "vietnameseMeaning": "Cầm đũa như thế nào vậy bạn?",
+        "audioUrl": "/audio/unit4/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Danny",
+        "text": "Like this! It's easy with practice.",
+        "vietnameseMeaning": "Như thế này này! Luyện tập là sẽ thấy dễ ngay.",
+        "audioUrl": "/audio/unit4/lesson3/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Dùng 'How do you use...?' để hỏi cách sử dụng dụng cụ. 'Like this' có nghĩa là 'Như thế này'."
+  },
+  "unit4_lesson4": {
+    "id": "u4l4-m1",
+    "title": "Countries Pattern",
+    "pattern": "This is our flag. It's ours. / This is their flag. It's theirs.",
+    "image": "/images/unit4/lesson4/pattern.png",
+    "audio": "/audio/unit4/lesson4/pattern.mp3",
+    "audioUrl": "/audio/unit4/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "Whose flag is this?",
+        "vietnameseMeaning": "Lá cờ này của ai?",
+        "audioUrl": "/audio/unit4/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "This is our flag. It's ours.",
+        "vietnameseMeaning": "Đây là cờ của chúng tớ. Nó là của chúng tớ.",
+        "audioUrl": "/audio/unit4/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Phân biệt đại từ sở hữu 'ours' (của chúng tôi/chúng tớ) và 'theirs' (của họ)."
+  },
+  "checkup_2": {
+    "id": "cu2-m1",
+    "title": "Check Up 2 Pattern Review",
+    "pattern": "Review Units 3 and 4: Occupations/Illnesses and Family/Possessives.",
+    "image": "/images/checkup2/pattern.png",
+    "audio": "/audio/checkup2/pattern.mp3",
+    "audioUrl": "/audio/checkup2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "Where does the cashier work?",
+        "vietnameseMeaning": "Nhân viên thu ngân làm việc ở đâu?",
+        "audioUrl": "/audio/checkup2/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "The cashier works at the supermarket. Whose fork is that? It's mine.",
+        "vietnameseMeaning": "Nhân viên thu ngân làm việc ở siêu thị. Cái nĩa kia của ai? Nó là của tớ.",
+        "audioUrl": "/audio/checkup2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Ôn tập tổng hợp kiến thức nghề nghiệp, sức khỏe (Unit 3) và gia đình, đồ dùng sở hữu (Unit 4)."
+  },
+  "unit5_lesson1": {
+    "id": "u5l1-m1",
+    "title": "Comparing People Pattern",
+    "pattern": "The girl is tall. The boy is taller. / Who's taller, Danny or Julie? Danny is taller.",
+    "image": "/images/unit5/lesson1/pattern.png",
+    "audio": "/audio/unit5/lesson1/pattern.mp3",
+    "audioUrl": "/audio/unit5/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Who's taller, Danny or Julie?",
+        "vietnameseMeaning": "Ai cao hơn, Danny hay Julie?",
+        "audioUrl": "/audio/unit5/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "Danny is taller.",
+        "vietnameseMeaning": "Danny cao hơn.",
+        "audioUrl": "/audio/unit5/lesson1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Sử dụng hình thức so sánh hơn bằng cách thêm '-er' sau tính từ ngắn (tall -> taller). Dùng 'Who's taller, A or B?' để hỏi so sánh."
+  },
+  "unit5_lesson2": {
+    "id": "u5l2-m1",
+    "title": "Comparing Things Pattern",
+    "pattern": "The red socks are thicker than the blue socks. / Is the red sweater thicker/thinner than the blue sweater? Yes, it is. / No, it isn't.",
+    "image": "/images/unit5/lesson2/pattern.png",
+    "audio": "/audio/unit5/lesson2/pattern.mp3",
+    "audioUrl": "/audio/unit5/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Mike",
+        "text": "Is the red sweater thicker than the blue sweater?",
+        "vietnameseMeaning": "Áo len đỏ có dày hơn áo len xanh không?",
+        "audioUrl": "/audio/unit5/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "Julie",
+        "text": "Yes, it is. The red socks are thicker than the blue socks.",
+        "vietnameseMeaning": "Có, đúng rồi. Tất đỏ dày hơn tất xanh.",
+        "audioUrl": "/audio/unit5/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "So sánh đồ vật bằng 'thicker/thinner than'. Trả lời câu hỏi Yes/No bằng 'Yes, it is.' hoặc 'No, it isn't.'"
+  },
+  "unit5_lesson3": {
+    "id": "u5l3-m1",
+    "title": "Story Pattern - Cool Shirt",
+    "pattern": "Nice shirt! Thank you. / Be nice.",
+    "image": "/images/unit5/lesson3/pattern.png",
+    "audio": "/audio/unit5/lesson3/pattern.mp3",
+    "audioUrl": "/audio/unit5/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Nice shirt!",
+        "vietnameseMeaning": "Áo đẹp thế!",
+        "audioUrl": "/audio/unit5/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Leo",
+        "text": "Thank you.",
+        "vietnameseMeaning": "Cảm ơn bạn nhé.",
+        "audioUrl": "/audio/unit5/lesson3/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Dùng 'Nice [trang phục]!' để đưa ra lời khen ngợi lịch sự. Bài học đạo đức: 'Be nice' (Hãy luôn tử tế, lịch sự)."
+  },
+  "unit5_lesson4": {
+    "id": "u5l4-m1",
+    "title": "Science Properties Pattern",
+    "pattern": "Which one is harder, the marble or the ball? The marble is harder.",
+    "image": "/images/unit5/lesson4/pattern.png",
+    "audio": "/audio/unit5/lesson4/pattern.mp3",
+    "audioUrl": "/audio/unit5/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Teacher",
+        "text": "Which one is harder, the marble or the ball?",
+        "vietnameseMeaning": "Vật nào cứng hơn, viên bi hay quả bóng?",
+        "audioUrl": "/audio/unit5/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "Student",
+        "text": "The marble is harder.",
+        "vietnameseMeaning": "Viên bi cứng hơn ạ.",
+        "audioUrl": "/audio/unit5/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi so sánh tính chất vật thể bằng 'Which one is harder, A or B?'. Trả lời: '[Item] is harder.'"
+  },
+  "unit6_lesson1": {
+    "id": "u6l1-m1",
+    "title": "Daily Chores Pattern",
+    "pattern": "I make my bed before school. / When does he/she make his/her bed? He/She makes his/her bed before school.",
+    "image": "/images/unit6/lesson1/pattern.png",
+    "audio": "/audio/unit6/lesson1/pattern.mp3",
+    "audioUrl": "/audio/unit6/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Emma",
+        "text": "When does he make his bed?",
+        "vietnameseMeaning": "Khi nào cậu ấy dọn giường ngủ?",
+        "audioUrl": "/audio/unit6/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "Danny",
+        "text": "He makes his bed before school.",
+        "vietnameseMeaning": "Cậu ấy dọn giường trước khi đi học.",
+        "audioUrl": "/audio/unit6/lesson1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Hỏi thời điểm làm việc nhà 'When does he/she make his/her bed?'. Trả lời: 'He/She makes his/her bed before/after school.'"
+  },
+  "unit6_lesson2": {
+    "id": "u6l2-m1",
+    "title": "Frequency Chores Pattern",
+    "pattern": "I always sweep the floor. / What are his/her chores? He/She always sweeps the floor.",
+    "image": "/images/unit6/lesson2/pattern.png",
+    "audio": "/audio/unit6/lesson2/pattern.mp3",
+    "audioUrl": "/audio/unit6/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Alex",
+        "text": "What are her chores?",
+        "vietnameseMeaning": "Công việc nhà của cô ấy là gì?",
+        "audioUrl": "/audio/unit6/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "Julie",
+        "text": "She always sweeps the floor and waters the plants.",
+        "vietnameseMeaning": "Cô ấy luôn luôn quét nhà và tưới cây.",
+        "audioUrl": "/audio/unit6/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Sử dụng 'always' (luôn luôn) để diễn tả tần suất công việc. Trả lời câu hỏi 'What are his/her chores?'."
+  },
+  "unit6_lesson3": {
+    "id": "u6l3-m1",
+    "title": "Story Pattern - Come Over",
+    "pattern": "Do you want to come over? Sure. When? After school. / Be friendly.",
+    "image": "/images/unit6/lesson3/pattern.png",
+    "audio": "/audio/unit6/lesson3/pattern.mp3",
+    "audioUrl": "/audio/unit6/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Do you want to come over?",
+        "vietnameseMeaning": "Cậu có muốn sang nhà tớ chơi không?",
+        "audioUrl": "/audio/unit6/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Mike",
+        "text": "Sure! When?",
+        "vietnameseMeaning": "Chắc chắn rồi! Khi nào thế?",
+        "audioUrl": "/audio/unit6/lesson3/d2.mp3"
+      },
+      {
+        "speaker": "Danny",
+        "text": "After school.",
+        "vietnameseMeaning": "Sau giờ học nhé.",
+        "audioUrl": "/audio/unit6/lesson3/d3.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Mời bạn sang nhà chơi 'Do you want to come over?'. Trả lời 'Sure. When?' để đồng ý. Bài học đạo đức: 'Be friendly' (Hãy luôn thân thiện)."
+  },
+  "unit6_lesson4": {
+    "id": "u6l4-m1",
+    "title": "Farm Chores Pattern",
+    "pattern": "I always milk the cows in the morning / before school.",
+    "image": "/images/unit6/lesson4/pattern.png",
+    "audio": "/audio/unit6/lesson4/pattern.mp3",
+    "audioUrl": "/audio/unit6/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Farmer",
+        "text": "What do you do in the morning?",
+        "vietnameseMeaning": "Cháu làm gì vào buổi sáng?",
+        "audioUrl": "/audio/unit6/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "Boy",
+        "text": "I always milk the cows in the morning.",
+        "vietnameseMeaning": "Cháu luôn vắt sữa bò vào buổi sáng ạ.",
+        "audioUrl": "/audio/unit6/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Nói về các công việc nông trại kết hợp trạng từ 'always' và cụm chỉ thời gian 'in the morning' hoặc 'before school'."
+  },
+  "checkup_3": {
+    "id": "cu3-m1",
+    "title": "Check Up 3 Pattern Review",
+    "pattern": "Review Units 5 and 6: Comparisons and Chores/Frequency.",
+    "image": "/images/checkup3/pattern.png",
+    "audio": "/audio/checkup3/pattern.mp3",
+    "audioUrl": "/audio/checkup3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "A",
+        "text": "Who's taller, Danny or Julie?",
+        "vietnameseMeaning": "Ai cao hơn, Danny hay Julie?",
+        "audioUrl": "/audio/checkup3/d1.mp3"
+      },
+      {
+        "speaker": "B",
+        "text": "Danny is taller. When does he make his bed? He makes his bed before school.",
+        "vietnameseMeaning": "Danny cao hơn. Khi nào cậu ấy dọn giường? Cậu ấy dọn giường trước khi đi học.",
+        "audioUrl": "/audio/checkup3/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Ôn tập tổng hợp kiến thức về so sánh hơn (Unit 5) cùng việc nhà và tần suất (Unit 6)."
+  },
+  "unit7_lesson1": {
+    "id": "u7l1-m1",
+    "title": "Where Someone Was Pattern",
+    "pattern": "Where was he/she yesterday? He/She was at the beach. / Was he/she at the beach yesterday? Yes, he/she was. / No, he/she wasn't. He/She was at the aquarium.",
+    "image": "/images/unit7/lesson1/pattern.png",
+    "audioUrl": "/audio/unit7/lesson1/pattern.mp3",
+    "audio": "/audio/unit7/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Where was he yesterday?",
+        "vietnameseMeaning": "Cậu ấy đã ở đâu ngày hôm qua?",
+        "audioUrl": "/audio/unit7/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "He was at the beach.",
+        "vietnameseMeaning": "Cậu ấy đã ở bãi biển.",
+        "audioUrl": "/audio/unit7/lesson1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'Where was he/she yesterday?' dùng để hỏi vị trí của một người trong quá khứ. Trả lời bằng 'He/She was at...'."
+  },
+  "unit7_lesson2": {
+    "id": "u7l2-m1",
+    "title": "Where Were They Pattern",
+    "pattern": "Where were they yesterday? They were at the bookstore. / Were they at the bookstore yesterday? Yes, they were. / No, they weren't. They were at the pharmacy.",
+    "image": "/images/unit7/lesson2/pattern.png",
+    "audioUrl": "/audio/unit7/lesson2/pattern.mp3",
+    "audio": "/audio/unit7/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Where were they yesterday?",
+        "vietnameseMeaning": "Họ đã ở đâu ngày hôm qua?",
+        "audioUrl": "/audio/unit7/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "They were at the bookstore.",
+        "vietnameseMeaning": "Họ đã ở hiệu sách.",
+        "audioUrl": "/audio/unit7/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'Where were they yesterday?' hỏi địa điểm của nhiều người trong quá khứ. Trả lời bằng 'They were at...'."
+  },
+  "unit7_lesson3": {
+    "id": "u7l3-m1",
+    "title": "Making Appointments Pattern",
+    "pattern": "Let's meet here at five o'clock. OK. See you then.",
+    "image": "/images/unit7/lesson3/pattern.png",
+    "audioUrl": "/audio/unit7/lesson3/pattern.mp3",
+    "audio": "/audio/unit7/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Mike",
+        "text": "Let's meet here at five o'clock.",
+        "vietnameseMeaning": "Hãy gặp nhau ở đây lúc 5 giờ nhé.",
+        "audioUrl": "/audio/unit7/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Danny",
+        "text": "OK. See you then.",
+        "vietnameseMeaning": "Được rồi. Hẹn gặp lại bạn lúc đó.",
+        "audioUrl": "/audio/unit7/lesson3/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'Let's meet here at...' dùng để hẹn giờ gặp mặt. Bài học nhắc nhở học sinh luôn đúng giờ (Be on time)."
+  },
+  "unit7_lesson4": {
+    "id": "u7l4-m1",
+    "title": "Asking About Weather Pattern",
+    "pattern": "How's the weather today? It's sunny. / How was the weather yesterday/on Monday? It was sunny.",
+    "image": "/images/unit7/lesson4/pattern.png",
+    "audioUrl": "/audio/unit7/lesson4/pattern.mp3",
+    "audio": "/audio/unit7/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "How was the weather yesterday?",
+        "vietnameseMeaning": "Thời tiết hôm qua thế nào?",
+        "audioUrl": "/audio/unit7/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "It was sunny.",
+        "vietnameseMeaning": "Trời đã có nắng.",
+        "audioUrl": "/audio/unit7/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'How's the weather today?' hỏi thời tiết hiện tại. 'How was the weather yesterday?' hỏi thời tiết trong quá khứ."
+  },
+  "unit8_lesson1": {
+    "id": "u8l1-m1",
+    "title": "Where Was Item Pattern",
+    "pattern": "Where was the folder? It was on the table. / What was on the table? A folder was on the table.",
+    "image": "/images/unit8/lesson1/pattern.png",
+    "audioUrl": "/audio/unit8/lesson1/pattern.mp3",
+    "audio": "/audio/unit8/lesson1/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Where was the folder?",
+        "vietnameseMeaning": "Kẹp tài liệu đã ở đâu?",
+        "audioUrl": "/audio/unit8/lesson1/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "It was on the table.",
+        "vietnameseMeaning": "Nó đã ở trên bàn.",
+        "audioUrl": "/audio/unit8/lesson1/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'Where was the...?' dùng hỏi vị trí đồ vật ở số ít trong quá khứ. 'What was on the table?' hỏi vật gì ở trên bàn."
+  },
+  "unit8_lesson2": {
+    "id": "u8l2-m1",
+    "title": "There Were Some/Weren't Any Pattern",
+    "pattern": "There were some/weren't any magazines on the table. / Were there any magazines on the table? Yes, there were. / No, there weren't.",
+    "image": "/images/unit8/lesson2/pattern.png",
+    "audioUrl": "/audio/unit8/lesson2/pattern.mp3",
+    "audio": "/audio/unit8/lesson2/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Were there any magazines on the table?",
+        "vietnameseMeaning": "Có tạp chí nào trên bàn không?",
+        "audioUrl": "/audio/unit8/lesson2/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "Yes, there were.",
+        "vietnameseMeaning": "Có, có một vài quyển.",
+        "audioUrl": "/audio/unit8/lesson2/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'There were some...' dùng khẳng định số nhiều ở quá khứ. 'There weren't any...' dùng phủ định. 'Were there any...?' dùng hỏi nghi vấn."
+  },
+  "unit8_lesson3": {
+    "id": "u8l3-m1",
+    "title": "Spelling Words Pattern",
+    "pattern": "How do you spell 'Saturday'? S-A-T-U-R-D-A-Y.",
+    "image": "/images/unit8/lesson3/pattern.png",
+    "audioUrl": "/audio/unit8/lesson3/pattern.mp3",
+    "audio": "/audio/unit8/lesson3/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "How do you spell 'Saturday'?",
+        "vietnameseMeaning": "Bạn đánh vần từ 'Saturday' như thế nào?",
+        "audioUrl": "/audio/unit8/lesson3/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "S-A-T-U-R-D-A-Y.",
+        "vietnameseMeaning": "S-A-T-U-R-D-A-Y.",
+        "audioUrl": "/audio/unit8/lesson3/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'How do you spell...?' dùng để hỏi cách đánh vần một từ tiếng Anh. Bài học khuyên chúng ta hãy luôn giúp đỡ người khác (Be helpful)."
+  },
+  "unit8_lesson4": {
+    "id": "u8l4-m1",
+    "title": "Technology in the Past Pattern",
+    "pattern": "There weren't any cell phones in 1940. There were phones like this.",
+    "image": "/images/unit8/lesson4/pattern.png",
+    "audioUrl": "/audio/unit8/lesson4/pattern.mp3",
+    "audio": "/audio/unit8/lesson4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Were there cell phones in 1940?",
+        "vietnameseMeaning": "Đã có điện thoại di động vào năm 1940 chưa?",
+        "audioUrl": "/audio/unit8/lesson4/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "No, there weren't. There were phones like this.",
+        "vietnameseMeaning": "Chưa có. Đã có những chiếc điện thoại như thế này.",
+        "audioUrl": "/audio/unit8/lesson4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "'There weren't any...' dùng để nói về thiết bị công nghệ chưa xuất hiện trong quá khứ."
+  },
+  "checkup_4": {
+    "id": "cu4-m1",
+    "title": "Check Up 4 Review Pattern",
+    "pattern": "Where were they yesterday? They were at the bookstore. / Were there any scissors on the desk? Yes, there were.",
+    "image": "/images/checkup4/pattern.png",
+    "audioUrl": "/audio/checkup4/pattern.mp3",
+    "audio": "/audio/checkup4/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Danny",
+        "text": "Where was he yesterday?",
+        "vietnameseMeaning": "Cậu ấy đã ở đâu ngày hôm qua?",
+        "audioUrl": "/audio/checkup4/d1.mp3"
+      },
+      {
+        "speaker": "Emma",
+        "text": "He was at the aquarium. There were some fish there.",
+        "vietnameseMeaning": "Cậu ấy đã ở thủy cung. Đã có vài con cá ở đó.",
+        "audioUrl": "/audio/checkup4/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Ôn tập tổng hợp thì quá khứ đơn với động từ to be (was/were) và cấu trúc có/không có đồ vật (there were / there weren't)."
+  },
+  "yle_practice": {
+    "id": "yle-m1",
+    "title": "Movers Final Review Pattern",
+    "pattern": "Reviewing all key grammar patterns from Units 1 to 8: Wants, Works at, Taller than, Was/Were, There were/weren't.",
+    "image": "/images/yle/pattern.png",
+    "audioUrl": "/audio/yle/pattern.mp3",
+    "audio": "/audio/yle/pattern.mp3",
+    "dialogue": [
+      {
+        "speaker": "Examiner",
+        "text": "Where were you yesterday?",
+        "vietnameseMeaning": "Hôm qua em đã ở đâu?",
+        "audioUrl": "/audio/yle/d1.mp3"
+      },
+      {
+        "speaker": "Candidate",
+        "text": "I was at the beach. It was sunny.",
+        "vietnameseMeaning": "Em đã ở bãi biển. Trời có nắng.",
+        "audioUrl": "/audio/yle/d2.mp3"
+      }
+    ],
+    "vietnameseExplanation": "Bài ôn tập chuẩn hóa Cambridge Movers đánh giá tổng hợp kỹ năng nghe, đọc, viết và nói từ Unit 1 đến Unit 8."
+  }
+}

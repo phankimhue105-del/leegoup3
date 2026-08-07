@@ -1,0 +1,308 @@
+{
+  "tasks": [
+    {
+      "id": "yle-s1",
+      "taskNumber": 1,
+      "type": "read-word",
+      "promptText": "Read vocabulary: 'popcorn'",
+      "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'popcorn'",
+      "image": "/images/yle/popcorn.png",
+      "referenceAudioUrl": "/audio/yle/s1.mp3",
+      "sampleAnswer": "popcorn",
+      "keywordsToDetect": [
+        "popcorn"
+      ]
+    },
+    {
+      "id": "yle-s2",
+      "taskNumber": 2,
+      "type": "read-word",
+      "promptText": "Read vocabulary: 'dictionary'",
+      "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'dictionary'",
+      "image": "/images/yle/dictionary.png",
+      "referenceAudioUrl": "/audio/yle/s2.mp3",
+      "sampleAnswer": "dictionary",
+      "keywordsToDetect": [
+        "dictionary"
+      ]
+    },
+    {
+      "id": "yle-s3",
+      "taskNumber": 3,
+      "type": "read-sentence",
+      "promptText": "Read sentence: 'The cashier works at the supermarket.'",
+      "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu nơi làm việc",
+      "image": "/images/yle/cashier.png",
+      "referenceAudioUrl": "/audio/yle/s3.mp3",
+      "sampleAnswer": "The cashier works at the supermarket.",
+      "keywordsToDetect": [
+        "cashier",
+        "supermarket"
+      ]
+    },
+    {
+      "id": "yle-s4",
+      "taskNumber": 4,
+      "type": "read-sentence",
+      "promptText": "Read sentence: 'The marble is harder than the ball.'",
+      "vietnamesePrompt": "Nhiệm vụ 4: Đọc câu so sánh",
+      "image": "/images/yle/marble.png",
+      "referenceAudioUrl": "/audio/yle/s4.mp3",
+      "sampleAnswer": "The marble is harder than the ball.",
+      "keywordsToDetect": [
+        "marble",
+        "harder"
+      ]
+    },
+    {
+      "id": "yle-s5",
+      "taskNumber": 5,
+      "type": "answer-question",
+      "promptText": "Answer question: 'What do you want?'",
+      "vietnamesePrompt": "Nhiệm vụ 5: Trả lời đồ muốn ăn",
+      "image": "/images/yle/gum.png",
+      "referenceAudioUrl": "/audio/yle/s5.mp3",
+      "sampleAnswer": "I want some gum.",
+      "keywordsToDetect": [
+        "want",
+        "gum"
+      ]
+    },
+    {
+      "id": "yle-s6",
+      "taskNumber": 6,
+      "type": "answer-question",
+      "promptText": "Answer question: 'Where was he yesterday?'",
+      "vietnamesePrompt": "Nhiệm vụ 6: Trả lời địa điểm quá khứ",
+      "image": "/images/yle/beach.png",
+      "referenceAudioUrl": "/audio/yle/s6.mp3",
+      "sampleAnswer": "He was at the beach.",
+      "keywordsToDetect": [
+        "beach",
+        "was"
+      ]
+    },
+    {
+      "id": "yle-s7",
+      "taskNumber": 7,
+      "type": "describe-picture",
+      "promptText": "Describe picture: 'In this picture, the boy is taller than the girl.'",
+      "vietnamesePrompt": "Nhiệm vụ 7: Miêu tả bức tranh so sánh chiều cao",
+      "image": "/images/yle/taller.png",
+      "referenceAudioUrl": "/audio/yle/s7.mp3",
+      "sampleAnswer": "The boy is taller than the girl.",
+      "keywordsToDetect": [
+        "boy",
+        "taller",
+        "girl"
+      ]
+    },
+    {
+      "id": "yle-s8",
+      "taskNumber": 8,
+      "type": "complete-dialogue",
+      "promptText": "Complete dialogue: 'Let's meet here at five o'clock.' -> 'OK. See you then.'",
+      "vietnamesePrompt": "Nhiệm vụ 8: Hoàn thành hội thoại hẹn giờ",
+      "image": "/images/yle/clock.png",
+      "referenceAudioUrl": "/audio/yle/s8.mp3",
+      "sampleAnswer": "OK. See you then.",
+      "keywordsToDetect": [
+        "ok",
+        "see",
+        "then"
+      ]
+    },
+    {
+      "id": "yle-s9",
+      "taskNumber": 9,
+      "type": "role-play",
+      "promptText": "Role-play: 'Do you want to come over?' -> 'Sure. After school.'",
+      "vietnamesePrompt": "Nhiệm vụ 9: Đóng vai trả lời lời mời",
+      "image": "/images/yle/come_over.png",
+      "referenceAudioUrl": "/audio/yle/s9.mp3",
+      "sampleAnswer": "Sure. After school.",
+      "keywordsToDetect": [
+        "sure",
+        "after",
+        "school"
+      ]
+    },
+    {
+      "id": "yle-s10",
+      "taskNumber": 10,
+      "type": "free-speaking",
+      "promptText": "Free speaking: 'Tell me about your favorite school supply.'",
+      "vietnamesePrompt": "Nhiệm vụ 10: Nói tự do về dụng cụ học tập yêu thích",
+      "image": "/images/yle/pencil_sharpener.png",
+      "referenceAudioUrl": "/audio/yle/s10.mp3",
+      "sampleAnswer": "My favorite school supply is my pencil sharpener.",
+      "keywordsToDetect": [
+        "favorite",
+        "pencil",
+        "sharpener"
+      ]
+    }
+  ],
+  "speakingTask": {
+    "id": "yle-s",
+    "promptText": "10 Cambridge Movers Speaking Tasks reviewing Units 1 to 8.",
+    "vietnamesePrompt": "10 nhiệm vụ kiểm tra kỹ năng nói chuẩn Cambridge Movers.",
+    "image": "/images/yle/speaking.png",
+    "referenceAudioUrl": "/audio/yle/speaking.mp3",
+    "sampleAnswer": "Complete response covering all 10 tasks.",
+    "keywordsToDetect": [
+      "popcorn",
+      "dictionary",
+      "cashier",
+      "marble",
+      "beach",
+      "taller",
+      "five",
+      "school"
+    ],
+    "tasks": [
+      {
+        "id": "yle-s1",
+        "taskNumber": 1,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'popcorn'",
+        "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'popcorn'",
+        "image": "/images/yle/popcorn.png",
+        "referenceAudioUrl": "/audio/yle/s1.mp3",
+        "sampleAnswer": "popcorn",
+        "keywordsToDetect": [
+          "popcorn"
+        ]
+      },
+      {
+        "id": "yle-s2",
+        "taskNumber": 2,
+        "type": "read-word",
+        "promptText": "Read vocabulary: 'dictionary'",
+        "vietnamesePrompt": "Nhiệm vụ 2: Đọc từ 'dictionary'",
+        "image": "/images/yle/dictionary.png",
+        "referenceAudioUrl": "/audio/yle/s2.mp3",
+        "sampleAnswer": "dictionary",
+        "keywordsToDetect": [
+          "dictionary"
+        ]
+      },
+      {
+        "id": "yle-s3",
+        "taskNumber": 3,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'The cashier works at the supermarket.'",
+        "vietnamesePrompt": "Nhiệm vụ 3: Đọc câu nơi làm việc",
+        "image": "/images/yle/cashier.png",
+        "referenceAudioUrl": "/audio/yle/s3.mp3",
+        "sampleAnswer": "The cashier works at the supermarket.",
+        "keywordsToDetect": [
+          "cashier",
+          "supermarket"
+        ]
+      },
+      {
+        "id": "yle-s4",
+        "taskNumber": 4,
+        "type": "read-sentence",
+        "promptText": "Read sentence: 'The marble is harder than the ball.'",
+        "vietnamesePrompt": "Nhiệm vụ 4: Đọc câu so sánh",
+        "image": "/images/yle/marble.png",
+        "referenceAudioUrl": "/audio/yle/s4.mp3",
+        "sampleAnswer": "The marble is harder than the ball.",
+        "keywordsToDetect": [
+          "marble",
+          "harder"
+        ]
+      },
+      {
+        "id": "yle-s5",
+        "taskNumber": 5,
+        "type": "answer-question",
+        "promptText": "Answer question: 'What do you want?'",
+        "vietnamesePrompt": "Nhiệm vụ 5: Trả lời đồ muốn ăn",
+        "image": "/images/yle/gum.png",
+        "referenceAudioUrl": "/audio/yle/s5.mp3",
+        "sampleAnswer": "I want some gum.",
+        "keywordsToDetect": [
+          "want",
+          "gum"
+        ]
+      },
+      {
+        "id": "yle-s6",
+        "taskNumber": 6,
+        "type": "answer-question",
+        "promptText": "Answer question: 'Where was he yesterday?'",
+        "vietnamesePrompt": "Nhiệm vụ 6: Trả lời địa điểm quá khứ",
+        "image": "/images/yle/beach.png",
+        "referenceAudioUrl": "/audio/yle/s6.mp3",
+        "sampleAnswer": "He was at the beach.",
+        "keywordsToDetect": [
+          "beach",
+          "was"
+        ]
+      },
+      {
+        "id": "yle-s7",
+        "taskNumber": 7,
+        "type": "describe-picture",
+        "promptText": "Describe picture: 'In this picture, the boy is taller than the girl.'",
+        "vietnamesePrompt": "Nhiệm vụ 7: Miêu tả bức tranh so sánh chiều cao",
+        "image": "/images/yle/taller.png",
+        "referenceAudioUrl": "/audio/yle/s7.mp3",
+        "sampleAnswer": "The boy is taller than the girl.",
+        "keywordsToDetect": [
+          "boy",
+          "taller",
+          "girl"
+        ]
+      },
+      {
+        "id": "yle-s8",
+        "taskNumber": 8,
+        "type": "complete-dialogue",
+        "promptText": "Complete dialogue: 'Let's meet here at five o'clock.' -> 'OK. See you then.'",
+        "vietnamesePrompt": "Nhiệm vụ 8: Hoàn thành hội thoại hẹn giờ",
+        "image": "/images/yle/clock.png",
+        "referenceAudioUrl": "/audio/yle/s8.mp3",
+        "sampleAnswer": "OK. See you then.",
+        "keywordsToDetect": [
+          "ok",
+          "see",
+          "then"
+        ]
+      },
+      {
+        "id": "yle-s9",
+        "taskNumber": 9,
+        "type": "role-play",
+        "promptText": "Role-play: 'Do you want to come over?' -> 'Sure. After school.'",
+        "vietnamesePrompt": "Nhiệm vụ 9: Đóng vai trả lời lời mời",
+        "image": "/images/yle/come_over.png",
+        "referenceAudioUrl": "/audio/yle/s9.mp3",
+        "sampleAnswer": "Sure. After school.",
+        "keywordsToDetect": [
+          "sure",
+          "after",
+          "school"
+        ]
+      },
+      {
+        "id": "yle-s10",
+        "taskNumber": 10,
+        "type": "free-speaking",
+        "promptText": "Free speaking: 'Tell me about your favorite school supply.'",
+        "vietnamesePrompt": "Nhiệm vụ 10: Nói tự do về dụng cụ học tập yêu thích",
+        "image": "/images/yle/pencil_sharpener.png",
+        "referenceAudioUrl": "/audio/yle/s10.mp3",
+        "sampleAnswer": "My favorite school supply is my pencil sharpener.",
+        "keywordsToDetect": [
+          "favorite",
+          "pencil",
+          "sharpener"
+        ]
+      }
+    ]
+  }
+}
