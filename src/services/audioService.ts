@@ -1,6 +1,50 @@
 import { SoundEffectType } from '../types/audio';
 
 /**
+ * Helper to extract a friendly English word/phrase from an audio file URL path.
+ * Example: "audio/vocabulary/gum.mp3" -> "gum"
+ */
+function extractWordFromUrl(url: string): string {
+  if (!url) return 'Audio placeholder';
+  try {
+    const decodedUrl = decodeURIComponent(url);
+    const filename = decodedUrl.substring(decodedUrl.lastIndexOf('/') + 1);
+    const nameWithoutExt = filename.substring(0, filename.lastIndexOf('.')) || filename;
+    return nameWithoutExt.replace(/[-_]/g, ' ').trim() || 'Audio placeholder';
+  } catch {
+    return 'Audio placeholder';
+  }
+}
+
+/**
+ * Robust SpeechSynthesis English voice selector for modern browsers and platforms.
+ */
+function getBestEnglishVoice(): SpeechSynthesisVoice | null {
+  if (typeof window === 'undefined' || !window.speechSynthesis) return null;
+  const voices = window.speechSynthesis.getVoices();
+  const enVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en') || v.lang.toLowerCase().includes('en-'));
+  
+  if (enVoices.length === 0) return null;
+  
+  // Preferred voice keywords in order of quality/naturalness across platforms
+  const preferredKeywords = ['google us english', 'microsoft aria', 'natural', 'samantha', 'daniel', 'en-us'];
+  for (const keyword of preferredKeywords) {
+    const found = enVoices.find(v => v.name.toLowerCase().includes(keyword.toLowerCase()));
+    if (found) return found;
+  }
+  
+  // Next look for any US voice
+  const usVoice = enVoices.find(v => v.lang.toLowerCase().includes('us') || v.lang.toLowerCase() === 'en-us');
+  if (usVoice) return usVoice;
+
+  // Fallback to default English voice
+  const defaultVoice = enVoices.find(v => v.default);
+  if (defaultVoice) return defaultVoice;
+
+  return enVoices[0];
+}
+
+/**
  * Reusable Audio Manager
  * Supports HTML5 audio playback, volume controls, fallback WebAudio synthesizer effects,
  * queueing, preloading, and speech synthesis fallback when MP3s are absent.
@@ -13,6 +57,10 @@ class AudioService {
 
   constructor() {
     // Lazy AudioContext instantiation
+    // Pre-bind onvoiceschanged to load voices early
+    if (typeof window !== 'undefined' && window.speechSynthesis) {
+      window.speechSynthesis.getVoices();
+    }
   }
 
   public setVolume(vol: number) {
@@ -35,7 +83,7 @@ class AudioService {
       this.currentAudio.currentTime = 0;
       this.currentAudio = null;
     }
-    if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window && window.speechSynthesis.speaking) {
       window.speechSynthesis.cancel();
     }
   }
@@ -43,26 +91,51 @@ class AudioService {
   public async playTextToSpeech(text: string, lang = 'en-US'): Promise<void> {
     this.stop();
     return new Promise((resolve) => {
-      if (!('speechSynthesis' in window)) {
+      if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+        console.error('[AudioManager] SpeechSynthesis is not supported in this browser.');
+        alert('Sorry, text-to-speech is not supported on this device. Please try another browser.');
         resolve();
         return;
       }
+      
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = lang;
-      utterance.rate = this.playbackRate;
+      utterance.rate = this.playbackRate || 0.9;
+      utterance.pitch = 1.0;
       utterance.volume = this.volume;
+      
+      const bestVoice = getBestEnglishVoice();
+      if (bestVoice) {
+        utterance.voice = bestVoice;
+      }
+
       utterance.onend = () => resolve();
-      utterance.onerror = () => resolve();
+      utterance.onerror = (event) => {
+        console.error('[AudioManager] SpeechSynthesis error:', event);
+        resolve();
+      };
+      
       window.speechSynthesis.speak(utterance);
     });
   }
 
-  public async playUrl(url: string): Promise<void> {
+  /**
+   * Play an audio URL. If it fails or is a missing local audio path, falls back to text-to-speech.
+   */
+  public async playUrl(url: string, textToSpeak?: string): Promise<void> {
     this.stop();
-    if (!url) {
+
+    // Identify if the file is a missing local path or empty
+    const isLocalAsset = !url || url.startsWith('/') || url.startsWith('audio/') || url.includes('/audio/') || url.includes('assets/');
+    
+    if (isLocalAsset) {
+      const speakText = textToSpeak || extractWordFromUrl(url);
+      console.warn(`[AudioManager] Redirecting local/missing asset to SpeechSynthesis: "${speakText}"`);
+      await this.playTextToSpeech(speakText);
       return;
     }
-    return new Promise((resolve, reject) => {
+
+    return new Promise((resolve) => {
       const audio = new Audio(url);
       audio.volume = this.volume;
       audio.playbackRate = this.playbackRate;
@@ -72,13 +145,20 @@ class AudioService {
         this.currentAudio = null;
         resolve();
       };
-      audio.onerror = (err) => {
+      
+      audio.onerror = async (err) => {
+        console.warn(`[AudioManager] Audio failed to load: ${url}. Falling back to SpeechSynthesis.`);
         this.currentAudio = null;
-        reject(err);
+        const speakText = textToSpeak || extractWordFromUrl(url);
+        await this.playTextToSpeech(speakText);
+        resolve();
       };
 
-      audio.play().catch(() => {
-        // Fallback or user gesture requirement
+      audio.play().catch(async () => {
+        console.warn(`[AudioManager] Play interrupted or failed. Falling back to SpeechSynthesis.`);
+        this.currentAudio = null;
+        const speakText = textToSpeak || extractWordFromUrl(url);
+        await this.playTextToSpeech(speakText);
         resolve();
       });
     });
@@ -89,6 +169,7 @@ class AudioService {
    */
   public playEffect(effect: SoundEffectType) {
     try {
+      if (typeof window === 'undefined') return;
       if (!this.audioContext) {
         const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
         this.audioContext = new AudioCtx();
@@ -159,3 +240,4 @@ class AudioService {
 }
 
 export const audioService = new AudioService();
+export const AudioManager = audioService; // Centralized AudioManager export
