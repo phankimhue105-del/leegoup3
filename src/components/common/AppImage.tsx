@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { PLACEHOLDER_IMAGES, getPlaceholderImageUrl } from '../../data/placeholderMedia';
-import { ImageOff } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ImageService } from '../../services/imageService';
 
 interface AppImageProps {
   src?: string;
@@ -19,14 +18,16 @@ export const AppImage: React.FC<AppImageProps> = ({
 }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [hasError, setHasError] = useState<boolean>(false);
+  const [currentSrc, setCurrentSrc] = useState<string>(() =>
+    ImageService.getImage(src, fallbackText || alt || 'Image')
+  );
 
-  // Resolve preset key or fallback URL
-  let resolvedSrc = src;
-  if (src && src in PLACEHOLDER_IMAGES) {
-    resolvedSrc = PLACEHOLDER_IMAGES[src as keyof typeof PLACEHOLDER_IMAGES];
-  } else if (!src) {
-    resolvedSrc = getPlaceholderImageUrl(fallbackText || alt || 'Image');
-  }
+  // Sync state if src or fallback dependencies change
+  useEffect(() => {
+    setCurrentSrc(ImageService.getImage(src, fallbackText || alt || 'Image'));
+    setHasError(false);
+    setLoading(true);
+  }, [src, fallbackText, alt]);
 
   return (
     <div className={`relative overflow-hidden rounded-2xl bg-slate-100 ${className}`} id={id}>
@@ -36,28 +37,25 @@ export const AppImage: React.FC<AppImageProps> = ({
         </div>
       )}
 
-      {hasError ? (
-        <div className="absolute inset-0 bg-slate-100 flex flex-col items-center justify-center p-4 text-center">
-          <ImageOff className="w-8 h-8 text-slate-400 mb-1" />
-          <span className="text-xs font-medium text-slate-500">
-            {fallbackText || alt || 'Image unavailable'}
-          </span>
-        </div>
-      ) : (
-        <img
-          src={resolvedSrc}
-          alt={alt}
-          loading="lazy"
-          onLoad={() => setLoading(false)}
-          onError={() => {
-            setLoading(false);
+      <img
+        src={currentSrc}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setLoading(false)}
+        onError={() => {
+          if (!hasError) {
             setHasError(true);
-          }}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            loading ? 'opacity-0' : 'opacity-100'
-          }`}
-        />
-      )}
+            // Replace broken remote image with SVG placeholder dynamically
+            setCurrentSrc(ImageService.getImage('', fallbackText || alt || 'Image'));
+          } else {
+            setLoading(false);
+          }
+        }}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          loading ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
     </div>
   );
 };
+
