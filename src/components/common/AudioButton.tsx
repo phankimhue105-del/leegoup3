@@ -43,7 +43,7 @@ export const AudioButton: React.FC<AudioButtonProps> = ({
     setPlaying(true);
     try {
       if (audioUrl) {
-        await playUrl(audioUrl);
+        await playUrl(audioUrl, textToSpeak);
       } else if (textToSpeak) {
         await playSpeech(textToSpeak);
       }
