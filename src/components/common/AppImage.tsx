@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ImageService } from '../../services/imageService';
 
 interface AppImageProps {
@@ -18,16 +18,55 @@ export const AppImage: React.FC<AppImageProps> = ({
 }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [hasError, setHasError] = useState<boolean>(false);
-  const [currentSrc, setCurrentSrc] = useState<string>(() =>
+  
+  // Track the original prop-resolved source to avoid resets on parent re-renders
+  const [resolvedSrcProp, setResolvedSrcProp] = useState<string>(() =>
     ImageService.getImage(src, fallbackText || alt || 'Image')
   );
 
-  // Sync state if src or fallback dependencies change
+  // Track the source currently assigned to the img element
+  const [currentSrc, setCurrentSrc] = useState<string>(resolvedSrcProp);
+
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // Sync state ONLY if the source resolved from props has actually changed
   useEffect(() => {
-    setCurrentSrc(ImageService.getImage(src, fallbackText || alt || 'Image'));
-    setHasError(false);
-    setLoading(true);
-  }, [src, fallbackText, alt]);
+    const nextResolved = ImageService.getImage(src, fallbackText || alt || 'Image');
+    if (nextResolved !== resolvedSrcProp) {
+      setResolvedSrcProp(nextResolved);
+      setCurrentSrc(nextResolved);
+      setHasError(false);
+      setLoading(true);
+    }
+  }, [src, fallbackText, alt, resolvedSrcProp]);
+
+  // Handle successful image load
+  const handleLoad = () => {
+    setLoading(false);
+  };
+
+  // Handle image load error, falling back to SVG placeholder only once
+  const handleError = () => {
+    if (!hasError) {
+      setHasError(true);
+      setCurrentSrc(ImageService.getImage('', fallbackText || alt || 'Image'));
+    } else {
+      setLoading(false);
+    }
+  };
+
+  // Check complete status of image element on mount or currentSrc changes
+  // This resolves issues where cached images finish loading before React binds event handlers
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete) {
+      if (img.naturalWidth > 0) {
+        setLoading(false);
+      } else {
+        handleError();
+      }
+    }
+  }, [currentSrc, hasError, fallbackText, alt]);
 
   return (
     <div className={`relative overflow-hidden rounded-2xl bg-slate-100 ${className}`} id={id}>
@@ -38,19 +77,12 @@ export const AppImage: React.FC<AppImageProps> = ({
       )}
 
       <img
+        ref={imgRef}
         src={currentSrc}
         alt={alt}
         loading="lazy"
-        onLoad={() => setLoading(false)}
-        onError={() => {
-          if (!hasError) {
-            setHasError(true);
-            // Replace broken remote image with SVG placeholder dynamically
-            setCurrentSrc(ImageService.getImage('', fallbackText || alt || 'Image'));
-          } else {
-            setLoading(false);
-          }
-        }}
+        onLoad={handleLoad}
+        onError={handleError}
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           loading ? 'opacity-0' : 'opacity-100'
         }`}
