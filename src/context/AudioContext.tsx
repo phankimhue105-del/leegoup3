@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { audioService } from '../services/audioService';
+import { AudioManager } from '../services/audioService';
 import { SoundEffectType } from '../types/audio';
 import { useSettings } from './SettingsContext';
 
 interface AudioContextType {
   isPlaying: boolean;
   playSpeech: (text: string) => Promise<void>;
-  playUrl: (url: string) => Promise<void>;
+  playUrl: (url: string, textToSpeak?: string) => Promise<void>;
   playEffect: (effect: SoundEffectType) => void;
   stopAudio: () => void;
 }
@@ -18,28 +18,23 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   useEffect(() => {
-    audioService.setVolume(settings.soundVolume);
-    audioService.setPlaybackSpeed(settings.voicePlaybackSpeed);
+    AudioManager.setVolume(settings.soundVolume);
+    AudioManager.setPlaybackSpeed(settings.voicePlaybackSpeed);
   }, [settings.soundVolume, settings.voicePlaybackSpeed]);
 
   const playSpeech = async (text: string) => {
     setIsPlaying(true);
     try {
-      await audioService.playTextToSpeech(text);
+      await AudioManager.playTextToSpeech(text);
     } finally {
       setIsPlaying(false);
     }
   };
 
-  const playUrl = async (url: string) => {
+  const playUrl = async (url: string, textToSpeak?: string) => {
     setIsPlaying(true);
     try {
-      if (url) {
-        await audioService.playUrl(url);
-      } else {
-        // Fallback to text to speech if url is empty
-        await audioService.playTextToSpeech(url || 'Audio placeholder');
-      }
+      await AudioManager.playUrl(url, textToSpeak);
     } catch {
       setIsPlaying(false);
     } finally {
@@ -48,11 +43,11 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   const playEffect = (effect: SoundEffectType) => {
-    audioService.playEffect(effect);
+    AudioManager.playEffect(effect);
   };
 
   const stopAudio = () => {
-    audioService.stop();
+    AudioManager.stop();
     setIsPlaying(false);
   };
 
