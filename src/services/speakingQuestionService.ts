@@ -37,6 +37,110 @@ function getReviewLessonsForCheckup(checkupUnitId: string, allUnits: Unit[]): Le
   return lessons;
 }
 
+// Helper to generate a contextual roleplay question based on unit context
+function getRoleplayQuestion(unitId: string, index: number, fallbackWord: string): { prompt: string; promptVi: string; expected: string } {
+  const normalizedId = unitId.toLowerCase();
+  
+  if (normalizedId.includes('unit-1')) {
+    // Food / snacks
+    if (index === 0) {
+      return {
+        prompt: "What do you want to eat for snacks?",
+        promptVi: "Con muốn ăn gì cho bữa nhẹ?",
+        expected: `I want some ${fallbackWord || 'popcorn'}.`
+      };
+    } else {
+      return {
+        prompt: "What do you like to drink?",
+        promptVi: "Con thích uống nước gì?",
+        expected: "I like soda."
+      };
+    }
+  } else if (normalizedId.includes('unit-2')) {
+    // Occupations
+    if (index === 0) {
+      return {
+        prompt: "What job do you want to do in the future?",
+        promptVi: "Con muốn làm nghề nghiệp gì trong tương lai?",
+        expected: `I want to be a ${fallbackWord || 'doctor'}.`
+      };
+    } else {
+      return {
+        prompt: "Where does your teacher work?",
+        promptVi: "Giáo viên của con làm việc ở đâu?",
+        expected: "The teacher works at the school."
+      };
+    }
+  } else if (normalizedId.includes('unit-3')) {
+    // Health / Illnesses
+    if (index === 0) {
+      return {
+        prompt: "How do you feel when you have a cold?",
+        promptVi: "Con cảm thấy thế nào khi bị cảm lạnh?",
+        expected: "I feel very tired."
+      };
+    } else {
+      return {
+        prompt: "What should you do when you have a headache?",
+        promptVi: "Con nên làm gì khi bị đau đầu?",
+        expected: "I should take medicine."
+      };
+    }
+  } else if (normalizedId.includes('unit-4')) {
+    // Clothing
+    if (index === 0) {
+      return {
+        prompt: "What clothes do you wear on a cold day?",
+        promptVi: "Con mặc quần áo gì vào ngày lạnh?",
+        expected: `I wear a ${fallbackWord || 'sweater'}.`
+      };
+    } else {
+      return {
+        prompt: "What is your favorite color of shirt?",
+        promptVi: "Màu áo yêu thích của con là gì?",
+        expected: "My favorite color is blue."
+      };
+    }
+  } else if (normalizedId.includes('unit-5')) {
+    // Places
+    if (index === 0) {
+      return {
+        prompt: "Where do you like to go after school?",
+        promptVi: "Con thích đi đâu sau giờ học?",
+        expected: `I like to go to the ${fallbackWord || 'movie theater'}.`
+      };
+    } else {
+      return {
+        prompt: "What do you like to do at the amusement park?",
+        promptVi: "Con thích làm gì ở công viên giải trí?",
+        expected: "I like to watch a movie."
+      };
+    }
+  } else if (normalizedId.includes('unit-6') || normalizedId.includes('unit-7') || normalizedId.includes('unit-8')) {
+    // Home / Chores
+    if (index === 0) {
+      return {
+        prompt: "What chores do you do to help at home?",
+        promptVi: "Con làm việc nhà nào để giúp đỡ gia đình?",
+        expected: `I ${fallbackWord || 'sweep the floor'}.`
+      };
+    } else {
+      return {
+        prompt: "Do you help your parents clean the room?",
+        promptVi: "Con có giúp bố mẹ dọn phòng không?",
+        expected: "Yes, I make my bed."
+      };
+    }
+  }
+
+  // Generic fallback
+  return {
+    prompt: `Do you like to learn about ${fallbackWord || 'English'}?`,
+    promptVi: `Con có thích học về ${fallbackWord || 'Tiếng Anh'} không?`,
+    expected: "Yes, I do."
+  };
+}
+
 export class SpeakingQuestionService {
   /**
    * Generates exactly 8 questions for standard lessons, or exactly 6 questions for Check-Ups
@@ -51,24 +155,7 @@ export class SpeakingQuestionService {
   private generateNormalQuestions(lesson: Lesson, unit: Unit): SpeakingQuestion[] {
     const questions: SpeakingQuestion[] = [];
     const vocabList = lesson.vocabulary || [];
-    const patternText = lesson.modelPattern?.pattern || lesson.speakingTask?.sampleAnswer || "I want some gum.";
     
-    // Extract a cleaner pattern sentence from "Question? Answer."
-    let basePatternResponse = patternText;
-    let basePatternQuestion = "What do you want?";
-    if (patternText.includes('?')) {
-      const parts = patternText.split('?');
-      basePatternQuestion = parts[0].trim() + '?';
-      basePatternResponse = parts[1]?.trim() || basePatternResponse;
-    }
-
-    const dialogue = lesson.modelPattern?.dialogue || [];
-    const dialogueQ = dialogue[0]?.text || basePatternQuestion;
-    const dialogueA = dialogue[1]?.text || basePatternResponse;
-
-    const topic = unit.title;
-
-    // Helper to get vocab safely with fallback
     const getVocab = (idx: number): VocabularyItem => {
       if (vocabList.length > 0) {
         return vocabList[idx % vocabList.length];
@@ -82,157 +169,103 @@ export class SpeakingQuestionService {
       };
     };
 
-    // Q1 - Vocabulary Recognition / Pronunciation
+    const patternText = lesson.modelPattern?.pattern || lesson.speakingTask?.sampleAnswer || "I want some gum.";
+    let basePatternResponse = patternText;
+    if (patternText.includes('?')) {
+      basePatternResponse = patternText.split('?')[1]?.trim() || basePatternResponse;
+    }
+
+    // --- Q1 to Q3: VOCABULARY PRONUNCIATION (SINGLE WORDS) ---
+    for (let i = 0; i < 3; i++) {
+      const vocab = getVocab(i);
+      questions.push({
+        id: `${lesson.id}-q${i + 1}`,
+        type: 'vocabulary',
+        instruction: `Read: "${vocab.word}"`,
+        vietnameseInstruction: `Đọc từ vựng: "${vocab.word}"`,
+        targetText: vocab.word,
+        expectedAnswer: vocab.word,
+        acceptableAnswers: [vocab.word],
+        vocabularyRefs: [vocab.word],
+        lessonContext: `Vocabulary word pronunciation of "${vocab.word}"`,
+        difficulty: 1,
+        image: vocab.image,
+        feedbackContext: `Practice pronouncing the single word "${vocab.word}".`
+      });
+    }
+
+    // --- Q4 to Q6: SENTENCE READING ---
+    // Q4: Example Sentence of vocabulary item 0
     const v1 = getVocab(0);
     questions.push({
-      id: `${lesson.id}-q1`,
-      type: 'vocabulary',
-      instruction: `Say the vocabulary word: "${v1.word}"`,
-      vietnameseInstruction: `Nói từ vựng sau: "${v1.word}"`,
-      targetText: v1.word,
-      expectedAnswer: v1.word,
-      acceptableAnswers: [v1.word],
+      id: `${lesson.id}-q4`,
+      type: 'vocabulary_context',
+      instruction: `Read: "${v1.exampleSentence}"`,
+      vietnameseInstruction: `Đọc câu: "${v1.exampleSentence}"`,
+      targetText: v1.exampleSentence,
+      expectedAnswer: v1.exampleSentence,
+      acceptableAnswers: [v1.exampleSentence],
       vocabularyRefs: [v1.word],
-      lessonContext: `Vocabulary pronunciation from ${lesson.title}`,
-      difficulty: 1,
+      lessonContext: `Sentence reading for vocabulary "${v1.word}"`,
+      difficulty: 2,
       image: v1.image,
-      feedbackContext: `Practice pronouncing the single word "${v1.word}". Try saying it clearly.`
+      feedbackContext: `Read the full vocabulary example sentence: "${v1.exampleSentence}".`
     });
 
-    // Q2 - Vocabulary in Context
+    // Q5: Example Sentence of vocabulary item 1
     const v2 = getVocab(1);
     questions.push({
-      id: `${lesson.id}-q2`,
+      id: `${lesson.id}-q5`,
       type: 'vocabulary_context',
-      instruction: `Say the sentence: "${v2.exampleSentence}"`,
-      vietnameseInstruction: `Nói câu sau: "${v2.exampleSentence}"`,
+      instruction: `Read: "${v2.exampleSentence}"`,
+      vietnameseInstruction: `Đọc câu: "${v2.exampleSentence}"`,
       targetText: v2.exampleSentence,
       expectedAnswer: v2.exampleSentence,
       acceptableAnswers: [v2.exampleSentence],
       vocabularyRefs: [v2.word],
-      lessonContext: `Vocabulary context sentence from ${lesson.title}`,
+      lessonContext: `Sentence reading for vocabulary "${v2.word}"`,
       difficulty: 2,
       image: v2.image,
-      feedbackContext: `Practice saying the full vocabulary context sentence: "${v2.exampleSentence}".`
+      feedbackContext: `Read the second vocabulary example sentence: "${v2.exampleSentence}".`
     });
 
-    // Q3 - Model Pattern - Controlled Practice
-    questions.push({
-      id: `${lesson.id}-q3`,
-      type: 'model_pattern',
-      instruction: `Say the pattern sentence: "${basePatternResponse}"`,
-      vietnameseInstruction: `Luyện nói mẫu câu chính: "${basePatternResponse}"`,
-      targetText: basePatternResponse,
-      expectedAnswer: basePatternResponse,
-      acceptableAnswers: [basePatternResponse],
-      vocabularyRefs: [v1.word],
-      modelPatternRef: lesson.modelPattern?.id,
-      lessonContext: `Target model pattern sentence from ${lesson.title}`,
-      difficulty: 2,
-      image: lesson.modelPattern?.image || lesson.speakingTask?.image,
-      feedbackContext: `Say the lesson's core sentence structure: "${basePatternResponse}".`
-    });
-
-    // Q4 - Model Pattern with a New Cue
-    const v3 = getVocab(2);
-    // Substitution logic: replace vocab[0] with vocab[2] in the base sentence
-    let newCueText = basePatternResponse;
-    const oldWord = v1.word;
-    const newWord = v3.word;
-    if (oldWord && newWord) {
-      try {
-        const regex = new RegExp(oldWord, 'gi');
-        newCueText = basePatternResponse.replace(regex, newWord);
-      } catch {
-        newCueText = `${basePatternResponse} and ${newWord}`;
-      }
-    }
-    questions.push({
-      id: `${lesson.id}-q4`,
-      type: 'model_pattern',
-      instruction: `Say the pattern with the new word "${v3.word}": "${newCueText}"`,
-      vietnameseInstruction: `Nói mẫu câu với từ thay thế mới "${v3.word}": "${newCueText}"`,
-      targetText: newCueText,
-      expectedAnswer: newCueText,
-      acceptableAnswers: [newCueText],
-      vocabularyRefs: [v3.word],
-      modelPatternRef: lesson.modelPattern?.id,
-      lessonContext: `Sentence pattern substitution using "${v3.word}"`,
-      difficulty: 3,
-      image: v3.image,
-      feedbackContext: `Replace the previous item with "${v3.word}" to say: "${newCueText}".`
-    });
-
-    // Q5 - Guided Response
-    questions.push({
-      id: `${lesson.id}-q5`,
-      type: 'guided_response',
-      instruction: `Answer the question: "${basePatternQuestion}"`,
-      vietnameseInstruction: `Trả lời câu hỏi sau: "${basePatternQuestion}"`,
-      targetText: basePatternResponse,
-      expectedAnswer: basePatternResponse,
-      acceptableAnswers: [basePatternResponse, basePatternResponse.replace(/[.!?]/g, '')],
-      vocabularyRefs: [v1.word],
-      modelPatternRef: lesson.modelPattern?.id,
-      lessonContext: `Guided response to question: "${basePatternQuestion}"`,
-      difficulty: 3,
-      image: lesson.modelPattern?.image || lesson.speakingTask?.image,
-      feedbackContext: `Answer the question "${basePatternQuestion}" with the model sentence "${basePatternResponse}".`
-    });
-
-    // Q6 - Lesson Context / Communicative Practice
+    // Q6: Main model pattern sentence or dialogue response
+    const pSentence = lesson.modelPattern?.dialogue?.[1]?.text || basePatternResponse;
     questions.push({
       id: `${lesson.id}-q6`,
-      type: 'contextual',
-      instruction: `Role-play. Answer the question: "${dialogueQ}"`,
-      vietnameseInstruction: `Đóng vai hội thoại. Trả lời câu hỏi: "${dialogueQ}"`,
-      targetText: dialogueA,
-      expectedAnswer: dialogueA,
-      acceptableAnswers: [dialogueA],
-      vocabularyRefs: [v2.word],
-      lessonContext: `Dialogue context practice from ${lesson.title}`,
-      difficulty: 4,
+      type: 'model_pattern',
+      instruction: `Read: "${pSentence}"`,
+      vietnameseInstruction: `Đọc câu: "${pSentence}"`,
+      targetText: pSentence,
+      expectedAnswer: pSentence,
+      acceptableAnswers: [pSentence],
+      vocabularyRefs: [v1.word],
+      modelPatternRef: lesson.modelPattern?.id,
+      lessonContext: `Target sentence structure reading`,
+      difficulty: 3,
       image: lesson.modelPattern?.image || lesson.speakingTask?.image,
-      feedbackContext: `Respond to the conversational prompt "${dialogueQ}" with "${dialogueA}".`
+      feedbackContext: `Practice pronouncing the lesson model pattern sentence: "${pSentence}".`
     });
 
-    // Q7 - Mixed Vocabulary + Model Pattern
-    const v4 = getVocab(3);
-    const q7Sentence = v4.exampleSentence;
-    questions.push({
-      id: `${lesson.id}-q7`,
-      type: 'mixed',
-      instruction: `Say a complete sentence using the word "${v4.word}": "${q7Sentence}"`,
-      vietnameseInstruction: `Nói câu hoàn chỉnh với từ "${v4.word}": "${q7Sentence}"`,
-      targetText: q7Sentence,
-      expectedAnswer: q7Sentence,
-      acceptableAnswers: [q7Sentence],
-      vocabularyRefs: [v4.word],
-      lessonContext: `Communicative mixed practice with "${v4.word}"`,
-      difficulty: 4,
-      image: v4.image,
-      feedbackContext: `Practice pronouncing the mixed vocabulary sentence containing "${v4.word}".`
-    });
-
-    // Q8 - Final Communicative Challenge
-    const lastVoc = getVocab(4);
-    let finalPrompt = `Talk about ${topic}: "${lastVoc.exampleSentence}"`;
-    let finalExpected = lastVoc.exampleSentence;
-    
-    questions.push({
-      id: `${lesson.id}-q8`,
-      type: 'communicative',
-      instruction: finalPrompt,
-      vietnameseInstruction: `Thử thách cuối cùng: Trả lời câu nói sau: "${lastVoc.exampleSentence}"`,
-      targetText: finalExpected,
-      expectedAnswer: finalExpected,
-      acceptableAnswers: [finalExpected],
-      vocabularyRefs: [lastVoc.word],
-      lessonContext: `Final lesson challenge about ${topic}`,
-      difficulty: 5,
-      image: lastVoc.image,
-      feedbackContext: `Complete the final lesson challenge by speaking the sentence: "${finalExpected}".`
-    });
+    // --- Q7 to Q8: ROLE-PLAY / PERSONAL RESPONSE ---
+    for (let i = 0; i < 2; i++) {
+      const vocabRef = getVocab(i + 2);
+      const rp = getRoleplayQuestion(unit.id, i, vocabRef.word);
+      questions.push({
+        id: `${lesson.id}-q${i + 7}`,
+        type: 'communicative',
+        instruction: rp.prompt,
+        vietnameseInstruction: rp.promptVi,
+        targetText: rp.expected,
+        expectedAnswer: rp.expected,
+        acceptableAnswers: [], // Evaluated semantically (any matching keywords/lengths)
+        vocabularyRefs: [vocabRef.word],
+        lessonContext: `Communicative personal response practice`,
+        difficulty: 4,
+        image: vocabRef.image,
+        feedbackContext: `Answer the question "${rp.prompt}" in your own words. Use "${vocabRef.word}" if applicable.`
+      });
+    }
 
     return questions;
   }
@@ -241,12 +274,11 @@ export class SpeakingQuestionService {
     const reviewLessons = getReviewLessonsForCheckup(unit.id, allUnits);
     const questions: SpeakingQuestion[] = [];
 
-    // Safe accessor for reviewed lessons
     const getReviewLesson = (idx: number): Lesson => {
       if (reviewLessons.length > 0) {
         return reviewLessons[idx % reviewLessons.length];
       }
-      return lesson; // Fallback to checkup lesson itself
+      return lesson;
     };
 
     const l1 = getReviewLesson(0);
@@ -259,113 +291,101 @@ export class SpeakingQuestionService {
     const v1 = l1.vocabulary?.[0] || { word: 'apple', image: '/images/fallback.png' };
     const v2 = l2.vocabulary?.[1] || { word: 'banana', image: '/images/fallback.png' };
 
-    // Q1 - Vocabulary from earlier lesson
+    // Q1-Q2: 2 vocabulary pronunciation questions
     questions.push({
       id: `${lesson.id}-q1`,
       type: 'vocabulary',
-      instruction: `Review vocabulary. Say: "${v1.word}"`,
-      vietnameseInstruction: `Ôn tập từ vựng. Đọc: "${v1.word}"`,
+      instruction: `Read: "${v1.word}"`,
+      vietnameseInstruction: `Đọc từ vựng: "${v1.word}"`,
       targetText: v1.word,
       expectedAnswer: v1.word,
       acceptableAnswers: [v1.word],
       vocabularyRefs: [v1.word],
-      lessonContext: `Vocabulary review from ${l1.title}`,
-      difficulty: 2,
+      lessonContext: `Checkup word review of "${v1.word}"`,
+      difficulty: 1,
       image: v1.image,
-      feedbackContext: `Say the reviewed word "${v1.word}" clearly.`
+      feedbackContext: `Pronounce the vocabulary word "${v1.word}".`
     });
 
-    // Q2 - Vocabulary from another lesson
     questions.push({
       id: `${lesson.id}-q2`,
       type: 'vocabulary',
-      instruction: `Review vocabulary. Say: "${v2.word}"`,
-      vietnameseInstruction: `Ôn tập từ vựng khác. Đọc: "${v2.word}"`,
+      instruction: `Read: "${v2.word}"`,
+      vietnameseInstruction: `Đọc từ vựng: "${v2.word}"`,
       targetText: v2.word,
       expectedAnswer: v2.word,
       acceptableAnswers: [v2.word],
       vocabularyRefs: [v2.word],
-      lessonContext: `Vocabulary review from ${l2.title}`,
-      difficulty: 2,
+      lessonContext: `Checkup word review of "${v2.word}"`,
+      difficulty: 1,
       image: v2.image,
-      feedbackContext: `Say the second reviewed word "${v2.word}" clearly.`
+      feedbackContext: `Pronounce the vocabulary word "${v2.word}".`
     });
 
-    // Q3 - Model Pattern from reviewed lessons
-    const p3Text = l3.modelPattern?.dialogue?.[0]?.text || l3.modelPattern?.pattern || "I want some gum.";
-    let p3Response = p3Text;
-    if (p3Text.includes('?')) {
-      p3Response = p3Text.split('?')[1]?.trim() || p3Text;
-    }
+    // Q3-Q4: 2 complete sentence reading questions
+    const p3 = l3.vocabulary?.[0]?.exampleSentence || "I want some gum.";
     questions.push({
       id: `${lesson.id}-q3`,
-      type: 'model_pattern',
-      instruction: `Review pattern sentence: "${p3Response}"`,
-      vietnameseInstruction: `Ôn tập mẫu câu: "${p3Response}"`,
-      targetText: p3Response,
-      expectedAnswer: p3Response,
-      acceptableAnswers: [p3Response],
+      type: 'vocabulary_context',
+      instruction: `Read: "${p3}"`,
+      vietnameseInstruction: `Đọc câu: "${p3}"`,
+      targetText: p3,
+      expectedAnswer: p3,
+      acceptableAnswers: [p3],
       vocabularyRefs: [l3.vocabulary?.[0]?.word || 'apple'],
-      lessonContext: `Pattern sentence review from ${l3.title}`,
-      difficulty: 3,
-      image: l3.modelPattern?.image || l3.speakingTask?.image || '/images/fallback.png',
-      feedbackContext: `Review and speak this target pattern sentence: "${p3Response}".`
+      lessonContext: `Checkup sentence reading from ${l3.title}`,
+      difficulty: 2,
+      image: l3.vocabulary?.[0]?.image || '/images/fallback.png',
+      feedbackContext: `Read the full sentence: "${p3}".`
     });
 
-    // Q4 - Vocabulary + Model Pattern combination
-    const p4Text = l4.modelPattern?.dialogue?.[0]?.text || l4.modelPattern?.pattern || "We need a carrot.";
-    let p4Response = p4Text;
-    if (p4Text.includes('?')) {
-      p4Response = p4Text.split('?')[1]?.trim() || p4Text;
-    }
+    const p4 = l4.vocabulary?.[0]?.exampleSentence || "We need a carrot.";
     questions.push({
       id: `${lesson.id}-q4`,
-      type: 'model_pattern',
-      instruction: `Review pattern sentence: "${p4Response}"`,
-      vietnameseInstruction: `Ôn tập mẫu câu phối hợp: "${p4Response}"`,
-      targetText: p4Response,
-      expectedAnswer: p4Response,
-      acceptableAnswers: [p4Response],
+      type: 'vocabulary_context',
+      instruction: `Read: "${p4}"`,
+      vietnameseInstruction: `Đọc câu: "${p4}"`,
+      targetText: p4,
+      expectedAnswer: p4,
+      acceptableAnswers: [p4],
       vocabularyRefs: [l4.vocabulary?.[0]?.word || 'banana'],
-      lessonContext: `Pattern sentence review from ${l4.title}`,
-      difficulty: 3,
-      image: l4.modelPattern?.image || l4.speakingTask?.image || '/images/fallback.png',
-      feedbackContext: `Review and speak this second target pattern sentence: "${p4Response}".`
+      lessonContext: `Checkup sentence reading from ${l4.title}`,
+      difficulty: 2,
+      image: l4.vocabulary?.[0]?.image || '/images/fallback.png',
+      feedbackContext: `Read the full sentence: "${p4}".`
     });
 
-    // Q5 - Context/dialogue from reviewed lessons
-    const dQ = l5.modelPattern?.dialogue?.[0]?.text || "Do you need any peppers?";
-    const dA = l5.modelPattern?.dialogue?.[1]?.text || "Yes, we do.";
+    // Q5-Q6: 2 role-play / personal-response questions
+    const rp1 = getRoleplayQuestion(l5.unitId, 0, l5.vocabulary?.[0]?.word || 'school');
     questions.push({
       id: `${lesson.id}-q5`,
-      type: 'contextual',
-      instruction: `Conversational practice. Answer: "${dQ}"`,
-      vietnameseInstruction: `Hội thoại ôn tập. Trả lời: "${dQ}"`,
-      targetText: dA,
-      expectedAnswer: dA,
-      acceptableAnswers: [dA],
-      vocabularyRefs: [l5.vocabulary?.[0]?.word || 'peppers'],
-      lessonContext: `Conversational review from ${l5.title}`,
-      difficulty: 4,
-      image: l5.modelPattern?.image || l5.speakingTask?.image || '/images/fallback.png',
-      feedbackContext: `Respond to the question "${dQ}" with "${dA}".`
+      type: 'communicative',
+      instruction: rp1.prompt,
+      vietnameseInstruction: rp1.promptVi,
+      targetText: rp1.expected,
+      expectedAnswer: rp1.expected,
+      acceptableAnswers: [],
+      vocabularyRefs: [l5.vocabulary?.[0]?.word || 'school'],
+      lessonContext: `Checkup roleplay response practice`,
+      difficulty: 3,
+      image: l5.vocabulary?.[0]?.image || '/images/fallback.png',
+      feedbackContext: `Answer the question: "${rp1.prompt}" in your own words.`
     });
 
-    // Q6 - Final mixed communicative task
-    const finalSent = l6.vocabulary?.[0]?.exampleSentence || "I want some popcorn.";
+    const rp2 = getRoleplayQuestion(l6.unitId, 1, l6.vocabulary?.[0]?.word || 'chores');
     questions.push({
       id: `${lesson.id}-q6`,
       type: 'communicative',
-      instruction: `Final review challenge: "${finalSent}"`,
-      vietnameseInstruction: `Thử thách ôn tập cuối cùng: Nói câu sau: "${finalSent}"`,
-      targetText: finalSent,
-      expectedAnswer: finalSent,
-      acceptableAnswers: [finalSent],
-      vocabularyRefs: [l6.vocabulary?.[0]?.word || 'popcorn'],
-      lessonContext: `Check-up communicative speaking test from ${l6.title}`,
-      difficulty: 4,
+      instruction: rp2.prompt,
+      vietnameseInstruction: rp2.promptVi,
+      targetText: rp2.expected,
+      expectedAnswer: rp2.expected,
+      acceptableAnswers: [],
+      vocabularyRefs: [l6.vocabulary?.[0]?.word || 'chores'],
+      lessonContext: `Checkup roleplay response practice`,
+      difficulty: 3,
       image: l6.vocabulary?.[0]?.image || '/images/fallback.png',
-      feedbackContext: `Complete the Check-Up by pronouncing the final review challenge: "${finalSent}".`
+      feedbackContext: `Answer the question: "${rp2.prompt}" in your own words.`
     });
 
     return questions;
