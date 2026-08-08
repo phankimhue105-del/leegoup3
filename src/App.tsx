@@ -50,6 +50,10 @@ export default function App() {
                       element={<LessonOverviewPage onOpenSettings={handleOpenSettings} />}
                     />
                     <Route
+                      path="/units/:unitId/lessons/:lessonId"
+                      element={<LessonOverviewPage onOpenSettings={handleOpenSettings} />}
+                    />
+                    <Route
                       path="/units/:unitId/lessons/:lessonId/vocabulary"
                       element={<VocabularyPage onOpenSettings={handleOpenSettings} />}
                     />
