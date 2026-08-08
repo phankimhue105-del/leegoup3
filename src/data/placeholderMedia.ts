@@ -13,7 +13,7 @@ export function getPlaceholderImageUrl(
     <rect width="100%" height="100%" fill="${bgColor}" rx="24"/>
     <circle cx="300" cy="180" r="70" fill="white" opacity="0.6"/>
     <path d="M270 170 L300 140 L330 170 M300 140 L300 210" stroke="${textColor}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="300" y="310" font-family="'Fredoka', sans-serif" font-size="28" font-weight="600" fill="${textColor}" text-anchor="middle">${title}</text>
+    <text x="300" y="310" font-family="'Nunito', sans-serif" font-size="28" font-weight="600" fill="${textColor}" text-anchor="middle">${title}</text>
   </svg>`;
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
