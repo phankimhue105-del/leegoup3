@@ -1,6 +1,59 @@
 import { PLACEHOLDER_IMAGES } from '../data/placeholderMedia';
 import { VOCABULARY_IMAGE_MAP } from '../data/vocabularyImageMap';
 
+// Centralized Semantic Composite Illustrations for Occupations, Actions, and Places
+const COMPOSITE_ILLUSTRATIONS: Record<string, { emojis: string[]; label: string }> = {
+  // Occupations
+  cashier: { emojis: ['🧑‍💼', '💵', '🛒'], label: 'Cashier at Checkout' },
+  librarian: { emojis: ['🧑‍🏫', '📚', '📖'], label: 'Librarian with Books' },
+  salesperson: { emojis: ['🧑‍💼', '🛍️', '🤝'], label: 'Salesperson Helping' },
+  server: { emojis: ['🧑‍🍳', '🍽️', '🍷'], label: 'Server Serving Food' },
+  vet: { emojis: ['🧑‍⚕️', '🐕', '🐱'], label: 'Veterinarian Checking Pet' },
+  
+  // Actions / Phrases
+  'buy groceries': { emojis: ['🧑', '🛒', '🍎'], label: 'Buying Groceries' },
+  'make food': { emojis: ['🧑‍🍳', '🍳', '🍲'], label: 'Preparing & Cooking Food' },
+  'sell things': { emojis: ['🧑', '🛍️', '💵'], label: 'Selling Items' },
+  'drive buses': { emojis: ['🧑‍✈️', '🚌', '🛣️'], label: 'Driving a Bus' },
+  'fight fires': { emojis: ['🧑‍🚒', '🚒', '🔥'], label: 'Extinguishing Flames' },
+  'help sick animals': { emojis: ['🧑‍⚕️', '🐕', '❤️'], label: 'Helping Sick Animals' },
+  'clean my room': { emojis: ['🧹', '🛏️', '✨'], label: 'Cleaning Room' },
+  'clean the room': { emojis: ['🧹', '🛏️', '✨'], label: 'Cleaning Room' },
+  'clean the bathroom': { emojis: ['🛁', '🧽', '🧼'], label: 'Cleaning Bathroom' },
+  'do laundry': { emojis: ['🧺', '🧼', '👕'], label: 'Doing Laundry' },
+  'make my bed': { emojis: ['🛏️', '🛌', '✨'], label: 'Making Bed' },
+  'sweep the floor': { emojis: ['🧹', '✨', '🚪'], label: 'Sweeping Floor' },
+  'take out the garbage': { emojis: ['🗑️', '🚮', '🚶'], label: 'Taking Out Garbage' },
+  'vacuum the carpet': { emojis: ['🧹', '🛋️', '✨'], label: 'Vacuuming Carpet' },
+  'walk the dog': { emojis: ['🚶', '🐕', '🦮'], label: 'Walking the Dog' },
+  'wash the car': { emojis: ['🚗', '🚿', '🧼'], label: 'Washing the Car' },
+  'wash the dishes': { emojis: ['🍽️', '🧽', '🚰'], label: 'Washing Dishes' },
+  'water the plants': { emojis: ['🪴', '🚿', '🌱'], label: 'Watering Plants' },
+  'set the table': { emojis: ['🍽️', '🍴', '🥄'], label: 'Setting the Table' },
+  'collect eggs': { emojis: ['🥚', '🪺', '🐓'], label: 'Collecting Eggs' },
+  'milk the cows': { emojis: ['🐄', '🥛', '🪣'], label: 'Milking the Cow' },
+  'feed the chickens': { emojis: ['🐓', '🌾', '🐔'], label: 'Feeding Chickens' },
+  'pick vegetables': { emojis: ['🥬', '🥕', '🧺'], label: 'Picking Vegetables' },
+  'watch a movie': { emojis: ['🎬', '🍿', '📽️'], label: 'Watching Movie' },
+  'after school': { emojis: ['🎒', '🏫', '⏰'], label: 'After School Time' },
+  'come over': { emojis: ['👋', '🏠', '🚶'], label: 'Coming Over / Visiting' },
+  'learn': { emojis: ['🧠', '📚', '🏫'], label: 'Learning / Studying' },
+  'practice': { emojis: ['✍️', '📝', '🧠'], label: 'Practicing / Writing' },
+  'spell': { emojis: ['🔤', '🗣️', '📝'], label: 'Spelling Words' },
+
+  // Places
+  'movie theater': { emojis: ['📽️', '🍿', '🎬'], label: 'Movie Theater / Cinema' },
+  'amusement park': { emojis: ['🎡', '🎢', '🎟️'], label: 'Amusement Park' },
+  'aquarium': { emojis: ['🐠', '🐬', '🐙'], label: 'Aquarium' },
+  'toy store': { emojis: ['🧸', '🏬', '🪁'], label: 'Toy Store' },
+  'hair salon': { emojis: ['💇', '✂️', '💈'], label: 'Hair Salon' },
+  'flower shop': { emojis: ['💐', '🌸', '🏬'], label: 'Flower Shop' },
+  
+  // Specific Food/Clothing Corrections
+  'potato chips': { emojis: ['🍟', '🥔', '🍿'], label: 'Potato Chips' },
+  'sweater': { emojis: ['👕', 'yarn', '🧣'], label: 'Sweater / Knitwear' }
+};
+
 // Normalizes a word string to standard lower-case keys for matching
 function getEmojiForWord(word: string): string | null {
   if (!word) return null;
@@ -45,7 +98,7 @@ const COLOR_SCHEMES = [
 
 export function generateSVGPlaceholder(word: string): string {
   const cleanWord = word.trim();
-  const emoji = getEmojiForWord(cleanWord);
+  const lowerWord = cleanWord.toLowerCase();
   
   // Consistent color scheme selection using word hash
   let hash = 0;
@@ -58,30 +111,59 @@ export function generateSVGPlaceholder(word: string): string {
   let bgFill = scheme.bg;
   let svgContent = '';
 
-  if (emoji) {
+  const composite = COMPOSITE_ILLUSTRATIONS[lowerWord];
+
+  if (composite) {
+    // 1. Render premium composite layout for complex items (actions, people, places)
     svgContent = `
       <!-- Top-left play graduation cap badge (decorative) -->
       <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
       
-      <!-- Center visual (Emoji) -->
-      <text x="200" y="160" font-size="95" text-anchor="middle" filter="url(#shadow)">${emoji}</text>
+      <!-- Composite Visual Layout (Multi-icon scene) -->
+      <!-- Main Icon (Left-center) -->
+      <text x="165" y="165" font-size="80" text-anchor="middle" filter="url(#shadow)">${composite.emojis[0]}</text>
       
+      <!-- Helper Accessory 1 (Top-right) -->
+      <text x="245" y="130" font-size="45" text-anchor="middle" filter="url(#shadow)">${composite.emojis[1]}</text>
+      
+      <!-- Helper Accessory 2 (Bottom-right) -->
+      <text x="245" y="190" font-size="45" text-anchor="middle" filter="url(#shadow)">${composite.emojis[2]}</text>
+      
+      <!-- Context Subtitle Tag -->
+      <text x="200" y="218" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">${composite.label.toUpperCase()}</text>
+
       <!-- Word Banner at the bottom -->
-      <rect x="30" y="225" width="340" height="50" rx="16" fill="white" filter="url(#shadow)"/>
-      <text x="200" y="258" font-family="'Nunito', 'Fredoka', 'Comic Sans MS', sans-serif" font-size="24" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+      <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
     `;
   } else {
-    // Neutral unavailable state (no letter, no book, no incorrect icons)
-    bgFill = '#F8FAFC'; // Slate 50 neutral background
-    svgContent = `
-      <!-- Center visual: Picture Frame with a slash -->
-      <text x="200" y="130" font-size="80" text-anchor="middle" filter="url(#shadow)">🖼️</text>
-      <text x="200" y="140" font-size="28" text-anchor="middle" fill="#EF4444" font-weight="900" filter="url(#shadow)">❌</text>
-      
-      <!-- Status text -->
-      <text x="200" y="210" font-family="'Nunito', sans-serif" font-size="18" font-weight="800" fill="#64748B" text-anchor="middle">Illustration Unavailable</text>
-      <text x="200" y="240" font-family="'Nunito', sans-serif" font-size="13" font-weight="700" fill="#94A3B8" text-anchor="middle">(${cleanWord})</text>
-    `;
+    const emoji = getEmojiForWord(cleanWord);
+    if (emoji) {
+      // 2. Render standard semantic emoji card
+      svgContent = `
+        <!-- Top-left play graduation cap badge (decorative) -->
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        
+        <!-- Center visual (Emoji) -->
+        <text x="200" y="160" font-size="95" text-anchor="middle" filter="url(#shadow)">${emoji}</text>
+        
+        <!-- Word Banner at the bottom -->
+        <rect x="30" y="225" width="340" height="50" rx="16" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="258" font-family="'Nunito', 'Fredoka', 'Comic Sans MS', sans-serif" font-size="24" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    } else {
+      // 3. Render neutral illustration unavailable status (no first-letter, no book fallback)
+      bgFill = '#F8FAFC';
+      svgContent = `
+        <!-- Center visual: Picture Frame with a cross -->
+        <text x="200" y="130" font-size="80" text-anchor="middle" filter="url(#shadow)">🖼️</text>
+        <text x="200" y="140" font-size="28" text-anchor="middle" fill="#EF4444" font-weight="900" filter="url(#shadow)">❌</text>
+        
+        <!-- Status text -->
+        <text x="200" y="210" font-family="'Nunito', sans-serif" font-size="18" font-weight="800" fill="#64748B" text-anchor="middle">Illustration Unavailable</text>
+        <text x="200" y="240" font-family="'Nunito', sans-serif" font-size="13" font-weight="700" fill="#94A3B8" text-anchor="middle">(${cleanWord})</text>
+      `;
+    }
   }
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
