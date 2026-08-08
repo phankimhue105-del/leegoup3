@@ -5,6 +5,7 @@ import { useProgress } from '../context/ProgressContext';
 import { Header } from '../components/common/Header';
 import { PracticeEngine } from '../components/practice/PracticeEngine';
 import { EmptyState } from '../components/common/EmptyState';
+import { TeacherIntroCard } from '../components/common/TeacherIntroCard';
 import { ChevronLeft } from 'lucide-react';
 
 interface PracticePageProps {
@@ -39,35 +40,30 @@ export const PracticePage: React.FC<PracticePageProps> = ({ onOpenSettings }) =>
   const handleComplete = (score: number) => {
     markSectionCompleted(lesson.id, 'practice');
     saveLessonResult(lesson.id, score, 0); // Save practice score
-    // Proceed to next workflow section: speaking
     navigate(`/units/${unit.id}/lessons/${lesson.id}/speaking`);
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-16">
+    <div className="min-h-screen bg-slate-50/50 pb-16">
       <Header onOpenSettings={onOpenSettings} />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-8 py-8 space-y-6">
         {/* Back navigation */}
         <div>
           <button
-            onClick={() => navigate(`/units/${unit.id}`)}
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer"
+            onClick={() => navigate(`/units/${unit.id}/lessons/${lesson.id}`)}
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-rose-600 transition-colors cursor-pointer"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4" />
             <span>Quay lại {lesson.title}</span>
           </button>
         </div>
 
-        {/* Section Title Banner */}
-        <div className="text-center space-y-1">
-          <span className="text-xs font-black uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
-            Phần 3/4 • Practice Quiz Engine
-          </span>
-          <h1 className="text-3xl font-black font-heading text-slate-800">
-            Bài Tập Thực Hành ({unit.title})
-          </h1>
-        </div>
+        {/* Teacher AI introduction */}
+        <TeacherIntroCard
+          englishText="Let's test what you have learned! Answer the practice quiz questions."
+          vietnameseText="Hãy kiểm tra lại những gì em đã học bằng cách trả lời các câu hỏi thực hành nhé."
+        />
 
         {/* Practice Engine Quiz Renderer */}
         <PracticeEngine
