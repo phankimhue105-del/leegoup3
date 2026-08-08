@@ -15,13 +15,31 @@ interface LessonOverviewPageProps {
 }
 
 export const LessonOverviewPage: React.FC<LessonOverviewPageProps> = ({ onOpenSettings }) => {
-  const { unitId } = useParams<{ unitId: string }>();
+  const { unitId, lessonId } = useParams<{ unitId: string; lessonId?: string }>();
   const { getUnitById } = useCourse();
   const { getLessonProgress, isSectionUnlocked } = useProgress();
   const navigate = useNavigate();
 
   const unit = unitId ? getUnitById(unitId) : undefined;
-  const [selectedLessonIndex, setSelectedLessonIndex] = useState<number>(0);
+  
+  // Set initial selected lesson index based on lessonId in the URL parameters
+  const [selectedLessonIndex, setSelectedLessonIndex] = useState<number>(() => {
+    if (unit && lessonId) {
+      const idx = unit.lessons.findIndex((l) => l.id === lessonId);
+      return idx >= 0 ? idx : 0;
+    }
+    return 0;
+  });
+
+  // Sync selected index when lessonId changes (e.g. from nav clicks)
+  React.useEffect(() => {
+    if (unit && lessonId) {
+      const idx = unit.lessons.findIndex((l) => l.id === lessonId);
+      if (idx >= 0) {
+        setSelectedLessonIndex(idx);
+      }
+    }
+  }, [lessonId, unit]);
 
   if (!unit || !unit.lessons || unit.lessons.length === 0) {
     return (
@@ -114,7 +132,10 @@ export const LessonOverviewPage: React.FC<LessonOverviewPageProps> = ({ onOpenSe
             {unit.lessons.map((l, idx) => (
               <button
                 key={l.id}
-                onClick={() => setSelectedLessonIndex(idx)}
+                onClick={() => {
+                  setSelectedLessonIndex(idx);
+                  navigate(`/units/${unit.id}/lessons/${l.id}`, { replace: true });
+                }}
                 className={`px-5 py-3 rounded-2xl text-sm font-extrabold font-heading transition-all whitespace-nowrap cursor-pointer ${
                   selectedLessonIndex === idx
                     ? 'bg-indigo-600 text-white shadow-md'
