@@ -81,23 +81,8 @@ class ProgressService {
     return false;
   }
 
-  /**
-   * Lesson Unlock logic:
-   * Unit 1 Lesson 1 is always unlocked.
-   * Other lessons are unlocked if the previous lesson in the course was completed,
-   * or for demo testing in Phase 1 framework, Unit first lessons are open.
-   */
   public isLessonUnlocked(lessonId: string, allLessonProgress: Record<string, LessonProgress>): boolean {
-    if (lessonId === 'u1-l1') return true;
-    
-    // For Phase 1 framework demonstration, any lesson with progress or the first lesson of any unit is unlocked
-    if (lessonId.endsWith('-l1')) return true;
-
-    // Otherwise check if previous lesson is completed
-    const prog = allLessonProgress[lessonId];
-    if (prog) return true;
-
-    return false;
+    return true; // Always unlocked for open-access curriculum
   }
 
   public calculateStars(practiceScore: number, speakingScore: number): number {
