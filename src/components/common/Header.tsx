@@ -416,5 +416,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSettings }) => {
           })}
       </div>
     </div>
+  </div>
   );
 };
