@@ -64,21 +64,9 @@ class ProgressService {
    */
   public isSectionUnlocked(
     lessonProgress: LessonProgress | undefined,
-    section: 'vocabulary' | 'model-pattern' | 'practice' | 'speaking'
+    section: 'vocabulary' | 'model-pattern' | 'practice' | 'speaking' | 'completed'
   ): boolean {
-    if (section === 'vocabulary') return true;
-    if (!lessonProgress) return false;
-
-    if (section === 'model-pattern') {
-      return !!lessonProgress.completedSections.vocabulary;
-    }
-    if (section === 'practice') {
-      return !!lessonProgress.completedSections['model-pattern'];
-    }
-    if (section === 'speaking') {
-      return !!lessonProgress.completedSections.practice;
-    }
-    return false;
+    return true; // All sections are open-access immediately
   }
 
   public isLessonUnlocked(lessonId: string, allLessonProgress: Record<string, LessonProgress>): boolean {
