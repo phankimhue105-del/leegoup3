@@ -1,479 +1,28 @@
 import { PLACEHOLDER_IMAGES } from '../data/placeholderMedia';
-
-// A comprehensive mapping of vocabulary words to emojis for Everybody Up 3
-const EMOJI_MAP: Record<string, string> = {
-  // QA Content Overrides for Units 1-3 Target Vocabulary
-  popcorn: '🍿',
-  peanuts: '🥜',
-  carrot: '🥕',
-  onion: '🧅',
-  pepper: '🫑',
-  cabbage: '🥬',
-  potato: '🥔',
-  tomato: '🍅',
-  smoothie: '🥤',
-  'buy groceries': '🛒',
-  'make food': '🍳',
-  'sell things': '🛍️',
-  'drive buses': '🚌',
-  'fight fires': '🚒',
-  present: '🎁',
-  dollar: '💵',
-  fever: '🤒',
-  headache: '🤕',
-
-  // Animals
-  cat: '🐱',
-  dog: '🐶',
-  bird: '🐦',
-  frog: '🐸',
-  rabbit: '🐰',
-  turtle: '🐢',
-  monkey: '🐵',
-  lion: '🦁',
-  tiger: '🐯',
-  bear: '🧸',
-  elephant: '🐘',
-  giraffe: '🦒',
-  zebra: '🦓',
-  kangaroo: '🦘',
-  hippopotamus: '🦛',
-  hippo: '🦛',
-  alligator: '🐊',
-  crocodile: '🐊',
-  snake: '🐍',
-  penguin: '🐧',
-  octopus: '🐙',
-  fish: '🐟',
-  shark: '🦈',
-  dolphin: '🐬',
-  whale: '🐳',
-  cow: '🐮',
-  pig: '🐷',
-  sheep: '🐑',
-  goat: '🐐',
-  horse: '🐴',
-  duck: '🦆',
-  chicken: '🐔',
-  rooster: '🐓',
-  hen: '🐔',
-  mouse: '🐭',
-  spider: '🕷️',
-  ant: '🐜',
-  bee: '🐝',
-  butterfly: '🦋',
-
-  // School & Classroom
-  pen: '🖊️',
-  pencil: '✏️',
-  eraser: '🧽',
-  ruler: '📏',
-  book: '📖',
-  notebook: '📓',
-  backpack: '🎒',
-  schoolbag: '🎒',
-  desk: '🪑',
-  chair: '🪑',
-  board: '📋',
-  blackboard: '📋',
-  whiteboard: '📋',
-  map: '🗺️',
-  globe: '🌐',
-  computer: '💻',
-  crayon: '🖍️',
-  marker: '🖊️',
-  glue: '🧴',
-  scissors: '✂️',
-  paper: '📄',
-  classroom: '🏫',
-  teacher: '👩‍🏫',
-  student: '🧑‍🎓',
-  school: '🏫',
-  homework: '📝',
-  test: '📝',
-  dictionary: '📕',
-
-  // Food & Drinks
-  apple: '🍎',
-  banana: '🍌',
-  orange: '🍊',
-  grape: '🍇',
-  grapes: '🍇',
-  strawberry: '🍓',
-  cherry: '🍒',
-  peach: '🍑',
-  pear: '🍐',
-  lemon: '🍋',
-  lime: '🍋',
-  pineapple: '🍍',
-  watermelon: '🍉',
-  melon: '🍈',
-  gum: '🍬',
-  candy: '🍬',
-  chocolate: '🍫',
-  cookie: '🍪',
-  cake: '🍰',
-  cupcake: '🧁',
-  'ice cream': '🍦',
-  icecream: '🍦',
-  pudding: '🍮',
-  jelly: '🍧',
-  donut: '🍩',
-  bread: '🍞',
-  toast: '🍞',
-  sandwich: '🥪',
-  pizza: '🍕',
-  hamburger: '🍔',
-  burger: '🍔',
-  'hot dog': '🌭',
-  hotdog: '🌭',
-  taco: '🌮',
-  pasta: '🍝',
-  spaghetti: '🍝',
-  rice: '🍚',
-  soup: '🥣',
-  salad: '🥗',
-  chicken: '🍗',
-  meat: '🥩',
-  steak: '🥩',
-  egg: '🥚',
-  cheese: '🧀',
-  milk: '🥛',
-  water: '💧',
-  juice: '🧃',
-  soda: '🥤',
-  tea: '🍵',
-  coffee: '☕',
-  yogurt: '🥛',
-  butter: '🧈',
-
-  // Toys & Play
-  ball: '⚽',
-  doll: '🪆',
-  train: '🚂',
-  block: '🧱',
-  puzzle: '🧩',
-  game: '🎮',
-  kite: '🪁',
-  balloon: '🎈',
-  'teddy bear': '🧸',
-  robot: '🤖',
-  skateboard: '🛹',
-  'yo-yo': '🪀',
-  yoyo: '🪀',
-  swing: '🛝',
-  slide: '🛝',
-  sandbox: '🏖️',
-
-  // Verbs & Actions
-  run: '🏃',
-  walk: '🚶',
-  jump: '🦘',
-  hop: '🦘',
-  skip: '🏃',
-  dance: '💃',
-  sing: '🎤',
-  play: '🎮',
-  swim: '🏊',
-  fly: '✈️',
-  climb: '🧗',
-  read: '📖',
-  write: '✍️',
-  draw: '🎨',
-  paint: '🎨',
-  color: '🖍️',
-  cut: '✂️',
-  paste: '🧴',
-  listen: '🎧',
-  speak: '🗣️',
-  talk: '💬',
-  look: '👁️',
-  see: '👁️',
-  watch: '📺',
-  hear: '👂',
-  smell: '👃',
-  taste: '👅',
-  touch: '✋',
-  eat: '🍽️',
-  drink: '🥤',
-  sleep: '😴',
-  'wake up': '⏰',
-  wakeup: '⏰',
-  wash: '🧼',
-  brush: '🪥',
-  comb: '🪮',
-  study: '📚',
-  clean: '🧹',
-  ride: '🚴',
-  drive: '🚗',
-
-  // Places
-  home: '🏠',
-  house: '🏠',
-  park: '🛝',
-  playground: '🛝',
-  store: '🏪',
-  shop: '🏪',
-  supermarket: '🛒',
-  bakery: '🍞',
-  library: '📚',
-  bookstore: '📚',
-  museum: '🏛️',
-  zoo: '🦁',
-  hospital: '🏥',
-  clinic: '🏥',
-  office: '💼',
-  'post office': '✉️',
-  postoffice: '✉️',
-  'police station': '👮',
-  policestation: '👮',
-  'fire station': '🚒',
-  firestation: '🚒',
-  bank: '🏦',
-  hotel: '🏨',
-  airport: '✈️',
-  station: '🚉',
-  beach: '🏖️',
-  mountain: '⛰️',
-  forest: '🌲',
-  river: '🏞️',
-  lake: '🏞️',
-
-  // Transportation
-  car: '🚗',
-  bus: '🚌',
-  taxi: '🚕',
-  truck: '🚚',
-  van: '🚐',
-  'police car': '🚓',
-  policecar: '🚓',
-  ambulance: '🤷‍♀️',
-  'fire engine': '🚒',
-  fireengine: '🚒',
-  motorcycle: '🏍️',
-  bicycle: '🚲',
-  bike: '🚲',
-  helicopter: '🚁',
-  boat: '⛵',
-  ship: '🚢',
-
-  // Colors
-  red: '🟥',
-  blue: '🟦',
-  green: '🟩',
-  yellow: '🟨',
-  orange: '🟧',
-  purple: '🟪',
-  pink: '🌸',
-  brown: '🟫',
-  black: '⬛',
-  white: '⬜',
-  gray: '⬜',
-  grey: '⬜',
-
-  // Body parts
-  head: '👤',
-  hair: '🦱',
-  face: '👤',
-  eye: '👁️',
-  eyes: '👁️',
-  ear: '👂',
-  ears: '👂',
-  nose: '👃',
-  mouth: '👄',
-  tooth: '🦷',
-  teeth: '🦷',
-  tongue: '👅',
-  neck: '👤',
-  shoulder: '👤',
-  shoulders: '👤',
-  arm: '💪',
-  arms: '💪',
-  hand: '✋',
-  hands: '✋',
-  finger: '🖐️',
-  fingers: '🖐️',
-  leg: '🦵',
-  legs: '🦵',
-  foot: '🦶',
-  feet: '🦶',
-  toe: '🦶',
-  toes: '🦶',
-
-  // Clothes
-  shirt: '👕',
-  tshirt: '👕',
-  blouse: '👚',
-  sweater: '🧶',
-  jacket: '🧥',
-  coat: '🧥',
-  pants: '👖',
-  jeans: '👖',
-  shorts: '🩳',
-  skirt: '👗',
-  dress: '👗',
-  socks: '🧦',
-  shoes: '👟',
-  boots: '🥾',
-  sneakers: '👟',
-  hat: '🎩',
-  cap: '🧢',
-  scarf: '🧣',
-  gloves: '🧤',
-
-  // Family
-  family: '👨‍👩‍👧‍👦',
-  mother: '👩',
-  mom: '👩',
-  father: '👨',
-  dad: '👨',
-  brother: '👦',
-  sister: '👧',
-  grandmother: '👵',
-  grandma: '👵',
-  grandfather: '👴',
-  grandpa: '👴',
-  baby: '👶',
-  friend: '🧑‍🤝‍🧑',
-
-  // Jobs & Occupations
-  doctor: '🧑‍⚕️',
-  nurse: '🧑‍⚕️',
-  dentist: '🦷',
-  vet: '🥼',
-  veterinarian: '🥼',
-  firefighter: '🧑‍🚒',
-  'police officer': '👮',
-  policeofficer: '👮',
-  pilot: '🧑‍✈️',
-  'bus driver': '🚌',
-  busdriver: '🚌',
-  'taxi driver': '🚕',
-  taxidriver: '🚕',
-  cook: '🧑‍🍳',
-  chef: '🧑‍🍳',
-  baker: '🧑‍🍳',
-  singer: '🧑‍🎤',
-  dancer: '💃',
-  actor: '🎭',
-  artist: '🎨',
-  farmer: '🧑‍🌾',
-  worker: '👷',
-  clown: '🤡',
-  salesperson: '🛍️',
-  'office worker': '💼',
-  officeworker: '💼',
-  'factory worker': '👷',
-  factoryworker: '👷',
-  reporter: '🎤',
-  mechanic: '🔧',
-  photographer: '📷',
-  astronaut: '👩‍🚀',
-  scientist: '🔬',
-  server: '🍽️',
-  waiter: '🍽️',
-  waitress: '🍽️',
-  student: '🧑‍🎓',
-  teacher: '👩‍🏫',
-
-  // Weather
-  sun: '☀️',
-  sunny: '☀️',
-  rain: '🌧️',
-  rainy: '🌧️',
-  cloud: '☁️',
-  cloudy: '☁️',
-  wind: '💨',
-  windy: '💨',
-  snow: '❄️',
-  snowy: '❄️',
-  storm: '⛈️',
-  stormy: '⛈️',
-  hot: '🥵',
-  cold: '🥶',
-  warm: '🌤️',
-  cool: '🍃',
-
-  // Feelings & States
-  happy: '😊',
-  sad: '😢',
-  angry: '😠',
-  scared: '😨',
-  surprised: '😲',
-  tired: '🥱',
-  sleepy: '😴',
-  excited: '🤩',
-  bored: '😑',
-  hungry: '😋',
-  thirsty: '🥵',
-  sick: '🤒',
-  fine: '🙂',
-  great: '😁',
-  ok: '🙂',
-
-  // Household
-  bed: '🛏️',
-  pillow: '🛌',
-  blanket: '🛌',
-  table: '🪑',
-  sofa: '🛋️',
-  couch: '🛋️',
-  tv: '📺',
-  television: '📺',
-  telephone: '☎️',
-  phone: '📱',
-  clock: '⏰',
-  lamp: '💡',
-  window: '🪟',
-  door: '🚪',
-  key: '🔑',
-  bag: '👜',
-  box: '📦',
-  mirror: '🪞',
-  sink: '🚰',
-  shower: '🚿',
-  tub: '🛁',
-
-  // Miscellaneous UP 3 Words
-  question: '❓',
-  answer: '💬',
-  word: '🔤',
-  letter: '✉️',
-  number: '🔢',
-  one: '1️⃣',
-  two: '2️⃣',
-  three: '3️⃣',
-  four: '4️⃣',
-  five: '5️⃣',
-  six: '6️⃣',
-  seven: '7️⃣',
-  eight: '8️⃣',
-  nine: '9️⃣',
-  ten: '🔟',
-};
+import { VOCABULARY_IMAGE_MAP } from '../data/vocabularyImageMap';
 
 // Normalizes a word string to standard lower-case keys for matching
 function getEmojiForWord(word: string): string | null {
   if (!word) return null;
   const clean = word.toLowerCase().trim().replace(/[^a-z0-9 ]/g, '');
   
-  // Direct match
-  if (EMOJI_MAP[clean]) {
-    return EMOJI_MAP[clean];
+  // 1. Direct match
+  if (VOCABULARY_IMAGE_MAP[clean]) {
+    return VOCABULARY_IMAGE_MAP[clean];
   }
 
-  // Singularize common patterns if it ends with s
+  // 2. Singularize common patterns if it ends with s
   if (clean.endsWith('s') && clean.length > 2) {
     const singular = clean.substring(0, clean.length - 1);
-    if (EMOJI_MAP[singular]) return EMOJI_MAP[singular];
+    if (VOCABULARY_IMAGE_MAP[singular]) return VOCABULARY_IMAGE_MAP[singular];
   }
   if (clean.endsWith('es') && clean.length > 3) {
     const singular = clean.substring(0, clean.length - 2);
-    if (EMOJI_MAP[singular]) return EMOJI_MAP[singular];
+    if (VOCABULARY_IMAGE_MAP[singular]) return VOCABULARY_IMAGE_MAP[singular];
   }
 
-  // Substring match
-  for (const [key, value] of Object.entries(EMOJI_MAP)) {
+  // 3. Substring match
+  for (const [key, value] of Object.entries(VOCABULARY_IMAGE_MAP)) {
     if (clean.includes(key) || key.includes(clean)) {
       return value;
     }
@@ -506,8 +55,9 @@ export function generateSVGPlaceholder(word: string): string {
   const schemeIndex = Math.abs(hash) % COLOR_SCHEMES.length;
   const scheme = COLOR_SCHEMES[schemeIndex];
 
-  // SVG Content based on whether a semantic emoji is available or if we display a word-specific fallback card
+  let bgFill = scheme.bg;
   let svgContent = '';
+
   if (emoji) {
     svgContent = `
       <!-- Top-left play graduation cap badge (decorative) -->
@@ -521,23 +71,16 @@ export function generateSVGPlaceholder(word: string): string {
       <text x="200" y="258" font-family="'Nunito', 'Fredoka', 'Comic Sans MS', sans-serif" font-size="24" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
     `;
   } else {
-    const upperWord = cleanWord.toUpperCase();
-    let fontSize = 44;
-    const len = upperWord.length;
-    if (len > 14) {
-      fontSize = 24;
-    } else if (len > 10) {
-      fontSize = 32;
-    } else if (len > 7) {
-      fontSize = 38;
-    }
-
+    // Neutral unavailable state (no letter, no book, no incorrect icons)
+    bgFill = '#F8FAFC'; // Slate 50 neutral background
     svgContent = `
-      <!-- Top-left play graduation cap badge (decorative) -->
-      <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+      <!-- Center visual: Picture Frame with a slash -->
+      <text x="200" y="130" font-size="80" text-anchor="middle" filter="url(#shadow)">🖼️</text>
+      <text x="200" y="140" font-size="28" text-anchor="middle" fill="#EF4444" font-weight="900" filter="url(#shadow)">❌</text>
       
-      <!-- Center visual: Word-specific fallback (clearly showing the vocabulary word, no book image, no single-letter only) -->
-      <text x="200" y="155" font-family="'Nunito', sans-serif" font-size="${fontSize}" font-weight="900" fill="${scheme.text}" text-anchor="middle" filter="url(#shadow)">${upperWord}</text>
+      <!-- Status text -->
+      <text x="200" y="210" font-family="'Nunito', sans-serif" font-size="18" font-weight="800" fill="#64748B" text-anchor="middle">Illustration Unavailable</text>
+      <text x="200" y="240" font-family="'Nunito', sans-serif" font-size="13" font-weight="700" fill="#94A3B8" text-anchor="middle">(${cleanWord})</text>
     `;
   }
 
@@ -555,7 +98,7 @@ export function generateSVGPlaceholder(word: string): string {
     </defs>
     
     <!-- Outer Card Rounded Background -->
-    <rect width="100%" height="100%" fill="${scheme.bg}" rx="32"/>
+    <rect width="100%" height="100%" fill="${bgFill}" rx="32"/>
     
     <!-- Central soft radial accent circle -->
     <circle cx="200" cy="130" r="85" fill="url(#radial-bg)"/>
@@ -586,7 +129,6 @@ class ImageServiceClass {
    * it returns a dynamically generated colorful educational SVG placeholder.
    */
   public getImage(src: string | undefined, fallbackText: string, category?: string): string {
-    // Extract a meaningful word from the source path if fallbackText is generic or empty
     const wordFromSrc = src ? extractWordFromPath(src) : '';
     const cleanWord = (fallbackText && fallbackText !== 'Question Image' && fallbackText !== 'Image')
       ? fallbackText
@@ -602,7 +144,6 @@ class ImageServiceClass {
       return PLACEHOLDER_IMAGES[src as keyof typeof PLACEHOLDER_IMAGES];
     }
 
-    // Otherwise (empty or local relative path), generate child-friendly educational SVG
     return generateSVGPlaceholder(cleanWord);
   }
 }
