@@ -68,7 +68,8 @@ export const SpeakingPage: React.FC<SpeakingPageProps> = ({ onOpenSettings }) =>
 
         {/* AI Speaking Card Component */}
         <SpeakingCard
-          task={lesson.speakingTask}
+          lesson={lesson}
+          unit={unit}
           onComplete={handleComplete}
         />
       </main>
