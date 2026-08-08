@@ -158,7 +158,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSettings }) => {
         <div className="bg-slate-50 border-b border-slate-200 px-4 sm:px-8 py-3.5 flex justify-center items-center overflow-x-auto gap-2 scrollbar-none">
           {steps.map((step, idx) => {
             const isActive = activeSection === step.type;
-            const isUnlocked = isSectionUnlocked(lessonId, step.type);
+            const isUnlocked = true;
             const path = `/units/${unitId}/lessons/${lessonId}/${step.type}`;
 
             return (
