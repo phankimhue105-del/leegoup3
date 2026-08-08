@@ -196,7 +196,6 @@ const EMOJI_MAP: Record<string, string> = {
   shop: '🏪',
   supermarket: '🛒',
   bakery: '🍞',
-  restaurant: '🍽️',
   library: '📚',
   bookstore: '📚',
   museum: '🏛️',
@@ -341,8 +340,6 @@ const EMOJI_MAP: Record<string, string> = {
   farmer: '🧑‍🌾',
   worker: '👷',
   clown: '🤡',
-  cashier: '🧑‍💼',
-  librarian: '📚',
   salesperson: '🛍️',
   'office worker': '💼',
   officeworker: '💼',
@@ -489,7 +486,41 @@ export function generateSVGPlaceholder(word: string): string {
   const schemeIndex = Math.abs(hash) % COLOR_SCHEMES.length;
   const scheme = COLOR_SCHEMES[schemeIndex];
 
-  // SVG representation: colorful, card design, big central emoji (or default book icon), bottom word banner
+  // SVG Content based on whether a semantic emoji is available or if we display a word-specific fallback card
+  let svgContent = '';
+  if (emoji) {
+    svgContent = `
+      <!-- Top-left play graduation cap badge (decorative) -->
+      <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+      
+      <!-- Center visual (Emoji) -->
+      <text x="200" y="160" font-size="95" text-anchor="middle" filter="url(#shadow)">${emoji}</text>
+      
+      <!-- Word Banner at the bottom -->
+      <rect x="30" y="225" width="340" height="50" rx="16" fill="white" filter="url(#shadow)"/>
+      <text x="200" y="258" font-family="'Nunito', 'Fredoka', 'Comic Sans MS', sans-serif" font-size="24" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+    `;
+  } else {
+    const upperWord = cleanWord.toUpperCase();
+    let fontSize = 44;
+    const len = upperWord.length;
+    if (len > 14) {
+      fontSize = 24;
+    } else if (len > 10) {
+      fontSize = 32;
+    } else if (len > 7) {
+      fontSize = 38;
+    }
+
+    svgContent = `
+      <!-- Top-left play graduation cap badge (decorative) -->
+      <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+      
+      <!-- Center visual: Word-specific fallback (clearly showing the vocabulary word, no book image, no single-letter only) -->
+      <text x="200" y="155" font-family="'Nunito', sans-serif" font-size="${fontSize}" font-weight="900" fill="${scheme.text}" text-anchor="middle" filter="url(#shadow)">${upperWord}</text>
+    `;
+  }
+
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
     <defs>
       <!-- Playful Drop Shadow -->
@@ -510,15 +541,7 @@ export function generateSVGPlaceholder(word: string): string {
     <circle cx="200" cy="130" r="85" fill="url(#radial-bg)"/>
     <circle cx="200" cy="130" r="75" fill="white" opacity="0.4"/>
     
-    <!-- Top-left play graduation cap badge (decorative, replacing first letter) -->
-    <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
-    
-    <!-- Center visual (Emoji or Default Book Icon) -->
-    <text x="200" y="160" font-size="95" text-anchor="middle" filter="url(#shadow)">${emoji || '📖'}</text>
-    
-    <!-- Word Banner at the bottom -->
-    <rect x="30" y="225" width="340" height="50" rx="16" fill="white" filter="url(#shadow)"/>
-    <text x="200" y="258" font-family="'Fredoka', 'Comic Sans MS', sans-serif" font-size="24" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+    ${svgContent}
   </svg>`;
 
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
