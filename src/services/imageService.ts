@@ -322,6 +322,7 @@ const EMOJI_MAP: Record<string, string> = {
   nurse: '🧑‍⚕️',
   dentist: '🦷',
   vet: '🥼',
+  veterinarian: '🥼',
   firefighter: '🧑‍🚒',
   'police officer': '👮',
   policeofficer: '👮',
@@ -340,6 +341,23 @@ const EMOJI_MAP: Record<string, string> = {
   farmer: '🧑‍🌾',
   worker: '👷',
   clown: '🤡',
+  cashier: '🧑‍💼',
+  librarian: '📚',
+  salesperson: '🛍️',
+  'office worker': '💼',
+  officeworker: '💼',
+  'factory worker': '👷',
+  factoryworker: '👷',
+  reporter: '🎤',
+  mechanic: '🔧',
+  photographer: '📷',
+  astronaut: '👩‍🚀',
+  scientist: '🔬',
+  server: '🍽️',
+  waiter: '🍽️',
+  waitress: '🍽️',
+  student: '🧑‍🎓',
+  teacher: '👩‍🏫',
 
   // Weather
   sun: '☀️',
@@ -461,7 +479,6 @@ const COLOR_SCHEMES = [
 
 export function generateSVGPlaceholder(word: string): string {
   const cleanWord = word.trim();
-  const firstLetter = cleanWord ? cleanWord.charAt(0).toUpperCase() : 'A';
   const emoji = getEmojiForWord(cleanWord);
   
   // Consistent color scheme selection using word hash
@@ -472,7 +489,7 @@ export function generateSVGPlaceholder(word: string): string {
   const schemeIndex = Math.abs(hash) % COLOR_SCHEMES.length;
   const scheme = COLOR_SCHEMES[schemeIndex];
 
-  // SVG representation: colorful, card design, big central emoji (or letter), bottom word banner
+  // SVG representation: colorful, card design, big central emoji (or default book icon), bottom word banner
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
     <defs>
       <!-- Playful Drop Shadow -->
@@ -493,15 +510,11 @@ export function generateSVGPlaceholder(word: string): string {
     <circle cx="200" cy="130" r="85" fill="url(#radial-bg)"/>
     <circle cx="200" cy="130" r="75" fill="white" opacity="0.4"/>
     
-    <!-- Top-left play letter badge -->
-    <text x="35" y="60" font-family="'Fredoka', 'Comic Sans MS', sans-serif" font-size="44" font-weight="900" fill="${scheme.text}" opacity="0.25">${firstLetter}</text>
+    <!-- Top-left play graduation cap badge (decorative, replacing first letter) -->
+    <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
     
-    <!-- Center visual (Emoji or Big Letter) -->
-    ${
-      emoji 
-      ? `<text x="200" y="160" font-size="95" text-anchor="middle" filter="url(#shadow)">${emoji}</text>`
-      : `<text x="200" y="165" font-family="'Fredoka', 'Comic Sans MS', sans-serif" font-size="110" font-weight="900" fill="${scheme.text}" text-anchor="middle" filter="url(#shadow)">${firstLetter}</text>`
-    }
+    <!-- Center visual (Emoji or Default Book Icon) -->
+    <text x="200" y="160" font-size="95" text-anchor="middle" filter="url(#shadow)">${emoji || '📖'}</text>
     
     <!-- Word Banner at the bottom -->
     <rect x="30" y="225" width="340" height="50" rx="16" fill="white" filter="url(#shadow)"/>
