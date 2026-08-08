@@ -39,11 +39,11 @@ export default function App() {
                     <Route path="/login" element={<LoginPage />} />
                     <Route
                       path="/home"
-                      element={<HomePage onOpenSettings={handleOpenSettings} />}
+                      element={<Navigate to="/units/unit-1/lessons/u1-l1" replace />}
                     />
                     <Route
                       path="/units"
-                      element={<UnitsPage onOpenSettings={handleOpenSettings} />}
+                      element={<Navigate to="/units/unit-1/lessons/u1-l1" replace />}
                     />
                     <Route
                       path="/units/:unitId"
