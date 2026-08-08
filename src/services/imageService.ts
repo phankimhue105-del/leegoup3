@@ -2,6 +2,26 @@ import { PLACEHOLDER_IMAGES } from '../data/placeholderMedia';
 
 // A comprehensive mapping of vocabulary words to emojis for Everybody Up 3
 const EMOJI_MAP: Record<string, string> = {
+  // QA Content Overrides for Units 1-3 Target Vocabulary
+  popcorn: '🍿',
+  peanuts: '🥜',
+  carrot: '🥕',
+  onion: '🧅',
+  pepper: '🫑',
+  cabbage: '🥬',
+  potato: '🥔',
+  tomato: '🍅',
+  smoothie: '🥤',
+  'buy groceries': '🛒',
+  'make food': '🍳',
+  'sell things': '🛍️',
+  'drive buses': '🚌',
+  'fight fires': '🚒',
+  present: '🎁',
+  dollar: '💵',
+  fever: '🤒',
+  headache: '🤕',
+
   // Animals
   cat: '🐱',
   dog: '🐶',
@@ -547,6 +567,17 @@ export function generateSVGPlaceholder(word: string): string {
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
+function extractWordFromPath(path: string): string {
+  if (!path) return '';
+  try {
+    const filename = path.substring(path.lastIndexOf('/') + 1);
+    const nameWithoutExt = filename.substring(0, filename.lastIndexOf('.')) || filename;
+    return nameWithoutExt.toLowerCase().replace(/[-_]/g, ' ').trim();
+  } catch {
+    return '';
+  }
+}
+
 class ImageServiceClass {
   /**
    * Resolves the correct image source to display.
@@ -555,6 +586,12 @@ class ImageServiceClass {
    * it returns a dynamically generated colorful educational SVG placeholder.
    */
   public getImage(src: string | undefined, fallbackText: string, category?: string): string {
+    // Extract a meaningful word from the source path if fallbackText is generic or empty
+    const wordFromSrc = src ? extractWordFromPath(src) : '';
+    const cleanWord = (fallbackText && fallbackText !== 'Question Image' && fallbackText !== 'Image')
+      ? fallbackText
+      : (wordFromSrc || 'Image');
+
     // If it's a valid remote URL or preloaded data URL, return it
     if (src && (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('data:'))) {
       return src;
@@ -566,7 +603,7 @@ class ImageServiceClass {
     }
 
     // Otherwise (empty or local relative path), generate child-friendly educational SVG
-    return generateSVGPlaceholder(fallbackText);
+    return generateSVGPlaceholder(cleanWord);
   }
 }
 
