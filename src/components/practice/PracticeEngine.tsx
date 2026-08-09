@@ -206,10 +206,6 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                     className={`w-full p-4 rounded-2xl border-2 text-left text-base font-bold transition-all flex items-center justify-between cursor-pointer ${optStyle}`}
                   >
                     <span>{opt}</span>
-                    {/* Hide play button next to options for listening questions to test discrimination */}
-                    {currentQuestion.type !== 'listening' && (
-                      <AudioButton textToSpeak={opt} size="sm" />
-                    )}
                   </button>
                 );
               })}
@@ -240,10 +236,6 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                     <div className="aspect-square rounded-xl overflow-hidden">
                       <AppImage src={imgSrc} alt={opt} className="w-full h-full object-cover" />
                     </div>
-                    {/* Only display word labels after submission to avoid giving away the answer */}
-                    {isSubmitted && (
-                      <p className="text-center font-heading font-bold text-xs text-indigo-650 mt-2">{opt}</p>
-                    )}
                   </div>
                 );
               })}
