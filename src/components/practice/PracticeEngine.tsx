@@ -198,6 +198,9 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                   optStyle = 'bg-indigo-50 border-indigo-500 text-indigo-900 font-bold';
                 }
 
+                const isDialogueQuestion = currentQuestion.questionText.toLowerCase().includes('dialogue');
+                const showOptionAudio = currentQuestion.type === 'multiple-choice' && !isDialogueQuestion;
+
                 return (
                   <button
                     key={idx}
@@ -206,6 +209,9 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                     className={`w-full p-4 rounded-2xl border-2 text-left text-base font-bold transition-all flex items-center justify-between cursor-pointer ${optStyle}`}
                   >
                     <span>{opt}</span>
+                    {showOptionAudio && (
+                      <AudioButton textToSpeak={opt} size="sm" />
+                    )}
                   </button>
                 );
               })}
