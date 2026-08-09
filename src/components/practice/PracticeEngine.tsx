@@ -233,6 +233,8 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                   borderStyle = 'border-indigo-500 ring-4 ring-indigo-100';
                 }
 
+                const isChoosePictureFor = currentQuestion.questionText.toLowerCase().includes('choose the picture for');
+
                 return (
                   <div
                     key={idx}
@@ -242,6 +244,9 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                     <div className="aspect-square rounded-xl overflow-hidden">
                       <AppImage src={imgSrc} alt={opt} className="w-full h-full object-cover" />
                     </div>
+                    {!isChoosePictureFor && (
+                      <p className="text-center font-heading font-bold text-xs text-slate-700 mt-2">{opt}</p>
+                    )}
                   </div>
                 );
               })}
