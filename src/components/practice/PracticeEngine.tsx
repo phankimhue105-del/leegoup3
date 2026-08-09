@@ -7,7 +7,7 @@ import { AppButton } from '../common/AppButton';
 import { ProgressBar } from '../common/ProgressBar';
 import { AudioButton } from '../common/AudioButton';
 import { AppImage } from '../common/AppImage';
-import { Clock, CheckCircle2, XCircle, HelpCircle, ArrowRight } from 'lucide-react';
+import { Clock, CheckCircle2, XCircle, ArrowRight } from 'lucide-react';
 
 interface PracticeEngineProps {
   questions: PracticeQuestion[];
@@ -19,12 +19,13 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
   onComplete,
 }) => {
   const { settings } = useSettings();
-  const { playEffect, playSpeech } = useAudio();
+  const { playEffect } = useAudio();
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [fillValue, setFillValue] = useState<string>('');
   const [matchingSelections, setMatchingSelections] = useState<Record<string, string>>({});
+  const [shuffledRightItems, setShuffledRightItems] = useState<string[]>([]);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
   const [correctCount, setCorrectCount] = useState<number>(0);
@@ -49,6 +50,15 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
     setIsCorrect(false);
   };
 
+  // Reset states and shuffle matching choices when question index changes
+  useEffect(() => {
+    resetQuestionState();
+    if (currentQuestion && currentQuestion.type === 'matching' && currentQuestion.matchingPairs) {
+      const rightTexts = currentQuestion.matchingPairs.map(p => p.rightText);
+      setShuffledRightItems([...rightTexts].sort(() => Math.random() - 0.5));
+    }
+  }, [currentIndex, currentQuestion?.id]);
+
   const handleSelectOption = (opt: string) => {
     if (isSubmitted) return;
     setSelectedOption(opt);
@@ -69,8 +79,10 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
         : (currentQuestion.correctAnswer as string).toLowerCase();
       correct = cleanUser === expected || expected.includes(cleanUser);
     } else if (currentQuestion.type === 'matching') {
-      // Check matching pairs
-      correct = true; // Phase 1 matching validation
+      // Validate matching dropdown connections
+      correct = currentQuestion.matchingPairs?.every(pair => 
+        matchingSelections[pair.leftText] === pair.rightText
+      ) ?? false;
     }
 
     setIsCorrect(correct);
@@ -87,7 +99,6 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
   const handleContinue = () => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
-      resetQuestionState();
     } else {
       const finalScore = Math.round((correctCount / questions.length) * 100);
       onComplete(finalScore);
@@ -95,6 +106,11 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
   };
 
   const progressPercent = Math.round(((currentIndex + 1) / questions.length) * 100);
+
+  // Check if matching selections are completely filled out
+  const isMatchingComplete =
+    currentQuestion.type === 'matching' &&
+    currentQuestion.matchingPairs?.every(p => matchingSelections[p.leftText]);
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
@@ -131,7 +147,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                 {currentQuestion.questionText}
               </h2>
 
-              {currentQuestion.promptAudioUrl && (
+              {currentQuestion.promptAudioUrl && currentQuestion.type !== 'listening' && (
                 <AudioButton
                   audioUrl={currentQuestion.promptAudioUrl}
                   textToSpeak={currentQuestion.questionText}
@@ -139,6 +155,18 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                 />
               )}
             </div>
+
+            {/* Target Audio for Listening Question */}
+            {currentQuestion.type === 'listening' && (
+              <div className="flex justify-center items-center py-6 bg-indigo-50/50 border-2 border-dashed border-indigo-100 rounded-3xl max-w-sm mx-auto my-2">
+                <AudioButton
+                  audioUrl={currentQuestion.promptAudioUrl}
+                  textToSpeak={currentQuestion.correctAnswer}
+                  size="lg"
+                  label="🔊 PLAY AUDIO"
+                />
+              </div>
+            )}
 
             {/* Optional Question Image */}
             {currentQuestion.questionImage && (
@@ -178,7 +206,10 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                     className={`w-full p-4 rounded-2xl border-2 text-left text-base font-bold transition-all flex items-center justify-between cursor-pointer ${optStyle}`}
                   >
                     <span>{opt}</span>
-                    <AudioButton textToSpeak={opt} size="sm" />
+                    {/* Hide play button next to options for listening questions to test discrimination */}
+                    {currentQuestion.type !== 'listening' && (
+                      <AudioButton textToSpeak={opt} size="sm" />
+                    )}
                   </button>
                 );
               })}
@@ -204,12 +235,15 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                   <div
                     key={idx}
                     onClick={() => handleSelectOption(opt)}
-                    className={`rounded-2xl p-2 border-2 cursor-pointer transition-all bg-slate-50 ${borderStyle}`}
+                    className={`rounded-2xl p-2 border-2 cursor-pointer transition-all bg-slate-50 flex flex-col justify-between ${borderStyle}`}
                   >
-                    <div className="aspect-square rounded-xl overflow-hidden mb-2">
+                    <div className="aspect-square rounded-xl overflow-hidden">
                       <AppImage src={imgSrc} alt={opt} className="w-full h-full object-cover" />
                     </div>
-                    <p className="text-center font-heading font-bold text-xs text-slate-700">{opt}</p>
+                    {/* Only display word labels after submission to avoid giving away the answer */}
+                    {isSubmitted && (
+                      <p className="text-center font-heading font-bold text-xs text-indigo-650 mt-2">{opt}</p>
+                    )}
                   </div>
                 );
               })}
@@ -232,15 +266,53 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
 
           {/* 2. Matching Pairs */}
           {currentQuestion.type === 'matching' && (
-            <div className="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-200">
-              <p className="text-xs font-bold text-slate-400 uppercase">Ghép nối tương ứng</p>
-              {currentQuestion.matchingPairs?.map((pair, idx) => (
-                <div key={idx} className="flex items-center justify-between gap-3 bg-white p-3 rounded-xl border border-slate-200">
-                  <span className="font-extrabold text-indigo-700">{pair.leftText}</span>
-                  <span className="text-slate-400 font-bold">➔</span>
-                  <span className="font-bold text-slate-700">{pair.rightText}</span>
-                </div>
-              ))}
+            <div className="space-y-4">
+              <p className="text-xs font-black text-slate-400 uppercase tracking-widest text-center">
+                Ghép nối từ tiếng Anh với nghĩa tương ứng
+              </p>
+              <div className="space-y-3">
+                {currentQuestion.matchingPairs?.map((pair, idx) => {
+                  const selectedVal = matchingSelections[pair.leftText] || '';
+                  const isRight = selectedVal === pair.rightText;
+
+                  let selectClass = 'w-full sm:w-64 p-3 rounded-xl border-2 font-semibold text-sm outline-hidden transition-colors cursor-pointer ';
+                  if (isSubmitted) {
+                    if (isRight) selectClass += 'bg-emerald-50 border-emerald-500 text-emerald-800';
+                    else selectClass += 'bg-rose-50 border-rose-400 text-rose-800';
+                  } else {
+                    selectClass += selectedVal
+                      ? 'bg-indigo-50 border-indigo-400 text-indigo-900 font-bold'
+                      : 'bg-white border-slate-200 text-slate-600 focus:border-indigo-400';
+                  }
+
+                  return (
+                    <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-2xs">
+                      <span className="font-black text-indigo-700 text-lg">{pair.leftText}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-slate-300 font-bold hidden sm:inline">➔</span>
+                        <select
+                          value={selectedVal}
+                          onChange={(e) => {
+                            if (isSubmitted) return;
+                            setMatchingSelections(prev => ({
+                              ...prev,
+                              [pair.leftText]: e.target.value
+                            }));
+                            playEffect('click');
+                          }}
+                          disabled={isSubmitted}
+                          className={selectClass}
+                        >
+                          <option value="">-- Chọn nghĩa đúng --</option>
+                          {shuffledRightItems.map((val, itemIdx) => (
+                            <option key={itemIdx} value={val}>{val}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
 
@@ -297,7 +369,11 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
         {!isSubmitted ? (
           <AppButton
             onClick={handleSubmit}
-            disabled={!selectedOption && !fillValue && currentQuestion.type !== 'matching'}
+            disabled={
+              currentQuestion.type === 'matching'
+                ? !isMatchingComplete
+                : (!selectedOption && !fillValue)
+            }
             variant="primary"
             size="lg"
             fullWidth
