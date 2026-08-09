@@ -56,6 +56,24 @@ class CourseService {
    * Cleans, sanitizes, and shuffles practice questions on-the-fly to enforce pedagogical rigor.
    */
   private preprocessCourseData() {
+    // Build a global lookup map of English words to Vietnamese meanings
+    const vocabToVietnamese: Record<string, string> = {};
+    this.courseData.units.forEach((unit) => {
+      unit.lessons.forEach((lesson) => {
+        if (lesson.vocabulary) {
+          lesson.vocabulary.forEach((v) => {
+            if (v.word && v.vietnameseMeaning) {
+              vocabToVietnamese[v.word.toLowerCase()] = v.vietnameseMeaning;
+            }
+          });
+        }
+      });
+    });
+
+    const getVietnameseMeaning = (word: string): string => {
+      return vocabToVietnamese[word.toLowerCase()] || word;
+    };
+
     this.courseData.units.forEach((unit) => {
       unit.lessons.forEach((lesson) => {
         if (lesson.practiceQuestions) {
@@ -76,7 +94,8 @@ class CourseService {
             }
 
             if (q.type === 'picture-select') {
-              q.questionText = `Choose the picture for '${q.correctAnswer}':`;
+              const vnMeaning = getVietnameseMeaning(q.correctAnswer as string);
+              q.questionText = `Choose the picture for '${vnMeaning}':`;
             } else if (q.type === 'listening') {
               q.questionText = "Listen and choose the word you hear:";
             } else if (q.type === 'matching') {
@@ -90,19 +109,20 @@ class CourseService {
               // Detect dialogue and grammar sentence questions
               const isGrammarOrDialogue = q.questionText.toLowerCase().includes('grammatically correct') || 
                                           q.questionText.toLowerCase().includes('dialogue');
-              const isSentenceAnswer = correct.includes(' ') && correct.trim().split(/\s+/).length > 2;
+              const isSentenceAnswer = typeof correct === 'string' && correct.includes(' ') && correct.trim().split(/\s+/).length > 2;
               const shouldPreserveOptions = isGrammarOrDialogue || isSentenceAnswer;
 
               if (shouldPreserveOptions && q.options && q.options.length > 0) {
+                const correctStr = correct as string;
                 // Ensure options contain the correct answer
-                if (!q.options.some(o => o.toLowerCase() === correct.toLowerCase())) {
-                  q.options.push(correct);
+                if (!q.options.some(o => o.toLowerCase() === correctStr.toLowerCase())) {
+                  q.options.push(correctStr);
                 }
                 const uniqueOptions = Array.from(new Set(q.options));
                 // Slice exactly 3 options if there are more (ensuring correct answer is included)
                 if (uniqueOptions.length > 3) {
-                  const others = uniqueOptions.filter(o => o.toLowerCase() !== correct.toLowerCase());
-                  q.options = [correct, others[0], others[1]];
+                  const others = uniqueOptions.filter(o => o.toLowerCase() !== correctStr.toLowerCase());
+                  q.options = [correctStr, others[0], others[1]];
                 } else {
                   q.options = uniqueOptions;
                 }
@@ -110,12 +130,13 @@ class CourseService {
                 q.options = q.options.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
               } else {
                 // Vocabulary-based question options generation
-                let distractors = vocabWords.filter(w => w.toLowerCase() !== correct.toLowerCase());
+                const correctStr = correct as string;
+                let distractors = vocabWords.filter(w => w.toLowerCase() !== correctStr.toLowerCase());
 
                 // If lesson contains insufficient vocabulary items, insert standard defaults
                 if (distractors.length < 2) {
                   distractors = [...distractors, 'popcorn', 'gum', 'chocolate', 'peanuts', 'tomato', 'onion'].filter(
-                    w => w.toLowerCase() !== correct.toLowerCase()
+                    w => w.toLowerCase() !== correctStr.toLowerCase()
                   );
                 }
 
@@ -128,7 +149,7 @@ class CourseService {
                 });
 
                 // Construct the clean options array
-                const sortedOptions = [correct, ...uniqueDistractors].sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+                const sortedOptions = [correctStr, ...uniqueDistractors].sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
                 q.options = sortedOptions;
               }
 
