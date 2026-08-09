@@ -86,26 +86,51 @@ class CourseService {
             // 2. Validate options and distractors for MC, image select, and listening
             if (q.type === 'multiple-choice' || q.type === 'picture-select' || q.type === 'listening') {
               const correct = q.correctAnswer;
-              let distractors = vocabWords.filter(w => w.toLowerCase() !== correct.toLowerCase());
+              
+              // Detect dialogue and grammar sentence questions
+              const isGrammarOrDialogue = q.questionText.toLowerCase().includes('grammatically correct') || 
+                                          q.questionText.toLowerCase().includes('dialogue');
+              const isSentenceAnswer = correct.includes(' ') && correct.trim().split(/\s+/).length > 2;
+              const shouldPreserveOptions = isGrammarOrDialogue || isSentenceAnswer;
 
-              // If lesson contains insufficient vocabulary items, insert standard defaults
-              if (distractors.length < 2) {
-                distractors = [...distractors, 'popcorn', 'gum', 'chocolate', 'peanuts', 'tomato', 'onion'].filter(
-                  w => w.toLowerCase() !== correct.toLowerCase()
-                );
-              }
-
-              // De-duplicate distractors
-              const uniqueDistractors: string[] = [];
-              distractors.forEach((d) => {
-                if (!uniqueDistractors.some(x => x.toLowerCase() === d.toLowerCase()) && uniqueDistractors.length < 2) {
-                  uniqueDistractors.push(d);
+              if (shouldPreserveOptions && q.options && q.options.length > 0) {
+                // Ensure options contain the correct answer
+                if (!q.options.some(o => o.toLowerCase() === correct.toLowerCase())) {
+                  q.options.push(correct);
                 }
-              });
+                const uniqueOptions = Array.from(new Set(q.options));
+                // Slice exactly 3 options if there are more (ensuring correct answer is included)
+                if (uniqueOptions.length > 3) {
+                  const others = uniqueOptions.filter(o => o.toLowerCase() !== correct.toLowerCase());
+                  q.options = [correct, others[0], others[1]];
+                } else {
+                  q.options = uniqueOptions;
+                }
+                // Shuffle
+                q.options = q.options.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+              } else {
+                // Vocabulary-based question options generation
+                let distractors = vocabWords.filter(w => w.toLowerCase() !== correct.toLowerCase());
 
-              // Construct the clean options array
-              const sortedOptions = [correct, ...uniqueDistractors].sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
-              q.options = sortedOptions;
+                // If lesson contains insufficient vocabulary items, insert standard defaults
+                if (distractors.length < 2) {
+                  distractors = [...distractors, 'popcorn', 'gum', 'chocolate', 'peanuts', 'tomato', 'onion'].filter(
+                    w => w.toLowerCase() !== correct.toLowerCase()
+                  );
+                }
+
+                // De-duplicate distractors
+                const uniqueDistractors: string[] = [];
+                distractors.forEach((d) => {
+                  if (!uniqueDistractors.some(x => x.toLowerCase() === d.toLowerCase()) && uniqueDistractors.length < 2) {
+                    uniqueDistractors.push(d);
+                  }
+                });
+
+                // Construct the clean options array
+                const sortedOptions = [correct, ...uniqueDistractors].sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+                q.options = sortedOptions;
+              }
 
               // Pair correct options to optionImages for image-select questions
               if (q.type === 'picture-select') {
