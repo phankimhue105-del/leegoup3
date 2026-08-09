@@ -175,10 +175,38 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
       return;
     }
 
+    // Determine the best supported mimeType for the browser/device (critical for iOS/Safari compatibility)
+    const mimeTypes = ['audio/webm', 'audio/mp4', 'audio/ogg', 'audio/wav', 'audio/aac'];
+    let selectedMimeType = '';
+    if (typeof MediaRecorder !== 'undefined') {
+      for (const mime of mimeTypes) {
+        if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(mime)) {
+          selectedMimeType = mime;
+          break;
+        }
+      }
+    }
+
     // 1. Initialize MediaRecorder to capture physical audio blob for playback/evaluation
     const chunks: Blob[] = [];
-    const recorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
-    mediaRecorderRef.current = recorder;
+    let recorder: MediaRecorder | null = null;
+    try {
+      const options = selectedMimeType ? { mimeType: selectedMimeType } : undefined;
+      recorder = new MediaRecorder(stream, options);
+      mediaRecorderRef.current = recorder;
+    } catch (e) {
+      console.warn('Failed to initialize MediaRecorder with preferred mimeType, fallback to default:', e);
+      try {
+        recorder = new MediaRecorder(stream);
+        mediaRecorderRef.current = recorder;
+      } catch (err) {
+        console.error('Failed to initialize MediaRecorder entirely:', err);
+        setErrorMessage('Ghi âm không khả dụng trên thiết bị này. Vui lòng nhập câu trả lời bằng bàn phím.');
+        setIsRecording(false);
+        stream.getTracks().forEach(track => track.stop());
+        return;
+      }
+    }
 
     recorder.ondataavailable = (e) => {
       if (e.data && e.data.size > 0) {
@@ -187,7 +215,7 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
     };
 
     recorder.onstop = () => {
-      const audioBlob = new Blob(chunks, { type: 'audio/webm' });
+      const audioBlob = new Blob(chunks, { type: selectedMimeType || 'audio/webm' });
       if (audioBlob && audioBlob.size > 0) {
         setRecordedBlob(audioBlob);
         const url = URL.createObjectURL(audioBlob);
@@ -217,14 +245,21 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
 
       recognition.onend = () => {
         setIsRecording(false);
+
+        // Stop MediaRecorder first to flush remaining packets cleanly
+        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+          try {
+            mediaRecorderRef.current.stop();
+          } catch (e) {}
+        }
+
         // Release stream tracks
         stream.getTracks().forEach(track => track.stop());
 
         // Process evaluation once both transcript and blob are captured
         setTimeout(() => {
           if (gotResult && transcriptText) {
-            // Retrieve current chunks from MediaRecorder
-            const finalBlob = new Blob(chunks, { type: 'audio/webm' });
+            const finalBlob = new Blob(chunks, { type: selectedMimeType || 'audio/webm' });
             setRecordedBlob(finalBlob);
             const url = URL.createObjectURL(finalBlob);
             setAudioUrl(url);
@@ -242,6 +277,11 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
       // Fallback if SpeechRecognition is not supported natively
       setTimeout(() => {
         setIsRecording(false);
+        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+          try {
+            mediaRecorderRef.current.stop();
+          } catch (e) {}
+        }
         stream.getTracks().forEach(track => track.stop());
         setErrorMessage('Thiết bị hoặc trình duyệt không hỗ trợ nhận diện giọng nói. Hãy dùng bàn phím nhập câu trả lời.');
       }, 2000);
