@@ -47,11 +47,13 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
   const [evalResult, setEvalResult] = useState<SpeakingEvaluationResult | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Refs for cleanup
+  // Refs for cleanup and event loops
   const recognitionRef = useRef<any>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const mediaStreamRef = useRef<MediaStream | null>(null);
   const audioPreviewRef = useRef<HTMLAudioElement | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const selectedMimeTypeRef = useRef<string>('');
 
   const currentQuestion = questions[currentIndex] || questions[0];
 
@@ -115,13 +117,8 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
 
     // Validate Blob if in speech mode
     if (mode === 'speech') {
-      if (!blob) {
-        setErrorMessage('Không nhận được tệp âm thanh ghi âm. Vui lòng bấm nói lại.');
-        setIsEvaluating(false);
-        return;
-      }
-      if (blob.size === 0) {
-        setErrorMessage('Dữ liệu âm thanh trống. Vui lòng kiểm tra lại mic và nói lại.');
+      if (!blob || blob.size === 0) {
+        setErrorMessage("Sorry, we couldn't record your voice. Please try again. / Không nhận được tệp âm thanh ghi âm. Vui lòng nói lại.");
         setIsEvaluating(false);
         return;
       }
@@ -164,6 +161,76 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
       setAudioUrl(null);
     }
 
+    // 1. Initialize Web Speech API synchronously first (while click user gesture is still active!)
+    let recognition: any = null;
+    let gotResult = false;
+    let transcriptText = '';
+
+    if (SpeechRecognition) {
+      try {
+        recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        recognition.onresult = (event: any) => {
+          gotResult = true;
+          transcriptText = event.results[0][0].transcript;
+          setRecognizedTranscript(transcriptText);
+        };
+
+        recognition.onerror = (event: any) => {
+          console.error('Speech recognition error:', event);
+        };
+
+        recognition.onend = () => {
+          setIsRecording(false);
+          setHasRecorded(true);
+
+          // Stop MediaRecorder first to flush remaining packets cleanly
+          if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+            try {
+              mediaRecorderRef.current.stop();
+            } catch (e) {}
+          }
+
+          // Release stream tracks
+          if (mediaStreamRef.current) {
+            mediaStreamRef.current.getTracks().forEach(track => {
+              try {
+                track.stop();
+              } catch (e) {}
+            });
+          }
+
+          // Process evaluation once both transcript and blob are captured
+          setTimeout(() => {
+            if (gotResult && transcriptText) {
+              if (recordedBlob && recordedBlob.size > 0) {
+                performEvaluation(transcriptText, recordedBlob, 'speech');
+              } else {
+                // Construct blob from current chunks in case onstop state is delayed
+                const fallbackBlob = new Blob(chunksRef.current, { type: selectedMimeTypeRef.current || 'audio/webm' });
+                if (fallbackBlob && fallbackBlob.size > 0) {
+                  performEvaluation(transcriptText, fallbackBlob, 'speech');
+                } else {
+                  setErrorMessage("Sorry, we couldn't record your voice. Please try again. / Không nhận được tệp âm thanh ghi âm. Vui lòng nói lại.");
+                }
+              }
+            } else {
+              setErrorMessage('Không nhận được câu trả lời. Hãy thử nói lại hoặc nhập câu trả lời bằng bàn phím.');
+            }
+          }, 500);
+        };
+
+        recognitionRef.current = recognition;
+        recognition.start(); // Started synchronously inside user click gesture loop
+      } catch (err: any) {
+        console.warn('Failed to start SpeechRecognition synchronously:', err);
+      }
+    }
+
+    // 2. Perform the async MediaStream request for MediaRecorder
     let stream: MediaStream;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -172,10 +239,16 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
       console.error('Microphone access denied:', err);
       setErrorMessage('Không thể truy cập micro. Vui lòng cấp quyền truy cập micro và thử lại.');
       setIsRecording(false);
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.abort();
+        } catch (e) {}
+        recognitionRef.current = null;
+      }
       return;
     }
 
-    // Determine the best supported mimeType for the browser/device (critical for iOS/Safari compatibility)
+    // Determine the best supported mimeType
     const mimeTypes = ['audio/webm', 'audio/mp4', 'audio/ogg', 'audio/wav', 'audio/aac'];
     let selectedMimeType = '';
     if (typeof MediaRecorder !== 'undefined') {
@@ -186,9 +259,12 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
         }
       }
     }
+    selectedMimeTypeRef.current = selectedMimeType;
 
-    // 1. Initialize MediaRecorder to capture physical audio blob for playback/evaluation
-    const chunks: Blob[] = [];
+    // Initialize chunks array ref
+    chunksRef.current = [];
+
+    // Initialize MediaRecorder
     let recorder: MediaRecorder | null = null;
     try {
       const options = selectedMimeType ? { mimeType: selectedMimeType } : undefined;
@@ -204,88 +280,30 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
         setErrorMessage('Ghi âm không khả dụng trên thiết bị này. Vui lòng nhập câu trả lời bằng bàn phím.');
         setIsRecording(false);
         stream.getTracks().forEach(track => track.stop());
+        if (recognitionRef.current) {
+          try {
+            recognitionRef.current.abort();
+          } catch (e) {}
+          recognitionRef.current = null;
+        }
         return;
       }
     }
 
     recorder.ondataavailable = (e) => {
       if (e.data && e.data.size > 0) {
-        chunks.push(e.data);
+        chunksRef.current.push(e.data);
       }
     };
 
     recorder.onstop = () => {
-      const audioBlob = new Blob(chunks, { type: selectedMimeType || 'audio/webm' });
+      const audioBlob = new Blob(chunksRef.current, { type: selectedMimeTypeRef.current || 'audio/webm' });
       if (audioBlob && audioBlob.size > 0) {
         setRecordedBlob(audioBlob);
         const url = URL.createObjectURL(audioBlob);
         setAudioUrl(url);
       }
     };
-
-    // 2. Initialize Web Speech API for real-time speech recognition
-    let gotResult = false;
-    let transcriptText = '';
-
-    if (SpeechRecognition) {
-      const recognition = new SpeechRecognition();
-      recognition.lang = 'en-US';
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
-
-      recognition.onresult = (event: any) => {
-        gotResult = true;
-        transcriptText = event.results[0][0].transcript;
-        setRecognizedTranscript(transcriptText);
-      };
-
-      recognition.onerror = (event: any) => {
-        console.error('Speech recognition error:', event);
-      };
-
-      recognition.onend = () => {
-        setIsRecording(false);
-
-        // Stop MediaRecorder first to flush remaining packets cleanly
-        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
-          try {
-            mediaRecorderRef.current.stop();
-          } catch (e) {}
-        }
-
-        // Release stream tracks
-        stream.getTracks().forEach(track => track.stop());
-
-        // Process evaluation once both transcript and blob are captured
-        setTimeout(() => {
-          if (gotResult && transcriptText) {
-            const finalBlob = new Blob(chunks, { type: selectedMimeType || 'audio/webm' });
-            setRecordedBlob(finalBlob);
-            const url = URL.createObjectURL(finalBlob);
-            setAudioUrl(url);
-            
-            performEvaluation(transcriptText, finalBlob, 'speech');
-          } else {
-            setErrorMessage('Không nhận được câu trả lời. Hãy thử nói lại hoặc nhập câu trả lời bằng bàn phím.');
-          }
-        }, 400);
-      };
-
-      recognitionRef.current = recognition;
-      recognition.start();
-    } else {
-      // Fallback if SpeechRecognition is not supported natively
-      setTimeout(() => {
-        setIsRecording(false);
-        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
-          try {
-            mediaRecorderRef.current.stop();
-          } catch (e) {}
-        }
-        stream.getTracks().forEach(track => track.stop());
-        setErrorMessage('Thiết bị hoặc trình duyệt không hỗ trợ nhận diện giọng nói. Hãy dùng bàn phím nhập câu trả lời.');
-      }, 2000);
-    }
 
     // Start MediaRecorder
     try {
@@ -298,7 +316,7 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
   const handleStopRecording = () => {
     if (!isRecording) return;
     
-    // Stop MediaRecorder
+    // Stop MediaRecorder first
     if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
       try {
         mediaRecorderRef.current.stop();
@@ -350,6 +368,20 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
       const averageScore = Math.round(finalScores.reduce((a, b) => a + b, 0) / finalScores.length);
       onComplete(averageScore);
     }
+  };
+
+  const handleRetry = () => {
+    setIsRecording(false);
+    setHasRecorded(false);
+    setEvalResult(null);
+    setErrorMessage(null);
+    setRecognizedTranscript('');
+    setTypedAnswer('');
+    if (audioUrl) {
+      URL.revokeObjectURL(audioUrl);
+      setAudioUrl(null);
+    }
+    setRecordedBlob(null);
   };
 
   // Maps task instructions in capitalized format
