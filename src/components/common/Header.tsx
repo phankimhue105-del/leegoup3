@@ -33,13 +33,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSettings }) => {
   else if (currentPath.endsWith('/speaking')) activeSection = 'speaking';
   else if (currentPath.endsWith('/completed')) activeSection = 'completed';
 
-  const steps: { type: typeof activeSection; label: string }[] = [
-    { type: 'vocabulary', label: 'Vocabulary' },
-    { type: 'model-pattern', label: 'Model Pattern' },
-    { type: 'practice', label: 'Practice' },
-    { type: 'speaking', label: 'Speaking' },
-    { type: 'completed', label: 'Completed' },
-  ];
+  const isCheckup = currentUnit?.type === 'checkup';
+
+  const steps: { type: 'vocabulary' | 'model-pattern' | 'practice' | 'speaking' | 'completed' | 'none'; label: string }[] = isCheckup
+    ? [
+        { type: 'practice', label: 'Practice' },
+        { type: 'speaking', label: 'Speaking' },
+        { type: 'completed', label: 'Completed' },
+      ]
+    : [
+        { type: 'vocabulary', label: 'Vocabulary' },
+        { type: 'model-pattern', label: 'Model Pattern' },
+        { type: 'practice', label: 'Practice' },
+        { type: 'speaking', label: 'Speaking' },
+        { type: 'completed', label: 'Completed' },
+      ];
 
   const unlockedCount = progressState.achievements.filter((a) => a.isUnlocked).length;
 
