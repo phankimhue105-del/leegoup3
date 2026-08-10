@@ -56,14 +56,22 @@ class CourseService {
    * Cleans, sanitizes, and shuffles practice questions on-the-fly to enforce pedagogical rigor.
    */
   private preprocessCourseData() {
-    // Build a global lookup map of English words to Vietnamese meanings
+    // Build global lookup maps of English words to Vietnamese meanings and images
     const vocabToVietnamese: Record<string, string> = {};
+    const vocabToImage: Record<string, string> = {};
+
     this.courseData.units.forEach((unit) => {
       unit.lessons.forEach((lesson) => {
         if (lesson.vocabulary) {
           lesson.vocabulary.forEach((v) => {
-            if (v.word && v.vietnameseMeaning) {
-              vocabToVietnamese[v.word.toLowerCase()] = v.vietnameseMeaning;
+            if (v.word) {
+              const wordKey = v.word.toLowerCase().trim();
+              if (v.vietnameseMeaning) {
+                vocabToVietnamese[wordKey] = v.vietnameseMeaning;
+              }
+              if (v.image) {
+                vocabToImage[wordKey] = v.image;
+              }
             }
           });
         }
@@ -71,24 +79,28 @@ class CourseService {
     });
 
     const getVietnameseMeaning = (word: string): string => {
-      return vocabToVietnamese[word.toLowerCase()] || word;
+      return vocabToVietnamese[word.toLowerCase().trim()] || word;
+    };
+
+    const getVocabImageGlobal = (word: string): string => {
+      return vocabToImage[word.toLowerCase().trim()] || '';
     };
 
     this.courseData.units.forEach((unit) => {
       unit.lessons.forEach((lesson) => {
         if (lesson.practiceQuestions) {
-          lesson.practiceQuestions = lesson.practiceQuestions.map((q, qIdx) => {
-            const vocabWords = (lesson.vocabulary || []).map(v => v.word);
-            const getVocabImage = (word: string) => {
-              const v = (lesson.vocabulary || []).find(x => x.word.toLowerCase() === word.toLowerCase());
-              return v ? v.image : word;
-            };
+          const vocabWords = (lesson.vocabulary || []).map(v => v.word);
+          const getVocabImageLocal = (word: string) => {
+            const v = (lesson.vocabulary || []).find(x => x.word.toLowerCase() === word.toLowerCase());
+            return v ? v.image : '';
+          };
 
+          const processedQuestions = lesson.practiceQuestions.map((q, qIdx) => {
             // 1. Normalise type mapping & prompts
             if (q.type === 'multiple-choice') {
               if (q.questionImage) {
                 q.questionText = "Look at the picture and choose the correct word:";
-              } else if (q.questionText.toLowerCase().includes('picture')) {
+              } else if (q.questionText.toLowerCase().includes('choose the picture')) {
                 q.type = 'picture-select';
               }
             }
@@ -105,32 +117,26 @@ class CourseService {
             // 2. Validate options and distractors for MC, image select, and listening
             if (q.type === 'multiple-choice' || q.type === 'picture-select' || q.type === 'listening') {
               const correct = q.correctAnswer;
-              
-              // Detect dialogue and grammar sentence questions
-              const isGrammarOrDialogue = q.questionText.toLowerCase().includes('grammatically correct') || 
-                                          q.questionText.toLowerCase().includes('dialogue');
-              const isSentenceAnswer = typeof correct === 'string' && correct.includes(' ') && correct.trim().split(/\s+/).length > 2;
-              const shouldPreserveOptions = isGrammarOrDialogue || isSentenceAnswer;
+              const correctStr = Array.isArray(correct) ? correct[0] : correct;
 
-              if (shouldPreserveOptions && q.options && q.options.length > 0) {
-                const correctStr = correct as string;
+              // If options are already defined in the JSON and valid, preserve and clean them
+              if (q.options && q.options.length >= 2) {
                 // Ensure options contain the correct answer
                 if (!q.options.some(o => o.toLowerCase() === correctStr.toLowerCase())) {
                   q.options.push(correctStr);
                 }
-                const uniqueOptions = Array.from(new Set(q.options));
-                // Slice exactly 3 options if there are more (ensuring correct answer is included)
-                if (uniqueOptions.length > 3) {
-                  const others = uniqueOptions.filter(o => o.toLowerCase() !== correctStr.toLowerCase());
-                  q.options = [correctStr, others[0], others[1]];
-                } else {
-                  q.options = uniqueOptions;
+                q.options = Array.from(new Set(q.options));
+                
+                // Slice options to exact count
+                const maxOpts = q.type === 'multiple-choice' ? q.options.length : 3;
+                if (q.options.length > maxOpts) {
+                  const others = q.options.filter(o => o.toLowerCase() !== correctStr.toLowerCase());
+                  q.options = [correctStr, ...others.slice(0, maxOpts - 1)];
                 }
                 // Shuffle
                 q.options = q.options.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
               } else {
-                // Vocabulary-based question options generation
-                const correctStr = correct as string;
+                // FALLBACK ONLY: Vocabulary-based question options generation if missing
                 let distractors = vocabWords.filter(w => w.toLowerCase() !== correctStr.toLowerCase());
 
                 // If lesson contains insufficient vocabulary items, insert standard defaults
@@ -155,7 +161,20 @@ class CourseService {
 
               // Pair correct options to optionImages for image-select questions
               if (q.type === 'picture-select') {
-                q.optionImages = q.options.map(opt => getVocabImage(opt));
+                const needsImagesResolving = !q.optionImages || 
+                  q.optionImages.length !== q.options.length || 
+                  q.optionImages.some(img => !img || img === 'vocab' || !img.includes('/'));
+
+                if (needsImagesResolving) {
+                  q.optionImages = q.options.map(opt => {
+                    // Try local lesson vocab image first, then global map, then empty
+                    const localImg = getVocabImageLocal(opt);
+                    if (localImg && localImg.includes('/')) return localImg;
+                    const globalImg = getVocabImageGlobal(opt);
+                    if (globalImg && globalImg.includes('/')) return globalImg;
+                    return '';
+                  });
+                }
               }
             }
 
@@ -163,13 +182,51 @@ class CourseService {
             if (q.type === 'matching') {
               if (!q.matchingPairs || q.matchingPairs.length === 0) {
                 q.matchingPairs = (lesson.vocabulary || []).slice(0, 3).map((v) => ({
+                  leftId: v.id,
                   leftText: v.word,
+                  rightId: v.id,
                   rightText: v.vietnameseMeaning
                 }));
               }
             }
 
             return q;
+          });
+
+          // 4. Strict Validation Layer (Filter out invalid questions)
+          lesson.practiceQuestions = processedQuestions.filter((q) => {
+            if (!q.id || !q.type || !q.questionText) return false;
+
+            if (['multiple-choice', 'picture-select', 'listening'].includes(q.type)) {
+              if (!q.options || q.options.length < 2) return false;
+              const correctStr = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
+              if (!q.options.some(o => o.toLowerCase() === correctStr.toLowerCase())) return false;
+
+              // Validate no mixed languages in multiple choice options
+              const isVietnamese = (text: string) => {
+                const regex = /[áàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ]/i;
+                return regex.test(text);
+              };
+
+              const hasVi = q.options.some(o => isVietnamese(o));
+              const hasEn = q.options.some(o => !isVietnamese(o) && /^[a-zA-Z\s,.'"-]+$/.test(o));
+              if (hasVi && hasEn) {
+                // Disallow mixed languages
+                return false;
+              }
+
+              // Validate image select questions: no broken or placeholder images
+              if (q.type === 'picture-select') {
+                if (!q.optionImages || q.optionImages.length !== q.options.length) return false;
+                for (const img of q.optionImages) {
+                  if (!img || img === 'vocab' || !img.includes('/') || img.toLowerCase().includes('unavailable') || img.toLowerCase().includes('placeholder')) {
+                    return false;
+                  }
+                }
+              }
+            }
+
+            return true;
           });
         }
       });
