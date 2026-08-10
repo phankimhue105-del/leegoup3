@@ -92,34 +92,7 @@ export const CurriculumMap: React.FC<CurriculumMapProps> = ({ isOpen, onClose })
               );
             }
 
-            // YLE practice card view
-            if (unit.type === 'yle') {
-              return (
-                <div
-                  key={unit.id}
-                  className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-5 rounded-2xl border border-indigo-400/50 shadow-xs space-y-3"
-                >
-                  <div>
-                    <h5 className="font-heading font-black text-sm flex items-center gap-1.5">
-                      🏆 YLE PRACTICE TEST
-                    </h5>
-                    <p className="text-[11px] font-bold opacity-90 mt-1">
-                      Movers Practice Test
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => {
-                      onClose();
-                      navigate(`/units/${unit.id}/lessons/${unit.lessons[0]?.id}`);
-                    }}
-                    className="w-full bg-white text-indigo-600 hover:bg-slate-100 py-2.5 rounded-xl text-xs font-black flex items-center justify-center gap-1.5 cursor-pointer shadow-xs transition-colors"
-                  >
-                    <Play className="w-3.5 h-3.5 fill-indigo-600" />
-                    <span>Play Practice Now</span>
-                  </button>
-                </div>
-              );
-            }
+
 
             // Standard Unit Card
             const isUnitActive = unit.id === unitId;
