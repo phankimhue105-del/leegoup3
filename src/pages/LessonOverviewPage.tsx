@@ -17,7 +17,9 @@ export const LessonOverviewPage: React.FC<LessonOverviewPageProps> = ({ onOpenSe
     if (unit) {
       const activeLessonId = lessonId || unit.lessons[0]?.id;
       if (activeLessonId) {
-        navigate(`/units/${unit.id}/lessons/${activeLessonId}/vocabulary`, { replace: true });
+        const isCheckup = unit.type === 'checkup';
+        const startSection = isCheckup ? 'practice' : 'vocabulary';
+        navigate(`/units/${unit.id}/lessons/${activeLessonId}/${startSection}`, { replace: true });
       }
     } else {
       // Fallback redirect if unit is invalid
