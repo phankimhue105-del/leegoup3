@@ -129,7 +129,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenSettings }) => {
                 Danh Sách Bài Học (Units)
               </h3>
               <p className="text-xs font-semibold text-slate-500">
-                Toàn bộ 8 Units, Check Up và YLE Practice theo sách giáo khoa
+                Toàn bộ 8 Units và Check Up theo sách giáo khoa
               </p>
             </div>
             <AppButton
