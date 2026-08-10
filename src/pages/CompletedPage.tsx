@@ -25,6 +25,7 @@ export const CompletedPage: React.FC<CompletedPageProps> = ({ onOpenSettings }) 
   const nextTarget = unitId && lessonId ? getNextLesson(unitId, lessonId) : undefined;
 
   const lessonProg = lessonId ? getLessonProgress(lessonId) : undefined;
+  const isCheckup = lessonData?.unit.type === 'checkup';
 
   useEffect(() => {
     // Fire celebration confetti & fanfare audio
@@ -60,10 +61,12 @@ export const CompletedPage: React.FC<CompletedPageProps> = ({ onOpenSettings }) 
               Xuất Sắc! Hoàn Thành Bài Học
             </span>
             <h1 className="text-3xl sm:text-4xl font-black font-heading tracking-tight">
-              Lesson Completed!
+              {isCheckup ? 'Check-Up Completed!' : 'Lesson Completed!'}
             </h1>
             <p className="text-sm font-semibold text-indigo-100">
-              Bạn đã hoàn tất xuất sắc cả 4 phần học của bài hôm nay 🎉
+              {isCheckup
+                ? 'Bạn đã hoàn tất xuất sắc bài kiểm tra hôm nay 🎉'
+                : 'Bạn đã hoàn tất xuất sắc cả 4 phần học của bài hôm nay 🎉'}
             </p>
           </div>
 
@@ -74,14 +77,16 @@ export const CompletedPage: React.FC<CompletedPageProps> = ({ onOpenSettings }) 
         </Card>
 
         {/* Score Breakdown Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <Card className="p-5 text-center space-y-1">
-            <span className="text-xs font-bold text-slate-400 uppercase">Từ vựng (Vocab)</span>
-            <div className="flex items-center justify-center gap-1.5 text-emerald-600 font-extrabold text-lg">
-              <CheckCircle2 className="w-5 h-5" />
-              <span>100% Thuộc</span>
-            </div>
-          </Card>
+        <div className={`grid grid-cols-1 ${isCheckup ? 'sm:grid-cols-2' : 'sm:grid-cols-3'} gap-4`}>
+          {!isCheckup && (
+            <Card className="p-5 text-center space-y-1">
+              <span className="text-xs font-bold text-slate-400 uppercase">Từ vựng (Vocab)</span>
+              <div className="flex items-center justify-center gap-1.5 text-emerald-600 font-extrabold text-lg">
+                <CheckCircle2 className="w-5 h-5" />
+                <span>100% Thuộc</span>
+              </div>
+            </Card>
+          )}
 
           <Card className="p-5 text-center space-y-1">
             <span className="text-xs font-bold text-slate-400 uppercase">Điểm thực hành</span>
