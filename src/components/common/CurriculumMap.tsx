@@ -63,6 +63,8 @@ export const CurriculumMap: React.FC<CurriculumMapProps> = ({ isOpen, onClose })
         {/* Scrollable Curriculum Map Content */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {units.map((unit) => {
+            if (unit.type === 'yle') return null;
+
             // Check-Up card view
             if (unit.type === 'checkup') {
               return (
