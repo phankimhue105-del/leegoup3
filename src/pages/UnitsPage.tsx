@@ -17,9 +17,10 @@ export const UnitsPage: React.FC<UnitsPageProps> = ({ onOpenSettings }) => {
   const { getLessonProgress } = useProgress();
   const navigate = useNavigate();
 
-  const [activeTab, setActiveTab] = useState<'all' | 'standard' | 'checkup' | 'yle'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'standard' | 'checkup'>('all');
 
   const filteredUnits = units.filter((u) => {
+    if (u.type === 'yle') return false;
     if (activeTab === 'all') return true;
     return u.type === activeTab;
   });
@@ -76,17 +77,7 @@ export const UnitsPage: React.FC<UnitsPageProps> = ({ onOpenSettings }) => {
             Check Up 1 – 4
           </button>
 
-          <button
-            onClick={() => setActiveTab('yle')}
-            className={`px-5 py-2.5 rounded-2xl text-sm font-bold transition-all whitespace-nowrap cursor-pointer flex items-center gap-1.5 ${
-              activeTab === 'yle'
-                ? 'bg-teal-600 text-white shadow-md'
-                : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-            }`}
-          >
-            <Award className="w-4 h-4" />
-            YLE Practice Test
-          </button>
+
         </div>
 
         {/* Units & Lessons List */}
