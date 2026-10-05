@@ -74,10 +74,12 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
       correct = selectedOption === currentQuestion.correctAnswer;
     } else if (currentQuestion.type === 'fill-in-blank') {
       const cleanUser = fillValue.trim().toLowerCase();
-      const expected = Array.isArray(currentQuestion.correctAnswer)
-        ? currentQuestion.correctAnswer[0].toLowerCase()
-        : (currentQuestion.correctAnswer as string).toLowerCase();
-      correct = cleanUser === expected || expected.includes(cleanUser);
+      if (Array.isArray(currentQuestion.correctAnswer)) {
+        correct = currentQuestion.correctAnswer.some(ans => ans.trim().toLowerCase() === cleanUser);
+      } else {
+        const expected = (currentQuestion.correctAnswer as string).trim().toLowerCase();
+        correct = cleanUser === expected;
+      }
     } else if (currentQuestion.type === 'matching') {
       // Validate matching dropdown connections
       correct = currentQuestion.matchingPairs?.every(pair => 
@@ -354,14 +356,24 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
               )}
 
               {/* Vietnamese Explanation Area */}
-              <div className="pt-2 border-t border-slate-200/60 text-xs font-semibold space-y-1">
-                <p className="font-bold uppercase tracking-wider text-slate-500">
-                  💡 Giải thích bài tập (Vietnamese Explanation):
-                </p>
-                <p className="text-slate-700 italic leading-relaxed">
-                  {currentQuestion.vietnameseExplanation}
-                </p>
-              </div>
+              {(currentQuestion.vietnameseExplanation || currentQuestion.explanation) && (
+                <div className="pt-2 border-t border-slate-200/60 text-xs font-semibold space-y-1">
+                  <p className="font-bold uppercase tracking-wider text-slate-500">
+                    💡 Giải thích bài tập:
+                  </p>
+                  <p className="text-slate-700 italic leading-relaxed">
+                    {(() => {
+                      const raw = currentQuestion.vietnameseExplanation || currentQuestion.explanation || '';
+                      const cleanRaw = raw.replace(/^Đúng[\.\!\,\s–\-]+/i, '');
+                      if (isCorrect) {
+                        return cleanRaw ? `Chính xác! ${cleanRaw}` : 'Chính xác!';
+                      } else {
+                        return cleanRaw ? `Chưa chính xác. ${cleanRaw}` : 'Chưa chính xác.';
+                      }
+                    })()}
+                  </p>
+                </div>
+              )}
             </motion.div>
           )}
         </motion.div>
