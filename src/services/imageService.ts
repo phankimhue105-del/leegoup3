@@ -152,16 +152,12 @@ export function generateSVGPlaceholder(word: string): string {
         <text x="200" y="258" font-family="'Nunito', 'Fredoka', 'Comic Sans MS', sans-serif" font-size="24" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     } else {
-      // 3. Render neutral illustration unavailable status (no first-letter, no book fallback)
+      // 3. Render clean educational card without placeholder error text
       bgFill = '#F8FAFC';
       svgContent = `
-        <!-- Center visual: Picture Frame with a cross -->
-        <text x="200" y="130" font-size="80" text-anchor="middle" filter="url(#shadow)">🖼️</text>
-        <text x="200" y="140" font-size="28" text-anchor="middle" fill="#EF4444" font-weight="900" filter="url(#shadow)">❌</text>
-        
-        <!-- Status text -->
-        <text x="200" y="210" font-family="'Nunito', sans-serif" font-size="18" font-weight="800" fill="#64748B" text-anchor="middle">Illustration Unavailable</text>
-        <text x="200" y="240" font-family="'Nunito', sans-serif" font-size="13" font-weight="700" fill="#94A3B8" text-anchor="middle">(${cleanWord})</text>
+        <text x="200" y="140" font-size="80" text-anchor="middle" filter="url(#shadow)">📖</text>
+        <rect x="30" y="225" width="340" height="50" rx="16" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="258" font-family="'Nunito', sans-serif" font-size="20" font-weight="800" fill="#475569" text-anchor="middle">${cleanWord}</text>
       `;
     }
   }
@@ -227,6 +223,31 @@ class ImageServiceClass {
     }
 
     return generateSVGPlaceholder(cleanWord);
+  }
+
+  /**
+   * Checks if a valid image asset or illustration exists for the specified image source or text
+   */
+  public hasValidImage(src?: string, fallbackText?: string): boolean {
+    if (!src && !fallbackText) return false;
+    if (src && (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('data:'))) {
+      return true;
+    }
+    if (src && src in PLACEHOLDER_IMAGES) {
+      return true;
+    }
+    const wordFromSrc = src ? extractWordFromPath(src) : '';
+    const cleanWord = (fallbackText && fallbackText !== 'Question Image' && fallbackText !== 'Image' && fallbackText !== 'Task Visual' && fallbackText !== 'Speaking Prompt')
+      ? fallbackText
+      : (wordFromSrc || '');
+    
+    if (!cleanWord) return false;
+    
+    const lowerWord = cleanWord.trim().toLowerCase();
+    if (COMPOSITE_ILLUSTRATIONS[lowerWord]) return true;
+    if (getEmojiForWord(cleanWord) !== null) return true;
+    
+    return false;
   }
 }
 
