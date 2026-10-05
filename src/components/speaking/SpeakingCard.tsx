@@ -4,6 +4,7 @@ import { Lesson, Unit } from '../../types/course';
 import { useCourse } from '../../context/CourseContext';
 import { speakingQuestionService, SpeakingQuestion } from '../../services/speakingQuestionService';
 import { speakingService, SpeakingEvaluationResult } from '../../services/speakingService';
+import { ImageService } from '../../services/imageService';
 import { AppImage } from '../common/AppImage';
 import { AudioButton } from '../common/AudioButton';
 import { AppButton } from '../common/AppButton';
@@ -405,15 +406,11 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
 
   const isLastQuestion = currentIndex === questions.length - 1;
 
-  // Filter placeholder illustration cleanly
+  // Filter illustration cleanly: only render image container if a valid image asset exists
   const shouldRenderImage = () => {
-    const img = currentQuestion.image;
-    if (!img) return false;
-    // Omit unmapped/missing image placeholders to prevent visual clutter
-    if (img.includes('placeholder') || currentQuestion.type === 'communicative') {
-      return false;
-    }
-    return true;
+    if (currentQuestion.type === 'communicative') return false;
+    const fallback = currentQuestion.targetText || currentQuestion.vocabularyRefs?.[0] || currentQuestion.expectedAnswer;
+    return ImageService.hasValidImage(currentQuestion.image, fallback);
   };
 
   return (
@@ -449,21 +446,15 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
           </h3>
         </div>
 
-        {/* ILLUSTRATION AREA (Renders only semantic SVG vectors) */}
-        {shouldRenderImage() ? (
+        {/* ILLUSTRATION AREA (Renders only valid image assets) */}
+        {shouldRenderImage() && (
           <div className="relative aspect-16/9 w-full rounded-2xl overflow-hidden border border-slate-100 bg-slate-50 shadow-xs max-w-sm mx-auto">
             <AppImage 
               src={currentQuestion.image} 
-              alt="Task Visual" 
+              alt={currentQuestion.targetText || "Task Visual"} 
+              fallbackText={currentQuestion.targetText || currentQuestion.vocabularyRefs?.[0]}
               className="w-full h-full object-cover" 
             />
-          </div>
-        ) : (
-          // Neutral small icon placeholder for role-play questions
-          <div className="flex justify-center items-center py-2">
-            <span className="text-5xl" role="img" aria-label="avatar">
-              {currentQuestion.type === 'communicative' ? '👩‍🏫' : '📝'}
-            </span>
           </div>
         )}
 
