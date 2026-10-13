@@ -1,40 +1,30 @@
 {
-  "unit1_lesson1": [
+    "unit1_lesson1": [
     {
       "id": "u1l1-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the correct word:",
+      "type": "multiple-choice",
+      "questionText": "What is 'bỏng ngô' in English?",
       "options": [
         "popcorn",
         "gum",
         "chocolate"
       ],
-      "optionImages": [
-        "/images/unit1/lesson1/popcorn.png",
-        "/images/unit1/lesson1/gum.png",
-        "/images/unit1/lesson1/chocolate.png"
-      ],
       "correctAnswer": "popcorn",
-      "explanation_vi": "Đúng. Bức tranh thể hiện món 'popcorn' (bỏng ngô).",
-      "vietnameseExplanation": "Đúng. Bức tranh thể hiện món 'popcorn' (bỏng ngô)."
+      "explanation_vi": "'Bỏng ngô' trong tiếng Anh là popcorn.",
+      "vietnameseExplanation": "'Bỏng ngô' trong tiếng Anh là popcorn."
     },
     {
       "id": "u1l1-q2",
-      "type": "picture-select",
-      "questionText": "Choose the picture for 'chocolate':",
+      "type": "multiple-choice",
+      "questionText": "What is 'sô-cô-la' in English?",
       "options": [
         "chocolate",
         "peanuts",
         "soda"
       ],
-      "optionImages": [
-        "/images/unit1/lesson1/chocolate.png",
-        "/images/unit1/lesson1/peanuts.png",
-        "/images/unit1/lesson1/soda.png"
-      ],
       "correctAnswer": "chocolate",
-      "explanation_vi": "Đúng. Đây là hình ảnh thanh sô-cô-la ('chocolate').",
-      "vietnameseExplanation": "Đúng. Đây là hình ảnh thanh sô-cô-la ('chocolate')."
+      "explanation_vi": "'Sô-cô-la' trong tiếng Anh là chocolate.",
+      "vietnameseExplanation": "'Sô-cô-la' trong tiếng Anh là chocolate."
     },
     {
       "id": "u1l1-q3",
@@ -43,12 +33,11 @@
       "options": [
         "Nước ngọt có ga",
         "Sữa tươi",
-        "Nước ép táo",
-        "Trà sữa"
+        "Nước ép táo"
       ],
       "correctAnswer": "Nước ngọt có ga",
-      "explanation_vi": "Đúng. 'soda' dịch sang tiếng Việt là nước ngọt có ga.",
-      "vietnameseExplanation": "Đúng. 'soda' dịch sang tiếng Việt là nước ngọt có ga."
+      "explanation_vi": "'soda' có nghĩa là nước ngọt có ga.",
+      "vietnameseExplanation": "'soda' có nghĩa là nước ngọt có ga."
     },
     {
       "id": "u1l1-q4",
@@ -61,8 +50,8 @@
         "potato chips"
       ],
       "correctAnswer": "gum",
-      "explanation_vi": "Đúng. Đoạn băng âm thanh phát từ 'gum'.",
-      "vietnameseExplanation": "Đúng. Đoạn băng âm thanh phát từ 'gum'."
+      "explanation_vi": "Từ phát âm là 'gum' (kẹo cao su).",
+      "vietnameseExplanation": "Từ phát âm là 'gum' (kẹo cao su)."
     },
     {
       "id": "u1l1-q5",
@@ -89,30 +78,34 @@
         }
       ],
       "correctAnswer": "gum-kẹo cao su, peanuts-đậu phộng, popcorn-bỏng ngô",
-      "explanation_vi": "Đúng. Bạn đã ghép chính xác từ vựng và nghĩa tiếng Việt.",
-      "vietnameseExplanation": "Đúng. Bạn đã ghép chính xác từ vựng và nghĩa tiếng Việt."
+      "explanation_vi": "Đã ghép nối chính xác các từ vựng với nghĩa tiếng Việt.",
+      "vietnameseExplanation": "Đã ghép nối chính xác các từ vựng với nghĩa tiếng Việt."
     },
     {
       "id": "u1l1-q6",
-      "type": "fill-in-blank",
+      "type": "multiple-choice",
       "questionText": "Complete the sentence: 'He _____ some potato chips.'",
+      "options": [
+        "wants",
+        "want",
+        "wanting"
+      ],
       "correctAnswer": "wants",
-      "explanation_vi": "Đúng. Ngôi thứ ba số ít 'He' đi với động từ chia 'wants'.",
-      "vietnameseExplanation": "Đúng. Ngôi thứ ba số ít 'He' đi với động từ chia 'wants'."
+      "explanation_vi": "Chủ ngữ ngôi thứ ba số ít 'He' đi với động từ chia 'wants'.",
+      "vietnameseExplanation": "Chủ ngữ ngôi thứ ba số ít 'He' đi với động từ chia 'wants'."
     },
     {
       "id": "u1l1-q7",
       "type": "multiple-choice",
-      "questionText": "Choose the correct answer for the dialogue: A: 'What do you want?' B: '_____'",
+      "questionText": "Choose the correct answer for the dialogue: A: 'What do you want?' B: '_____' ",
       "options": [
         "I want some peanuts.",
         "Yes, I do.",
-        "No, thanks.",
-        "He wants soda."
+        "No, thanks."
       ],
       "correctAnswer": "I want some peanuts.",
-      "explanation_vi": "Đúng. Hỏi 'What do you want?' trả lời 'I want some...'.",
-      "vietnameseExplanation": "Đúng. Hỏi 'What do you want?' trả lời 'I want some...'."
+      "explanation_vi": "Hỏi 'What do you want?' trả lời bằng 'I want some...'.",
+      "vietnameseExplanation": "Hỏi 'What do you want?' trả lời bằng 'I want some...'."
     },
     {
       "id": "u1l1-q8",
@@ -121,30 +114,24 @@
       "options": [
         "any",
         "some",
-        "a",
-        "an"
+        "a"
       ],
       "correctAnswer": "any",
-      "explanation_vi": "Đúng. Dùng 'any' trong câu phủ định với 'doesn't want'.",
-      "vietnameseExplanation": "Đúng. Dùng 'any' trong câu phủ định với 'doesn't want'."
+      "explanation_vi": "Dùng 'any' trong câu phủ định với 'doesn't want'.",
+      "vietnameseExplanation": "Dùng 'any' trong câu phủ định với 'doesn't want'."
     },
     {
       "id": "u1l1-q9",
-      "type": "picture-select",
-      "questionText": "Choose the sentence matching the picture of peanuts:",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct sentence: \"Họ muốn một ít đậu phộng.\"",
       "options": [
         "They want some peanuts.",
         "They want some popcorn.",
         "They want some gum."
       ],
-      "optionImages": [
-        "/images/unit1/lesson1/peanuts.png",
-        "/images/unit1/lesson1/popcorn.png",
-        "/images/unit1/lesson1/gum.png"
-      ],
       "correctAnswer": "They want some peanuts.",
-      "explanation_vi": "Đúng. Hình ảnh hiển thị món đậu phộng ('peanuts').",
-      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị món đậu phộng ('peanuts')."
+      "explanation_vi": "'They want some peanuts.' có nghĩa là họ muốn một ít đậu phộng.",
+      "vietnameseExplanation": "'They want some peanuts.' có nghĩa là họ muốn một ít đậu phộng."
     },
     {
       "id": "u1l1-q10",
@@ -153,50 +140,39 @@
       "options": [
         "He wants some chocolate.",
         "He want some chocolate.",
-        "He wanting some chocolate.",
-        "He is want some chocolate."
+        "He wanting some chocolate."
       ],
       "correctAnswer": "He wants some chocolate.",
-      "explanation_vi": "Đúng. Chủ ngữ 'He' cần động từ thêm -s ('wants').",
-      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' cần động từ thêm -s ('wants')."
+      "explanation_vi": "Chủ ngữ 'He' cần động từ thêm -s ('wants').",
+      "vietnameseExplanation": "Chủ ngữ 'He' cần động từ thêm -s ('wants')."
     }
   ],
   "unit1_lesson2": [
     {
       "id": "u1l2-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the correct word:",
+      "type": "multiple-choice",
+      "questionText": "What is 'củ cà rốt' in English?",
       "options": [
         "carrot",
         "onion",
         "cabbage"
       ],
-      "optionImages": [
-        "/images/unit1/lesson2/carrot.png",
-        "/images/unit1/lesson2/onion.png",
-        "/images/unit1/lesson2/cabbage.png"
-      ],
       "correctAnswer": "carrot",
-      "explanation_vi": "Đúng. Đây là củ cà rốt ('carrot').",
-      "vietnameseExplanation": "Đúng. Đây là củ cà rốt ('carrot')."
+      "explanation_vi": "'Carrot' có nghĩa là củ cà rốt.",
+      "vietnameseExplanation": "'Carrot' có nghĩa là củ cà rốt."
     },
     {
       "id": "u1l2-q2",
-      "type": "picture-select",
-      "questionText": "Choose the picture for 'cabbage':",
+      "type": "multiple-choice",
+      "questionText": "What is 'bắp cải' in English?",
       "options": [
         "cabbage",
         "potato",
         "tomato"
       ],
-      "optionImages": [
-        "/images/unit1/lesson2/cabbage.png",
-        "/images/unit1/lesson2/potato.png",
-        "/images/unit1/lesson2/tomato.png"
-      ],
       "correctAnswer": "cabbage",
-      "explanation_vi": "Đúng. Đây là hình ảnh bắp cải ('cabbage').",
-      "vietnameseExplanation": "Đúng. Đây là hình ảnh bắp cải ('cabbage')."
+      "explanation_vi": "'Cabbage' có nghĩa là bắp cải.",
+      "vietnameseExplanation": "'Cabbage' có nghĩa là bắp cải."
     },
     {
       "id": "u1l2-q3",
@@ -205,12 +181,11 @@
       "options": [
         "Củ hành tây",
         "Củ tỏi",
-        "Bắp cải",
-        "Quả cà chua"
+        "Bắp cải"
       ],
       "correctAnswer": "Củ hành tây",
-      "explanation_vi": "Đúng. 'onion' nghĩa là củ hành tây.",
-      "vietnameseExplanation": "Đúng. 'onion' nghĩa là củ hành tây."
+      "explanation_vi": "'onion' có nghĩa là củ hành tây.",
+      "vietnameseExplanation": "'onion' có nghĩa là củ hành tây."
     },
     {
       "id": "u1l2-q4",
@@ -223,8 +198,8 @@
         "pepper"
       ],
       "correctAnswer": "tomato",
-      "explanation_vi": "Đúng. Từ được đọc là 'tomato'.",
-      "vietnameseExplanation": "Đúng. Từ được đọc là 'tomato'."
+      "explanation_vi": "Từ được đọc là 'tomato' (quả cà chua).",
+      "vietnameseExplanation": "Từ được đọc là 'tomato' (quả cà chua)."
     },
     {
       "id": "u1l2-q5",
@@ -251,16 +226,21 @@
         }
       ],
       "correctAnswer": "pepper-ớt chuông, potato-khoai tây, tomato-cà chua",
-      "explanation_vi": "Đúng. Các cặp từ ghép nối chính xác.",
-      "vietnameseExplanation": "Đúng. Các cặp từ ghép nối chính xác."
+      "explanation_vi": "Đã ghép nối chính xác các từ vựng với nghĩa tiếng Việt.",
+      "vietnameseExplanation": "Đã ghép nối chính xác các từ vựng với nghĩa tiếng Việt."
     },
     {
       "id": "u1l2-q6",
-      "type": "fill-in-blank",
+      "type": "multiple-choice",
       "questionText": "Complete the sentence: 'Do you need _____ peppers?'",
+      "options": [
+        "any",
+        "some",
+        "a"
+      ],
       "correctAnswer": "any",
-      "explanation_vi": "Đúng. Dùng 'any' trong câu hỏi nghi vấn.",
-      "vietnameseExplanation": "Đúng. Dùng 'any' trong câu hỏi nghi vấn."
+      "explanation_vi": "Dùng 'any' trong câu hỏi nghi vấn với danh từ số nhiều.",
+      "vietnameseExplanation": "Dùng 'any' trong câu hỏi nghi vấn với danh từ số nhiều."
     },
     {
       "id": "u1l2-q7",
@@ -269,12 +249,11 @@
       "options": [
         "Yes, we do.",
         "Yes, I am.",
-        "No, it isn't.",
-        "They need carrots."
+        "No, it isn't."
       ],
       "correctAnswer": "Yes, we do.",
-      "explanation_vi": "Đúng. Câu hỏi 'Do you need...?' trả lời 'Yes, we do.'.",
-      "vietnameseExplanation": "Đúng. Câu hỏi 'Do you need...?' trả lời 'Yes, we do.'."
+      "explanation_vi": "Câu hỏi 'Do you need...?' trả lời bằng 'Yes, we do.' hoặc 'No, we don't.'.",
+      "vietnameseExplanation": "Câu hỏi 'Do you need...?' trả lời bằng 'Yes, we do.' hoặc 'No, we don't.'."
     },
     {
       "id": "u1l2-q8",
@@ -283,30 +262,24 @@
       "options": [
         "do",
         "does",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "do",
-      "explanation_vi": "Đúng. Chủ ngữ 'they' đi với trợ động từ 'do'.",
-      "vietnameseExplanation": "Đúng. Chủ ngữ 'they' đi với trợ động từ 'do'."
+      "explanation_vi": "Chủ ngữ 'they' đi với trợ động từ 'do' trong câu hỏi.",
+      "vietnameseExplanation": "Chủ ngữ 'they' đi với trợ động từ 'do' trong câu hỏi."
     },
     {
       "id": "u1l2-q9",
-      "type": "picture-select",
-      "questionText": "Choose the sentence for the picture of potatoes:",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct sentence: \"Họ cần một ít khoai tây.\"",
       "options": [
         "They need some potatoes.",
         "They need some carrots.",
         "They need some onions."
       ],
-      "optionImages": [
-        "/images/unit1/lesson2/potato.png",
-        "/images/unit1/lesson2/carrot.png",
-        "/images/unit1/lesson2/onion.png"
-      ],
       "correctAnswer": "They need some potatoes.",
-      "explanation_vi": "Đúng. Bức tranh miêu tả những củ khoai tây.",
-      "vietnameseExplanation": "Đúng. Bức tranh miêu tả những củ khoai tây."
+      "explanation_vi": "'They need some potatoes.' có nghĩa là họ cần một ít khoai tây.",
+      "vietnameseExplanation": "'They need some potatoes.' có nghĩa là họ cần một ít khoai tây."
     },
     {
       "id": "u1l2-q10",
@@ -315,50 +288,39 @@
       "options": [
         "a",
         "an",
-        "some",
-        "any"
+        "some"
       ],
       "correctAnswer": "a",
-      "explanation_vi": "Đúng. 'carrot' số ít bắt đầu bằng phụ âm nên đi với 'a'.",
-      "vietnameseExplanation": "Đúng. 'carrot' số ít bắt đầu bằng phụ âm nên đi với 'a'."
+      "explanation_vi": "'carrot' số ít bắt đầu bằng phụ âm nên đi với 'a'.",
+      "vietnameseExplanation": "'carrot' số ít bắt đầu bằng phụ âm nên đi với 'a'."
     }
   ],
   "unit1_lesson3": [
     {
       "id": "u1l3-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the correct word:",
+      "type": "multiple-choice",
+      "questionText": "What is 'món súp' in English?",
       "options": [
         "soup",
         "salad",
         "spaghetti"
       ],
-      "optionImages": [
-        "/images/unit1/lesson3/soup.png",
-        "/images/unit1/lesson3/salad.png",
-        "/images/unit1/lesson3/spaghetti.png"
-      ],
       "correctAnswer": "soup",
-      "explanation_vi": "Đúng. Đây là món súp ('soup').",
-      "vietnameseExplanation": "Đúng. Đây là món súp ('soup')."
+      "explanation_vi": "'Soup' có nghĩa là món súp.",
+      "vietnameseExplanation": "'Soup' có nghĩa là món súp."
     },
     {
       "id": "u1l3-q2",
-      "type": "picture-select",
-      "questionText": "Choose the picture for 'spaghetti':",
+      "type": "multiple-choice",
+      "questionText": "What is 'mỳ Ý' in English?",
       "options": [
         "spaghetti",
         "soup",
         "salad"
       ],
-      "optionImages": [
-        "/images/unit1/lesson3/spaghetti.png",
-        "/images/unit1/lesson3/soup.png",
-        "/images/unit1/lesson3/salad.png"
-      ],
       "correctAnswer": "spaghetti",
-      "explanation_vi": "Đúng. Đây là món mỳ Ý ('spaghetti').",
-      "vietnameseExplanation": "Đúng. Đây là món mỳ Ý ('spaghetti')."
+      "explanation_vi": "'Spaghetti' có nghĩa là món mỳ Ý.",
+      "vietnameseExplanation": "'Spaghetti' có nghĩa là món mỳ Ý."
     },
     {
       "id": "u1l3-q3",
@@ -367,12 +329,11 @@
       "options": [
         "Lành mạnh / Tốt cho sức khỏe",
         "Ngon miệng",
-        "Nóng hổi",
-        "Đắt tiền"
+        "Nóng hổi"
       ],
       "correctAnswer": "Lành mạnh / Tốt cho sức khỏe",
-      "explanation_vi": "Đúng. 'healthy' nghĩa là lành mạnh.",
-      "vietnameseExplanation": "Đúng. 'healthy' nghĩa là lành mạnh."
+      "explanation_vi": "'healthy' có nghĩa là lành mạnh, tốt cho sức khỏe.",
+      "vietnameseExplanation": "'healthy' có nghĩa là lành mạnh, tốt cho sức khỏe."
     },
     {
       "id": "u1l3-q4",
@@ -385,8 +346,8 @@
         "dinner"
       ],
       "correctAnswer": "lunch",
-      "explanation_vi": "Đúng. Băng thu âm nói về bữa trưa ('lunch').",
-      "vietnameseExplanation": "Đúng. Băng thu âm nói về bữa trưa ('lunch')."
+      "explanation_vi": "Băng thu âm nói về bữa trưa ('lunch').",
+      "vietnameseExplanation": "Băng thu âm nói về bữa trưa ('lunch')."
     },
     {
       "id": "u1l3-q5",
@@ -413,30 +374,34 @@
         }
       ],
       "correctAnswer": "lunch-bữa ăn trưa, healthy-lành mạnh, try-thử",
-      "explanation_vi": "Đúng. Đã nối đúng các từ vựng trong câu chuyện.",
-      "vietnameseExplanation": "Đúng. Đã nối đúng các từ vựng trong câu chuyện."
+      "explanation_vi": "Đã nối đúng các từ vựng trong câu chuyện.",
+      "vietnameseExplanation": "Đã nối đúng các từ vựng trong câu chuyện."
     },
     {
       "id": "u1l3-q6",
-      "type": "fill-in-blank",
+      "type": "multiple-choice",
       "questionText": "Complete the phrase: 'That _____ good!'",
+      "options": [
+        "sounds",
+        "sound",
+        "sounding"
+      ],
       "correctAnswer": "sounds",
-      "explanation_vi": "Đúng. Cụm từ chuẩn khen ngợi là 'That sounds good!'.",
-      "vietnameseExplanation": "Đúng. Cụm từ chuẩn khen ngợi là 'That sounds good!'."
+      "explanation_vi": "Cụm từ chuẩn khen ngợi là 'That sounds good!'.",
+      "vietnameseExplanation": "Cụm từ chuẩn khen ngợi là 'That sounds good!'."
     },
     {
       "id": "u1l3-q7",
       "type": "multiple-choice",
-      "questionText": "Choose the response: A: 'What's for lunch?' B: '_____'",
+      "questionText": "Choose the response: A: 'What's for lunch?' B: '_____' ",
       "options": [
         "Soup and salad.",
         "I like blue.",
-        "Yes, please.",
-        "It's a dog."
+        "Yes, please."
       ],
       "correctAnswer": "Soup and salad.",
-      "explanation_vi": "Đúng. Trả lời tên các món ăn cho bữa trưa.",
-      "vietnameseExplanation": "Đúng. Trả lời tên các món ăn cho bữa trưa."
+      "explanation_vi": "Trả lời tên các món ăn cho bữa trưa: 'Soup and salad.'.",
+      "vietnameseExplanation": "Trả lời tên các món ăn cho bữa trưa: 'Soup and salad.'."
     },
     {
       "id": "u1l3-q8",
@@ -445,30 +410,24 @@
       "options": [
         "healthy",
         "angry",
-        "sad",
-        "fast"
+        "sad"
       ],
       "correctAnswer": "healthy",
-      "explanation_vi": "Đúng. Thông điệp sức khỏe là 'Be healthy!'.",
-      "vietnameseExplanation": "Đúng. Thông điệp sức khỏe là 'Be healthy!'."
+      "explanation_vi": "Thông điệp sức khỏe trong bài học là 'Be healthy!'.",
+      "vietnameseExplanation": "Thông điệp sức khỏe trong bài học là 'Be healthy!'."
     },
     {
       "id": "u1l3-q9",
-      "type": "picture-select",
-      "questionText": "Choose the picture for 'salad':",
+      "type": "multiple-choice",
+      "questionText": "What is 'món rau trộn' in English?",
       "options": [
         "salad",
         "soup",
         "spaghetti"
       ],
-      "optionImages": [
-        "/images/unit1/lesson3/salad.png",
-        "/images/unit1/lesson3/soup.png",
-        "/images/unit1/lesson3/spaghetti.png"
-      ],
       "correctAnswer": "salad",
-      "explanation_vi": "Đúng. Bức tranh miêu tả món rau trộn salad.",
-      "vietnameseExplanation": "Đúng. Bức tranh miêu tả món rau trộn salad."
+      "explanation_vi": "'Salad' có nghĩa là món rau trộn salad.",
+      "vietnameseExplanation": "'Salad' có nghĩa là món rau trộn salad."
     },
     {
       "id": "u1l3-q10",
@@ -477,50 +436,39 @@
       "options": [
         "Just try it!",
         "Don't eat it!",
-        "Go away!",
-        "Sleep now!"
+        "Go away!"
       ],
       "correctAnswer": "Just try it!",
-      "explanation_vi": "Đúng. Tên truyện là 'Just try it!' khuyên ta thử món mới.",
-      "vietnameseExplanation": "Đúng. Tên truyện là 'Just try it!' khuyên ta thử món mới."
+      "explanation_vi": "Tên câu chuyện là 'Just try it!' khuyên ta thử món mới.",
+      "vietnameseExplanation": "Tên câu chuyện là 'Just try it!' khuyên ta thử món mới."
     }
   ],
   "unit1_lesson4": [
     {
       "id": "u1l4-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the correct word:",
+      "type": "multiple-choice",
+      "questionText": "What is 'món trứng ốp lết' in English?",
       "options": [
         "omelet",
         "smoothie",
         "milkshake"
       ],
-      "optionImages": [
-        "/images/unit1/lesson4/omelet.png",
-        "/images/unit1/lesson4/smoothie.png",
-        "/images/unit1/lesson4/milkshake.png"
-      ],
       "correctAnswer": "omelet",
-      "explanation_vi": "Đúng. Đây là món trứng ốp lết ('omelet').",
-      "vietnameseExplanation": "Đúng. Đây là món trứng ốp lết ('omelet')."
+      "explanation_vi": "'Omelet' có nghĩa là món trứng ốp lết.",
+      "vietnameseExplanation": "'Omelet' có nghĩa là món trứng ốp lết."
     },
     {
       "id": "u1l4-q2",
-      "type": "picture-select",
-      "questionText": "Choose the picture for 'smoothie':",
+      "type": "multiple-choice",
+      "questionText": "What is 'món sinh tố' in English?",
       "options": [
         "smoothie",
         "fruit salad",
         "omelet"
       ],
-      "optionImages": [
-        "/images/unit1/lesson4/smoothie.png",
-        "/images/unit1/lesson4/fruit_salad.png",
-        "/images/unit1/lesson4/omelet.png"
-      ],
       "correctAnswer": "smoothie",
-      "explanation_vi": "Đúng. Đây là món sinh tố ('smoothie').",
-      "vietnameseExplanation": "Đúng. Đây là món sinh tố ('smoothie')."
+      "explanation_vi": "'Smoothie' có nghĩa là món sinh tố.",
+      "vietnameseExplanation": "'Smoothie' có nghĩa là món sinh tố."
     },
     {
       "id": "u1l4-q3",
@@ -529,15 +477,120 @@
       "options": [
         "an",
         "a",
-        "some",
-        "the"
+        "some"
       ],
       "correctAnswer": "an",
-      "explanation_vi": "Đúng. 'omelet' bắt đầu bằng nguyên âm 'o' nên dùng mạo từ 'an'.",
-      "vietnameseExplanation": "Đúng. 'omelet' bắt đầu bằng nguyên âm 'o' nên dùng mạo từ 'an'."
+      "explanation_vi": "'omelet' bắt đầu bằng nguyên âm 'o' nên dùng mạo từ 'an'.",
+      "vietnameseExplanation": "'omelet' bắt đầu bằng nguyên âm 'o' nên dùng mạo từ 'an'."
     },
     {
       "id": "u1l4-q4",
+      "type": "listening",
+      "questionText": "Listen and choose the drink mentioned:",
+      "promptAudioUrl": "/audio/unit1/lesson4/milkshake.mp3",
+      "options": [
+        "milkshake",
+        "smoothie",
+        "soda"
+      ],
+      "correctAnswer": "milkshake",
+      "explanation_vi": "Tên thức uống được đọc là 'milkshake' (sữa lắc).",
+      "vietnameseExplanation": "Tên thức uống được đọc là 'milkshake' (sữa lắc)."
+    },
+    {
+      "id": "u1l4-q5",
+      "type": "matching",
+      "questionText": "Match the cooking terms:",
+      "matchingPairs": [
+        {
+          "leftId": "l1",
+          "leftText": "omelet",
+          "rightId": "r1",
+          "rightText": "trứng rán"
+        },
+        {
+          "leftId": "l2",
+          "leftText": "smoothie",
+          "rightId": "r2",
+          "rightText": "sinh tố"
+        },
+        {
+          "leftId": "l3",
+          "leftText": "milkshake",
+          "rightId": "r3",
+          "rightText": "sữa lắc"
+        }
+      ],
+      "correctAnswer": "omelet-trứng rán, smoothie-sinh tố, milkshake-sữa lắc",
+      "explanation_vi": "Các món ăn và nghĩa ghép đúng hoàn toàn.",
+      "vietnameseExplanation": "Các món ăn và nghĩa ghép đúng hoàn toàn."
+    },
+    {
+      "id": "u1l4-q6",
+      "type": "multiple-choice",
+      "questionText": "Complete: 'I want to _____ a smoothie.'",
+      "options": [
+        "make",
+        "makes",
+        "making"
+      ],
+      "correctAnswer": "make",
+      "explanation_vi": "Sau 'want to' là động từ nguyên thể 'make'.",
+      "vietnameseExplanation": "Sau 'want to' là động từ nguyên thể 'make'."
+    },
+    {
+      "id": "u1l4-q7",
+      "type": "multiple-choice",
+      "questionText": "Choose the response: A: 'What do you want to make?' B: '_____' ",
+      "options": [
+        "I want to make fruit salad.",
+        "I like fruit.",
+        "Yes, I do."
+      ],
+      "correctAnswer": "I want to make fruit salad.",
+      "explanation_vi": "Trả lời đúng cấu trúc 'I want to make...': 'I want to make fruit salad.'.",
+      "vietnameseExplanation": "Trả lời đúng cấu trúc 'I want to make...': 'I want to make fruit salad.'."
+    },
+    {
+      "id": "u1l4-q8",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct form: 'She _____ to make a milkshake.'",
+      "options": [
+        "wants",
+        "want",
+        "wanting"
+      ],
+      "correctAnswer": "wants",
+      "explanation_vi": "Ngôi 'She' đi với động từ thêm -s ('wants').",
+      "vietnameseExplanation": "Ngôi 'She' đi với động từ thêm -s ('wants')."
+    },
+    {
+      "id": "u1l4-q9",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct sentence: \"Chúng tôi muốn làm món salad hoa quả.\"",
+      "options": [
+        "We want to make fruit salad.",
+        "We want to make an omelet.",
+        "We want to make a smoothie."
+      ],
+      "correctAnswer": "We want to make fruit salad.",
+      "explanation_vi": "'We want to make fruit salad.' có nghĩa là chúng tôi muốn làm món salad hoa quả.",
+      "vietnameseExplanation": "'We want to make fruit salad.' có nghĩa là chúng tôi muốn làm món salad hoa quả."
+    },
+    {
+      "id": "u1l4-q10",
+      "type": "multiple-choice",
+      "questionText": "Mixed Review: Fill in the subject: '_____ want to make an omelet.'",
+      "options": [
+        "I",
+        "He",
+        "She"
+      ],
+      "correctAnswer": "I",
+      "explanation_vi": "Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'.",
+      "vietnameseExplanation": "Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'."
+    }
+  ]      "id": "u1l4-q4",
       "type": "listening",
       "questionText": "Listen and choose the drink mentioned:",
       "promptAudioUrl": "/audio/unit1/lesson4/milkshake.mp3",
