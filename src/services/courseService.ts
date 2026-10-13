@@ -1,5 +1,357 @@
 import courseDataRaw from '../data/courseData.json';
-import { CourseData, Unit, Lesson } from '../types/course';
+import { CourseData, Unit, Lesson, PracticeQuestion } from '../types/course';
+
+// Audited, pedagogical, text-based practice questions for Unit 1 (Lessons 1-4)
+const UNIT1_PRACTICE_QUESTIONS: Record<string, PracticeQuestion[]> = {
+  'u1-l1': [
+    {
+      id: "u1l1-q1",
+      type: "multiple-choice",
+      questionText: "What is 'bỏng ngô' in English?",
+      options: ["popcorn", "gum", "chocolate"],
+      correctAnswer: "popcorn",
+      vietnameseExplanation: "'Bỏng ngô' trong tiếng Anh là popcorn."
+    },
+    {
+      id: "u1l1-q2",
+      type: "multiple-choice",
+      questionText: "What is 'sô-cô-la' in English?",
+      options: ["chocolate", "peanuts", "soda"],
+      correctAnswer: "chocolate",
+      vietnameseExplanation: "'Sô-cô-la' trong tiếng Anh là chocolate."
+    },
+    {
+      id: "u1l1-q3",
+      type: "multiple-choice",
+      questionText: "What does 'soda' mean in Vietnamese?",
+      options: ["Nước ngọt có ga", "Sữa tươi", "Nước ép táo"],
+      correctAnswer: "Nước ngọt có ga",
+      vietnameseExplanation: "'soda' có nghĩa là nước ngọt có ga."
+    },
+    {
+      id: "u1l1-q4",
+      type: "listening",
+      questionText: "Listen and choose the word you hear:",
+      promptAudioUrl: "/audio/unit1/lesson1/gum.mp3",
+      options: ["gum", "peanuts", "potato chips"],
+      correctAnswer: "gum",
+      vietnameseExplanation: "Từ phát âm là 'gum' (kẹo cao su)."
+    },
+    {
+      id: "u1l1-q5",
+      type: "matching",
+      questionText: "Match the words with their Vietnamese meanings:",
+      matchingPairs: [
+        { leftId: "l1", leftText: "gum", rightId: "r1", rightText: "kẹo cao su" },
+        { leftId: "l2", leftText: "peanuts", rightId: "r2", rightText: "đậu phộng" },
+        { leftId: "l3", leftText: "popcorn", rightId: "r3", rightText: "bỏng ngô" }
+      ],
+      correctAnswer: "gum-kẹo cao su, peanuts-đậu phộng, popcorn-bỏng ngô",
+      vietnameseExplanation: "Đã ghép nối chính xác các từ vựng với nghĩa tiếng Việt."
+    },
+    {
+      id: "u1l1-q6",
+      type: "multiple-choice",
+      questionText: "Complete the sentence: 'He _____ some potato chips.'",
+      options: ["wants", "want", "wanting"],
+      correctAnswer: "wants",
+      vietnameseExplanation: "Chủ ngữ 'He' (ngôi thứ 3 số ít) đi với động từ thêm 's': wants."
+    },
+    {
+      id: "u1l1-q7",
+      type: "multiple-choice",
+      questionText: "Choose the correct answer for the dialogue: A: 'What do you want?' B: '_____'",
+      options: ["I want some peanuts.", "Yes, I do.", "No, thanks."],
+      correctAnswer: "I want some peanuts.",
+      vietnameseExplanation: "Để trả lời câu hỏi 'What do you want?', cấu trúc chuẩn là 'I want + danh từ'."
+    },
+    {
+      id: "u1l1-q8",
+      type: "multiple-choice",
+      questionText: "Choose the correct word: 'She doesn't want _____ soda.'",
+      options: ["any", "some", "a"],
+      correctAnswer: "any",
+      vietnameseExplanation: "Trong câu phủ định, ta dùng 'any' thay vì 'some'."
+    },
+    {
+      id: "u1l1-q9",
+      type: "multiple-choice",
+      questionText: "Choose the correct sentence: \"Họ muốn một ít đậu phộng.\"",
+      options: ["They want some peanuts.", "They want some popcorn.", "They want some gum."],
+      correctAnswer: "They want some peanuts.",
+      vietnameseExplanation: "'They want some peanuts.' có nghĩa là họ muốn một ít đậu phộng."
+    },
+    {
+      id: "u1l1-q10",
+      type: "multiple-choice",
+      questionText: "Mixed Review: Which sentence is grammatically correct?",
+      options: ["He wants some chocolate.", "He want some chocolate.", "He wanting some chocolate."],
+      correctAnswer: "He wants some chocolate.",
+      vietnameseExplanation: "Với chủ ngữ 'He', động từ 'want' phải thêm 's' thành 'wants'."
+    }
+  ],
+  'u1-l2': [
+    {
+      id: "u1l2-q1",
+      type: "multiple-choice",
+      questionText: "What is 'củ cà rốt' in English?",
+      options: ["carrot", "cabbage", "onion"],
+      correctAnswer: "carrot",
+      vietnameseExplanation: "'Củ cà rốt' trong tiếng Anh là carrot."
+    },
+    {
+      id: "u1l2-q2",
+      type: "multiple-choice",
+      questionText: "What is 'bắp cải' in English?",
+      options: ["cabbage", "potato", "tomato"],
+      correctAnswer: "cabbage",
+      vietnameseExplanation: "'Bắp cải' trong tiếng Anh là cabbage."
+    },
+    {
+      id: "u1l2-q3",
+      type: "multiple-choice",
+      questionText: "What does 'onion' mean in Vietnamese?",
+      options: ["Củ hành tây", "Bắp cải", "Củ tỏi"],
+      correctAnswer: "Củ hành tây",
+      vietnameseExplanation: "'onion' có nghĩa là củ hành tây."
+    },
+    {
+      id: "u1l2-q4",
+      type: "listening",
+      questionText: "Listen and choose the word you hear:",
+      promptAudioUrl: "/audio/unit1/lesson2/tomato.mp3",
+      options: ["tomato", "potato", "pepper"],
+      correctAnswer: "tomato",
+      vietnameseExplanation: "Từ phát âm là 'tomato' (quả cà chua)."
+    },
+    {
+      id: "u1l2-q5",
+      type: "matching",
+      questionText: "Match the words with their meanings:",
+      matchingPairs: [
+        { leftId: "l1", leftText: "tomato", rightId: "r1", rightText: "cà chua" },
+        { leftId: "l2", leftText: "potato", rightId: "r2", rightText: "khoai tây" },
+        { leftId: "l3", leftText: "pepper", rightId: "r3", rightText: "ớt chuông" }
+      ],
+      correctAnswer: "tomato-cà chua, potato-khoai tây, pepper-ớt chuông",
+      vietnameseExplanation: "Đã ghép nối chính xác các loại rau củ với nghĩa tiếng Việt."
+    },
+    {
+      id: "u1l2-q6",
+      type: "multiple-choice",
+      questionText: "Complete the sentence: 'Do you need _____ peppers?'",
+      options: ["any", "some", "a"],
+      correctAnswer: "any",
+      vietnameseExplanation: "Trong câu hỏi nghi vấn, ta dùng 'any' trước danh từ số nhiều đếm được."
+    },
+    {
+      id: "u1l2-q7",
+      type: "multiple-choice",
+      questionText: "Choose the response: A: 'Do you need any carrots?' B: '_____'",
+      options: ["Yes, we do.", "Yes, I am.", "No, it isn't."],
+      correctAnswer: "Yes, we do.",
+      vietnameseExplanation: "Câu hỏi bắt đầu bằng trợ động từ 'Do you...', câu trả lời khẳng định là 'Yes, we do.' hoặc 'Yes, I do.'."
+    },
+    {
+      id: "u1l2-q8",
+      type: "multiple-choice",
+      questionText: "Choose the correct word: 'What _____ they need?'",
+      options: ["do", "does", "are"],
+      correctAnswer: "do",
+      vietnameseExplanation: "Với chủ ngữ số nhiều 'they', ta dùng trợ động từ 'do'."
+    },
+    {
+      id: "u1l2-q9",
+      type: "multiple-choice",
+      questionText: "Choose the correct sentence: \"Họ cần một ít khoai tây.\"",
+      options: ["They need some potatoes.", "They need some carrots.", "They need some onions."],
+      correctAnswer: "They need some potatoes.",
+      vietnameseExplanation: "'They need some potatoes.' có nghĩa là họ cần một ít khoai tây."
+    },
+    {
+      id: "u1l2-q10",
+      type: "multiple-choice",
+      questionText: "Mixed Review: Choose the correct article: 'They need _____ carrot.'",
+      options: ["a", "an", "some"],
+      correctAnswer: "a",
+      vietnameseExplanation: "'Carrot' bắt đầu bằng một phụ âm, dùng mạo từ 'a'."
+    }
+  ],
+  'u1-l3': [
+    {
+      id: "u1l3-q1",
+      type: "multiple-choice",
+      questionText: "What is 'món súp' in English?",
+      options: ["soup", "salad", "spaghetti"],
+      correctAnswer: "soup",
+      vietnameseExplanation: "'Món súp' trong tiếng Anh là soup."
+    },
+    {
+      id: "u1l3-q2",
+      type: "multiple-choice",
+      questionText: "What is 'mỳ Ý' in English?",
+      options: ["spaghetti", "salad", "soup"],
+      correctAnswer: "spaghetti",
+      vietnameseExplanation: "'Mỳ Ý' trong tiếng Anh là spaghetti."
+    },
+    {
+      id: "u1l3-q3",
+      type: "multiple-choice",
+      questionText: "What does 'healthy' mean?",
+      options: ["Lành mạnh / Tốt cho sức khỏe", "Ngon miệng", "Nóng hổi"],
+      correctAnswer: "Lành mạnh / Tốt cho sức khỏe",
+      vietnameseExplanation: "'healthy' có nghĩa là lành mạnh, có lợi cho sức khỏe."
+    },
+    {
+      id: "u1l3-q4",
+      type: "listening",
+      questionText: "Listen and choose the word you hear:",
+      promptAudioUrl: "/audio/unit1/lesson3/lunch.mp3",
+      options: ["lunch", "dinner", "breakfast"],
+      correctAnswer: "lunch",
+      vietnameseExplanation: "Từ phát âm là 'lunch' (bữa trưa)."
+    },
+    {
+      id: "u1l3-q5",
+      type: "matching",
+      questionText: "Match the words with their Vietnamese meanings:",
+      matchingPairs: [
+        { leftId: "l1", leftText: "lunch", rightId: "r1", rightText: "bữa ăn trưa" },
+        { leftId: "l2", leftText: "healthy", rightId: "r2", rightText: "lành mạnh" },
+        { leftId: "l3", leftText: "try", rightId: "r3", rightText: "thử" }
+      ],
+      correctAnswer: "lunch-bữa ăn trưa, healthy-lành mạnh, try-thử",
+      vietnameseExplanation: "Đã ghép nối chính xác các từ trong câu chuyện với nghĩa tiếng Việt."
+    },
+    {
+      id: "u1l3-q6",
+      type: "multiple-choice",
+      questionText: "Complete the phrase: 'That _____ good!'",
+      options: ["sounds", "sound", "sounding"],
+      correctAnswer: "sounds",
+      vietnameseExplanation: "Chủ ngữ 'That' là số ít, động từ chia thêm 's': sounds good."
+    },
+    {
+      id: "u1l3-q7",
+      type: "multiple-choice",
+      questionText: "Choose the response: A: 'What's for lunch?' B: '_____'",
+      options: ["Soup and salad.", "Yes, please.", "I like blue."],
+      correctAnswer: "Soup and salad.",
+      vietnameseExplanation: "Để trả lời cho câu hỏi bữa trưa có món gì ('What's for lunch?'), ta nêu các món ăn."
+    },
+    {
+      id: "u1l3-q8",
+      type: "multiple-choice",
+      questionText: "Complete the value sentence: 'Be _____!'",
+      options: ["healthy", "angry", "sad"],
+      correctAnswer: "healthy",
+      vietnameseExplanation: "Thông điệp đạo đức của bài học là hãy sống lành mạnh: 'Be healthy!'."
+    },
+    {
+      id: "u1l3-q9",
+      type: "multiple-choice",
+      questionText: "What is 'món rau trộn' in English?",
+      options: ["salad", "spaghetti", "soup"],
+      correctAnswer: "salad",
+      vietnameseExplanation: "'Món rau trộn' trong tiếng Anh là salad."
+    },
+    {
+      id: "u1l3-q10",
+      type: "multiple-choice",
+      questionText: "Mixed Review: What does the story encourage you to do?",
+      options: ["Just try it!", "Don't eat it!", "Go away!"],
+      correctAnswer: "Just try it!",
+      vietnameseExplanation: "Câu chuyện khuyến khích hãy thử các món ăn mới: 'Just try it!'."
+    }
+  ],
+  'u1-l4': [
+    {
+      id: "u1l4-q1",
+      type: "multiple-choice",
+      questionText: "What is 'món trứng ốp lết' in English?",
+      options: ["omelet", "smoothie", "milkshake"],
+      correctAnswer: "omelet",
+      vietnameseExplanation: "'Món trứng ốp lết' trong tiếng Anh là omelet."
+    },
+    {
+      id: "u1l4-q2",
+      type: "multiple-choice",
+      questionText: "What is 'món sinh tố' in English?",
+      options: ["smoothie", "fruit salad", "omelet"],
+      correctAnswer: "smoothie",
+      vietnameseExplanation: "'Món sinh tố' trong tiếng Anh là smoothie."
+    },
+    {
+      id: "u1l4-q3",
+      type: "multiple-choice",
+      questionText: "Choose the correct article: '_____ omelet'",
+      options: ["an", "a", "some"],
+      correctAnswer: "an",
+      vietnameseExplanation: "'Omelet' bắt đầu bằng nguyên âm 'o', ta dùng mạo từ 'an'."
+    },
+    {
+      id: "u1l4-q4",
+      type: "listening",
+      questionText: "Listen and choose the word you hear:",
+      promptAudioUrl: "/audio/unit1/lesson4/milkshake.mp3",
+      options: ["milkshake", "smoothie", "soda"],
+      correctAnswer: "milkshake",
+      vietnameseExplanation: "Từ phát âm là 'milkshake' (sữa lắc)."
+    },
+    {
+      id: "u1l4-q5",
+      type: "matching",
+      questionText: "Match the words with their Vietnamese meanings:",
+      matchingPairs: [
+        { leftId: "l1", leftText: "omelet", rightId: "r1", rightText: "trứng rán" },
+        { leftId: "l2", leftText: "smoothie", rightId: "r2", rightText: "sinh tố" },
+        { leftId: "l3", leftText: "milkshake", rightId: "r3", rightText: "sữa lắc" }
+      ],
+      correctAnswer: "omelet-trứng rán, smoothie-sinh tố, milkshake-sữa lắc",
+      vietnameseExplanation: "Đã ghép nối chính xác các món ăn, đồ uống với nghĩa tiếng Việt."
+    },
+    {
+      id: "u1l4-q6",
+      type: "multiple-choice",
+      questionText: "Complete: 'I want to _____ a smoothie.'",
+      options: ["make", "makes", "making"],
+      correctAnswer: "make",
+      vietnameseExplanation: "Sau cấu trúc 'want to', ta dùng động từ nguyên thể không chia: 'make'."
+    },
+    {
+      id: "u1l4-q7",
+      type: "multiple-choice",
+      questionText: "Choose the response: A: 'What do you want to make?' B: '_____'",
+      options: ["I want to make fruit salad.", "Yes, I do.", "I like fruit."],
+      correctAnswer: "I want to make fruit salad.",
+      vietnameseExplanation: "Câu trả lời đúng cho 'What do you want to make?' là 'I want to make + tên món ăn'."
+    },
+    {
+      id: "u1l4-q8",
+      type: "multiple-choice",
+      questionText: "Choose the correct form: 'She _____ to make a milkshake.'",
+      options: ["wants", "want", "wanting"],
+      correctAnswer: "wants",
+      vietnameseExplanation: "Chủ ngữ 'She' là ngôi thứ 3 số ít, động từ chia thêm 's': wants."
+    },
+    {
+      id: "u1l4-q9",
+      type: "multiple-choice",
+      questionText: "Choose the correct sentence: \"Chúng tôi muốn làm món salad hoa quả.\"",
+      options: ["We want to make fruit salad.", "We want to make an omelet.", "We want to make a smoothie."],
+      correctAnswer: "We want to make fruit salad.",
+      vietnameseExplanation: "'We want to make fruit salad.' có nghĩa là chúng tôi muốn làm món salad hoa quả."
+    },
+    {
+      id: "u1l4-q10",
+      type: "multiple-choice",
+      questionText: "Mixed Review: Fill in the subject: '_____ want to make an omelet.'",
+      options: ["I", "He", "She"],
+      correctAnswer: "I",
+      vietnameseExplanation: "Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'."
+    }
+  ]
+};
 
 class CourseService {
   private courseData: CourseData;
@@ -53,9 +405,19 @@ class CourseService {
   }
 
   /**
-   * Cleans, sanitizes, and shuffles practice questions on-the-fly to enforce pedagogical rigor.
+   * Cleans, sanitizes, and enforces pedagogical rigor for practice questions.
    */
   private preprocessCourseData() {
+    // 1. Authoritative Override for Unit 1 Practice Questions
+    const unit1 = this.courseData.units.find((u) => u.id === 'unit-1');
+    if (unit1) {
+      unit1.lessons.forEach((lesson) => {
+        if (UNIT1_PRACTICE_QUESTIONS[lesson.id]) {
+          lesson.practiceQuestions = [...UNIT1_PRACTICE_QUESTIONS[lesson.id]];
+        }
+      });
+    }
+
     // Build global lookup maps of English words to Vietnamese meanings and images
     const vocabToVietnamese: Record<string, string> = {};
     const vocabToImage: Record<string, string> = {};
@@ -87,16 +449,21 @@ class CourseService {
     };
 
     this.courseData.units.forEach((unit) => {
+      // For Unit 1, preserve the authoritative questions directly
+      if (unit.id === 'unit-1') {
+        return;
+      }
+
       unit.lessons.forEach((lesson) => {
         if (lesson.practiceQuestions) {
-          const vocabWords = (lesson.vocabulary || []).map(v => v.word);
+          const vocabWords = (lesson.vocabulary || []).map((v) => v.word);
           const getVocabImageLocal = (word: string) => {
-            const v = (lesson.vocabulary || []).find(x => x.word.toLowerCase() === word.toLowerCase());
+            const v = (lesson.vocabulary || []).find((x) => x.word.toLowerCase() === word.toLowerCase());
             return v ? v.image : '';
           };
 
           const processedQuestions = lesson.practiceQuestions.map((q, qIdx) => {
-            // 1. Normalise type mapping & prompts
+            // Normalise type mapping & prompts
             if (q.type === 'multiple-choice') {
               if (q.questionImage) {
                 q.questionText = "Look at the picture and choose the correct word:";
@@ -106,68 +473,63 @@ class CourseService {
             }
 
             if (q.type === 'picture-select') {
-              const vnMeaning = getVietnameseMeaning(q.correctAnswer as string);
-              q.questionText = `Choose the picture for '${vnMeaning}':`;
+              if (q.questionText && q.questionText.startsWith('Choose the picture for "')) {
+                // Preserve explicit customized prompt
+              } else {
+                const vnMeaning = getVietnameseMeaning(q.correctAnswer as string);
+                q.questionText = `Choose the picture for '${vnMeaning}':`;
+              }
             } else if (q.type === 'listening') {
               q.questionText = "Listen and choose the word you hear:";
             } else if (q.type === 'matching') {
               q.questionText = "Match the words with their Vietnamese meanings:";
             }
 
-            // 2. Validate options and distractors for MC, image select, and listening
+            // Validate options and distractors for MC, image select, and listening
             if (q.type === 'multiple-choice' || q.type === 'picture-select' || q.type === 'listening') {
               const correct = q.correctAnswer;
               const correctStr = Array.isArray(correct) ? correct[0] : correct;
 
-              // If options are already defined in the JSON and valid, preserve and clean them
               if (q.options && q.options.length >= 2) {
-                // Ensure options contain the correct answer
-                if (!q.options.some(o => o.toLowerCase() === correctStr.toLowerCase())) {
+                if (!q.options.some((o) => o.toLowerCase() === correctStr.toLowerCase())) {
                   q.options.push(correctStr);
                 }
                 q.options = Array.from(new Set(q.options));
-                
-                // Slice options to exact count
+
                 const maxOpts = q.type === 'multiple-choice' ? q.options.length : 3;
                 if (q.options.length > maxOpts) {
-                  const others = q.options.filter(o => o.toLowerCase() !== correctStr.toLowerCase());
+                  const others = q.options.filter((o) => o.toLowerCase() !== correctStr.toLowerCase());
                   q.options = [correctStr, ...others.slice(0, maxOpts - 1)];
                 }
-                // Shuffle
                 q.options = q.options.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
               } else {
-                // FALLBACK ONLY: Vocabulary-based question options generation if missing
-                let distractors = vocabWords.filter(w => w.toLowerCase() !== correctStr.toLowerCase());
+                let distractors = vocabWords.filter((w) => w.toLowerCase() !== correctStr.toLowerCase());
 
-                // If lesson contains insufficient vocabulary items, insert standard defaults
                 if (distractors.length < 2) {
                   distractors = [...distractors, 'popcorn', 'gum', 'chocolate', 'peanuts', 'tomato', 'onion'].filter(
-                    w => w.toLowerCase() !== correctStr.toLowerCase()
+                    (w) => w.toLowerCase() !== correctStr.toLowerCase()
                   );
                 }
 
-                // De-duplicate distractors
                 const uniqueDistractors: string[] = [];
                 distractors.forEach((d) => {
-                  if (!uniqueDistractors.some(x => x.toLowerCase() === d.toLowerCase()) && uniqueDistractors.length < 2) {
+                  if (!uniqueDistractors.some((x) => x.toLowerCase() === d.toLowerCase()) && uniqueDistractors.length < 2) {
                     uniqueDistractors.push(d);
                   }
                 });
 
-                // Construct the clean options array
                 const sortedOptions = [correctStr, ...uniqueDistractors].sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
                 q.options = sortedOptions;
               }
 
-              // Pair correct options to optionImages for image-select questions
               if (q.type === 'picture-select') {
-                const needsImagesResolving = !q.optionImages || 
-                  q.optionImages.length !== q.options.length || 
-                  q.optionImages.some(img => !img || img === 'vocab' || !img.includes('/'));
+                const needsImagesResolving =
+                  !q.optionImages ||
+                  q.optionImages.length !== q.options.length ||
+                  q.optionImages.some((img) => !img || img === 'vocab' || !img.includes('/'));
 
                 if (needsImagesResolving) {
-                  q.optionImages = q.options.map(opt => {
-                    // Try local lesson vocab image first, then global map, then empty
+                  q.optionImages = q.options.map((opt) => {
                     const localImg = getVocabImageLocal(opt);
                     if (localImg && localImg.includes('/')) return localImg;
                     const globalImg = getVocabImageGlobal(opt);
@@ -178,7 +540,7 @@ class CourseService {
               }
             }
 
-            // 3. Structurally validate matching question pairs
+            // Matching pairs validation
             if (q.type === 'matching') {
               if (!q.matchingPairs || q.matchingPairs.length === 0) {
                 q.matchingPairs = (lesson.vocabulary || []).slice(0, 3).map((v) => ({
@@ -193,33 +555,36 @@ class CourseService {
             return q;
           });
 
-          // 4. Strict Validation Layer (Filter out invalid questions)
+          // Strict Validation Layer
           lesson.practiceQuestions = processedQuestions.filter((q) => {
             if (!q.id || !q.type || !q.questionText) return false;
 
             if (['multiple-choice', 'picture-select', 'listening'].includes(q.type)) {
               if (!q.options || q.options.length < 2) return false;
               const correctStr = Array.isArray(q.correctAnswer) ? q.correctAnswer[0] : q.correctAnswer;
-              if (!q.options.some(o => o.toLowerCase() === correctStr.toLowerCase())) return false;
+              if (!q.options.some((o) => o.toLowerCase() === correctStr.toLowerCase())) return false;
 
-              // Validate no mixed languages in multiple choice options
               const isVietnamese = (text: string) => {
                 const regex = /[áàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ]/i;
                 return regex.test(text);
               };
 
-              const hasVi = q.options.some(o => isVietnamese(o));
-              const hasEn = q.options.some(o => !isVietnamese(o) && /^[a-zA-Z\s,.'"-]+$/.test(o));
+              const hasVi = q.options.some((o) => isVietnamese(o));
+              const hasEn = q.options.some((o) => !isVietnamese(o) && /^[a-zA-Z\s,.'"-]+$/.test(o));
               if (hasVi && hasEn) {
-                // Disallow mixed languages
                 return false;
               }
 
-              // Validate image select questions: no broken or placeholder images
               if (q.type === 'picture-select') {
                 if (!q.optionImages || q.optionImages.length !== q.options.length) return false;
                 for (const img of q.optionImages) {
-                  if (!img || img === 'vocab' || !img.includes('/') || img.toLowerCase().includes('unavailable') || img.toLowerCase().includes('placeholder')) {
+                  if (
+                    !img ||
+                    img === 'vocab' ||
+                    !img.includes('/') ||
+                    img.toLowerCase().includes('unavailable') ||
+                    img.toLowerCase().includes('placeholder')
+                  ) {
                     return false;
                   }
                 }
