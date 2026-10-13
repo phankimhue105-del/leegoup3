@@ -44,10 +44,13 @@ function getRoleplayQuestion(unitId: string, index: number, fallbackWord: string
   if (normalizedId.includes('unit-1')) {
     // Food / snacks
     if (index === 0) {
+      // Snack items in Unit 1: potato chips, popcorn, peanuts, gum, chocolate
+      const nonSnackWords = ['lunch', 'soup', 'salad', 'spaghetti', 'healthy', 'try', 'carrot', 'cabbage', 'onion', 'tomato', 'potato', 'pepper', 'omelet', 'smoothie', 'milkshake'];
+      const validSnack = fallbackWord && !nonSnackWords.includes(fallbackWord.toLowerCase().trim()) ? fallbackWord : 'potato chips';
       return {
         prompt: "What do you want to eat for snacks?",
         promptVi: "Con muốn ăn gì cho bữa nhẹ?",
-        expected: `I want some ${fallbackWord || 'popcorn'}.`
+        expected: `I want some ${validSnack}.`
       };
     } else {
       return {
@@ -251,19 +254,43 @@ export class SpeakingQuestionService {
     for (let i = 0; i < 2; i++) {
       const vocabRef = getVocab(i + 2);
       const rp = getRoleplayQuestion(unit.id, i, vocabRef.word);
+
+      let targetText = rp.expected;
+      let expectedAnswer = rp.expected;
+      let acceptableAnswers: string[] = [];
+      let vocabularyRefs = [vocabRef.word];
+      let feedbackContext = `Answer the question "${rp.prompt}" in your own words. Use "${vocabRef.word}" if applicable.`;
+      let image = vocabRef.image;
+
+      // Specific configuration for Unit 1 Lesson 3 Task 7: Snacks
+      if (lesson.id === 'u1-l3' && i === 0) {
+        targetText = "I want some potato chips.";
+        expectedAnswer = "I want some potato chips.";
+        acceptableAnswers = [
+          "I want some potato chips.",
+          "I want some popcorn.",
+          "I want some peanuts.",
+          "I want some gum.",
+          "I want some chocolate."
+        ];
+        vocabularyRefs = ["potato chips", "popcorn", "peanuts", "gum", "chocolate"];
+        feedbackContext = `Answer what you want for snacks in your own words, for example: "I want some potato chips.", "I want some popcorn.", or "I want some peanuts.".`;
+        image = "/images/unit1/lesson1/potato_chips.png";
+      }
+
       questions.push({
         id: `${lesson.id}-q${i + 7}`,
         type: 'communicative',
         instruction: rp.prompt,
         vietnameseInstruction: rp.promptVi,
-        targetText: rp.expected,
-        expectedAnswer: rp.expected,
-        acceptableAnswers: [], // Evaluated semantically (any matching keywords/lengths)
-        vocabularyRefs: [vocabRef.word],
+        targetText,
+        expectedAnswer,
+        acceptableAnswers,
+        vocabularyRefs,
         lessonContext: `Communicative personal response practice`,
         difficulty: 4,
-        image: vocabRef.image,
-        feedbackContext: `Answer the question "${rp.prompt}" in your own words. Use "${vocabRef.word}" if applicable.`
+        image,
+        feedbackContext
       });
     }
 
