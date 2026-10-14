@@ -475,9 +475,9 @@ class CourseService {
             if (q.type === 'picture-select') {
               if (
                 q.questionText &&
-                (q.questionText.startsWith('Choose the picture for "') ||
-                 q.questionText.startsWith('Choose the sentence') ||
-                 q.questionText.startsWith('Choose sentence'))
+                (q.questionText.toLowerCase().includes('picture') ||
+                 q.questionText.toLowerCase().includes('sentence') ||
+                 q.questionText.startsWith('Look at the picture'))
               ) {
                 // Preserve explicit customized prompt
               } else {
@@ -491,7 +491,61 @@ class CourseService {
             }
 
             // Validate options and distractors for MC, image select, and listening
-            if (q.type === 'multiple-choice' || q.type === 'picture-select' || q.type === 'listening') {
+            if (q.type === 'picture-select') {
+              const correct = q.correctAnswer;
+              const correctStr = Array.isArray(correct) ? correct[0] : correct;
+
+              // Keep options and optionImages strictly paired together
+              let pairs: { opt: string; img: string }[] = [];
+              if (q.options && q.optionImages && q.options.length === q.optionImages.length) {
+                pairs = q.options.map((opt, i) => ({
+                  opt,
+                  img: q.optionImages![i] || getVocabImageLocal(opt) || getVocabImageGlobal(opt) || ''
+                }));
+              } else if (q.options) {
+                pairs = q.options.map((opt) => ({
+                  opt,
+                  img: getVocabImageLocal(opt) || getVocabImageGlobal(opt) || ''
+                }));
+              }
+
+              // Ensure correct answer is present
+              if (!pairs.some((p) => p.opt.toLowerCase() === correctStr.toLowerCase())) {
+                pairs.push({
+                  opt: correctStr,
+                  img: getVocabImageLocal(correctStr) || getVocabImageGlobal(correctStr) || ''
+                });
+              }
+
+              // De-duplicate pairs by opt
+              const seenOpts = new Set<string>();
+              pairs = pairs.filter((p) => {
+                const key = p.opt.toLowerCase();
+                if (seenOpts.has(key)) return false;
+                seenOpts.add(key);
+                return true;
+              });
+
+              // Limit to 3 options for picture-select
+              if (pairs.length > 3) {
+                const correctPair = pairs.find((p) => p.opt.toLowerCase() === correctStr.toLowerCase())!;
+                const otherPairs = pairs.filter((p) => p.opt.toLowerCase() !== correctStr.toLowerCase());
+                pairs = [correctPair, ...otherPairs.slice(0, 2)];
+              }
+
+              // Shuffle pairs together so opt and img NEVER desync!
+              pairs.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+
+              q.options = pairs.map((p) => p.opt);
+              q.optionImages = pairs.map((p) => {
+                if (p.img && p.img.includes('/')) return p.img;
+                const local = getVocabImageLocal(p.opt);
+                if (local && local.includes('/')) return local;
+                const global = getVocabImageGlobal(p.opt);
+                if (global && global.includes('/')) return global;
+                return '';
+              });
+            } else if (q.type === 'multiple-choice' || q.type === 'listening') {
               const correct = q.correctAnswer;
               const correctStr = Array.isArray(correct) ? correct[0] : correct;
 
@@ -525,23 +579,6 @@ class CourseService {
 
                 const sortedOptions = [correctStr, ...uniqueDistractors].sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
                 q.options = sortedOptions;
-              }
-
-              if (q.type === 'picture-select') {
-                const needsImagesResolving =
-                  !q.optionImages ||
-                  q.optionImages.length !== q.options.length ||
-                  q.optionImages.some((img) => !img || img === 'vocab' || !img.includes('/'));
-
-                if (needsImagesResolving) {
-                  q.optionImages = q.options.map((opt) => {
-                    const localImg = getVocabImageLocal(opt);
-                    if (localImg && localImg.includes('/')) return localImg;
-                    const globalImg = getVocabImageGlobal(opt);
-                    if (globalImg && globalImg.includes('/')) return globalImg;
-                    return '';
-                  });
-                }
               }
             }
 
