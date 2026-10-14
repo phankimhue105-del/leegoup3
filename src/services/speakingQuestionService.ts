@@ -250,6 +250,11 @@ export class SpeakingQuestionService {
       feedbackContext: `Practice pronouncing the lesson model pattern sentence: "${pSentence}".`
     });
 
+    // For Unit 2 Speaking: Exactly 6 questions (Q1-Q6), omitting the last two "Answer the teacher" role-play tasks
+    if (unit.id === 'unit-2') {
+      return questions;
+    }
+
     // --- Q7 to Q8: ROLE-PLAY / PERSONAL RESPONSE ---
     for (let i = 0; i < 2; i++) {
       const vocabRef = getVocab(i + 2);
