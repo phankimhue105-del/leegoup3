@@ -473,7 +473,12 @@ class CourseService {
             }
 
             if (q.type === 'picture-select') {
-              if (q.questionText && q.questionText.startsWith('Choose the picture for "')) {
+              if (
+                q.questionText &&
+                (q.questionText.startsWith('Choose the picture for "') ||
+                 q.questionText.startsWith('Choose the sentence') ||
+                 q.questionText.startsWith('Choose sentence'))
+              ) {
                 // Preserve explicit customized prompt
               } else {
                 const vnMeaning = getVietnameseMeaning(q.correctAnswer as string);
