@@ -22,6 +22,7 @@ const COMPOSITE_ILLUSTRATIONS: Record<string, { emojis: string[]; label: string 
   'borrow book': { emojis: ['📚', '🧑‍🏫', '🔖'], label: 'Borrowing Books' },
   'buy groceries': { emojis: ['🛒', '🍎', '🥦'], label: 'Buying Groceries' },
   'watch a movie': { emojis: ['🎬', '🍿', '📽️'], label: 'Watching Movie' },
+  'watch movie': { emojis: ['🎬', '🍿', '📽️'], label: 'Watching Movie' },
 
   // Unit 2 - Story (It's Over There! - Lesson 3)
   'map': { emojis: ['🗺️', '🧭', '📍'], label: 'Map' },
@@ -106,7 +107,7 @@ export function extractCoreWord(text: string): string {
   if (lower.includes('mail letter') || lower.includes('mailing letter') || lower.includes('mail letters')) return 'mail letters';
   if (lower.includes('borrow book') || lower.includes('borrowing book')) return 'borrow books';
   if (lower.includes('buy groceries') || lower.includes('buying groceries')) return 'buy groceries';
-  if (lower.includes('watch a movie') || lower.includes('watching a movie')) return 'watch a movie';
+  if (lower.includes('watch a movie') || lower.includes('watching a movie') || lower.includes('watch movie') || (lower.includes('watch') && lower.includes('movie'))) return 'watch a movie';
   if (lower.includes('shop') || lower.includes('shopping')) return 'shop';
   
   if (lower.includes('street')) return 'street';
@@ -141,9 +142,11 @@ function getEmojiForWord(word: string): string | null {
     if (VOCABULARY_IMAGE_MAP[singular]) return VOCABULARY_IMAGE_MAP[singular];
   }
 
-  // 3. Substring match (disambiguate fold vs folder)
-  for (const [key, value] of Object.entries(VOCABULARY_IMAGE_MAP)) {
+  // 3. Substring match (prioritize longer multi-word keys first to prevent short single-word false matches)
+  const sortedEntries = Object.entries(VOCABULARY_IMAGE_MAP).sort((a, b) => b[0].length - a[0].length);
+  for (const [key, value] of sortedEntries) {
     if (clean === 'fold' && key.includes('folder')) continue;
+    if (key === 'watch' && (clean.includes('movie') || clean.includes('film'))) continue;
     if (clean.includes(key) || (key.length >= 4 && key.includes(clean))) {
       return value;
     }
