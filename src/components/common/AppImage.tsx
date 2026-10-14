@@ -7,6 +7,7 @@ interface AppImageProps {
   className?: string;
   fallbackText?: string;
   id?: string;
+  hideText?: boolean;
 }
 
 export const AppImage: React.FC<AppImageProps> = ({
@@ -15,13 +16,14 @@ export const AppImage: React.FC<AppImageProps> = ({
   className = '',
   fallbackText,
   id,
+  hideText = false,
 }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [hasError, setHasError] = useState<boolean>(false);
   
   // Track the original prop-resolved source to avoid resets on parent re-renders
   const [resolvedSrcProp, setResolvedSrcProp] = useState<string>(() =>
-    ImageService.getImage(src, fallbackText || alt || 'Image')
+    ImageService.getImage(src, fallbackText || alt || 'Image', undefined, hideText)
   );
 
   // Track the source currently assigned to the img element
@@ -31,14 +33,14 @@ export const AppImage: React.FC<AppImageProps> = ({
 
   // Sync state ONLY if the source resolved from props has actually changed
   useEffect(() => {
-    const nextResolved = ImageService.getImage(src, fallbackText || alt || 'Image');
+    const nextResolved = ImageService.getImage(src, fallbackText || alt || 'Image', undefined, hideText);
     if (nextResolved !== resolvedSrcProp) {
       setResolvedSrcProp(nextResolved);
       setCurrentSrc(nextResolved);
       setHasError(false);
       setLoading(true);
     }
-  }, [src, fallbackText, alt, resolvedSrcProp]);
+  }, [src, fallbackText, alt, resolvedSrcProp, hideText]);
 
   // Handle successful image load
   const handleLoad = () => {
@@ -49,7 +51,7 @@ export const AppImage: React.FC<AppImageProps> = ({
   const handleError = () => {
     if (!hasError) {
       setHasError(true);
-      setCurrentSrc(ImageService.getImage('', fallbackText || alt || 'Image'));
+      setCurrentSrc(ImageService.getImage('', fallbackText || alt || 'Image', undefined, hideText));
     } else {
       setLoading(false);
     }
