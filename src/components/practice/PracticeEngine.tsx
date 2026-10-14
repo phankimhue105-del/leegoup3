@@ -29,9 +29,23 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
   const [correctCount, setCorrectCount] = useState<number>(0);
-  const [timerSeconds, setTimerSeconds] = useState<number>(0);
+  // Global Requirement 2: Sanitize practice questions by filtering out any communicative / role-play / answer-the-teacher questions
+  const activeQuestions = React.useMemo(() => {
+    const filtered = questions.filter((q) => {
+      const typeStr = (q.type || '').toLowerCase();
+      if (typeStr === 'communicative' || typeStr === 'role-play' || typeStr === 'speaking') {
+        return false;
+      }
+      const qText = (q.questionText || '').toLowerCase();
+      if (qText.includes('answer the teacher')) {
+        return false;
+      }
+      return true;
+    });
+    return filtered.length > 0 ? filtered : questions;
+  }, [questions]);
 
-  const currentQuestion = questions[currentIndex] || questions[0];
+  const currentQuestion = activeQuestions[currentIndex] || activeQuestions[0];
 
   // Optional Timer (OFF by default)
   useEffect(() => {
@@ -99,15 +113,15 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
   };
 
   const handleContinue = () => {
-    if (currentIndex < questions.length - 1) {
+    if (currentIndex < activeQuestions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
     } else {
-      const finalScore = Math.round((correctCount / questions.length) * 100);
+      const finalScore = Math.round((correctCount / activeQuestions.length) * 100);
       onComplete(finalScore);
     }
   };
 
-  const progressPercent = Math.round(((currentIndex + 1) / questions.length) * 100);
+  const progressPercent = Math.round(((currentIndex + 1) / activeQuestions.length) * 100);
 
   // Check if matching selections are completely filled out
   const isMatchingComplete =
@@ -120,7 +134,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
       <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs space-y-3">
         <div className="flex items-center justify-between font-heading font-bold text-slate-700">
           <span className="text-base text-indigo-600">
-            Câu {currentIndex + 1} / {questions.length}
+            Câu {currentIndex + 1} / {activeQuestions.length}
           </span>
 
           {settings.timerEnabled && (
@@ -244,7 +258,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                     className={`rounded-2xl p-2 border-2 cursor-pointer transition-all bg-slate-50 flex flex-col justify-between ${borderStyle}`}
                   >
                     <div className="aspect-square rounded-xl overflow-hidden">
-                      <AppImage src={imgSrc} alt={opt} className="w-full h-full object-cover" />
+                      <AppImage src={imgSrc} alt={opt} hideText={true} className="w-full h-full object-cover" />
                     </div>
                     {!isChoosePictureFor && (
                       <p className="text-center font-heading font-bold text-xs text-slate-700 mt-2">{opt}</p>
@@ -355,8 +369,8 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                 </p>
               )}
 
-              {/* Vietnamese Explanation Area */}
-              {(currentQuestion.vietnameseExplanation || currentQuestion.explanation) && (
+              {/* Vietnamese Explanation Area - Suppressed entirely for matching questions */}
+              {currentQuestion.type !== 'matching' && (currentQuestion.vietnameseExplanation || currentQuestion.explanation) && (
                 <div className="pt-2 border-t border-slate-200/60 text-xs font-semibold space-y-1">
                   <p className="font-bold uppercase tracking-wider text-slate-500">
                     💡 Giải thích bài tập:
@@ -403,7 +417,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
             fullWidth
             icon={<ArrowRight className="w-6 h-6" />}
           >
-            {currentIndex < questions.length - 1 ? 'Câu tiếp theo' : 'Xem kết quả thực hành'}
+            {currentIndex < activeQuestions.length - 1 ? 'Câu tiếp theo' : 'Xem kết quả thực hành'}
           </AppButton>
         )}
       </div>
