@@ -1,5 +1,5 @@
 {
-    "unit1_lesson1": [
+  "unit1_lesson1": [
     {
       "id": "u1l1-q1",
       "type": "multiple-choice",
@@ -97,7 +97,7 @@
     {
       "id": "u1l1-q7",
       "type": "multiple-choice",
-      "questionText": "Choose the correct answer for the dialogue: A: 'What do you want?' B: '_____' ",
+      "questionText": "Choose the correct answer for the dialogue: A: 'What do you want?' B: '_____'",
       "options": [
         "I want some peanuts.",
         "Yes, I do.",
@@ -589,115 +589,6 @@
       "correctAnswer": "I",
       "explanation_vi": "Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'.",
       "vietnameseExplanation": "Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'."
-    }
-  ]      "id": "u1l4-q4",
-      "type": "listening",
-      "questionText": "Listen and choose the drink mentioned:",
-      "promptAudioUrl": "/audio/unit1/lesson4/milkshake.mp3",
-      "options": [
-        "milkshake",
-        "smoothie",
-        "soda"
-      ],
-      "correctAnswer": "milkshake",
-      "explanation_vi": "Đúng. Tên thức uống được đọc là 'milkshake'.",
-      "vietnameseExplanation": "Đúng. Tên thức uống được đọc là 'milkshake'."
-    },
-    {
-      "id": "u1l4-q5",
-      "type": "matching",
-      "questionText": "Match the cooking terms:",
-      "matchingPairs": [
-        {
-          "leftId": "l1",
-          "leftText": "omelet",
-          "rightId": "r1",
-          "rightText": "trứng rán"
-        },
-        {
-          "leftId": "l2",
-          "leftText": "smoothie",
-          "rightId": "r2",
-          "rightText": "sinh tố"
-        },
-        {
-          "leftId": "l3",
-          "leftText": "milkshake",
-          "rightId": "r3",
-          "rightText": "sữa lắc"
-        }
-      ],
-      "correctAnswer": "omelet-trứng rán, smoothie-sinh tố, milkshake-sữa lắc",
-      "explanation_vi": "Đúng. Các món ăn và nghĩa ghép đúng hoàn toàn.",
-      "vietnameseExplanation": "Đúng. Các món ăn và nghĩa ghép đúng hoàn toàn."
-    },
-    {
-      "id": "u1l4-q6",
-      "type": "fill-in-blank",
-      "questionText": "Complete: 'I want to _____ a smoothie.'",
-      "correctAnswer": "make",
-      "explanation_vi": "Đúng. Cấu trúc là 'I want to make...'.",
-      "vietnameseExplanation": "Đúng. Cấu trúc là 'I want to make...'."
-    },
-    {
-      "id": "u1l4-q7",
-      "type": "multiple-choice",
-      "questionText": "Choose the response: A: 'What do you want to make?' B: '_____'",
-      "options": [
-        "I want to make fruit salad.",
-        "I like fruit.",
-        "Yes, I do.",
-        "No, thanks."
-      ],
-      "correctAnswer": "I want to make fruit salad.",
-      "explanation_vi": "Đúng. Trả lời đúng cấu trúc 'I want to make...'.",
-      "vietnameseExplanation": "Đúng. Trả lời đúng cấu trúc 'I want to make...'."
-    },
-    {
-      "id": "u1l4-q8",
-      "type": "multiple-choice",
-      "questionText": "Choose the correct form: 'She _____ to make a milkshake.'",
-      "options": [
-        "wants",
-        "want",
-        "wanting",
-        "is want"
-      ],
-      "correctAnswer": "wants",
-      "explanation_vi": "Đúng. Ngôi 'She' đi với 'wants'.",
-      "vietnameseExplanation": "Đúng. Ngôi 'She' đi với 'wants'."
-    },
-    {
-      "id": "u1l4-q9",
-      "type": "picture-select",
-      "questionText": "Choose the sentence for fruit salad picture:",
-      "options": [
-        "We want to make fruit salad.",
-        "We want to make an omelet.",
-        "We want to make a smoothie."
-      ],
-      "optionImages": [
-        "/images/unit1/lesson4/fruit_salad.png",
-        "/images/unit1/lesson4/omelet.png",
-        "/images/unit1/lesson4/smoothie.png"
-      ],
-      "correctAnswer": "We want to make fruit salad.",
-      "explanation_vi": "Đúng. Hình ảnh hiển thị đĩa salad trái cây.",
-      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị đĩa salad trái cây."
-    },
-    {
-      "id": "u1l4-q10",
-      "type": "multiple-choice",
-      "questionText": "Mixed Review: Fill in the subject: '_____ want to make an omelet.'",
-      "options": [
-        "I",
-        "He",
-        "She",
-        "It"
-      ],
-      "correctAnswer": "I",
-      "explanation_vi": "Đúng. Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'.",
-      "vietnameseExplanation": "Đúng. Động từ 'want' ở dạng nguyên thể phù hợp với ngôi 'I'."
     }
   ],
   "unit2_lesson1": [
@@ -1281,8 +1172,13 @@
     },
     {
       "id": "u2l4-q6",
-      "type": "fill-in-blank",
+      "type": "multiple-choice",
       "questionText": "Complete: '_____, color the house.'",
+      "options": [
+        "First",
+        "Finally",
+        "Behind"
+      ],
       "correctAnswer": "First",
       "explanation_vi": "Đúng. Bước đầu tiên trong quy trình dùng 'First'.",
       "vietnameseExplanation": "Đúng. Bước đầu tiên trong quy trình dùng 'First'."
