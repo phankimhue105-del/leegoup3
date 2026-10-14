@@ -39,6 +39,7 @@ export const VOCABULARY_IMAGE_MAP: Record<string, string> = {
   'shop': '🛍️',
   'shopping': '🛍️',
   'watch a movie': '🎬',
+  'watch movie': '🎬',
   'borrow books': '📚',
   'borrow book': '📚',
   'mail letters': '📮',
