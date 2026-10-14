@@ -2710,7 +2710,7 @@
               "questionText": "Complete: '_____, color the house.'",
               "options": [
                 "First",
-                "Finally",
+                "across",
                 "Behind"
               ],
               "correctAnswer": "First",
