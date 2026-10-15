@@ -465,9 +465,11 @@ class CourseService {
           const processedQuestions = lesson.practiceQuestions.map((q, qIdx) => {
             // Normalise type mapping & prompts
             if (q.type === 'multiple-choice') {
-              if (q.questionImage) {
+              if (q.questionImage && unit.id === 'yle-practice') {
                 q.questionText = "Look at the picture and choose the correct word:";
-              } else if (q.questionText.toLowerCase().includes('choose the picture')) {
+              } else if (q.questionImage && !q.questionText) {
+                q.questionText = "Look at the picture and choose the correct word:";
+              } else if (q.questionText && q.questionText.toLowerCase().includes('choose the picture')) {
                 q.type = 'picture-select';
               }
             }
