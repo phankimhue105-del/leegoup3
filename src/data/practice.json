@@ -594,21 +594,16 @@
   "unit2_lesson1": [
     {
       "id": "u2l1-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the place:",
+      "type": "multiple-choice",
+      "questionText": "Which place can you go to borrow books?",
       "options": [
-        "park",
-        "library",
-        "supermarket"
+        "Park",
+        "Library",
+        "Supermarket"
       ],
-      "optionImages": [
-        "/images/unit2/lesson1/park.png",
-        "/images/unit2/lesson1/library.png",
-        "/images/unit2/lesson1/supermarket.png"
-      ],
-      "correctAnswer": "park",
-      "explanation_vi": "Đúng. Bức tranh miêu tả công viên ('park').",
-      "vietnameseExplanation": "Đúng. Bức tranh miêu tả công viên ('park')."
+      "correctAnswer": "Library",
+      "explanation_vi": "Đúng. Bạn đến thư viện ('Library') để mượn sách.",
+      "vietnameseExplanation": "Đúng. Bạn đến thư viện ('Library') để mượn sách."
     },
     {
       "id": "u2l1-q2",
@@ -722,21 +717,16 @@
     },
     {
       "id": "u2l1-q9",
-      "type": "picture-select",
-      "questionText": "Choose the sentence for department store:",
+      "type": "multiple-choice",
+      "questionText": "Which place can you go to buy clothes?",
       "options": [
-        "They are at the department store.",
-        "They are at the park.",
-        "They are at the library."
+        "Department store",
+        "Park",
+        "Library"
       ],
-      "optionImages": [
-        "/images/unit2/lesson1/department_store.png",
-        "/images/unit2/lesson1/park.png",
-        "/images/unit2/lesson1/library.png"
-      ],
-      "correctAnswer": "They are at the department store.",
-      "explanation_vi": "Đúng. Hình ảnh hiển thị cửa hàng bách hóa.",
-      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị cửa hàng bách hóa."
+      "correctAnswer": "Department store",
+      "explanation_vi": "Đúng. Bạn đến cửa hàng bách hóa ('Department store') để mua quần áo.",
+      "vietnameseExplanation": "Đúng. Bạn đến cửa hàng bách hóa ('Department store') để mua quần áo."
     },
     {
       "id": "u2l1-q10",
@@ -756,21 +746,16 @@
   "unit2_lesson2": [
     {
       "id": "u2l2-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the activity:",
+      "type": "multiple-choice",
+      "questionText": "Which activity means buying things at a store?",
       "options": [
-        "borrow books",
-        "mail letters",
-        "shop"
+        "Borrow books",
+        "Mail letters",
+        "Shop"
       ],
-      "optionImages": [
-        "/images/unit2/lesson2/borrow_books.png",
-        "/images/unit2/lesson2/mail_letters.png",
-        "/images/unit2/lesson2/shop.png"
-      ],
-      "correctAnswer": "borrow books",
-      "explanation_vi": "Đúng. Đây là hoạt động mượn sách ('borrow books').",
-      "vietnameseExplanation": "Đúng. Đây là hoạt động mượn sách ('borrow books')."
+      "correctAnswer": "Shop",
+      "explanation_vi": "Đúng. 'Shop' (mua sắm) có nghĩa là mua đồ tại cửa hàng.",
+      "vietnameseExplanation": "Đúng. 'Shop' (mua sắm) có nghĩa là mua đồ tại cửa hàng."
     },
     {
       "id": "u2l2-q2",
@@ -884,21 +869,16 @@
     },
     {
       "id": "u2l2-q9",
-      "type": "picture-select",
-      "questionText": "Choose sentence for shopping picture:",
+      "type": "multiple-choice",
+      "questionText": "What is she doing?",
       "options": [
         "She's shopping.",
         "She's mailing letters.",
         "She's borrowing books."
       ],
-      "optionImages": [
-        "/images/unit2/lesson2/shop.png",
-        "/images/unit2/lesson2/mail_letters.png",
-        "/images/unit2/lesson2/borrow_books.png"
-      ],
       "correctAnswer": "She's shopping.",
-      "explanation_vi": "Đúng. Bức tranh miêu tả cô ấy đang mua sắm.",
-      "vietnameseExplanation": "Đúng. Bức tranh miêu tả cô ấy đang mua sắm."
+      "explanation_vi": "Đúng. Cô ấy đang mua sắm ('She’s shopping.').",
+      "vietnameseExplanation": "Đúng. Cô ấy đang mua sắm ('She’s shopping.')."
     },
     {
       "id": "u2l2-q10",
@@ -918,21 +898,16 @@
   "unit2_lesson3": [
     {
       "id": "u2l3-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the word:",
+      "type": "multiple-choice",
+      "questionText": "Which word means a drawing that helps you find places?",
       "options": [
         "map",
         "street",
         "behind"
       ],
-      "optionImages": [
-        "/images/unit2/lesson3/map.png",
-        "/images/unit2/lesson3/street.png",
-        "/images/unit2/lesson3/behind.png"
-      ],
       "correctAnswer": "map",
-      "explanation_vi": "Đúng. Bức tranh là hình tấm bản đồ ('map').",
-      "vietnameseExplanation": "Đúng. Bức tranh là hình tấm bản đồ ('map')."
+      "explanation_vi": "Đúng. 'map' (bản đồ) là hình vẽ giúp bạn tìm đường.",
+      "vietnameseExplanation": "Đúng. 'map' (bản đồ) là hình vẽ giúp bạn tìm đường."
     },
     {
       "id": "u2l3-q2",
@@ -1046,21 +1021,16 @@
     },
     {
       "id": "u2l3-q9",
-      "type": "picture-select",
-      "questionText": "Choose picture for 'behind':",
+      "type": "multiple-choice",
+      "questionText": "Complete the sentence: The ball is ______ the box.",
       "options": [
         "behind",
-        "map",
-        "street"
-      ],
-      "optionImages": [
-        "/images/unit2/lesson3/behind.png",
-        "/images/unit2/lesson3/map.png",
-        "/images/unit2/lesson3/street.png"
+        "between",
+        "in"
       ],
       "correctAnswer": "behind",
-      "explanation_vi": "Đúng. Hình ảnh vị trí nằm ở phía sau.",
-      "vietnameseExplanation": "Đúng. Hình ảnh vị trí nằm ở phía sau."
+      "explanation_vi": "Đúng. Quả bóng nằm phía sau cái hộp — dùng 'behind'.",
+      "vietnameseExplanation": "Đúng. Quả bóng nằm phía sau cái hộp — dùng 'behind'."
     },
     {
       "id": "u2l3-q10",
@@ -1080,21 +1050,16 @@
   "unit2_lesson4": [
     {
       "id": "u2l4-q1",
-      "type": "picture-select",
-      "questionText": "Look at the picture and choose the art action:",
+      "type": "multiple-choice",
+      "questionText": "Which action means using scissors to divide paper into pieces?",
       "options": [
         "cut",
         "color",
         "glue"
       ],
-      "optionImages": [
-        "/images/unit2/lesson4/cut.png",
-        "/images/unit2/lesson4/color.png",
-        "/images/unit2/lesson4/glue.png"
-      ],
       "correctAnswer": "cut",
-      "explanation_vi": "Đúng. Bức tranh tả hành động cắt giấy ('cut').",
-      "vietnameseExplanation": "Đúng. Bức tranh tả hành động cắt giấy ('cut')."
+      "explanation_vi": "Đúng. 'cut' (cắt) có nghĩa là dùng kéo để chia giấy thành các mảnh.",
+      "vietnameseExplanation": "Đúng. 'cut' (cắt) có nghĩa là dùng kéo để chia giấy thành các mảnh."
     },
     {
       "id": "u2l4-q2",
@@ -1213,21 +1178,16 @@
     },
     {
       "id": "u2l4-q9",
-      "type": "picture-select",
-      "questionText": "Choose picture for 'glue':",
+      "type": "multiple-choice",
+      "questionText": "Choose the correct word: We use scissors to ______ paper.",
       "options": [
-        "glue",
-        "fold",
-        "color"
+        "cut",
+        "color",
+        "glue"
       ],
-      "optionImages": [
-        "/images/unit2/lesson4/glue.png",
-        "/images/unit2/lesson4/fold.png",
-        "/images/unit2/lesson4/color.png"
-      ],
-      "correctAnswer": "glue",
-      "explanation_vi": "Đúng. Đây là hình ảnh dán bằng hồ ('glue').",
-      "vietnameseExplanation": "Đúng. Đây là hình ảnh dán bằng hồ ('glue')."
+      "correctAnswer": "cut",
+      "explanation_vi": "Đúng. Chúng ta dùng kéo để cắt ('cut') giấy.",
+      "vietnameseExplanation": "Đúng. Chúng ta dùng kéo để cắt ('cut') giấy."
     },
     {
       "id": "u2l4-q10",
