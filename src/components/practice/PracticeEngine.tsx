@@ -190,6 +190,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                 <AppImage
                   src={currentQuestion.questionImage}
                   alt="Question Image"
+                  hideText={true}
                   className="w-full h-full object-cover"
                 />
               </div>
