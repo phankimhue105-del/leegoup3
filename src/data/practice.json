@@ -871,6 +871,7 @@
       "id": "u2l2-q9",
       "type": "multiple-choice",
       "questionText": "What is she doing?",
+      "questionImage": "/images/unit2/lesson2/shop.png",
       "options": [
         "She's shopping.",
         "She's mailing letters.",
@@ -1023,6 +1024,7 @@
       "id": "u2l3-q9",
       "type": "multiple-choice",
       "questionText": "Complete the sentence: The ball is ______ the box.",
+      "questionImage": "/images/unit2/lesson3/behind.png",
       "options": [
         "behind",
         "between",
