@@ -87,7 +87,7 @@ const COMPOSITE_ILLUSTRATIONS: Record<string, { emojis: string[]; label: string 
   
   // Specific Food/Clothing Corrections
   'potato chips': { emojis: ['🍟', '🥔', '🍿'], label: 'Potato Chips' },
-  'sweater': { emojis: ['👕', '🧶', '🧣'], label: 'Sweater / Knitwear' }
+  'sweater': { emojis: ['🧥', '🧶', '🧣'], label: 'Sweater / Knitwear' }
 };
 
 // Extracts core vocabulary/action phrase from sentences or descriptions
@@ -228,6 +228,51 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
+  } else if (lowerWord === 'sweater') {
+    // Dedicated knit sweater illustration (clearly a warm long-sleeved wool sweater, not a T-shirt)
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <!-- Knit wool sweater body & long sleeves -->
+          <path d="M 135 110 L 105 120 L 70 195 L 98 206 L 130 155 L 130 225 L 270 225 L 270 155 L 302 206 L 330 195 L 295 120 L 265 110 C 245 125 155 125 135 110 Z" fill="#E11D48" />
+          <!-- Ribbed collar -->
+          <path d="M 135 110 C 155 125 245 125 265 110 C 250 96 150 96 135 110 Z" fill="#9F1239" />
+          <!-- Ribbed hem -->
+          <rect x="130" y="215" width="140" height="10" fill="#9F1239" rx="3" />
+          <!-- Ribbed cuffs -->
+          <path d="M 70 195 L 98 206 L 94 216 L 66 205 Z" fill="#9F1239" />
+          <path d="M 302 206 L 330 195 L 334 205 L 306 216 Z" fill="#9F1239" />
+          <!-- Knitted cable zigzag patterns across chest -->
+          <path d="M 142 160 L 152 148 L 162 160 L 172 148 L 182 160 L 192 148 L 202 160 L 212 148 L 222 160 L 232 148 L 242 160 L 252 148 L 260 158" stroke="#FFE4E6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <path d="M 142 182 L 152 170 L 162 182 L 172 170 L 182 182 L 192 170 L 202 182 L 212 170 L 222 182 L 232 170 L 242 182 L 252 170 L 260 180" stroke="#FFE4E6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <!-- Wool yarn ball badge -->
+          <text x="315" y="105" font-size="40" text-anchor="middle">🧶</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <!-- Knit wool sweater body & long sleeves -->
+          <path d="M 135 105 L 105 115 L 70 190 L 98 201 L 130 150 L 130 215 L 270 215 L 270 150 L 302 201 L 330 190 L 295 115 L 265 105 C 245 120 155 120 135 105 Z" fill="#E11D48" />
+          <!-- Ribbed collar -->
+          <path d="M 135 105 C 155 120 245 120 265 105 C 250 93 150 93 135 105 Z" fill="#9F1239" />
+          <!-- Ribbed hem -->
+          <rect x="130" y="206" width="140" height="9" fill="#9F1239" rx="3" />
+          <!-- Ribbed cuffs -->
+          <path d="M 70 190 L 98 201 L 94 211 L 66 200 Z" fill="#9F1239" />
+          <path d="M 302 201 L 330 190 L 334 200 L 306 211 Z" fill="#9F1239" />
+          <!-- Knitted patterns -->
+          <path d="M 142 150 L 152 140 L 162 150 L 172 140 L 182 150 L 192 140 L 202 150 L 212 140 L 222 150 L 232 140 L 242 150 L 252 140 L 260 148" stroke="#FFE4E6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <path d="M 142 170 L 152 160 L 162 170 L 172 160 L 182 170 L 192 160 L 202 170 L 212 160 L 222 170 L 232 160 L 242 170 L 252 160 L 260 168" stroke="#FFE4E6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <!-- Wool yarn ball badge -->
+          <text x="315" y="100" font-size="36" text-anchor="middle">🧶</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">KNIT SWEATER</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
   } else if (composite) {
     if (hideText) {
       // Clean, centered text-free composite layout for Practice picture-selection questions
@@ -344,6 +389,11 @@ class ImageServiceClass {
     // If it's a valid remote URL or preloaded data URL, return it
     if (src && (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('data:'))) {
       return src;
+    }
+
+    // Specific realistic image for "make food" (person preparing/cooking food)
+    if (src === '/images/unit3/lesson2/make_food.png' || cleanWord === 'make food') {
+      return 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80';
     }
 
     // Resolve pre-defined keys in PLACEHOLDER_IMAGES (if applicable)
