@@ -250,7 +250,9 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                   borderStyle = 'border-indigo-500 ring-4 ring-indigo-100';
                 }
 
-                const isChoosePictureFor = currentQuestion.questionText.toLowerCase().includes('choose the picture for');
+                const isChoosePictureFor =
+                  currentQuestion.questionText.toLowerCase().includes('choose picture for') ||
+                  currentQuestion.questionText.toLowerCase().includes('choose the picture for');
 
                 return (
                   <div
