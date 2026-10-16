@@ -479,7 +479,9 @@ class CourseService {
                 q.questionText &&
                 (q.questionText.toLowerCase().includes('picture') ||
                  q.questionText.toLowerCase().includes('sentence') ||
-                 q.questionText.startsWith('Look at the picture'))
+                 q.questionText.toLowerCase().includes('which person') ||
+                 q.questionText.startsWith('Look at the picture') ||
+                 q.id === 'u3l1-q1')
               ) {
                 // Preserve explicit customized prompt
               } else {
@@ -536,7 +538,9 @@ class CourseService {
               }
 
               // Shuffle pairs together so opt and img NEVER desync!
-              pairs.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+              if (q.id !== 'u3l1-q1' && q.id !== 'u3l3-q9' && q.id !== 'u3l4-q9') {
+                pairs.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+              }
 
               q.options = pairs.map((p) => p.opt);
               q.optionImages = pairs.map((p) => {
@@ -562,7 +566,9 @@ class CourseService {
                   const others = q.options.filter((o) => o.toLowerCase() !== correctStr.toLowerCase());
                   q.options = [correctStr, ...others.slice(0, maxOpts - 1)];
                 }
-                q.options = q.options.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+                if (q.id !== 'u3l1-q9') {
+                  q.options = q.options.sort(() => (qIdx % 2 === 0 ? 1 : -1) * 0.5);
+                }
               } else {
                 let distractors = vocabWords.filter((w) => w.toLowerCase() !== correctStr.toLowerCase());
 
