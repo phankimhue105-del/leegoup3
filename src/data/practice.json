@@ -1324,7 +1324,7 @@
     {
       "id": "u3l1-q1",
       "type": "picture-select",
-      "questionText": "Look at the picture and choose the correct job word:",
+      "questionText": "Which person works with books in a library?",
       "options": [
         "cashier",
         "librarian",
@@ -1335,9 +1335,9 @@
         "/images/unit3/lesson1/librarian.png",
         "/images/unit3/lesson1/server.png"
       ],
-      "correctAnswer": "cashier",
-      "explanation_vi": "Đúng. Bức tranh thể hiện nhân viên thu ngân ('cashier').",
-      "vietnameseExplanation": "Đúng. Bức tranh thể hiện nhân viên thu ngân ('cashier')."
+      "correctAnswer": "librarian",
+      "explanation_vi": "Đúng. 'librarian' (thủ thư) làm việc với sách trong thư viện.",
+      "vietnameseExplanation": "Đúng. 'librarian' (thủ thư) làm việc với sách trong thư viện."
     },
     {
       "id": "u3l1-q2",
@@ -1451,21 +1451,16 @@
     },
     {
       "id": "u3l1-q9",
-      "type": "picture-select",
-      "questionText": "Choose the sentence matching the postal worker picture:",
+      "type": "multiple-choice",
+      "questionText": "Where does a postal worker work?",
       "options": [
-        "The postal worker works at the post office.",
-        "The server works at the restaurant.",
-        "The cashier works at the supermarket."
+        "At the post office.",
+        "At the restaurant.",
+        "At the supermarket."
       ],
-      "optionImages": [
-        "/images/unit3/lesson1/postal_worker.png",
-        "/images/unit3/lesson1/server.png",
-        "/images/unit3/lesson1/cashier.png"
-      ],
-      "correctAnswer": "The postal worker works at the post office.",
-      "explanation_vi": "Đúng. Nhân viên bưu điện làm tại 'post office'.",
-      "vietnameseExplanation": "Đúng. Nhân viên bưu điện làm tại 'post office'."
+      "correctAnswer": "At the post office.",
+      "explanation_vi": "Đúng. Nhân viên bưu điện làm việc tại bưu điện (At the post office).",
+      "vietnameseExplanation": "Đúng. Nhân viên bưu điện làm việc tại bưu điện (At the post office)."
     },
     {
       "id": "u3l1-q10",
