@@ -1454,13 +1454,13 @@
       "type": "multiple-choice",
       "questionText": "Where does a postal worker work?",
       "options": [
-        "At the post office.",
-        "At the restaurant.",
-        "At the supermarket."
+        "A. At the post office.",
+        "B. At the restaurant.",
+        "C. At the supermarket."
       ],
-      "correctAnswer": "At the post office.",
-      "explanation_vi": "Đúng. Nhân viên bưu điện làm việc tại bưu điện (At the post office).",
-      "vietnameseExplanation": "Đúng. Nhân viên bưu điện làm việc tại bưu điện (At the post office)."
+      "correctAnswer": "A. At the post office.",
+      "explanation_vi": "Đúng. A. At the post office. (Nhân viên bưu điện làm việc tại bưu điện).",
+      "vietnameseExplanation": "Đúng. A. At the post office. (Nhân viên bưu điện làm việc tại bưu điện)."
     },
     {
       "id": "u3l1-q10",
