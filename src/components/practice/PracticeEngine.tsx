@@ -85,7 +85,8 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
     let correct = false;
 
     if (currentQuestion.type === 'multiple-choice' || currentQuestion.type === 'listening' || currentQuestion.type === 'picture-select') {
-      correct = selectedOption === currentQuestion.correctAnswer;
+      const normalize = (s: string | null) => (s || '').replace(/^[A-D]\.\s*/i, '').trim().toLowerCase();
+      correct = selectedOption === currentQuestion.correctAnswer || normalize(selectedOption) === normalize(currentQuestion.correctAnswer as string);
     } else if (currentQuestion.type === 'fill-in-blank') {
       const cleanUser = fillValue.trim().toLowerCase();
       if (Array.isArray(currentQuestion.correctAnswer)) {
@@ -205,8 +206,11 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                 const isSelected = selectedOption === opt;
                 let optStyle = 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-indigo-50/50 hover:border-indigo-300';
 
+                const normalize = (s: string | null) => (s || '').replace(/^[A-D]\.\s*/i, '').trim().toLowerCase();
+                const isCorrectOpt = opt === currentQuestion.correctAnswer || normalize(opt) === normalize(currentQuestion.correctAnswer as string);
+
                 if (isSubmitted) {
-                  if (opt === currentQuestion.correctAnswer) {
+                  if (isCorrectOpt) {
                     optStyle = 'bg-emerald-50 border-emerald-500 text-emerald-900 font-extrabold';
                   } else if (isSelected) {
                     optStyle = 'bg-rose-50 border-rose-400 text-rose-900';
@@ -217,6 +221,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
 
                 const isDialogueQuestion = currentQuestion.questionText.toLowerCase().includes('dialogue');
                 const showOptionAudio = currentQuestion.type === 'multiple-choice' && !isDialogueQuestion;
+                const audioText = opt.replace(/^[A-D]\.\s*/i, '');
 
                 return (
                   <button
@@ -227,7 +232,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
                   >
                     <span>{opt}</span>
                     {showOptionAudio && (
-                      <AudioButton textToSpeak={opt} size="sm" />
+                      <AudioButton textToSpeak={audioText} size="sm" />
                     )}
                   </button>
                 );
