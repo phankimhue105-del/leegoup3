@@ -1,4 +1,5 @@
 import courseDataRaw from '../data/courseData.json';
+import practiceDict from '../data/practice.json';
 import { CourseData, Unit, Lesson, PracticeQuestion } from '../types/course';
 
 // Audited, pedagogical, text-based practice questions for Unit 1 (Lessons 1-4)
@@ -418,6 +419,18 @@ class CourseService {
       });
     }
 
+    // Direct synchronization for Unit 3 Practice Questions from practiceDict
+    const unit3 = this.courseData.units.find((u) => u.id === 'unit-3');
+    if (unit3) {
+      const pDict = practiceDict as Record<string, PracticeQuestion[]>;
+      unit3.lessons.forEach((lesson) => {
+        const dictKey = `unit3_lesson${lesson.id.replace('u3-l', '')}`;
+        if (pDict[dictKey]) {
+          lesson.practiceQuestions = [...pDict[dictKey]];
+        }
+      });
+    }
+
     // Build global lookup maps of English words to Vietnamese meanings and images
     const vocabToVietnamese: Record<string, string> = {};
     const vocabToImage: Record<string, string> = {};
@@ -449,8 +462,8 @@ class CourseService {
     };
 
     this.courseData.units.forEach((unit) => {
-      // For Unit 1, preserve the authoritative questions directly
-      if (unit.id === 'unit-1') {
+      // For Unit 1 and Unit 3, preserve the authoritative questions directly
+      if (unit.id === 'unit-1' || unit.id === 'unit-3') {
         return;
       }
 
