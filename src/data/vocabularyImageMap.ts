@@ -206,6 +206,10 @@ export const VOCABULARY_IMAGE_MAP: Record<string, string> = {
   'Mexico': '🇲🇽',
   'Russia': '🇷🇺',
   'Turkey': '🇹🇷',
+  'japan': '🇯🇵',
+  'mexico': '🇲🇽',
+  'russia': '🇷🇺',
+  'turkey': '🇹🇷',
 
   // Descriptions / Adjectives
   'easy': '✅',
