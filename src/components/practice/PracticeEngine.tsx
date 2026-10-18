@@ -29,6 +29,7 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
   const [correctCount, setCorrectCount] = useState<number>(0);
+  const [timerSeconds, setTimerSeconds] = useState<number>(0);
   // Global Requirement 2: Sanitize practice questions by filtering out any communicative / role-play / answer-the-teacher questions
   const activeQuestions = React.useMemo(() => {
     const filtered = questions.filter((q) => {
