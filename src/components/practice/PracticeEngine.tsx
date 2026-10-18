@@ -258,7 +258,8 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
 
                 const isChoosePictureFor =
                   currentQuestion.questionText.toLowerCase().includes('choose picture for') ||
-                  currentQuestion.questionText.toLowerCase().includes('choose the picture for');
+                  currentQuestion.questionText.toLowerCase().includes('choose the picture for') ||
+                  currentQuestion.questionText.toLowerCase().includes('which picture');
 
                 return (
                   <div
@@ -433,3 +434,4 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
     </div>
   );
 };
+
