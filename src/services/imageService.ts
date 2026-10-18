@@ -147,6 +147,7 @@ function getEmojiForWord(word: string): string | null {
   for (const [key, value] of sortedEntries) {
     if (clean === 'fold' && key.includes('folder')) continue;
     if (key === 'watch' && (clean.includes('movie') || clean.includes('film'))) continue;
+    if (key === 'key' && clean !== 'key') continue;
     if (clean.includes(key) || (key.length >= 4 && key.includes(clean))) {
       return value;
     }
@@ -269,6 +270,209 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
           <text x="315" y="100" font-size="36" text-anchor="middle">🧶</text>
         </g>
         <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">KNIT SWEATER</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'aunt') {
+    // Dedicated illustration for aunt: Adult woman caring for her young niece in a warm family home setting
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <!-- Family house backdrop -->
+          <path d="M 140 85 L 200 45 L 260 85 L 250 85 L 250 120 L 150 120 L 150 85 Z" fill="#FED7AA" opacity="0.6"/>
+          <rect x="230" y="55" width="12" height="20" fill="#FDBA74" opacity="0.7"/>
+          <path d="M 190 90 L 210 90 L 210 110 L 190 110 Z" fill="#FFFFFF" opacity="0.8"/>
+          <!-- Loving family heart -->
+          <text x="200" y="98" font-size="28" text-anchor="middle">❤️</text>
+          <!-- Aunt (adult woman on left) -->
+          <circle cx="160" cy="115" r="18" fill="#FDBA74"/>
+          <!-- Aunt wavy hair -->
+          <path d="M 142 112 C 142 94 178 94 178 112 C 182 124 176 132 170 134 C 160 130 144 130 142 112 Z" fill="#9A3412"/>
+          <circle cx="155" cy="115" r="2.5" fill="#431407"/>
+          <circle cx="167" cy="115" r="2.5" fill="#431407"/>
+          <path d="M 158 122 Q 161 126 164 122" stroke="#431407" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Aunt body / elegant dress -->
+          <path d="M 145 138 Q 160 134 175 138 L 180 205 L 140 205 Z" fill="#EA580C"/>
+          <path d="M 152 136 L 160 148 L 168 136" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+          <rect x="146" y="205" width="10" height="18" fill="#FDBA74"/>
+          <rect x="164" y="205" width="10" height="18" fill="#FDBA74"/>
+          <!-- Niece (young child girl on right) -->
+          <circle cx="230" cy="142" r="14" fill="#FDBA74"/>
+          <!-- Niece pigtails & hair -->
+          <circle cx="216" cy="136" r="6" fill="#78350F"/>
+          <circle cx="244" cy="136" r="6" fill="#78350F"/>
+          <path d="M 218 140 C 218 126 242 126 242 140 Z" fill="#78350F"/>
+          <circle cx="226" cy="142" r="2" fill="#431407"/>
+          <circle cx="234" cy="142" r="2" fill="#431407"/>
+          <path d="M 228 147 Q 230 150 232 147" stroke="#431407" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <!-- Niece dress -->
+          <path d="M 218 158 Q 230 156 242 158 L 246 205 L 214 205 Z" fill="#F43F5E"/>
+          <rect x="220" y="205" width="7" height="18" fill="#FDBA74"/>
+          <rect x="233" y="205" width="7" height="18" fill="#FDBA74"/>
+          <!-- Aunt holding hands with niece -->
+          <path d="M 172 152 Q 195 168 220 166" stroke="#FDBA74" stroke-width="6" stroke-linecap="round" fill="none"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <!-- Family house backdrop -->
+          <path d="M 140 80 L 200 42 L 260 80 L 250 80 L 250 115 L 150 115 L 150 80 Z" fill="#FED7AA" opacity="0.6"/>
+          <rect x="230" y="52" width="12" height="18" fill="#FDBA74" opacity="0.7"/>
+          <!-- Loving family heart -->
+          <text x="200" y="94" font-size="26" text-anchor="middle">❤️</text>
+          <!-- Aunt (adult woman on left) -->
+          <circle cx="160" cy="110" r="17" fill="#FDBA74"/>
+          <path d="M 142 107 C 142 90 178 90 178 107 C 182 119 176 127 170 129 C 160 125 144 125 142 107 Z" fill="#9A3412"/>
+          <circle cx="155" cy="110" r="2.5" fill="#431407"/>
+          <circle cx="167" cy="110" r="2.5" fill="#431407"/>
+          <path d="M 158 117 Q 161 121 164 117" stroke="#431407" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M 145 132 Q 160 128 175 132 L 180 195 L 140 195 Z" fill="#EA580C"/>
+          <rect x="146" y="195" width="10" height="18" fill="#FDBA74"/>
+          <rect x="164" y="195" width="10" height="18" fill="#FDBA74"/>
+          <!-- Niece (young child girl on right) -->
+          <circle cx="230" cy="136" r="13" fill="#FDBA74"/>
+          <circle cx="216" cy="130" r="6" fill="#78350F"/>
+          <circle cx="244" cy="130" r="6" fill="#78350F"/>
+          <path d="M 218 134 C 218 122 242 122 242 134 Z" fill="#78350F"/>
+          <circle cx="226" cy="136" r="2" fill="#431407"/>
+          <circle cx="234" cy="136" r="2" fill="#431407"/>
+          <path d="M 228 141 Q 230 144 232 141" stroke="#431407" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M 218 152 Q 230 150 242 152 L 246 195 L 214 195 Z" fill="#F43F5E"/>
+          <rect x="220" y="195" width="7" height="18" fill="#FDBA74"/>
+          <rect x="233" y="195" width="7" height="18" fill="#FDBA74"/>
+          <!-- Aunt holding hands with niece -->
+          <path d="M 172 146 Q 195 160 220 158" stroke="#FDBA74" stroke-width="6" stroke-linecap="round" fill="none"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">FAMILY: AUNT WITH NIECE</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'japan') {
+    // Official National Flag of Japan: Crisp white banner with centered crimson red sun disc
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="70" y="55" width="260" height="170" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2.5"/>
+          <circle cx="200" cy="140" r="51" fill="#BC002D"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="80" y="45" width="240" height="155" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+          <circle cx="200" cy="122.5" r="46.5" fill="#BC002D"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">NATIONAL FLAG: JAPAN</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'turkey') {
+    // Official National Flag of Turkey: Vibrant red background with white crescent moon and 5-pointed star
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="70" y="55" width="260" height="170" rx="10" fill="#E30A17" stroke="#CBD5E1" stroke-width="1.5"/>
+          <circle cx="165" cy="140" r="44" fill="#FFFFFF"/>
+          <circle cx="176" cy="140" r="35.2" fill="#E30A17"/>
+          <polygon points="204.0,140.0 217.5,135.3 217.8,121.0 226.5,132.4 240.2,128.2 232.0,140.0 240.2,151.8 226.5,147.6 217.8,159.0 217.5,144.7" fill="#FFFFFF"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="80" y="45" width="240" height="155" rx="10" fill="#E30A17" stroke="#CBD5E1" stroke-width="1.5"/>
+          <circle cx="168" cy="122.5" r="40" fill="#FFFFFF"/>
+          <circle cx="178" cy="122.5" r="32" fill="#E30A17"/>
+          <polygon points="203.0,122.5 215.3,118.2 215.6,105.2 223.5,115.6 235.9,111.8 228.4,122.5 235.9,133.2 223.5,129.4 215.6,139.8 215.3,126.8" fill="#FFFFFF"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">NATIONAL FLAG: TURKEY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'mexico') {
+    // Official National Flag of Mexico: Vertical tricolor Green, White, Red with coat of arms
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <clipPath id="mexico-flag-clip-hide">
+            <rect x="70" y="55" width="260" height="170" rx="10"/>
+          </clipPath>
+          <g clip-path="url(#mexico-flag-clip-hide)">
+            <rect x="70" y="55" width="86.6" height="170" fill="#006847"/>
+            <rect x="156.6" y="55" width="86.8" height="170" fill="#FFFFFF"/>
+            <rect x="243.4" y="55" width="86.6" height="170" fill="#CE1126"/>
+            <!-- Mexico Coat of Arms in White center -->
+            <path d="M 188 155 Q 200 148 212 155 L 208 162 Q 200 158 192 162 Z" fill="#15803D"/>
+            <path d="M 194 145 C 190 130 185 120 178 118 C 188 122 195 128 198 136 C 200 125 204 122 208 124 C 206 128 204 134 204 138 C 208 130 216 124 222 120 C 216 124 210 132 205 145 Z" fill="#854D0E"/>
+            <path d="M 206 126 Q 212 124 214 130 Q 216 134 212 136" stroke="#15803D" stroke-width="2.5" fill="none"/>
+            <path d="M 180 158 C 182 166 200 172 200 172 C 200 172 218 166 220 158" stroke="#15803D" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </g>
+          <rect x="70" y="55" width="260" height="170" rx="10" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <clipPath id="mexico-flag-clip">
+            <rect x="80" y="45" width="240" height="155" rx="10"/>
+          </clipPath>
+          <g clip-path="url(#mexico-flag-clip)">
+            <rect x="80" y="45" width="80" height="155" fill="#006847"/>
+            <rect x="160" y="45" width="80" height="155" fill="#FFFFFF"/>
+            <rect x="240" y="45" width="80" height="155" fill="#CE1126"/>
+            <!-- Mexico Coat of Arms in White center -->
+            <path d="M 188 138 Q 200 131 212 138 L 208 145 Q 200 141 192 145 Z" fill="#15803D"/>
+            <path d="M 194 128 C 190 113 185 103 178 101 C 188 105 195 111 198 119 C 200 108 204 105 208 107 C 206 111 204 117 204 121 C 208 113 216 107 222 103 C 216 107 210 115 205 128 Z" fill="#854D0E"/>
+            <path d="M 206 109 Q 212 107 214 113 Q 216 117 212 119" stroke="#15803D" stroke-width="2.5" fill="none"/>
+            <path d="M 180 141 C 182 149 200 155 200 155 C 200 155 218 149 220 141" stroke="#15803D" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </g>
+          <rect x="80" y="45" width="240" height="155" rx="10" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">NATIONAL FLAG: MEXICO</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'russia') {
+    // Official National Flag of Russia: Horizontal tricolor White, Blue, Red
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <clipPath id="russia-flag-clip-hide">
+            <rect x="70" y="55" width="260" height="170" rx="10"/>
+          </clipPath>
+          <g clip-path="url(#russia-flag-clip-hide)">
+            <rect x="70" y="55" width="260" height="56.7" fill="#FFFFFF"/>
+            <rect x="70" y="111.7" width="260" height="56.7" fill="#0039A6"/>
+            <rect x="70" y="168.4" width="260" height="56.6" fill="#D52B1E"/>
+          </g>
+          <rect x="70" y="55" width="260" height="170" rx="10" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <clipPath id="russia-flag-clip">
+            <rect x="80" y="45" width="240" height="155" rx="10"/>
+          </clipPath>
+          <g clip-path="url(#russia-flag-clip)">
+            <rect x="80" y="45" width="240" height="51.6" fill="#FFFFFF"/>
+            <rect x="80" y="96.6" width="240" height="51.7" fill="#0039A6"/>
+            <rect x="80" y="148.3" width="240" height="51.7" fill="#D52B1E"/>
+          </g>
+          <rect x="80" y="45" width="240" height="155" rx="10" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">NATIONAL FLAG: RUSSIA</text>
         <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
