@@ -1943,7 +1943,7 @@
     {
       "id": "u4l1-q1",
       "type": "picture-select",
-      "questionText": "Look at picture and choose correct family word:",
+      "questionText": "Which picture shows the grandparents?",
       "options": [
         "parents",
         "grandparents",
@@ -1954,9 +1954,9 @@
         "/images/unit4/lesson1/grandparents.png",
         "/images/unit4/lesson1/aunt.png"
       ],
-      "correctAnswer": "parents",
-      "explanation_vi": "Đúng. Bức tranh hiển thị bố mẹ ('parents').",
-      "vietnameseExplanation": "Đúng. Bức tranh hiển thị bố mẹ ('parents')."
+      "correctAnswer": "grandparents",
+      "explanation_vi": "Đúng. Hình ở giữa hiển thị ông bà ('grandparents').",
+      "vietnameseExplanation": "Đúng. Hình ở giữa hiển thị ông bà ('grandparents')."
     },
     {
       "id": "u4l1-q2",
@@ -2413,7 +2413,8 @@
     {
       "id": "u4l4-q1",
       "type": "multiple-choice",
-      "questionText": "What country is 'Mexico'?",
+      "questionText": "What country is this?",
+      "questionImage": "/images/unit4/lesson4/mexico.png",
       "options": [
         "Nước Mê-hi-cô",
         "Nước Nhật Bản",
@@ -2421,8 +2422,8 @@
         "Nước Thổ Nhĩ Kỳ"
       ],
       "correctAnswer": "Nước Mê-hi-cô",
-      "explanation_vi": "Đúng. 'Mexico' là nước Mê-hi-cô.",
-      "vietnameseExplanation": "Đúng. 'Mexico' là nước Mê-hi-cô."
+      "explanation_vi": "Đúng. Đây là quốc kỳ nước Mê-hi-cô (Mexico).",
+      "vietnameseExplanation": "Đúng. Đây là quốc kỳ nước Mê-hi-cô (Mexico)."
     },
     {
       "id": "u4l4-q2",
@@ -2545,8 +2546,8 @@
         "/images/unit4/lesson4/turkey.png"
       ],
       "correctAnswer": "Japan",
-      "explanation_vi": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản.",
-      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản."
+      "explanation_vi": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản (nền trắng, hình tròn đỏ ở giữa).",
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản (nền trắng, hình tròn đỏ ở giữa)."
     },
     {
       "id": "u4l4-q10",
