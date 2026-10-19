@@ -2023,8 +2023,8 @@
                 "She's borrowing books."
               ],
               "correctAnswer": "She's shopping.",
-              "explanation_vi": "Đúng. Cô ấy đang mua sắm ('She's shopping.').",
-              "vietnameseExplanation": "Đúng. Cô ấy đang mua sắm ('She's shopping.')."
+              "explanation_vi": "Đúng. Cô ấy đang mua sắm ('She’s shopping.').",
+              "vietnameseExplanation": "Đúng. Cô ấy đang mua sắm ('She’s shopping.')."
             },
             {
               "id": "u2l2-q10",
@@ -3241,7 +3241,7 @@
             {
               "id": "u3l1-q1",
               "type": "picture-select",
-              "questionText": "Look at the picture and choose the correct job word:",
+              "questionText": "Which person works with books in a library?",
               "options": [
                 "cashier",
                 "librarian",
@@ -3252,9 +3252,9 @@
                 "/images/unit3/lesson1/librarian.png",
                 "/images/unit3/lesson1/server.png"
               ],
-              "correctAnswer": "cashier",
-              "explanation_vi": "Đúng. Bức tranh thể hiện nhân viên thu ngân ('cashier').",
-              "vietnameseExplanation": "Đúng. Bức tranh thể hiện nhân viên thu ngân ('cashier')."
+              "correctAnswer": "librarian",
+              "explanation_vi": "Đúng. 'librarian' (thủ thư) làm việc với sách trong thư viện.",
+              "vietnameseExplanation": "Đúng. 'librarian' (thủ thư) làm việc với sách trong thư viện."
             },
             {
               "id": "u3l1-q2",
@@ -3271,8 +3271,8 @@
                 "/images/unit3/lesson1/vet.png"
               ],
               "correctAnswer": "librarian",
-              "explanation_vi": "Đúng. Đây là hình ảnh thủ thư ('librarian').",
-              "vietnameseExplanation": "Đúng. Đây là hình ảnh thủ thư ('librarian')."
+              "explanation_vi": "Librarian là người thủ thư.",
+              "vietnameseExplanation": "Librarian là người thủ thư."
             },
             {
               "id": "u3l1-q3",
@@ -3368,21 +3368,16 @@
             },
             {
               "id": "u3l1-q9",
-              "type": "picture-select",
-              "questionText": "Choose the sentence matching the postal worker picture:",
+              "type": "multiple-choice",
+              "questionText": "Where does a postal worker work?",
               "options": [
-                "The postal worker works at the post office.",
-                "The server works at the restaurant.",
-                "The cashier works at the supermarket."
+                "A. At the post office.",
+                "B. At the restaurant.",
+                "C. At the supermarket."
               ],
-              "optionImages": [
-                "/images/unit3/lesson1/postal_worker.png",
-                "/images/unit3/lesson1/server.png",
-                "/images/unit3/lesson1/cashier.png"
-              ],
-              "correctAnswer": "The postal worker works at the post office.",
-              "explanation_vi": "Đúng. Nhân viên bưu điện làm tại 'post office'.",
-              "vietnameseExplanation": "Đúng. Nhân viên bưu điện làm tại 'post office'."
+              "correctAnswer": "A. At the post office.",
+              "explanation_vi": "Đúng. A. At the post office. (Nhân viên bưu điện làm việc tại bưu điện).",
+              "vietnameseExplanation": "Đúng. A. At the post office. (Nhân viên bưu điện làm việc tại bưu điện)."
             },
             {
               "id": "u3l1-q10",
@@ -3513,7 +3508,7 @@
               "phonetic": "/meɪk fuːd/",
               "example": "Cooks make food.",
               "exampleSentence": "Cooks make food.",
-              "image": "/images/unit3/lesson2/make_food.png",
+              "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80",
               "audio": "/audio/unit3/lesson2/make_food.mp3",
               "audioUrl": "/audio/unit3/lesson2/make_food.mp3"
             },
@@ -4673,7 +4668,7 @@
             {
               "id": "u4l1-q1",
               "type": "picture-select",
-              "questionText": "Look at picture and choose correct family word:",
+              "questionText": "Which picture shows the grandparents?",
               "options": [
                 "parents",
                 "grandparents",
@@ -4684,9 +4679,9 @@
                 "/images/unit4/lesson1/grandparents.png",
                 "/images/unit4/lesson1/aunt.png"
               ],
-              "correctAnswer": "parents",
-              "explanation_vi": "Đúng. Bức tranh hiển thị bố mẹ ('parents').",
-              "vietnameseExplanation": "Đúng. Bức tranh hiển thị bố mẹ ('parents')."
+              "correctAnswer": "grandparents",
+              "explanation_vi": "Đúng. Hình ở giữa hiển thị ông bà ('grandparents').",
+              "vietnameseExplanation": "Đúng. Hình ở giữa hiển thị ông bà ('grandparents')."
             },
             {
               "id": "u4l1-q2",
@@ -5732,7 +5727,8 @@
             {
               "id": "u4l4-q1",
               "type": "multiple-choice",
-              "questionText": "What country is 'Mexico'?",
+              "questionText": "What country is this?",
+              "questionImage": "/images/unit4/lesson4/mexico.png",
               "options": [
                 "Nước Mê-hi-cô",
                 "Nước Nhật Bản",
@@ -5740,8 +5736,8 @@
                 "Nước Thổ Nhĩ Kỳ"
               ],
               "correctAnswer": "Nước Mê-hi-cô",
-              "explanation_vi": "Đúng. 'Mexico' là nước Mê-hi-cô.",
-              "vietnameseExplanation": "Đúng. 'Mexico' là nước Mê-hi-cô."
+              "explanation_vi": "Đúng. Đây là quốc kỳ nước Mê-hi-cô (Mexico).",
+              "vietnameseExplanation": "Đúng. Đây là quốc kỳ nước Mê-hi-cô (Mexico)."
             },
             {
               "id": "u4l4-q2",
@@ -5864,8 +5860,8 @@
                 "/images/unit4/lesson4/turkey.png"
               ],
               "correctAnswer": "Japan",
-              "explanation_vi": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản.",
-              "vietnameseExplanation": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản."
+              "explanation_vi": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản (nền trắng, hình tròn đỏ ở giữa).",
+              "vietnameseExplanation": "Đúng. Hình ảnh hiển thị quốc kỳ Nhật Bản (nền trắng, hình tròn đỏ ở giữa)."
             },
             {
               "id": "u4l4-q10",
@@ -6435,7 +6431,7 @@
             {
               "id": "u5l1-q1",
               "type": "picture-select",
-              "questionText": "Look at the picture and choose the correct word for high stature:",
+              "questionText": "Choose the picture for 'tall':",
               "options": [
                 "tall",
                 "short",
@@ -6527,10 +6523,10 @@
             {
               "id": "u5l1-q6",
               "type": "fill-in-blank",
-              "questionText": "Complete the sentence: 'The girl is tall. The boy is _____.'",
-              "correctAnswer": "taller",
-              "explanation_vi": "Đúng. Dạng so sánh hơn của 'tall' là 'taller'.",
-              "vietnameseExplanation": "Đúng. Dạng so sánh hơn của 'tall' là 'taller'."
+              "questionText": "Complete the sentence: The girl is tall. The boy is ______. (thấp)",
+              "correctAnswer": "short",
+              "explanation_vi": "Đúng. Từ trái nghĩa với 'tall' (cao) là 'short' (thấp).",
+              "vietnameseExplanation": "Đúng. Từ trái nghĩa với 'tall' (cao) là 'short' (thấp)."
             },
             {
               "id": "u5l1-q7",
@@ -6562,21 +6558,16 @@
             },
             {
               "id": "u5l1-q9",
-              "type": "picture-select",
-              "questionText": "Choose the sentence matching the picture of an old man:",
+              "type": "multiple-choice",
+              "questionText": "Choose the opposite of 'old'.",
               "options": [
-                "The man is old.",
-                "The man is young.",
-                "The girl is tall."
+                "A. young",
+                "B. tall",
+                "C. short"
               ],
-              "optionImages": [
-                "/images/unit5/lesson1/old.png",
-                "/images/unit5/lesson1/young.png",
-                "/images/unit5/lesson1/tall.png"
-              ],
-              "correctAnswer": "The man is old.",
-              "explanation_vi": "Đúng. Hình ảnh miêu tả người đàn ông đã già ('old').",
-              "vietnameseExplanation": "Đúng. Hình ảnh miêu tả người đàn ông đã già ('old')."
+              "correctAnswer": "A. young",
+              "explanation_vi": "Đúng. Từ trái nghĩa với 'old' (già) là 'young' (trẻ).",
+              "vietnameseExplanation": "Đúng. Từ trái nghĩa với 'old' (già) là 'young' (trẻ)."
             },
             {
               "id": "u5l1-q10",
@@ -6875,10 +6866,10 @@
             {
               "id": "u5l2-q6",
               "type": "fill-in-blank",
-              "questionText": "Complete: 'This shirt is dirty, but that shirt is _____.'",
+              "questionText": "Complete: This shirt is dirty, but that shirt is ______! (sạch)",
               "correctAnswer": "clean",
-              "explanation_vi": "Đúng. Từ trái nghĩa với 'dirty' là 'clean'.",
-              "vietnameseExplanation": "Đúng. Từ trái nghĩa với 'dirty' là 'clean'."
+              "explanation_vi": "Đúng. 'clean' có nghĩa là sạch sẽ.",
+              "vietnameseExplanation": "Đúng. 'clean' có nghĩa là sạch sẽ."
             },
             {
               "id": "u5l2-q7",
@@ -6913,18 +6904,18 @@
               "type": "picture-select",
               "questionText": "Picture Application: Choose the picture matching 'dirty shirt':",
               "options": [
-                "dirty",
+                "dirty shirt",
                 "clean",
                 "pretty"
               ],
               "optionImages": [
-                "/images/unit5/lesson2/dirty.png",
+                "/images/unit5/lesson2/dirty_shirt.png",
                 "/images/unit5/lesson2/clean.png",
                 "/images/unit5/lesson2/pretty.png"
               ],
-              "correctAnswer": "dirty",
-              "explanation_vi": "Đúng. Bức tranh hiển thị chiếc áo bẩn ('dirty').",
-              "vietnameseExplanation": "Đúng. Bức tranh hiển thị chiếc áo bẩn ('dirty')."
+              "correctAnswer": "dirty shirt",
+              "explanation_vi": "Đúng. Bức tranh hiển thị chiếc áo có vết bẩn rõ ràng ('dirty shirt').",
+              "vietnameseExplanation": "Đúng. Bức tranh hiển thị chiếc áo có vết bẩn rõ ràng ('dirty shirt')."
             },
             {
               "id": "u5l2-q10",
@@ -7222,10 +7213,10 @@
             {
               "id": "u5l3-q8",
               "type": "fill-in-blank",
-              "questionText": "Complete the lesson value: 'Be _____.'",
+              "questionText": "Complete the lesson value: \"Be _______.\" (lịch sự, tử tế)",
               "correctAnswer": "nice",
-              "explanation_vi": "Đúng. Giá trị bài học là 'Be nice'.",
-              "vietnameseExplanation": "Đúng. Giá trị bài học là 'Be nice'."
+              "explanation_vi": "Đúng. Giá trị bài học là 'Be nice' (Hãy lịch sự, tử tế).",
+              "vietnameseExplanation": "Đúng. Giá trị bài học là 'Be nice' (Hãy lịch sự, tử tế)."
             },
             {
               "id": "u5l3-q9",
@@ -7504,13 +7495,13 @@
                 "light"
               ],
               "optionImages": [
-                "/images/unit5/lesson4/hard.png",
+                "/images/unit5/lesson4/marble.png",
                 "/images/unit5/lesson4/soft.png",
                 "/images/unit5/lesson4/light.png"
               ],
               "correctAnswer": "hard",
-              "explanation_vi": "Đúng. Bức tranh viên bi cứng ('hard').",
-              "vietnameseExplanation": "Đúng. Bức tranh viên bi cứng ('hard')."
+              "explanation_vi": "Đúng. Bức tranh hiển thị viên bi thủy tinh cứng ('hard marble').",
+              "vietnameseExplanation": "Đúng. Bức tranh hiển thị viên bi thủy tinh cứng ('hard marble')."
             },
             {
               "id": "u5l4-q6",
