@@ -2682,7 +2682,7 @@
     {
       "id": "u5l1-q1",
       "type": "picture-select",
-      "questionText": "Look at the picture and choose the correct word for high stature:",
+      "questionText": "Choose the picture for 'tall':",
       "options": [
         "tall",
         "short",
@@ -2774,10 +2774,10 @@
     {
       "id": "u5l1-q6",
       "type": "fill-in-blank",
-      "questionText": "Complete the sentence: 'The girl is tall. The boy is _____.'",
-      "correctAnswer": "taller",
-      "explanation_vi": "Đúng. Dạng so sánh hơn của 'tall' là 'taller'.",
-      "vietnameseExplanation": "Đúng. Dạng so sánh hơn của 'tall' là 'taller'."
+      "questionText": "Complete the sentence: The girl is tall. The boy is ______. (thấp)",
+      "correctAnswer": "short",
+      "explanation_vi": "Đúng. Từ trái nghĩa với 'tall' (cao) là 'short' (thấp).",
+      "vietnameseExplanation": "Đúng. Từ trái nghĩa với 'tall' (cao) là 'short' (thấp)."
     },
     {
       "id": "u5l1-q7",
@@ -2809,21 +2809,16 @@
     },
     {
       "id": "u5l1-q9",
-      "type": "picture-select",
-      "questionText": "Choose the sentence matching the picture of an old man:",
+      "type": "multiple-choice",
+      "questionText": "Choose the opposite of 'old'.",
       "options": [
-        "The man is old.",
-        "The man is young.",
-        "The girl is tall."
+        "A. young",
+        "B. tall",
+        "C. short"
       ],
-      "optionImages": [
-        "/images/unit5/lesson1/old.png",
-        "/images/unit5/lesson1/young.png",
-        "/images/unit5/lesson1/tall.png"
-      ],
-      "correctAnswer": "The man is old.",
-      "explanation_vi": "Đúng. Hình ảnh miêu tả người đàn ông đã già ('old').",
-      "vietnameseExplanation": "Đúng. Hình ảnh miêu tả người đàn ông đã già ('old')."
+      "correctAnswer": "A. young",
+      "explanation_vi": "Đúng. Từ trái nghĩa với 'old' (già) là 'young' (trẻ).",
+      "vietnameseExplanation": "Đúng. Từ trái nghĩa với 'old' (già) là 'young' (trẻ)."
     },
     {
       "id": "u5l1-q10",
@@ -2918,10 +2913,10 @@
     {
       "id": "u5l2-q6",
       "type": "fill-in-blank",
-      "questionText": "Complete: 'This shirt is dirty, but that shirt is _____.'",
+      "questionText": "Complete: This shirt is dirty, but that shirt is ______! (sạch)",
       "correctAnswer": "clean",
-      "explanation_vi": "Đúng. Từ trái nghĩa với 'dirty' là 'clean'.",
-      "vietnameseExplanation": "Đúng. Từ trái nghĩa với 'dirty' là 'clean'."
+      "explanation_vi": "Đúng. 'clean' có nghĩa là sạch sẽ.",
+      "vietnameseExplanation": "Đúng. 'clean' có nghĩa là sạch sẽ."
     },
     {
       "id": "u5l2-q7",
@@ -2956,18 +2951,18 @@
       "type": "picture-select",
       "questionText": "Picture Application: Choose the picture matching 'dirty shirt':",
       "options": [
-        "dirty",
+        "dirty shirt",
         "clean",
         "pretty"
       ],
       "optionImages": [
-        "/images/unit5/lesson2/dirty.png",
+        "/images/unit5/lesson2/dirty_shirt.png",
         "/images/unit5/lesson2/clean.png",
         "/images/unit5/lesson2/pretty.png"
       ],
-      "correctAnswer": "dirty",
-      "explanation_vi": "Đúng. Bức tranh hiển thị chiếc áo bẩn ('dirty').",
-      "vietnameseExplanation": "Đúng. Bức tranh hiển thị chiếc áo bẩn ('dirty')."
+      "correctAnswer": "dirty shirt",
+      "explanation_vi": "Đúng. Bức tranh hiển thị chiếc áo có vết bẩn rõ ràng ('dirty shirt').",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị chiếc áo có vết bẩn rõ ràng ('dirty shirt')."
     },
     {
       "id": "u5l2-q10",
@@ -3088,10 +3083,10 @@
     {
       "id": "u5l3-q8",
       "type": "fill-in-blank",
-      "questionText": "Complete the lesson value: 'Be _____.'",
+      "questionText": "Complete the lesson value: \"Be _______.\" (lịch sự, tử tế)",
       "correctAnswer": "nice",
-      "explanation_vi": "Đúng. Giá trị bài học là 'Be nice'.",
-      "vietnameseExplanation": "Đúng. Giá trị bài học là 'Be nice'."
+      "explanation_vi": "Đúng. Giá trị bài học là 'Be nice' (Hãy lịch sự, tử tế).",
+      "vietnameseExplanation": "Đúng. Giá trị bài học là 'Be nice' (Hãy lịch sự, tử tế)."
     },
     {
       "id": "u5l3-q9",
@@ -3193,13 +3188,13 @@
         "light"
       ],
       "optionImages": [
-        "/images/unit5/lesson4/hard.png",
+        "/images/unit5/lesson4/marble.png",
         "/images/unit5/lesson4/soft.png",
         "/images/unit5/lesson4/light.png"
       ],
       "correctAnswer": "hard",
-      "explanation_vi": "Đúng. Bức tranh viên bi cứng ('hard').",
-      "vietnameseExplanation": "Đúng. Bức tranh viên bi cứng ('hard')."
+      "explanation_vi": "Đúng. Bức tranh hiển thị viên bi thủy tinh cứng ('hard marble').",
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị viên bi thủy tinh cứng ('hard marble')."
     },
     {
       "id": "u5l4-q6",
