@@ -613,7 +613,7 @@ class CourseService {
    * Cleans, sanitizes, and enforces pedagogical rigor for practice questions.
    */
   private preprocessCourseData() {
-    // 1. Authoritative Synchronization for Unit 1 Practice Questions from practiceDict
+    // 1. Authoritative Synchronization for Unit 1 Practice Questions from practiceDict (src/data/practice.json)
     const unit1 = this.courseData.units.find((u) => u.id === 'unit-1');
     if (unit1) {
       const pDict = practiceDict as Record<string, PracticeQuestion[]>;
