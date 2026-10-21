@@ -258,6 +258,11 @@ export const PracticeEngine: React.FC<PracticeEngineProps> = ({
 
                 const isChoosePictureFor =
                   currentQuestion.id === 'u5l2-q9' ||
+                  currentQuestion.id === 'u6l1-q1' ||
+                  currentQuestion.id === 'u6l1-q9' ||
+                  currentQuestion.id === 'u6l2-q1' ||
+                  currentQuestion.id === 'u6l2-q9' ||
+                  Boolean((currentQuestion as any).hideOptionLabels) ||
                   currentQuestion.questionText.toLowerCase().includes('choose picture for') ||
                   currentQuestion.questionText.toLowerCase().includes('choose the picture for') ||
                   currentQuestion.questionText.toLowerCase().includes('which picture');
