@@ -250,8 +250,8 @@ export class SpeakingQuestionService {
       feedbackContext: `Practice pronouncing the lesson model pattern sentence: "${pSentence}".`
     });
 
-    // For Unit 2, Unit 3, Unit 4 & Unit 5 Speaking: Exactly 6 questions (Q1-Q6), omitting the last two "Answer the teacher" role-play tasks
-    if (unit.id === 'unit-2' || unit.id === 'unit-3' || unit.id === 'unit-4' || unit.id === 'unit-5') {
+    // For Unit 2, Unit 3, Unit 4, Unit 5 & Unit 6 Speaking: Exactly 6 questions (Q1-Q6), omitting the last two "Answer the teacher" role-play tasks
+    if (unit.id === 'unit-2' || unit.id === 'unit-3' || unit.id === 'unit-4' || unit.id === 'unit-5' || unit.id === 'unit-6') {
       return questions;
     }
 
