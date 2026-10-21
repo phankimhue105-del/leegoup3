@@ -57,20 +57,33 @@ const COMPOSITE_ILLUSTRATIONS: Record<string, { emojis: string[]; label: string 
   'help sick animals': { emojis: ['🧑‍⚕️', '🐕', '❤️'], label: 'Helping Sick Animals' },
   'clean my room': { emojis: ['🧹', '🛏️', '✨'], label: 'Cleaning Room' },
   'clean the room': { emojis: ['🧹', '🛏️', '✨'], label: 'Cleaning Room' },
+  'clean room': { emojis: ['🧹', '🛏️', '✨'], label: 'Cleaning Room' },
   'clean the bathroom': { emojis: ['🛁', '🧽', '🧼'], label: 'Cleaning Bathroom' },
+  'clean bathroom': { emojis: ['🛁', '🧽', '🧼'], label: 'Cleaning Bathroom' },
   'do laundry': { emojis: ['🧺', '🧼', '👕'], label: 'Doing Laundry' },
   'make my bed': { emojis: ['🛏️', '🛌', '✨'], label: 'Making Bed' },
+  'make bed': { emojis: ['🛏️', '🛌', '✨'], label: 'Making Bed' },
   'sweep the floor': { emojis: ['🧹', '✨', '🚪'], label: 'Sweeping Floor' },
+  'sweep floor': { emojis: ['🧹', '✨', '🚪'], label: 'Sweeping Floor' },
   'take out the garbage': { emojis: ['🗑️', '🚮', '🚶'], label: 'Taking Out Garbage' },
+  'take out garbage': { emojis: ['🗑️', '🚮', '🚶'], label: 'Taking Out Garbage' },
   'vacuum the carpet': { emojis: ['🧹', '🛋️', '✨'], label: 'Vacuuming Carpet' },
+  'vacuum carpet': { emojis: ['🧹', '🛋️', '✨'], label: 'Vacuuming Carpet' },
   'walk the dog': { emojis: ['🚶', '🐕', '🦮'], label: 'Walking the Dog' },
+  'walk dog': { emojis: ['🚶', '🐕', '🦮'], label: 'Walking the Dog' },
   'wash the car': { emojis: ['🚗', '🚿', '🧼'], label: 'Washing the Car' },
+  'wash car': { emojis: ['🚗', '🚿', '🧼'], label: 'Washing the Car' },
   'wash the dishes': { emojis: ['🍽️', '🧽', '🚰'], label: 'Washing Dishes' },
+  'wash dishes': { emojis: ['🍽️', '🧽', '🚰'], label: 'Washing Dishes' },
   'water the plants': { emojis: ['🪴', '🚿', '🌱'], label: 'Watering Plants' },
+  'water plants': { emojis: ['🪴', '🚿', '🌱'], label: 'Watering Plants' },
   'set the table': { emojis: ['🍽️', '🍴', '🥄'], label: 'Setting the Table' },
+  'set table': { emojis: ['🍽️', '🍴', '🥄'], label: 'Setting the Table' },
   'collect eggs': { emojis: ['🥚', '🪺', '🐓'], label: 'Collecting Eggs' },
   'milk the cows': { emojis: ['🐄', '🥛', '🪣'], label: 'Milking the Cow' },
+  'milk cows': { emojis: ['🐄', '🥛', '🪣'], label: 'Milking the Cow' },
   'feed the chickens': { emojis: ['🐓', '🌾', '🐔'], label: 'Feeding Chickens' },
+  'feed chickens': { emojis: ['🐓', '🌾', '🐔'], label: 'Feeding Chickens' },
   'pick vegetables': { emojis: ['🥬', '🥕', '🧺'], label: 'Picking Vegetables' },
   'after school': { emojis: ['🎒', '🏫', '⏰'], label: 'After School Time' },
   'come over': { emojis: ['👋', '🏠', '🚶'], label: 'Coming Over / Visiting' },
@@ -121,6 +134,41 @@ export function extractCoreWord(text: string): string {
   
   if (lower.includes('dirty shirt') || lower.includes('dirty_shirt')) return 'dirty shirt';
   if (lower.includes('marble')) return 'marble';
+
+  // Unit 6 Chores & Household Actions
+  if (lower.includes('take out') && lower.includes('garbage')) return 'take out the garbage';
+  if (lower.includes('take out garbage') || lower.includes('take_out_garbage')) return 'take out the garbage';
+  if (lower.includes('clean') && lower.includes('bathroom')) return 'clean the bathroom';
+  if (lower.includes('clean_bathroom')) return 'clean the bathroom';
+  if (lower.includes('wash') && lower.includes('car')) return 'wash the car';
+  if (lower.includes('wash_car')) return 'wash the car';
+  if (lower.includes('vacuum') && (lower.includes('carpet') || lower === 'vacuum')) return 'vacuum the carpet';
+  if (lower.includes('vacuum_carpet')) return 'vacuum the carpet';
+  if (lower.includes('water') && lower.includes('plant')) return 'water the plants';
+  if (lower.includes('water_plants')) return 'water the plants';
+  if (lower.includes('milk') && lower.includes('cow')) return 'milk the cows';
+  if (lower.includes('milk_cows')) return 'milk the cows';
+  if (lower.includes('feed') && lower.includes('chicken')) return 'feed the chickens';
+  if (lower.includes('feed_chickens')) return 'feed the chickens';
+  if (lower.includes('pick') && lower.includes('vegetable')) return 'pick vegetables';
+  if (lower.includes('pick_vegetables')) return 'pick vegetables';
+  if (lower.includes('collect') && lower.includes('egg')) return 'collect eggs';
+  if (lower.includes('collect_eggs')) return 'collect eggs';
+  if (lower.includes('sweep') && lower.includes('floor')) return 'sweep the floor';
+  if (lower.includes('sweep_the_floor') || lower.includes('sweep_floor')) return 'sweep the floor';
+  if (lower.includes('make') && lower.includes('bed')) return 'make my bed';
+  if (lower.includes('make_my_bed') || lower.includes('make_bed')) return 'make my bed';
+  if (lower.includes('do laundry') || lower.includes('do_laundry')) return 'do laundry';
+  if (lower.includes('wash') && lower.includes('dish')) return 'wash the dishes';
+  if (lower.includes('wash_the_dishes') || lower.includes('wash_dishes')) return 'wash the dishes';
+  if (lower.includes('walk') && lower.includes('dog')) return 'walk the dog';
+  if (lower.includes('walk_the_dog') || lower.includes('walk_dog')) return 'walk the dog';
+  if (lower.includes('set') && lower.includes('table')) return 'set the table';
+  if (lower.includes('set_the_table') || lower.includes('set_table')) return 'set the table';
+  if (lower.includes('clean') && lower.includes('room')) return 'clean my room';
+  if (lower.includes('clean_my_room') || lower.includes('clean_room')) return 'clean my room';
+  if (lower.includes('come over') || lower.includes('come_over')) return 'come over';
+  if (lower.includes('after school') || lower.includes('after_school')) return 'after school';
   
   return text;
 }
@@ -151,6 +199,8 @@ function getEmojiForWord(word: string): string | null {
     if (clean === 'fold' && key.includes('folder')) continue;
     if (key === 'watch' && (clean.includes('movie') || clean.includes('film'))) continue;
     if (key === 'key' && clean !== 'key') continue;
+    if (key === 'bag' && clean.includes('garbage')) continue;
+    if (key === 'clean' && clean.includes('bathroom')) continue;
     if (clean.includes(key) || (key.length >= 4 && key.includes(clean))) {
       return value;
     }
@@ -205,6 +255,532 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
           <text x="175" y="180" font-size="90" text-anchor="middle">📦</text>
         </g>
         <text x="200" y="218" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">SPATIAL: BEHIND</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'take out the garbage' || lowerWord === 'take out garbage') {
+    // Dedicated illustration for "take out the garbage": Person carrying a tied garbage bag to an outdoor wheelie trash bin
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <!-- Ground line -->
+          <line x1="50" y1="230" x2="350" y2="230" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+          
+          <!-- Outdoor green wheelie trash bin on the right -->
+          <rect x="235" y="125" width="70" height="95" rx="6" fill="#15803D"/>
+          <!-- Bin rib lines -->
+          <line x1="247" y1="140" x2="247" y2="210" stroke="#166534" stroke-width="3" stroke-linecap="round"/>
+          <line x1="270" y1="140" x2="270" y2="210" stroke="#166534" stroke-width="3" stroke-linecap="round"/>
+          <line x1="293" y1="140" x2="293" y2="210" stroke="#166534" stroke-width="3" stroke-linecap="round"/>
+          <!-- Bin wheels -->
+          <circle cx="240" cy="223" r="10" fill="#334155"/>
+          <circle cx="240" cy="223" r="4" fill="#94A3B8"/>
+          <!-- Bin handles and lid slightly open -->
+          <rect x="228" y="116" width="84" height="12" rx="4" fill="#166534"/>
+          <path d="M 230 116 L 310 102 L 312 110 L 232 120 Z" fill="#14532D"/>
+          <rect x="262" y="98" width="16" height="7" rx="3" fill="#14532D"/>
+          <!-- Recycle symbol on bin -->
+          <text x="270" y="180" font-size="28" text-anchor="middle" fill="#86EFAC">♻️</text>
+
+          <!-- Person walking on the left -->
+          <circle cx="120" cy="95" r="16" fill="#FDBA74"/>
+          <path d="M 104 92 C 104 76 136 76 136 92 C 142 92 144 96 142 99 L 120 99 Z" fill="#0284C7"/>
+          <circle cx="126" cy="95" r="2.2" fill="#431407"/>
+          <path d="M 124 101 Q 128 104 132 101" stroke="#431407" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M 106 114 L 134 114 L 138 165 L 102 165 Z" fill="#F59E0B" rx="4"/>
+          <path d="M 106 165 L 94 220 L 108 222 L 118 175 L 124 175 L 138 220 L 152 218 L 132 165 Z" fill="#1E3A8A"/>
+          <ellipse cx="94" cy="223" rx="10" ry="5" fill="#475569"/>
+          <ellipse cx="145" cy="221" rx="10" ry="5" fill="#475569"/>
+          <path d="M 130 125 L 165 145 L 180 148" stroke="#FDBA74" stroke-width="7" stroke-linecap="round" fill="none"/>
+          
+          <!-- Black trash bag being carried towards bin -->
+          <path d="M 175 145 Q 165 155 162 175 Q 160 205 185 208 Q 210 205 208 175 Q 205 155 190 145 Z" fill="#1E293B"/>
+          <polygon points="175,145 182,138 190,145" fill="#334155"/>
+          <path d="M 178 141 Q 183 133 186 142" stroke="#EF4444" stroke-width="2.5" fill="none"/>
+          <path d="M 198 165 Q 215 160 226 150" stroke="#0284C7" stroke-width="2.5" stroke-dasharray="3,3" fill="none"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="50" y1="215" x2="350" y2="215" stroke="#CBD5E1" stroke-width="3.5" stroke-linecap="round"/>
+          
+          <!-- Outdoor green wheelie trash bin on the right -->
+          <rect x="235" y="115" width="66" height="90" rx="6" fill="#15803D"/>
+          <line x1="247" y1="130" x2="247" y2="195" stroke="#166534" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="268" y1="130" x2="268" y2="195" stroke="#166534" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="289" y1="130" x2="289" y2="195" stroke="#166534" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="240" cy="208" r="9" fill="#334155"/>
+          <circle cx="240" cy="208" r="3.5" fill="#94A3B8"/>
+          <rect x="228" y="107" width="80" height="11" rx="4" fill="#166534"/>
+          <path d="M 230 107 L 306 94 L 308 101 L 232 111 Z" fill="#14532D"/>
+          <rect x="260" y="90" width="16" height="6" rx="2.5" fill="#14532D"/>
+          <text x="268" y="168" font-size="24" text-anchor="middle" fill="#86EFAC">♻️</text>
+
+          <!-- Person walking on the left -->
+          <circle cx="120" cy="85" r="15" fill="#FDBA74"/>
+          <path d="M 105 82 C 105 67 135 67 135 82 C 141 82 143 86 141 89 L 120 89 Z" fill="#0284C7"/>
+          <circle cx="126" cy="85" r="2" fill="#431407"/>
+          <path d="M 124 91 Q 127 94 131 91" stroke="#431407" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M 106 103 L 134 103 L 138 150 L 102 150 Z" fill="#F59E0B" rx="4"/>
+          <path d="M 106 150 L 95 205 L 109 207 L 118 160 L 124 160 L 136 205 L 150 203 L 132 150 Z" fill="#1E3A8A"/>
+          <ellipse cx="95" cy="208" rx="9" ry="4.5" fill="#475569"/>
+          <ellipse cx="143" cy="206" rx="9" ry="4.5" fill="#475569"/>
+          <path d="M 130 113 L 163 133 L 178 136" stroke="#FDBA74" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+          
+          <!-- Black trash bag -->
+          <path d="M 173 133 Q 163 143 160 162 Q 158 190 183 192 Q 206 190 204 162 Q 201 143 187 133 Z" fill="#1E293B"/>
+          <polygon points="173,133 180,126 187,133" fill="#334155"/>
+          <path d="M 176 129 Q 181 122 184 130" stroke="#EF4444" stroke-width="2" fill="none"/>
+          <path d="M 194 153 Q 210 148 222 138" stroke="#0284C7" stroke-width="2" stroke-dasharray="3,3" fill="none"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">CHORES: TAKING OUT THE GARBAGE</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'clean the bathroom' || lowerWord === 'clean bathroom') {
+    // Dedicated illustration for "clean the bathroom": Sparkling clean bathtub, spray bottle, soap suds & sponge
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <!-- Bathroom tile wall backdrop -->
+          <rect x="60" y="55" width="280" height="180" rx="16" fill="#E0F2FE" opacity="0.6"/>
+          <line x1="60" y1="100" x2="340" y2="100" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="60" y1="145" x2="340" y2="145" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="120" y1="55" x2="120" y2="190" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="180" y1="55" x2="180" y2="190" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="240" y1="55" x2="240" y2="190" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="300" y1="55" x2="300" y2="190" stroke="#BAE6FD" stroke-width="1.5"/>
+
+          <!-- Shower head top left -->
+          <path d="M 80 55 L 80 75 Q 80 90 105 90 L 115 90" stroke="#94A3B8" stroke-width="5" fill="none"/>
+          <path d="M 112 80 L 126 90 L 112 100 Z" fill="#64748B"/>
+          <circle cx="135" cy="92" r="2.5" fill="#38BDF8"/>
+          <circle cx="145" cy="98" r="2.5" fill="#38BDF8"/>
+          <circle cx="138" cy="105" r="2" fill="#38BDF8"/>
+
+          <!-- Bathtub body -->
+          <path d="M 90 135 C 90 125 105 125 115 125 L 285 125 C 295 125 310 125 310 135 L 305 190 C 305 210 280 215 200 215 C 120 215 95 210 95 190 Z" fill="#FFFFFF" stroke="#93C5FD" stroke-width="3"/>
+          <path d="M 105 138 C 105 132 295 132 295 138 C 295 146 105 146 105 138 Z" fill="#BAE6FD"/>
+          <rect x="115" y="212" width="14" height="12" rx="3" fill="#64748B"/>
+          <rect x="271" y="212" width="14" height="12" rx="3" fill="#64748B"/>
+
+          <!-- Cleaning spray bottle on the right -->
+          <rect x="250" y="85" width="22" height="42" rx="5" fill="#0284C7"/>
+          <path d="M 255 85 L 260 72 L 267 72 L 270 85 Z" fill="#38BDF8"/>
+          <path d="M 260 72 L 250 67 L 252 62 L 273 62 L 273 72 Z" fill="#E2E8F0"/>
+          <circle cx="242" cy="62" r="2" fill="#38BDF8"/>
+          <circle cx="236" cy="58" r="2.5" fill="#38BDF8"/>
+          <circle cx="235" cy="66" r="1.8" fill="#38BDF8"/>
+
+          <!-- Yellow sponge with bubbles in the center -->
+          <rect x="170" y="145" width="45" height="26" rx="8" fill="#FACC15" stroke="#EAB308" stroke-width="2"/>
+          <circle cx="180" cy="155" r="2.5" fill="#CA8A04" opacity="0.6"/>
+          <circle cx="195" cy="158" r="3" fill="#CA8A04" opacity="0.6"/>
+          <circle cx="203" cy="152" r="2" fill="#CA8A04" opacity="0.6"/>
+
+          <!-- Soap bubbles / foam -->
+          <circle cx="160" cy="140" r="10" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2" opacity="0.9"/>
+          <circle cx="178" cy="132" r="13" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2" opacity="0.9"/>
+          <circle cx="200" cy="136" r="11" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2" opacity="0.9"/>
+          <circle cx="218" cy="142" r="8" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2" opacity="0.9"/>
+          
+          <text x="130" y="125" font-size="28">✨</text>
+          <text x="280" y="125" font-size="24">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="60" y="48" width="280" height="165" rx="16" fill="#E0F2FE" opacity="0.6"/>
+          <line x1="60" y1="90" x2="340" y2="90" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="60" y1="130" x2="340" y2="130" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="120" y1="48" x2="120" y2="175" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="180" y1="48" x2="180" y2="175" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="240" y1="48" x2="240" y2="175" stroke="#BAE6FD" stroke-width="1.5"/>
+          <line x1="300" y1="48" x2="300" y2="175" stroke="#BAE6FD" stroke-width="1.5"/>
+
+          <path d="M 80 48 L 80 65 Q 80 80 105 80 L 115 80" stroke="#94A3B8" stroke-width="4.5" fill="none"/>
+          <path d="M 112 71 L 125 80 L 112 89 Z" fill="#64748B"/>
+          <circle cx="132" cy="82" r="2.2" fill="#38BDF8"/>
+          <circle cx="142" cy="88" r="2.2" fill="#38BDF8"/>
+
+          <path d="M 90 125 C 90 115 105 115 115 115 L 285 115 C 295 115 310 115 310 125 L 305 178 C 305 196 280 200 200 200 C 120 200 95 196 95 178 Z" fill="#FFFFFF" stroke="#93C5FD" stroke-width="3"/>
+          <path d="M 105 127 C 105 122 295 122 295 127 C 295 134 105 134 105 127 Z" fill="#BAE6FD"/>
+          <rect x="115" y="198" width="13" height="10" rx="3" fill="#64748B"/>
+          <rect x="271" y="198" width="13" height="10" rx="3" fill="#64748B"/>
+
+          <rect x="252" y="75" width="20" height="38" rx="5" fill="#0284C7"/>
+          <path d="M 257 75 L 261 63 L 268 63 L 271 75 Z" fill="#38BDF8"/>
+          <path d="M 261 63 L 251 59 L 253 54 L 272 54 L 272 63 Z" fill="#E2E8F0"/>
+          <circle cx="244" cy="54" r="1.8" fill="#38BDF8"/>
+          <circle cx="238" cy="50" r="2.2" fill="#38BDF8"/>
+
+          <rect x="172" y="136" width="42" height="24" rx="7" fill="#FACC15" stroke="#EAB308" stroke-width="2"/>
+          <circle cx="182" cy="145" r="2.2" fill="#CA8A04" opacity="0.6"/>
+          <circle cx="196" cy="148" r="2.5" fill="#CA8A04" opacity="0.6"/>
+
+          <circle cx="162" cy="131" r="9" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8" opacity="0.9"/>
+          <circle cx="179" cy="123" r="12" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8" opacity="0.9"/>
+          <circle cx="200" cy="127" r="10" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8" opacity="0.9"/>
+          <circle cx="217" cy="133" r="7.5" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8" opacity="0.9"/>
+          
+          <text x="130" y="115" font-size="24">✨</text>
+          <text x="280" y="115" font-size="22">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">CHORES: CLEANING THE BATHROOM</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'wash the car' || lowerWord === 'wash car') {
+    // Dedicated illustration for "wash the car": Washing car with soapy bubbles, hose spray & bucket
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="50" y1="230" x2="350" y2="230" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+
+          <!-- Blue Car Body -->
+          <path d="M 100 185 L 85 185 C 75 185 68 178 68 168 L 72 155 C 75 145 83 140 92 140 L 125 140 L 155 105 C 160 100 168 98 175 98 L 245 98 C 255 98 262 103 268 110 L 295 140 L 315 142 C 325 143 332 150 332 160 L 332 175 C 332 182 326 185 318 185 L 305 185 Z" fill="#2563EB"/>
+          <path d="M 132 138 L 158 107 L 202 107 L 202 138 Z" fill="#BAE6FD"/>
+          <path d="M 210 138 L 210 107 L 243 107 L 267 138 Z" fill="#BAE6FD"/>
+          <circle cx="326" cy="155" r="5" fill="#FDE047"/>
+          <rect x="68" y="152" width="5" height="10" rx="2" fill="#EF4444"/>
+          <circle cx="125" cy="190" r="22" fill="#1E293B"/>
+          <circle cx="125" cy="190" r="11" fill="#94A3B8"/>
+          <circle cx="125" cy="190" r="4" fill="#F8FAFC"/>
+          <circle cx="280" cy="190" r="22" fill="#1E293B"/>
+          <circle cx="280" cy="190" r="11" fill="#94A3B8"/>
+          <circle cx="280" cy="190" r="4" fill="#F8FAFC"/>
+
+          <!-- Soap foam bubbles -->
+          <circle cx="170" cy="94" r="8" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8"/>
+          <circle cx="184" cy="90" r="10" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8"/>
+          <circle cx="200" cy="93" r="8" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8"/>
+          <circle cx="285" cy="135" r="9" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8"/>
+          <circle cx="300" cy="138" r="7" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.8"/>
+
+          <!-- Red wash bucket -->
+          <path d="M 335 190 L 340 225 L 365 225 L 370 190 Z" fill="#DC2626"/>
+          <ellipse cx="352.5" cy="190" rx="17.5" ry="5" fill="#F87171"/>
+          <rect x="345" y="180" width="16" height="10" rx="3" fill="#FACC15"/>
+
+          <!-- Water hose and spray -->
+          <path d="M 35 228 Q 50 170 85 130" stroke="#16A34A" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <rect x="80" y="122" width="14" height="8" rx="2" fill="#D97706" transform="rotate(-40, 80, 122)"/>
+          <path d="M 95 116 Q 130 100 160 102" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="3,3" fill="none"/>
+          <circle cx="140" cy="108" r="3" fill="#38BDF8"/>
+          <circle cx="165" cy="115" r="2.5" fill="#38BDF8"/>
+          <text x="210" y="85" font-size="24">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="50" y1="215" x2="350" y2="215" stroke="#CBD5E1" stroke-width="3.5" stroke-linecap="round"/>
+
+          <path d="M 100 173 L 85 173 C 75 173 68 166 68 156 L 72 144 C 75 134 83 130 92 130 L 125 130 L 155 98 C 160 93 168 91 175 91 L 245 91 C 255 91 262 96 268 103 L 295 130 L 315 132 C 325 133 332 140 332 150 L 332 163 C 332 170 326 173 318 173 L 305 173 Z" fill="#2563EB"/>
+          <path d="M 132 128 L 158 100 L 202 100 L 202 128 Z" fill="#BAE6FD"/>
+          <path d="M 210 128 L 210 100 L 243 100 L 267 128 Z" fill="#BAE6FD"/>
+          <circle cx="326" cy="146" r="4.5" fill="#FDE047"/>
+          <rect x="68" y="143" width="5" height="9" rx="2" fill="#EF4444"/>
+          <circle cx="125" cy="178" r="20" fill="#1E293B"/>
+          <circle cx="125" cy="178" r="10" fill="#94A3B8"/>
+          <circle cx="125" cy="178" r="3.5" fill="#F8FAFC"/>
+          <circle cx="280" cy="178" r="20" fill="#1E293B"/>
+          <circle cx="280" cy="178" r="10" fill="#94A3B8"/>
+          <circle cx="280" cy="178" r="3.5" fill="#F8FAFC"/>
+
+          <circle cx="170" cy="87" r="7" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.5"/>
+          <circle cx="184" cy="83" r="9" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.5"/>
+          <circle cx="200" cy="86" r="7" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.5"/>
+          <circle cx="285" cy="125" r="8" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.5"/>
+
+          <path d="M 335 178 L 340 210 L 365 210 L 370 178 Z" fill="#DC2626"/>
+          <ellipse cx="352.5" cy="178" rx="17.5" ry="4.5" fill="#F87171"/>
+          <rect x="345" y="169" width="15" height="9" rx="3" fill="#FACC15"/>
+
+          <path d="M 35 213 Q 50 160 85 120" stroke="#16A34A" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <rect x="80" y="113" width="13" height="7" rx="2" fill="#D97706" transform="rotate(-40, 80, 113)"/>
+          <path d="M 95 108 Q 130 92 160 94" stroke="#38BDF8" stroke-width="2" stroke-dasharray="3,3" fill="none"/>
+          <circle cx="140" cy="100" r="2.5" fill="#38BDF8"/>
+          <text x="210" y="78" font-size="22">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">CHORES: WASHING THE CAR</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'vacuum the carpet' || lowerWord === 'vacuum carpet') {
+    // Dedicated illustration for "vacuum the carpet": Vacuum cleaner cleaning a woven living room rug with suction sparkles
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="40" y1="230" x2="360" y2="230" stroke="#E2E8F0" stroke-width="4"/>
+
+          <!-- Woven carpet / rug with geometric pattern -->
+          <rect x="70" y="170" width="260" height="55" rx="6" fill="#F97316"/>
+          <rect x="80" y="176" width="240" height="43" rx="4" fill="#FEF08A"/>
+          <polygon points="110,197 125,183 140,197 125,211" fill="#EA580C"/>
+          <polygon points="170,197 185,183 200,197 185,211" fill="#EA580C"/>
+          <polygon points="230,197 245,183 260,197 245,211" fill="#EA580C"/>
+          <polygon points="290,197 305,183 320,197 305,211" fill="#EA580C"/>
+
+          <!-- Vacuum Cleaner Canister Unit on right -->
+          <ellipse cx="295" cy="148" rx="35" ry="22" fill="#7C3AED"/>
+          <ellipse cx="285" cy="142" rx="20" ry="12" fill="#A78BFA"/>
+          <circle cx="310" cy="158" r="14" fill="#334155"/>
+          <circle cx="310" cy="158" r="6" fill="#94A3B8"/>
+          <circle cx="275" cy="138" r="4" fill="#EF4444"/>
+
+          <!-- Flexible Vacuum Hose -->
+          <path d="M 270 148 C 240 148 220 85 185 85 C 160 85 155 110 155 125" stroke="#64748B" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <path d="M 270 148 C 240 148 220 85 185 85 C 160 85 155 110 155 125" stroke="#94A3B8" stroke-width="3" stroke-dasharray="2,5" stroke-linecap="round" fill="none"/>
+
+          <!-- Metal Wand & Handle -->
+          <path d="M 155 125 L 140 190" stroke="#CBD5E1" stroke-width="6" stroke-linecap="round"/>
+          <rect x="150" y="125" width="12" height="18" rx="3" fill="#1E293B"/>
+
+          <!-- Vacuum Floor Nozzle Head on the carpet -->
+          <polygon points="110,198 170,198 165,188 115,188" fill="#4C1D95"/>
+          <rect x="112" y="197" width="56" height="5" rx="2" fill="#A78BFA"/>
+
+          <rect x="100" y="180" width="80" height="35" rx="4" fill="#FFFFFF" opacity="0.35"/>
+          <text x="120" y="165" font-size="26">✨</text>
+          <text x="165" y="155" font-size="20">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="40" y1="215" x2="360" y2="215" stroke="#E2E8F0" stroke-width="3.5"/>
+
+          <rect x="70" y="160" width="260" height="50" rx="6" fill="#F97316"/>
+          <rect x="80" y="165" width="240" height="40" rx="4" fill="#FEF08A"/>
+          <polygon points="110,185 125,172 140,185 125,198" fill="#EA580C"/>
+          <polygon points="170,185 185,172 200,185 185,198" fill="#EA580C"/>
+          <polygon points="230,185 245,172 260,185 245,198" fill="#EA580C"/>
+          <polygon points="290,185 305,172 320,185 305,198" fill="#EA580C"/>
+
+          <ellipse cx="295" cy="138" rx="33" ry="20" fill="#7C3AED"/>
+          <ellipse cx="285" cy="132" rx="18" ry="11" fill="#A78BFA"/>
+          <circle cx="310" cy="148" r="13" fill="#334155"/>
+          <circle cx="310" cy="148" r="5" fill="#94A3B8"/>
+          <circle cx="275" cy="128" r="3.5" fill="#EF4444"/>
+
+          <path d="M 270 138 C 240 138 220 80 185 80 C 160 80 155 102 155 116" stroke="#64748B" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <path d="M 270 138 C 240 138 220 80 185 80 C 160 80 155 102 155 116" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="2,5" stroke-linecap="round" fill="none"/>
+
+          <path d="M 155 116 L 140 178" stroke="#CBD5E1" stroke-width="5.5" stroke-linecap="round"/>
+          <rect x="150" y="116" width="11" height="16" rx="3" fill="#1E293B"/>
+
+          <polygon points="110,185 170,185 165,176 115,176" fill="#4C1D95"/>
+          <rect x="112" y="184" width="56" height="4.5" rx="2" fill="#A78BFA"/>
+
+          <rect x="100" y="169" width="80" height="32" rx="4" fill="#FFFFFF" opacity="0.35"/>
+          <text x="120" y="152" font-size="24">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">CHORES: VACUUMING THE CARPET</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'water the plants' || lowerWord === 'water plants') {
+    // Dedicated illustration for "water the plants": Classic watering can pouring glistening water drops onto lush potted plants
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="50" y1="230" x2="350" y2="230" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+
+          <!-- Large terracotta pot on the right -->
+          <polygon points="210,165 290,165 280,225 220,225" fill="#EA580C"/>
+          <rect x="205" y="156" width="90" height="12" rx="4" fill="#C2410C"/>
+
+          <!-- Lush green plant stems & broad leaves -->
+          <path d="M 250 160 Q 250 120 230 95 Q 260 115 250 160" fill="#15803D"/>
+          <path d="M 250 160 Q 270 125 305 110 Q 285 135 250 160" fill="#16A34A"/>
+          <path d="M 250 160 Q 230 135 195 125 Q 220 145 250 160" fill="#22C55E"/>
+          <path d="M 250 150 Q 255 105 275 80 Q 265 110 250 150" fill="#15803D"/>
+          <circle cx="275" cy="78" r="10" fill="#F43F5E"/>
+          <circle cx="275" cy="78" r="4" fill="#FDE047"/>
+
+          <!-- Small pot on the left -->
+          <polygon points="120,185 170,185 163,225 127,225" fill="#D97706"/>
+          <rect x="117" y="178" width="56" height="9" rx="3" fill="#B45309"/>
+          <path d="M 145 180 Q 130 155 115 150 Q 135 165 145 180" fill="#16A34A"/>
+          <path d="M 145 180 Q 160 155 175 150 Q 155 165 145 180" fill="#22C55E"/>
+
+          <!-- Tilted Turquoise Watering Can -->
+          <ellipse cx="140" cy="85" rx="32" ry="24" fill="#0D9488" transform="rotate(25, 140, 85)"/>
+          <path d="M 160 90 L 210 115 L 208 122 L 155 98 Z" fill="#0F766E"/>
+          <ellipse cx="212" cy="120" rx="7" ry="12" fill="#14B8A6" transform="rotate(45, 212, 120)"/>
+          <path d="M 115 75 Q 90 85 105 110" stroke="#0F766E" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M 130 65 Q 140 45 165 60" stroke="#0F766E" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+          <!-- Water droplets -->
+          <path d="M 218 126 Q 232 145 240 165" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="3,3" fill="none"/>
+          <circle cx="230" cy="138" r="3" fill="#38BDF8"/>
+          <circle cx="242" cy="148" r="3.5" fill="#38BDF8"/>
+          <circle cx="250" cy="135" r="3" fill="#38BDF8"/>
+          <text x="285" y="100" font-size="24">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="50" y1="215" x2="350" y2="215" stroke="#CBD5E1" stroke-width="3.5" stroke-linecap="round"/>
+
+          <polygon points="210,152 290,152 280,210 220,210" fill="#EA580C"/>
+          <rect x="205" y="144" width="90" height="11" rx="4" fill="#C2410C"/>
+
+          <path d="M 250 148 Q 250 110 230 87 Q 260 105 250 148" fill="#15803D"/>
+          <path d="M 250 148 Q 270 115 305 100 Q 285 125 250 148" fill="#16A34A"/>
+          <path d="M 250 148 Q 230 125 195 115 Q 220 135 250 148" fill="#22C55E"/>
+          <path d="M 250 138 Q 255 95 275 72 Q 265 100 250 138" fill="#15803D"/>
+          <circle cx="275" cy="70" r="9" fill="#F43F5E"/>
+          <circle cx="275" cy="70" r="3.5" fill="#FDE047"/>
+
+          <polygon points="120,172 170,172 163,210 127,210" fill="#D97706"/>
+          <rect x="117" y="165" width="56" height="8" rx="3" fill="#B45309"/>
+          <path d="M 145 168 Q 130 145 115 140 Q 135 155 145 168" fill="#16A34A"/>
+          <path d="M 145 168 Q 160 145 175 140 Q 155 155 145 168" fill="#22C55E"/>
+
+          <ellipse cx="140" cy="78" rx="30" ry="22" fill="#0D9488" transform="rotate(25, 140, 78)"/>
+          <path d="M 160 83 L 208 106 L 206 112 L 155 90 Z" fill="#0F766E"/>
+          <ellipse cx="210" cy="110" rx="6.5" ry="11" fill="#14B8A6" transform="rotate(45, 210, 110)"/>
+          <path d="M 115 68 Q 90 78 105 102" stroke="#0F766E" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          <path d="M 130 58 Q 140 40 165 54" stroke="#0F766E" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+          <path d="M 216 116 Q 230 133 238 152" stroke="#38BDF8" stroke-width="2" stroke-dasharray="3,3" fill="none"/>
+          <circle cx="228" cy="126" r="2.5" fill="#38BDF8"/>
+          <circle cx="239" cy="136" r="3" fill="#38BDF8"/>
+          <text x="285" y="92" font-size="22">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">CHORES: WATERING THE PLANTS</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'milk the cows' || lowerWord === 'milk cows') {
+    // Dedicated illustration for "milk the cows": Farmer milking a dairy cow on a stool into a milk pail
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="40" y1="230" x2="360" y2="230" stroke="#FDE047" stroke-width="5" stroke-linecap="round"/>
+
+          <!-- Dairy Cow Body -->
+          <path d="M 110 120 C 110 95 140 85 200 85 C 235 85 245 100 245 130 L 245 175 C 245 185 235 190 220 190 L 125 190 C 110 190 110 180 110 175 Z" fill="#FFFFFF" stroke="#334155" stroke-width="3"/>
+          <path d="M 130 95 Q 150 90 155 115 Q 145 135 130 125 Z" fill="#1E293B"/>
+          <path d="M 185 90 Q 215 88 220 115 Q 210 135 185 125 Z" fill="#1E293B"/>
+
+          <!-- Cow Head -->
+          <circle cx="85" cy="115" r="25" fill="#FFFFFF" stroke="#334155" stroke-width="2.5"/>
+          <path d="M 72 100 Q 88 95 85 118 Q 70 115 72 100 Z" fill="#1E293B"/>
+          <circle cx="80" cy="112" r="3" fill="#FFFFFF"/>
+          <circle cx="80" cy="112" r="1.8" fill="#000000"/>
+          <ellipse cx="68" cy="125" rx="14" ry="10" fill="#FBCFE8"/>
+          <circle cx="64" cy="125" r="2" fill="#9D174D"/>
+          <circle cx="72" cy="125" r="2" fill="#9D174D"/>
+          <path d="M 88 92 Q 95 78 88 74 Q 82 78 84 92" fill="#FDE047"/>
+          <ellipse cx="98" cy="98" rx="10" ry="5" fill="#FFFFFF" stroke="#334155" stroke-width="1.5" transform="rotate(30, 98, 98)"/>
+
+          <!-- Cow Legs -->
+          <rect x="115" y="188" width="12" height="38" rx="4" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+          <rect x="115" y="220" width="12" height="6" fill="#1E293B"/>
+          <rect x="220" y="188" width="12" height="38" rx="4" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+          <rect x="220" y="220" width="12" height="6" fill="#1E293B"/>
+
+          <!-- Udder -->
+          <path d="M 175 190 Q 185 208 198 208 Q 210 208 215 190 Z" fill="#FBCFE8" stroke="#F472B6" stroke-width="1.5"/>
+          <rect x="182" y="206" width="3" height="7" rx="1.5" fill="#F472B6"/>
+          <rect x="195" y="206" width="3" height="7" rx="1.5" fill="#F472B6"/>
+
+          <!-- Milk Pail & Milk Stream -->
+          <path d="M 178 205 L 182 228 L 206 228 L 210 205 Z" fill="#94A3B8"/>
+          <ellipse cx="194" cy="205" rx="16" ry="4" fill="#CBD5E1"/>
+          <ellipse cx="194" cy="207" rx="13" ry="3" fill="#FFFFFF"/>
+          <line x1="183.5" y1="212" x2="190" y2="222" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="196.5" y1="212" x2="196" y2="222" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+
+          <!-- Farmer sitting on stool -->
+          <rect x="260" y="195" width="30" height="6" rx="2" fill="#78350F"/>
+          <line x1="265" y1="201" x2="260" y2="228" stroke="#78350F" stroke-width="4" stroke-linecap="round"/>
+          <line x1="285" y1="201" x2="290" y2="228" stroke="#78350F" stroke-width="4" stroke-linecap="round"/>
+
+          <circle cx="265" cy="120" r="13" fill="#FDBA74"/>
+          <ellipse cx="265" cy="112" rx="20" ry="6" fill="#FACC15"/>
+          <path d="M 255 110 C 255 100 275 100 275 110 Z" fill="#EAB308"/>
+          <path d="M 255 133 L 278 133 L 285 180 L 255 180 Z" fill="#0284C7" rx="4"/>
+          <rect x="259" y="133" width="4" height="47" fill="#1E3A8A"/>
+          <rect x="272" y="133" width="4" height="47" fill="#1E3A8A"/>
+          <path d="M 260 145 L 210 185 L 188 206" stroke="#FDBA74" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M 265 148 L 220 188 L 198 206" stroke="#FDBA74" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M 265 180 L 250 205 L 245 228" stroke="#1E3A8A" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <ellipse cx="245" cy="228" rx="8" ry="4" fill="#451A03"/>
+
+          <text x="325" y="90" font-size="34">🥛</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="40" y1="215" x2="360" y2="215" stroke="#FDE047" stroke-width="4" stroke-linecap="round"/>
+
+          <path d="M 110 110 C 110 88 140 78 200 78 C 235 78 245 92 245 120 L 245 160 C 245 170 235 175 220 175 L 125 175 C 110 175 110 166 110 160 Z" fill="#FFFFFF" stroke="#334155" stroke-width="2.5"/>
+          <path d="M 130 88 Q 150 83 155 106 Q 145 124 130 115 Z" fill="#1E293B"/>
+          <path d="M 185 83 Q 215 81 220 106 Q 210 124 185 115 Z" fill="#1E293B"/>
+
+          <circle cx="85" cy="105" r="22" fill="#FFFFFF" stroke="#334155" stroke-width="2"/>
+          <path d="M 73 92 Q 88 88 85 108 Q 71 105 73 92 Z" fill="#1E293B"/>
+          <circle cx="80" cy="102" r="2.5" fill="#FFFFFF"/>
+          <circle cx="80" cy="102" r="1.5" fill="#000000"/>
+          <ellipse cx="70" cy="115" rx="12" ry="8" fill="#FBCFE8"/>
+          <circle cx="66" cy="115" r="1.8" fill="#9D174D"/>
+          <circle cx="74" cy="115" r="1.8" fill="#9D174D"/>
+          <path d="M 88 84 Q 94 72 88 68 Q 82 72 84 84" fill="#FDE047"/>
+          <ellipse cx="96" cy="90" rx="9" ry="4.5" fill="#FFFFFF" stroke="#334155" stroke-width="1.2" transform="rotate(30, 96, 90)"/>
+
+          <rect x="115" y="172" width="11" height="35" rx="3" fill="#FFFFFF" stroke="#334155" stroke-width="1.8"/>
+          <rect x="115" y="203" width="11" height="5" fill="#1E293B"/>
+          <rect x="220" y="172" width="11" height="35" rx="3" fill="#FFFFFF" stroke="#334155" stroke-width="1.8"/>
+          <rect x="220" y="203" width="11" height="5" fill="#1E293B"/>
+
+          <path d="M 175 175 Q 185 192 198 192 Q 210 192 215 175 Z" fill="#FBCFE8" stroke="#F472B6" stroke-width="1.2"/>
+          <rect x="182" y="190" width="2.5" height="6" rx="1" fill="#F472B6"/>
+          <rect x="195" y="190" width="2.5" height="6" rx="1" fill="#F472B6"/>
+
+          <path d="M 178 192 L 182 212 L 206 212 L 210 192 Z" fill="#94A3B8"/>
+          <ellipse cx="194" cy="192" rx="15" ry="3.5" fill="#CBD5E1"/>
+          <ellipse cx="194" cy="193" rx="12" ry="2.5" fill="#FFFFFF"/>
+          <line x1="183.5" y1="195" x2="190" y2="204" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+          <line x1="196.5" y1="195" x2="196" y2="204" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+          <rect x="260" y="180" width="28" height="5" rx="2" fill="#78350F"/>
+          <line x1="265" y1="185" x2="260" y2="212" stroke="#78350F" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="285" y1="185" x2="290" y2="212" stroke="#78350F" stroke-width="3.5" stroke-linecap="round"/>
+
+          <circle cx="265" cy="110" r="12" fill="#FDBA74"/>
+          <ellipse cx="265" cy="103" rx="18" ry="5" fill="#FACC15"/>
+          <path d="M 256 101 C 256 92 274 92 274 101 Z" fill="#EAB308"/>
+          <path d="M 255 122 L 278 122 L 285 166 L 255 166 Z" fill="#0284C7" rx="3"/>
+          <rect x="259" y="122" width="3.5" height="44" fill="#1E3A8A"/>
+          <rect x="272" y="122" width="3.5" height="44" fill="#1E3A8A"/>
+          <path d="M 260 133 L 210 170 L 188 190" stroke="#FDBA74" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M 265 136 L 220 173 L 198 190" stroke="#FDBA74" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+          <path d="M 265 166 L 250 190 L 245 212" stroke="#1E3A8A" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <ellipse cx="245" cy="212" rx="7" ry="3.5" fill="#451A03"/>
+
+          <text x="325" y="80" font-size="28">🥛</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">FARM CHORES: MILKING THE COW</text>
         <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
