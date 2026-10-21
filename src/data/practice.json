@@ -3265,6 +3265,7 @@
     {
       "id": "u6l1-q1",
       "type": "picture-select",
+      "hideOptionLabels": true,
       "questionText": "Picture -> Word: Choose the correct word for making bed:",
       "options": [
         "make my bed",
@@ -3393,6 +3394,7 @@
     {
       "id": "u6l1-q9",
       "type": "picture-select",
+      "hideOptionLabels": true,
       "questionText": "Picture MCQ: Choose the sentence matching 'doing laundry':",
       "options": [
         "He does laundry.",
@@ -3427,6 +3429,7 @@
     {
       "id": "u6l2-q1",
       "type": "picture-select",
+      "hideOptionLabels": true,
       "questionText": "Vocabulary Review: Choose the picture for 'water the plants':",
       "options": [
         "water the plants",
@@ -3537,16 +3540,17 @@
     {
       "id": "u6l2-q9",
       "type": "picture-select",
+      "hideOptionLabels": true,
       "questionText": "Picture Application: Choose the picture for 'clean the bathroom':",
       "options": [
         "clean the bathroom",
         "vacuum the carpet",
-        "water the plants"
+        "take out the garbage"
       ],
       "optionImages": [
         "/images/unit6/lesson2/clean_bathroom.png",
         "/images/unit6/lesson2/vacuum_carpet.png",
-        "/images/unit6/lesson2/water_plants.png"
+        "/images/unit6/lesson2/take_out_garbage.png"
       ],
       "correctAnswer": "clean the bathroom",
       "explanation_vi": "Đúng. Hình ảnh dọn phòng tắm ('clean the bathroom').",
