@@ -111,6 +111,15 @@ const COMPOSITE_ILLUSTRATIONS: Record<string, { emojis: string[]; label: string 
   'stormy': { emojis: ['⛈️', '⚡', '🌧️'], label: 'Stormy Weather' },
   'snowy': { emojis: ['❄️', '⛄', '🌨️'], label: 'Snowy Weather' },
   
+  // Unit 8 - Things We Use
+  'folder': { emojis: ['📁', '📄', '📎'], label: 'Document Folder' },
+  'magazine': { emojis: ['📰', '📖', '🎨'], label: 'Magazine' },
+  'poster': { emojis: ['📜', '🖼️', '🎨'], label: 'Poster' },
+  'pencil sharpener': { emojis: ['✏️', '⚙️', '📝'], label: 'Pencil Sharpener' },
+  'glue stick': { emojis: ['🖍️', '🧴', '📄'], label: 'Glue Stick' },
+  'clean up': { emojis: ['🧹', '🧼', '✨'], label: 'Cleaning Up' },
+  'digital tv': { emojis: ['📺', '📡', '🎬'], label: 'Digital TV' },
+
   // Specific Food/Clothing Corrections
   'potato chips': { emojis: ['🍟', '🥔', '🍿'], label: 'Potato Chips' },
   'sweater': { emojis: ['🧥', '🧶', '🧣'], label: 'Sweater / Knitwear' }
@@ -152,6 +161,16 @@ export function extractCoreWord(text: string): string {
   if (lower.includes('windy')) return 'windy';
   if (lower.includes('stormy')) return 'stormy';
   if (lower.includes('snowy')) return 'snowy';
+
+  // Unit 8 Things We Use
+  if (lower.includes('digital tv') || lower.includes('digital_tv') || (lower.includes('digital') && lower.includes('tv'))) return 'digital tv';
+  if (lower.includes('pencil sharpener') || lower.includes('pencil_sharpener') || lower.includes('sharpener')) return 'pencil sharpener';
+  if (lower.includes('glue stick') || lower.includes('glue_stick')) return 'glue stick';
+  if (lower.includes('magazine')) return 'magazine';
+  if (lower.includes('poster')) return 'poster';
+  if (lower.includes('clean up') || lower.includes('clean_up')) return 'clean up';
+  if (lower.includes('saturday')) return 'Saturday';
+  if (lower === 'folder' || lower.includes('folder')) return 'folder';
 
   if ((lower.includes('shop') || lower.includes('shopping')) && !lower.includes('coffee') && !lower.includes('flower')) return 'shop';
   
@@ -291,7 +310,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'take out the garbage' || lowerWord === 'take out garbage') {
+    } else if (lowerWord === 'take out the garbage' || lowerWord === 'take out garbage') {
     // Dedicated illustration for "take out the garbage": Person carrying a tied garbage bag to an outdoor wheelie trash bin
     if (hideText) {
       svgContent = `
@@ -373,7 +392,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'clean the bathroom' || lowerWord === 'clean bathroom') {
+    } else if (lowerWord === 'clean the bathroom' || lowerWord === 'clean bathroom') {
     // Dedicated illustration for "clean the bathroom": Sparkling clean bathtub, spray bottle, soap suds & sponge
     if (hideText) {
       svgContent = `
@@ -469,7 +488,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'wash the car' || lowerWord === 'wash car') {
+    } else if (lowerWord === 'wash the car' || lowerWord === 'wash car') {
     // Dedicated illustration for "wash the car": Washing car with soapy bubbles, hose spray & bucket
     if (hideText) {
       svgContent = `
@@ -548,7 +567,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'vacuum the carpet' || lowerWord === 'vacuum carpet') {
+    } else if (lowerWord === 'vacuum the carpet' || lowerWord === 'vacuum carpet') {
     // Dedicated illustration for "vacuum the carpet": Vacuum cleaner cleaning a woven living room rug with suction sparkles
     if (hideText) {
       svgContent = `
@@ -623,7 +642,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'water the plants' || lowerWord === 'water plants') {
+    } else if (lowerWord === 'water the plants' || lowerWord === 'water plants') {
     // Dedicated illustration for "water the plants": Classic watering can pouring glistening water drops onto lush potted plants
     if (hideText) {
       svgContent = `
@@ -700,7 +719,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'milk the cows' || lowerWord === 'milk cows') {
+    } else if (lowerWord === 'milk the cows' || lowerWord === 'milk cows') {
     // Dedicated illustration for "milk the cows": Farmer milking a dairy cow on a stool into a milk pail
     if (hideText) {
       svgContent = `
@@ -817,7 +836,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'pool' || lowerWord === 'swimming pool') {
+    } else if (lowerWord === 'pool' || lowerWord === 'swimming pool') {
     // Dedicated illustration for "pool": Clear swimming pool with blue water, lane lines, ladder & dive board
     if (hideText) {
       svgContent = `
@@ -873,7 +892,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'coffee shop' || lowerWord === 'cafe') {
+    } else if (lowerWord === 'coffee shop' || lowerWord === 'cafe') {
     // Dedicated illustration for "coffee shop": Café storefront with striped awning, coffee cup logo & outdoor bistro table
     if (hideText) {
       svgContent = `
@@ -953,7 +972,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'flower shop' || lowerWord === 'florist') {
+    } else if (lowerWord === 'flower shop' || lowerWord === 'florist') {
     // Dedicated illustration for "flower shop": Florist shop with colorful blooming flowers, bouquets & awning
     if (hideText) {
       svgContent = `
@@ -1049,7 +1068,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'bookstore' || lowerWord === 'book shop') {
+    } else if (lowerWord === 'bookstore' || lowerWord === 'book shop') {
     // Dedicated illustration for "bookstore": Bookshop facade with large bookshelves lined with colorful books & open reading book
     if (hideText) {
       svgContent = `
@@ -1129,7 +1148,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'pharmacy' || lowerWord === 'drugstore') {
+    } else if (lowerWord === 'pharmacy' || lowerWord === 'drugstore') {
     // Dedicated illustration for "pharmacy": Pharmacy building with green cross sign, medicine counter & prescription bottles
     if (hideText) {
       svgContent = `
@@ -1203,7 +1222,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'meet' || lowerWord === 'greeting' || lowerWord === 'meeting') {
+    } else if (lowerWord === 'meet' || lowerWord === 'greeting' || lowerWord === 'meeting') {
     // Dedicated illustration for "meet": Two friendly people meeting warmly, waving & shaking hands in greeting
     if (hideText) {
       svgContent = `
@@ -1289,7 +1308,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'sunny' || lowerWord === 'sun') {
+    } else if (lowerWord === 'sunny' || lowerWord === 'sun') {
     // Dedicated illustration for "sunny": Radiant smiling golden sun with bright sunbeams
     if (hideText) {
       svgContent = `
@@ -1349,7 +1368,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'rainy' || lowerWord === 'rain') {
+    } else if (lowerWord === 'rainy' || lowerWord === 'rain') {
     // Dedicated illustration for "rainy": Rain cloud pouring glistening raindrops onto a colorful open umbrella
     if (hideText) {
       svgContent = `
@@ -1405,7 +1424,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'cloudy' || lowerWord === 'clouds') {
+    } else if (lowerWord === 'cloudy' || lowerWord === 'clouds') {
     // Dedicated illustration for "cloudy": Scenic sky filled with billowing cumulus clouds with sun peaking behind
     if (hideText) {
       svgContent = `
@@ -1437,7 +1456,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'windy' || lowerWord === 'wind') {
+    } else if (lowerWord === 'windy' || lowerWord === 'wind') {
     // Dedicated illustration for "windy": Tree bending gracefully under strong wind gusts with flying swirling leaves
     if (hideText) {
       svgContent = `
@@ -1487,7 +1506,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'stormy' || lowerWord === 'storm') {
+    } else if (lowerWord === 'stormy' || lowerWord === 'storm') {
     // Dedicated illustration for "stormy": Dark ominous thunderclouds, bright electric lightning bolts & heavy storm rain
     if (hideText) {
       svgContent = `
@@ -1530,7 +1549,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'snowy' || lowerWord === 'snow') {
+    } else if (lowerWord === 'snowy' || lowerWord === 'snow') {
     // Dedicated illustration for "snowy": Snow-covered pine tree, falling snowflakes & cheerful snowman
     if (hideText) {
       svgContent = `
@@ -1600,6 +1619,389 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
+  } else if (lowerWord === 'folder') {
+    // Dedicated illustration for "folder": Document folder / binder holding paperwork with metal clip
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 90 90 L 140 90 L 160 110 L 310 110 C 318 110 325 117 325 125 L 325 210 C 325 218 318 225 310 225 L 90 225 C 82 225 75 218 75 210 L 75 105 C 75 97 82 90 90 90 Z" fill="#1D4ED8" />
+          <rect x="95" y="105" width="210" height="110" rx="4" fill="#F8FAFC" />
+          <line x1="115" y1="125" x2="285" y2="125" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <line x1="115" y1="145" x2="285" y2="145" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <line x1="115" y1="165" x2="255" y2="165" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <line x1="115" y1="185" x2="270" y2="185" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <path d="M 75 140 L 325 140 L 325 210 C 325 218 318 225 310 225 L 90 225 C 82 225 75 218 75 210 Z" fill="#2563EB" opacity="0.95" />
+          <rect x="165" y="96" width="70" height="20" rx="4" fill="#94A3B8" stroke="#475569" stroke-width="2" />
+          <circle cx="185" cy="106" r="4" fill="#334155" />
+          <circle cx="215" cy="106" r="4" fill="#334155" />
+          <path d="M 180 116 L 180 135 L 220 135 L 220 116" stroke="#475569" stroke-width="3" fill="none" stroke-linecap="round" />
+          <rect x="95" y="90" width="45" height="15" rx="3" fill="#F59E0B" />
+          <text x="117" y="101" font-family="'Nunito', sans-serif" font-size="8" font-weight="900" fill="#FFFFFF" text-anchor="middle">DOCS</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 90 90 L 140 90 L 160 110 L 310 110 C 318 110 325 117 325 125 L 325 210 C 325 218 318 225 310 225 L 90 225 C 82 225 75 218 75 210 L 75 105 C 75 97 82 90 90 90 Z" fill="#1D4ED8" />
+          <rect x="95" y="105" width="210" height="110" rx="4" fill="#F8FAFC" />
+          <line x1="115" y1="125" x2="285" y2="125" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <line x1="115" y1="145" x2="285" y2="145" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <line x1="115" y1="165" x2="255" y2="165" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <line x1="115" y1="185" x2="270" y2="185" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" />
+          <path d="M 75 140 L 325 140 L 325 210 C 325 218 318 225 310 225 L 90 225 C 82 225 75 218 75 210 Z" fill="#2563EB" opacity="0.95" />
+          <rect x="165" y="96" width="70" height="20" rx="4" fill="#94A3B8" stroke="#475569" stroke-width="2" />
+          <circle cx="185" cy="106" r="4" fill="#334155" />
+          <circle cx="215" cy="106" r="4" fill="#334155" />
+          <path d="M 180 116 L 180 135 L 220 135 L 220 116" stroke="#475569" stroke-width="3" fill="none" stroke-linecap="round" />
+          <rect x="95" y="90" width="45" height="15" rx="3" fill="#F59E0B" />
+          <text x="117" y="101" font-family="'Nunito', sans-serif" font-size="8" font-weight="900" fill="#FFFFFF" text-anchor="middle">DOCS</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">DOCUMENT FOLDER</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'magazine') {
+    // Dedicated illustration for "magazine": Glossy printed magazine with headlines and feature image
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="125" y="65" width="165" height="145" rx="6" fill="#E2E8F0" transform="rotate(6, 207, 137)" />
+          <rect x="120" y="65" width="165" height="145" rx="6" fill="#F8FAFC" transform="rotate(3, 202, 137)" />
+          <rect x="115" y="65" width="165" height="145" rx="6" fill="#7C3AED" />
+          <rect x="122" y="73" width="151" height="32" rx="4" fill="#5B21B6" />
+          <text x="197" y="95" font-family="'Nunito', sans-serif" font-size="16" font-weight="900" fill="#FDE047" text-anchor="middle" letter-spacing="2">MAGAZINE</text>
+          <rect x="122" y="112" width="90" height="88" rx="4" fill="#C4B5FD" />
+          <circle cx="150" cy="140" r="14" fill="#FBBF24" />
+          <path d="M 130 185 L 155 155 L 180 185 Z" fill="#10B981" />
+          <path d="M 165 185 L 185 165 L 205 185 Z" fill="#059669" />
+          <rect x="220" y="115" width="53" height="8" rx="2" fill="#FDE047" />
+          <rect x="220" y="130" width="45" height="5" rx="2" fill="#DDD6FE" />
+          <rect x="220" y="140" width="50" height="5" rx="2" fill="#DDD6FE" />
+          <rect x="220" y="155" width="48" height="7" rx="2" fill="#F8FAFC" />
+          <rect x="220" y="168" width="42" height="5" rx="2" fill="#DDD6FE" />
+          <rect x="235" y="185" width="35" height="15" fill="#FFFFFF" rx="2" />
+          <line x1="240" y1="187" x2="240" y2="198" stroke="#1E293B" stroke-width="2" />
+          <line x1="245" y1="187" x2="245" y2="198" stroke="#1E293B" stroke-width="1.5" />
+          <line x1="250" y1="187" x2="250" y2="198" stroke="#1E293B" stroke-width="2" />
+          <line x1="256" y1="187" x2="256" y2="198" stroke="#1E293B" stroke-width="1.5" />
+          <line x1="262" y1="187" x2="262" y2="198" stroke="#1E293B" stroke-width="2" />
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="125" y="65" width="165" height="145" rx="6" fill="#E2E8F0" transform="rotate(6, 207, 137)" />
+          <rect x="120" y="65" width="165" height="145" rx="6" fill="#F8FAFC" transform="rotate(3, 202, 137)" />
+          <rect x="115" y="65" width="165" height="145" rx="6" fill="#7C3AED" />
+          <rect x="122" y="73" width="151" height="32" rx="4" fill="#5B21B6" />
+          <text x="197" y="95" font-family="'Nunito', sans-serif" font-size="16" font-weight="900" fill="#FDE047" text-anchor="middle" letter-spacing="2">MAGAZINE</text>
+          <rect x="122" y="112" width="90" height="88" rx="4" fill="#C4B5FD" />
+          <circle cx="150" cy="140" r="14" fill="#FBBF24" />
+          <path d="M 130 185 L 155 155 L 180 185 Z" fill="#10B981" />
+          <path d="M 165 185 L 185 165 L 205 185 Z" fill="#059669" />
+          <rect x="220" y="115" width="53" height="8" rx="2" fill="#FDE047" />
+          <rect x="220" y="130" width="45" height="5" rx="2" fill="#DDD6FE" />
+          <rect x="220" y="140" width="50" height="5" rx="2" fill="#DDD6FE" />
+          <rect x="220" y="155" width="48" height="7" rx="2" fill="#F8FAFC" />
+          <rect x="220" y="168" width="42" height="5" rx="2" fill="#DDD6FE" />
+          <rect x="235" y="185" width="35" height="15" fill="#FFFFFF" rx="2" />
+          <line x1="240" y1="187" x2="240" y2="198" stroke="#1E293B" stroke-width="2" />
+          <line x1="245" y1="187" x2="245" y2="198" stroke="#1E293B" stroke-width="1.5" />
+          <line x1="250" y1="187" x2="250" y2="198" stroke="#1E293B" stroke-width="2" />
+          <line x1="256" y1="187" x2="256" y2="198" stroke="#1E293B" stroke-width="1.5" />
+          <line x1="262" y1="187" x2="262" y2="198" stroke="#1E293B" stroke-width="2" />
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">ART SUPPLIES: MAGAZINE</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'poster') {
+    // Dedicated illustration for "poster": Wall poster pinned by colorful thumbtacks with graphic art
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="100" y="55" width="200" height="155" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3" />
+          <rect x="110" y="65" width="180" height="135" rx="3" fill="#0284C7" />
+          <circle cx="200" cy="115" r="32" fill="#F59E0B" />
+          <path d="M 110 185 Q 155 135 200 160 Q 245 140 290 185 L 290 200 L 110 200 Z" fill="#0369A1" />
+          <path d="M 140 200 L 175 155 L 210 200 Z" fill="#0284C7" />
+          <rect x="125" y="72" width="150" height="24" rx="4" fill="#0F172A" opacity="0.85" />
+          <text x="200" y="89" font-family="'Nunito', sans-serif" font-size="13" font-weight="900" fill="#FDE047" text-anchor="middle" letter-spacing="3">ART POSTER</text>
+          <circle cx="106" cy="61" r="7" fill="#EF4444" />
+          <circle cx="106" cy="61" r="3" fill="#FCA5A5" />
+          <circle cx="294" cy="61" r="7" fill="#EF4444" />
+          <circle cx="294" cy="61" r="3" fill="#FCA5A5" />
+          <circle cx="106" cy="204" r="7" fill="#EF4444" />
+          <circle cx="106" cy="204" r="3" fill="#FCA5A5" />
+          <circle cx="294" cy="204" r="7" fill="#EF4444" />
+          <circle cx="294" cy="204" r="3" fill="#FCA5A5" />
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="100" y="55" width="200" height="155" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3" />
+          <rect x="110" y="65" width="180" height="135" rx="3" fill="#0284C7" />
+          <circle cx="200" cy="115" r="32" fill="#F59E0B" />
+          <path d="M 110 185 Q 155 135 200 160 Q 245 140 290 185 L 290 200 L 110 200 Z" fill="#0369A1" />
+          <path d="M 140 200 L 175 155 L 210 200 Z" fill="#0284C7" />
+          <rect x="125" y="72" width="150" height="24" rx="4" fill="#0F172A" opacity="0.85" />
+          <text x="200" y="89" font-family="'Nunito', sans-serif" font-size="13" font-weight="900" fill="#FDE047" text-anchor="middle" letter-spacing="3">ART POSTER</text>
+          <circle cx="106" cy="61" r="7" fill="#EF4444" />
+          <circle cx="106" cy="61" r="3" fill="#FCA5A5" />
+          <circle cx="294" cy="61" r="7" fill="#EF4444" />
+          <circle cx="294" cy="61" r="3" fill="#FCA5A5" />
+          <circle cx="106" cy="204" r="7" fill="#EF4444" />
+          <circle cx="106" cy="204" r="3" fill="#FCA5A5" />
+          <circle cx="294" cy="204" r="7" fill="#EF4444" />
+          <circle cx="294" cy="204" r="3" fill="#FCA5A5" />
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">ART SUPPLIES: POSTER</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'pencil sharpener' || lowerWord === 'pencil_sharpener' || lowerWord === 'sharpener') {
+    // Dedicated illustration for "pencil sharpener": Compact sharpener with metal blade, screw, entry hole & wooden shaving
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 130 90 L 250 80 L 260 175 L 120 185 Z" fill="#0EA5E9" stroke="#0284C7" stroke-width="3" />
+          <line x1="125" y1="120" x2="123" y2="155" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
+          <line x1="254" y1="110" x2="257" y2="145" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
+          <rect x="150" y="95" width="80" height="70" rx="3" fill="#0284C7" />
+          <rect x="158" y="90" width="64" height="65" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2" />
+          <line x1="160" y1="150" x2="220" y2="150" stroke="#64748B" stroke-width="3" />
+          <circle cx="190" cy="118" r="7" fill="#CBD5E1" stroke="#64748B" stroke-width="2" />
+          <line x1="185" y1="118" x2="195" y2="118" stroke="#334155" stroke-width="2" />
+          <ellipse cx="190" cy="177" rx="22" ry="10" fill="#0F172A" />
+          <ellipse cx="190" cy="177" rx="16" ry="6" fill="#1E293B" />
+          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round" />
+          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#1E293B" stroke-width="2" fill="none" stroke-linecap="round" />
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 130 90 L 250 80 L 260 175 L 120 185 Z" fill="#0EA5E9" stroke="#0284C7" stroke-width="3" />
+          <line x1="125" y1="120" x2="123" y2="155" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
+          <line x1="254" y1="110" x2="257" y2="145" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
+          <rect x="150" y="95" width="80" height="70" rx="3" fill="#0284C7" />
+          <rect x="158" y="90" width="64" height="65" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2" />
+          <line x1="160" y1="150" x2="220" y2="150" stroke="#64748B" stroke-width="3" />
+          <circle cx="190" cy="118" r="7" fill="#CBD5E1" stroke="#64748B" stroke-width="2" />
+          <line x1="185" y1="118" x2="195" y2="118" stroke="#334155" stroke-width="2" />
+          <ellipse cx="190" cy="177" rx="22" ry="10" fill="#0F172A" />
+          <ellipse cx="190" cy="177" rx="16" ry="6" fill="#1E293B" />
+          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round" />
+          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#1E293B" stroke-width="2" fill="none" stroke-linecap="round" />
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">ART SUPPLIES: PENCIL SHARPENER</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'glue stick' || lowerWord === 'glue_stick') {
+    // Dedicated illustration for "glue stick": Solid cylindrical glue stick tube with twist knob & cap
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="172" y="70" width="56" height="42" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+          <ellipse cx="200" cy="70" rx="28" ry="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+          <rect x="166" y="105" width="68" height="10" rx="3" fill="#6D28D9" />
+          <rect x="168" y="115" width="64" height="75" rx="3" fill="#8B5CF6" />
+          <rect x="172" y="125" width="56" height="52" rx="3" fill="#FDE047" />
+          <text x="200" y="146" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#7C3AED" text-anchor="middle">GLUE</text>
+          <text x="200" y="162" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#7C3AED" text-anchor="middle">STICK</text>
+          <rect x="168" y="190" width="64" height="22" rx="4" fill="#6D28D9" />
+          <line x1="178" y1="192" x2="178" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="188" y1="192" x2="188" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="198" y1="192" x2="198" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="208" y1="192" x2="208" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="218" y1="192" x2="218" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <rect x="250" y="130" width="45" height="78" rx="6" fill="#7C3AED" />
+          <line x1="256" y1="135" x2="256" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <line x1="264" y1="135" x2="264" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <line x1="272" y1="135" x2="272" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <line x1="280" y1="135" x2="280" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <text x="135" y="110" font-size="24">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="172" y="70" width="56" height="42" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2" />
+          <ellipse cx="200" cy="70" rx="28" ry="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+          <rect x="166" y="105" width="68" height="10" rx="3" fill="#6D28D9" />
+          <rect x="168" y="115" width="64" height="75" rx="3" fill="#8B5CF6" />
+          <rect x="172" y="125" width="56" height="52" rx="3" fill="#FDE047" />
+          <text x="200" y="146" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#7C3AED" text-anchor="middle">GLUE</text>
+          <text x="200" y="162" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#7C3AED" text-anchor="middle">STICK</text>
+          <rect x="168" y="190" width="64" height="22" rx="4" fill="#6D28D9" />
+          <line x1="178" y1="192" x2="178" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="188" y1="192" x2="188" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="198" y1="192" x2="198" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="208" y1="192" x2="208" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <line x1="218" y1="192" x2="218" y2="210" stroke="#5B21B6" stroke-width="2" />
+          <rect x="250" y="130" width="45" height="78" rx="6" fill="#7C3AED" />
+          <line x1="256" y1="135" x2="256" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <line x1="264" y1="135" x2="264" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <line x1="272" y1="135" x2="272" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <line x1="280" y1="135" x2="280" y2="155" stroke="#6D28D9" stroke-width="2" />
+          <text x="135" y="110" font-size="24">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">ART SUPPLIES: GLUE STICK</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'saturday') {
+    // Dedicated illustration for "Saturday": Calendar page flip displaying Saturday with weekend icon
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="120" y="55" width="160" height="155" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3" />
+          <rect x="140" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="170" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="200" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="220" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="250" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <path d="M 120 69 C 120 61 126 55 134 55 L 266 55 C 274 55 280 61 280 69 L 280 102 L 120 102 Z" fill="#EF4444" />
+          <text x="200" y="87" font-family="'Nunito', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">SATURDAY</text>
+          <text x="200" y="122" font-family="'Nunito', sans-serif" font-size="12" font-weight="800" fill="#94A3B8" text-anchor="middle" letter-spacing="1">WEEKEND</text>
+          <text x="200" y="178" font-family="'Nunito', 'Fredoka', sans-serif" font-size="52" font-weight="900" fill="#1E293B" text-anchor="middle">28</text>
+          <text x="245" y="195" font-size="22">🌟</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="120" y="55" width="160" height="155" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3" />
+          <rect x="140" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="170" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="200" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="220" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <rect x="250" y="46" width="10" height="18" rx="5" fill="#64748B" />
+          <path d="M 120 69 C 120 61 126 55 134 55 L 266 55 C 274 55 280 61 280 69 L 280 102 L 120 102 Z" fill="#EF4444" />
+          <text x="200" y="87" font-family="'Nunito', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">SATURDAY</text>
+          <text x="200" y="122" font-family="'Nunito', sans-serif" font-size="12" font-weight="800" fill="#94A3B8" text-anchor="middle" letter-spacing="1">WEEKEND</text>
+          <text x="200" y="178" font-family="'Nunito', 'Fredoka', sans-serif" font-size="52" font-weight="900" fill="#1E293B" text-anchor="middle">28</text>
+          <text x="245" y="195" font-size="22">🌟</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">DAYS: SATURDAY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'clean up' || lowerWord === 'clean_up') {
+    // Dedicated illustration for "clean up": Broom, dustpan, soapy cleaning bucket with bubbles
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 95 140 L 110 205 L 160 205 L 175 140 Z" fill="#0284C7" stroke="#0369A1" stroke-width="2.5" />
+          <ellipse cx="135" cy="140" rx="40" ry="10" fill="#38BDF8" stroke="#0369A1" stroke-width="2" />
+          <path d="M 95 140 C 95 105 175 105 175 140" stroke="#94A3B8" stroke-width="3.5" fill="none" />
+          <ellipse cx="135" cy="138" rx="34" ry="7" fill="#F0F9FF" />
+          <circle cx="120" cy="132" r="8" fill="#E0F2FE" />
+          <circle cx="135" cy="128" r="9" fill="#E0F2FE" />
+          <circle cx="150" cy="133" r="8" fill="#E0F2FE" />
+          <circle cx="130" cy="115" r="5" fill="#BAE6FD" opacity="0.8" />
+          <circle cx="160" cy="120" r="4" fill="#BAE6FD" opacity="0.8" />
+          <polygon points="190,175 240,175 255,205 175,205" fill="#0D9488" />
+          <rect x="210" y="152" width="10" height="25" rx="3" fill="#115E59" />
+          <line x1="285" y1="60" x2="235" y2="180" stroke="#78350F" stroke-width="7" stroke-linecap="round" />
+          <rect x="220" y="172" width="30" height="12" rx="3" fill="#B45309" transform="rotate(-23, 235, 178)" />
+          <path d="M 215 180 L 255 165 L 265 208 L 205 215 Z" fill="#FBBF24" />
+          <line x1="218" y1="195" x2="225" y2="213" stroke="#D97706" stroke-width="2" />
+          <line x1="230" y1="192" x2="238" y2="211" stroke="#D97706" stroke-width="2" />
+          <line x1="242" y1="188" x2="250" y2="208" stroke="#D97706" stroke-width="2" />
+          <text x="260" y="90" font-size="28">✨</text>
+          <text x="180" y="105" font-size="22">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 95 140 L 110 205 L 160 205 L 175 140 Z" fill="#0284C7" stroke="#0369A1" stroke-width="2.5" />
+          <ellipse cx="135" cy="140" rx="40" ry="10" fill="#38BDF8" stroke="#0369A1" stroke-width="2" />
+          <path d="M 95 140 C 95 105 175 105 175 140" stroke="#94A3B8" stroke-width="3.5" fill="none" />
+          <ellipse cx="135" cy="138" rx="34" ry="7" fill="#F0F9FF" />
+          <circle cx="120" cy="132" r="8" fill="#E0F2FE" />
+          <circle cx="135" cy="128" r="9" fill="#E0F2FE" />
+          <circle cx="150" cy="133" r="8" fill="#E0F2FE" />
+          <circle cx="130" cy="115" r="5" fill="#BAE6FD" opacity="0.8" />
+          <circle cx="160" cy="120" r="4" fill="#BAE6FD" opacity="0.8" />
+          <polygon points="190,175 240,175 255,205 175,205" fill="#0D9488" />
+          <rect x="210" y="152" width="10" height="25" rx="3" fill="#115E59" />
+          <line x1="285" y1="60" x2="235" y2="180" stroke="#78350F" stroke-width="7" stroke-linecap="round" />
+          <rect x="220" y="172" width="30" height="12" rx="3" fill="#B45309" transform="rotate(-23, 235, 178)" />
+          <path d="M 215 180 L 255 165 L 265 208 L 205 215 Z" fill="#FBBF24" />
+          <line x1="218" y1="195" x2="225" y2="213" stroke="#D97706" stroke-width="2" />
+          <line x1="230" y1="192" x2="238" y2="211" stroke="#D97706" stroke-width="2" />
+          <line x1="242" y1="188" x2="250" y2="208" stroke="#D97706" stroke-width="2" />
+          <text x="260" y="90" font-size="28">✨</text>
+          <text x="180" y="105" font-size="22">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">ACTION: CLEAN UP</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'digital tv' || lowerWord === 'digital_tv') {
+    // Dedicated illustration for "digital TV": Modern slim widescreen television on stand with remote
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <ellipse cx="200" cy="208" rx="65" ry="9" fill="#64748B" />
+          <ellipse cx="200" cy="206" rx="60" ry="7" fill="#94A3B8" />
+          <rect x="193" y="172" width="14" height="34" rx="2" fill="#475569" />
+          <rect x="65" y="60" width="270" height="152" rx="6" fill="#0F172A" stroke="#334155" stroke-width="3" />
+          <rect x="71" y="66" width="258" height="138" rx="3" fill="#0284C7" />
+          <path d="M 71 160 Q 135 120 200 150 Q 265 130 329 170 L 329 204 L 71 204 Z" fill="#0369A1" />
+          <circle cx="275" cy="100" r="18" fill="#F59E0B" />
+          <rect x="80" y="74" width="46" height="18" rx="4" fill="#0F172A" opacity="0.8" />
+          <text x="103" y="87" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#38BDF8" text-anchor="middle">4K HDR</text>
+          <text x="315" y="87" font-size="14" text-anchor="end">📡</text>
+          <circle cx="320" cy="207" r="2.5" fill="#22C55E" />
+          <rect x="270" y="195" width="45" height="15" rx="3" fill="#1E293B" stroke="#475569" stroke-width="1.5" />
+          <circle cx="276" cy="202" r="2.5" fill="#EF4444" />
+          <line x1="283" y1="202" x2="305" y2="202" stroke="#64748B" stroke-width="2" stroke-dasharray="2,3" />
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <ellipse cx="200" cy="208" rx="65" ry="9" fill="#64748B" />
+          <ellipse cx="200" cy="206" rx="60" ry="7" fill="#94A3B8" />
+          <rect x="193" y="172" width="14" height="34" rx="2" fill="#475569" />
+          <rect x="65" y="60" width="270" height="152" rx="6" fill="#0F172A" stroke="#334155" stroke-width="3" />
+          <rect x="71" y="66" width="258" height="138" rx="3" fill="#0284C7" />
+          <path d="M 71 160 Q 135 120 200 150 Q 265 130 329 170 L 329 204 L 71 204 Z" fill="#0369A1" />
+          <circle cx="275" cy="100" r="18" fill="#F59E0B" />
+          <rect x="80" y="74" width="46" height="18" rx="4" fill="#0F172A" opacity="0.8" />
+          <text x="103" y="87" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#38BDF8" text-anchor="middle">4K HDR</text>
+          <text x="315" y="87" font-size="14" text-anchor="end">📡</text>
+          <circle cx="320" cy="207" r="2.5" fill="#22C55E" />
+          <rect x="270" y="195" width="45" height="15" rx="3" fill="#1E293B" stroke="#475569" stroke-width="1.5" />
+          <circle cx="276" cy="202" r="2.5" fill="#EF4444" />
+          <line x1="283" y1="202" x2="305" y2="202" stroke="#64748B" stroke-width="2" stroke-dasharray="2,3" />
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">TECHNOLOGY: DIGITAL TV</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+
   } else if (lowerWord === 'fold' || lowerWord === 'folding') {
     // Special action illustration for "fold": Hands folding a sheet of paper / paper folded in half (never yellow folder)
     if (hideText) {
@@ -1623,7 +2025,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'sweater') {
+    } else if (lowerWord === 'sweater') {
     // Dedicated knit sweater illustration (clearly a warm long-sleeved wool sweater, not a T-shirt)
     if (hideText) {
       svgContent = `
@@ -1668,7 +2070,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'aunt') {
+    } else if (lowerWord === 'aunt') {
     // Dedicated illustration for aunt: Adult woman caring for her young niece in a warm family home setting
     if (hideText) {
       svgContent = `
@@ -1745,7 +2147,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'japan') {
+    } else if (lowerWord === 'japan') {
     // Official National Flag of Japan: Crisp white banner with centered crimson red sun disc
     if (hideText) {
       svgContent = `
@@ -1766,7 +2168,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'turkey') {
+    } else if (lowerWord === 'turkey') {
     // Official National Flag of Turkey: Vibrant red background with white crescent moon and 5-pointed star
     if (hideText) {
       svgContent = `
@@ -1791,7 +2193,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'mexico') {
+    } else if (lowerWord === 'mexico') {
     // Official National Flag of Mexico: Vertical tricolor Green, White, Red with coat of arms
     if (hideText) {
       svgContent = `
@@ -1836,7 +2238,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'russia') {
+    } else if (lowerWord === 'russia') {
     // Official National Flag of Russia: Horizontal tricolor White, Blue, Red
     if (hideText) {
       svgContent = `
@@ -1871,7 +2273,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'tall' || lowerWord === 'taller') {
+    } else if (lowerWord === 'tall' || lowerWord === 'taller') {
     // Dedicated illustration for tall: Tall person compared against height measuring scale with upward indicator
     if (hideText) {
       svgContent = `
@@ -1922,7 +2324,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'short' || lowerWord === 'shorter') {
+    } else if (lowerWord === 'short' || lowerWord === 'shorter') {
     // Dedicated illustration for short: Shorter figure next to height scale with downward level indicator
     if (hideText) {
       svgContent = `
@@ -1975,7 +2377,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'weak') {
+    } else if (lowerWord === 'weak') {
     // Dedicated illustration for weak: Person sweating, struggling to lift tiny weight
     if (hideText) {
       svgContent = `
@@ -2018,7 +2420,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'thick' || lowerWord === 'thicker') {
+    } else if (lowerWord === 'thick' || lowerWord === 'thicker') {
     // Dedicated illustration for thick: Distinctly thick, heavy hardcover book with massive page stack
     if (hideText) {
       svgContent = `
@@ -2059,7 +2461,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'clean') {
+    } else if (lowerWord === 'clean') {
     // Dedicated illustration for clean: Sparkling clean dinner plate with bright glints & sparkle stars
     if (hideText) {
       svgContent = `
@@ -2088,7 +2490,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'dirty') {
+    } else if (lowerWord === 'dirty') {
     // Dedicated illustration for dirty: A pair of white socks with prominent, clear brown mud and dirt stains
     if (hideText) {
       svgContent = `
@@ -2133,7 +2535,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'dirty shirt' || lowerWord === 'dirtyshirt') {
+    } else if (lowerWord === 'dirty shirt' || lowerWord === 'dirtyshirt') {
     // Dedicated illustration for dirty shirt: Shirt with prominent mud splatters & dirt stain spots
     if (hideText) {
       svgContent = `
@@ -2172,7 +2574,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'shirt') {
+    } else if (lowerWord === 'shirt') {
     // Dedicated illustration for button-down dress shirt: Collared shirt with neat front buttons and cuffs
     if (hideText) {
       svgContent = `
@@ -2209,7 +2611,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'wear' || lowerWord === 'wearing') {
+    } else if (lowerWord === 'wear' || lowerWord === 'wearing') {
     // Dedicated illustration for wear: A person putting on / wearing a shirt, buttoning with both hands
     if (hideText) {
       svgContent = `
@@ -2256,7 +2658,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'light' && !lowerWord.includes('traffic')) {
+    } else if (lowerWord === 'light' && !lowerWord.includes('traffic')) {
     // Dedicated illustration for light (weight): A graceful, delicate floating feather in breeze
     if (hideText) {
       svgContent = `
@@ -2291,7 +2693,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (lowerWord === 'marble' || lowerWord === 'marbles' || lowerWord.includes('marble')) {
+    } else if (lowerWord === 'marble' || lowerWord === 'marbles' || lowerWord.includes('marble')) {
     // Dedicated illustration for hard marble: Crystal-clear round glass marble with light reflection & swirls
     if (hideText) {
       svgContent = `
@@ -2336,7 +2738,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else if (composite) {
+    } else if (composite) {
     if (hideText) {
       // Clean, centered text-free composite layout for Practice picture-selection questions
       svgContent = `
@@ -2360,7 +2762,7 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
-  } else {
+    } else {
     const emoji = getEmojiForWord(cleanWord);
     if (emoji) {
       if (hideText) {
