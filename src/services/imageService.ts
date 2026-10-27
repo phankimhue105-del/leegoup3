@@ -91,12 +91,25 @@ const COMPOSITE_ILLUSTRATIONS: Record<string, { emojis: string[]; label: string 
   'practice': { emojis: ['✍️', '📝', '🧠'], label: 'Practicing / Writing' },
   'spell': { emojis: ['🔤', '🗣️', '📝'], label: 'Spelling Words' },
 
-  // Places
+  // Places (Unit 5 / Unit 7)
   'amusement park': { emojis: ['🎡', '🎢', '🎟️'], label: 'Amusement Park' },
   'aquarium': { emojis: ['🐠', '🐬', '🐙'], label: 'Aquarium' },
   'toy store': { emojis: ['🧸', '🏬', '🪁'], label: 'Toy Store' },
   'hair salon': { emojis: ['💇', '✂️', '💈'], label: 'Hair Salon' },
   'flower shop': { emojis: ['💐', '🌸', '🏬'], label: 'Flower Shop' },
+  'pool': { emojis: ['🏊', '🌊', '🩳'], label: 'Swimming Pool' },
+  'coffee shop': { emojis: ['☕', '🥐', '🏬'], label: 'Coffee Shop' },
+  'bookstore': { emojis: ['📚', '📖', '🏬'], label: 'Bookstore' },
+  'pharmacy': { emojis: ['⚕️', '💊', '🏥'], label: 'Pharmacy' },
+  'meet': { emojis: ['🤝', '👋', '😊'], label: 'Meeting Friends' },
+
+  // Weather (Unit 7 Lesson 4)
+  'sunny': { emojis: ['☀️', '🕶️', '🌤️'], label: 'Sunny Weather' },
+  'rainy': { emojis: ['🌧️', '☔', '💧'], label: 'Rainy Weather' },
+  'cloudy': { emojis: ['☁️', '🌥️', '⛅'], label: 'Cloudy Weather' },
+  'windy': { emojis: ['🌬️', '🍃', '💨'], label: 'Windy Weather' },
+  'stormy': { emojis: ['⛈️', '⚡', '🌧️'], label: 'Stormy Weather' },
+  'snowy': { emojis: ['❄️', '⛄', '🌨️'], label: 'Snowy Weather' },
   
   // Specific Food/Clothing Corrections
   'potato chips': { emojis: ['🍟', '🥔', '🍿'], label: 'Potato Chips' },
@@ -121,7 +134,26 @@ export function extractCoreWord(text: string): string {
   if (lower.includes('borrow book') || lower.includes('borrowing book')) return 'borrow books';
   if (lower.includes('buy groceries') || lower.includes('buying groceries')) return 'buy groceries';
   if (lower.includes('watch a movie') || lower.includes('watching a movie') || lower.includes('watch movie') || (lower.includes('watch') && lower.includes('movie'))) return 'watch a movie';
-  if (lower.includes('shop') || lower.includes('shopping')) return 'shop';
+
+  // Unit 7 Places & Out and About (prioritized before generic shop)
+  if (lower.includes('coffee shop') || lower.includes('coffee_shop') || (lower.includes('coffee') && lower.includes('shop'))) return 'coffee shop';
+  if (lower.includes('flower shop') || lower.includes('flower_shop') || (lower.includes('flower') && lower.includes('shop'))) return 'flower shop';
+  if (lower.includes('toy store') || lower.includes('toy_store')) return 'toy store';
+  if (lower.includes('hair salon') || lower.includes('hair_salon')) return 'hair salon';
+  if (lower.includes('bookstore') || lower.includes('book_store')) return 'bookstore';
+  if (lower.includes('pharmacy')) return 'pharmacy';
+  if (lower.includes('pool') && !lower.includes('whirlpool')) return 'pool';
+  if (lower === 'meet' || lower.includes('meet')) return 'meet';
+
+  // Unit 7 Weather
+  if (lower.includes('sunny')) return 'sunny';
+  if (lower.includes('rainy')) return 'rainy';
+  if (lower.includes('cloudy')) return 'cloudy';
+  if (lower.includes('windy')) return 'windy';
+  if (lower.includes('stormy')) return 'stormy';
+  if (lower.includes('snowy')) return 'snowy';
+
+  if ((lower.includes('shop') || lower.includes('shopping')) && !lower.includes('coffee') && !lower.includes('flower')) return 'shop';
   
   if (lower.includes('street')) return 'street';
   if (lower.includes('map')) return 'map';
@@ -781,6 +813,789 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
           <text x="325" y="80" font-size="28">🥛</text>
         </g>
         <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">FARM CHORES: MILKING THE COW</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'pool' || lowerWord === 'swimming pool') {
+    // Dedicated illustration for "pool": Clear swimming pool with blue water, lane lines, ladder & dive board
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="50" y="80" width="300" height="150" rx="20" fill="#E2E8F0" stroke="#94A3B8" stroke-width="3"/>
+          <rect x="62" y="92" width="276" height="126" rx="14" fill="#0EA5E9"/>
+          <line x1="62" y1="134" x2="338" y2="134" stroke="#F8FAFC" stroke-width="2.5" stroke-dasharray="6,8"/>
+          <line x1="62" y1="176" x2="338" y2="176" stroke="#F8FAFC" stroke-width="2.5" stroke-dasharray="6,8"/>
+          <circle cx="120" cy="134" r="3.5" fill="#EF4444"/>
+          <circle cx="200" cy="134" r="3.5" fill="#EF4444"/>
+          <circle cx="280" cy="134" r="3.5" fill="#EF4444"/>
+          <circle cx="120" cy="176" r="3.5" fill="#EF4444"/>
+          <circle cx="200" cy="176" r="3.5" fill="#EF4444"/>
+          <circle cx="280" cy="176" r="3.5" fill="#EF4444"/>
+          <path d="M 85 70 L 85 110" stroke="#CBD5E1" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M 105 70 L 105 110" stroke="#CBD5E1" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="85" y1="80" x2="105" y2="80" stroke="#64748B" stroke-width="3"/>
+          <line x1="85" y1="95" x2="105" y2="95" stroke="#64748B" stroke-width="3"/>
+          <rect x="290" y="66" width="55" height="12" rx="3" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
+          <rect x="330" y="78" width="10" height="25" fill="#64748B"/>
+          <path d="M 140 110 Q 155 106 170 110" stroke="#38BDF8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M 220 150 Q 235 146 250 150" stroke="#38BDF8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M 160 195 Q 175 191 190 195" stroke="#38BDF8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="240" y="112" font-size="22">✨</text>
+          <text x="135" y="165" font-size="26">🏊</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="50" y="72" width="300" height="135" rx="18" fill="#E2E8F0" stroke="#94A3B8" stroke-width="3"/>
+          <rect x="62" y="82" width="276" height="115" rx="12" fill="#0EA5E9"/>
+          <line x1="62" y1="120" x2="338" y2="120" stroke="#F8FAFC" stroke-width="2" stroke-dasharray="6,8"/>
+          <line x1="62" y1="158" x2="338" y2="158" stroke="#F8FAFC" stroke-width="2" stroke-dasharray="6,8"/>
+          <circle cx="130" cy="120" r="3" fill="#EF4444"/>
+          <circle cx="210" cy="120" r="3" fill="#EF4444"/>
+          <circle cx="290" cy="120" r="3" fill="#EF4444"/>
+          <circle cx="130" cy="158" r="3" fill="#EF4444"/>
+          <circle cx="210" cy="158" r="3" fill="#EF4444"/>
+          <circle cx="290" cy="158" r="3" fill="#EF4444"/>
+          <path d="M 85 62 L 85 98" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+          <path d="M 103 62 L 103 98" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+          <line x1="85" y1="72" x2="103" y2="72" stroke="#64748B" stroke-width="2.5"/>
+          <line x1="85" y1="86" x2="103" y2="86" stroke="#64748B" stroke-width="2.5"/>
+          <rect x="290" y="58" width="55" height="10" rx="3" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
+          <rect x="330" y="68" width="10" height="22" fill="#64748B"/>
+          <text x="240" y="105" font-size="20">✨</text>
+          <text x="140" y="150" font-size="24">🏊</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">PLACES: SWIMMING POOL</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'coffee shop' || lowerWord === 'cafe') {
+    // Dedicated illustration for "coffee shop": Café storefront with striped awning, coffee cup logo & outdoor bistro table
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="40" y1="230" x2="360" y2="230" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="90" width="260" height="140" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+          <rect x="110" y="60" width="180" height="32" rx="6" fill="#78350F"/>
+          <text x="200" y="82" font-family="'Nunito', sans-serif" font-size="16" font-weight="900" fill="#FEF3C7" text-anchor="middle" letter-spacing="1.5">☕ CAFE &amp; COFFEE</text>
+
+          <path d="M 60 92 L 70 120 L 95 120 L 90 92 Z" fill="#B45309"/>
+          <path d="M 90 92 L 95 120 L 120 120 L 115 92 Z" fill="#FEF3C7"/>
+          <path d="M 115 92 L 120 120 L 145 120 L 140 92 Z" fill="#B45309"/>
+          <path d="M 140 92 L 145 120 L 170 120 L 165 92 Z" fill="#FEF3C7"/>
+          <path d="M 165 92 L 170 120 L 195 120 L 190 92 Z" fill="#B45309"/>
+          <path d="M 190 92 L 195 120 L 220 120 L 215 92 Z" fill="#FEF3C7"/>
+          <path d="M 215 92 L 220 120 L 245 120 L 240 92 Z" fill="#B45309"/>
+          <path d="M 240 92 L 245 120 L 270 120 L 265 92 Z" fill="#FEF3C7"/>
+          <path d="M 265 92 L 270 120 L 295 120 L 290 92 Z" fill="#B45309"/>
+          <path d="M 290 92 L 295 120 L 320 120 L 315 92 Z" fill="#FEF3C7"/>
+          <path d="M 315 92 L 320 120 L 340 120 L 330 92 Z" fill="#B45309"/>
+
+          <rect x="85" y="130" width="115" height="90" rx="6" fill="#E0F2FE" stroke="#93C5FD" stroke-width="2"/>
+          <ellipse cx="140" cy="180" rx="28" ry="16" fill="#F8FAFC"/>
+          <rect x="115" y="152" width="50" height="32" rx="4" fill="#92400E"/>
+          <path d="M 165 156 C 178 156 178 178 165 178" stroke="#92400E" stroke-width="4.5" fill="none"/>
+          <path d="M 130 148 Q 133 138 128 132" stroke="#D97706" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M 140 146 Q 144 135 138 128" stroke="#D97706" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M 150 148 Q 153 138 148 132" stroke="#D97706" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <rect x="220" y="130" width="55" height="100" rx="4" fill="#78350F"/>
+          <rect x="228" y="138" width="39" height="42" rx="3" fill="#E0F2FE" opacity="0.8"/>
+          <circle cx="265" cy="185" r="3.5" fill="#FDE047"/>
+
+          <ellipse cx="295" cy="205" rx="18" ry="6" fill="#94A3B8"/>
+          <line x1="295" y1="205" x2="295" y2="230" stroke="#64748B" stroke-width="3"/>
+          <text x="295" y="200" font-size="14" text-anchor="middle">🥐</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="40" y1="215" x2="360" y2="215" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="80" width="260" height="135" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+          <rect x="110" y="52" width="180" height="28" rx="6" fill="#78350F"/>
+          <text x="200" y="72" font-family="'Nunito', sans-serif" font-size="14" font-weight="900" fill="#FEF3C7" text-anchor="middle" letter-spacing="1.5">☕ COFFEE SHOP</text>
+
+          <path d="M 60 82 L 70 108 L 95 108 L 90 82 Z" fill="#B45309"/>
+          <path d="M 90 82 L 95 108 L 120 108 L 115 82 Z" fill="#FEF3C7"/>
+          <path d="M 115 82 L 120 108 L 145 108 L 140 82 Z" fill="#B45309"/>
+          <path d="M 140 82 L 145 108 L 170 108 L 165 82 Z" fill="#FEF3C7"/>
+          <path d="M 165 82 L 170 108 L 195 108 L 190 82 Z" fill="#B45309"/>
+          <path d="M 190 82 L 195 108 L 220 108 L 215 82 Z" fill="#FEF3C7"/>
+          <path d="M 215 82 L 220 108 L 245 108 L 240 82 Z" fill="#B45309"/>
+          <path d="M 240 82 L 245 108 L 270 108 L 265 82 Z" fill="#FEF3C7"/>
+          <path d="M 265 82 L 270 108 L 295 108 L 290 82 Z" fill="#B45309"/>
+          <path d="M 290 82 L 295 108 L 320 108 L 315 82 Z" fill="#FEF3C7"/>
+          <path d="M 315 82 L 320 108 L 340 108 L 330 82 Z" fill="#B45309"/>
+
+          <rect x="85" y="118" width="115" height="85" rx="6" fill="#E0F2FE" stroke="#93C5FD" stroke-width="2"/>
+          <ellipse cx="140" cy="168" rx="26" ry="14" fill="#F8FAFC"/>
+          <rect x="117" y="142" width="46" height="28" rx="4" fill="#92400E"/>
+          <path d="M 163 146 C 175 146 175 166 163 166" stroke="#92400E" stroke-width="4" fill="none"/>
+          <path d="M 132 138 Q 135 130 130 124" stroke="#D97706" stroke-width="2" fill="none"/>
+          <path d="M 142 136 Q 146 127 140 120" stroke="#D97706" stroke-width="2" fill="none"/>
+
+          <rect x="220" y="118" width="55" height="97" rx="4" fill="#78350F"/>
+          <rect x="228" y="126" width="39" height="38" rx="3" fill="#E0F2FE" opacity="0.8"/>
+          <circle cx="265" cy="170" r="3" fill="#FDE047"/>
+
+          <ellipse cx="295" cy="192" rx="16" ry="5" fill="#94A3B8"/>
+          <line x1="295" y1="192" x2="295" y2="215" stroke="#64748B" stroke-width="2.5"/>
+          <text x="295" y="188" font-size="12" text-anchor="middle">🥐</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">PLACES: COFFEE SHOP</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'flower shop' || lowerWord === 'florist') {
+    // Dedicated illustration for "flower shop": Florist shop with colorful blooming flowers, bouquets & awning
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="40" y1="230" x2="360" y2="230" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="90" width="260" height="140" rx="8" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
+          <rect x="110" y="60" width="180" height="32" rx="6" fill="#15803D"/>
+          <text x="200" y="82" font-family="'Nunito', sans-serif" font-size="16" font-weight="900" fill="#DCFCE7" text-anchor="middle" letter-spacing="1.5">🌸 FLOWER SHOP 💐</text>
+
+          <path d="M 60 92 L 70 120 L 95 120 L 90 92 Z" fill="#F43F5E"/>
+          <path d="M 90 92 L 95 120 L 120 120 L 115 92 Z" fill="#DCFCE7"/>
+          <path d="M 115 92 L 120 120 L 145 120 L 140 92 Z" fill="#F43F5E"/>
+          <path d="M 140 92 L 145 120 L 170 120 L 165 92 Z" fill="#DCFCE7"/>
+          <path d="M 165 92 L 170 120 L 195 120 L 190 92 Z" fill="#F43F5E"/>
+          <path d="M 190 92 L 195 120 L 220 120 L 215 92 Z" fill="#DCFCE7"/>
+          <path d="M 215 92 L 220 120 L 245 120 L 240 92 Z" fill="#F43F5E"/>
+          <path d="M 240 92 L 245 120 L 270 120 L 265 92 Z" fill="#DCFCE7"/>
+          <path d="M 265 92 L 270 120 L 295 120 L 290 92 Z" fill="#F43F5E"/>
+          <path d="M 290 92 L 295 120 L 320 120 L 315 92 Z" fill="#DCFCE7"/>
+          <path d="M 315 92 L 320 120 L 340 120 L 330 92 Z" fill="#F43F5E"/>
+
+          <rect x="85" y="130" width="125" height="90" rx="6" fill="#F8FAFC" stroke="#86EFAC" stroke-width="2"/>
+          <polygon points="98,185 122,185 118,212 102,212" fill="#EA580C"/>
+          <path d="M 110 185 Q 100 160 90 155 Q 110 170 110 185" fill="#16A34A"/>
+          <path d="M 110 185 Q 120 160 130 155 Q 110 170 110 185" fill="#22C55E"/>
+          <rect x="135" y="178" width="26" height="34" rx="4" fill="#0284C7"/>
+          <line x1="148" y1="178" x2="138" y2="152" stroke="#16A34A" stroke-width="3"/>
+          <line x1="148" y1="178" x2="148" y2="148" stroke="#16A34A" stroke-width="3"/>
+          <line x1="148" y1="178" x2="158" y2="152" stroke="#16A34A" stroke-width="3"/>
+          <circle cx="138" cy="150" r="9" fill="#EC4899"/>
+          <circle cx="148" cy="144" r="10" fill="#F43F5E"/>
+          <circle cx="158" cy="150" r="9" fill="#FB7185"/>
+
+          <polygon points="175,182 198,182 194,212 179,212" fill="#D97706"/>
+          <line x1="186" y1="182" x2="186" y2="155" stroke="#16A34A" stroke-width="3.5"/>
+          <circle cx="186" cy="150" r="13" fill="#FBBF24"/>
+          <circle cx="186" cy="150" r="6" fill="#78350F"/>
+
+          <rect x="230" y="130" width="55" height="100" rx="4" fill="#15803D"/>
+          <rect x="238" y="138" width="39" height="42" rx="3" fill="#DCFCE7" opacity="0.8"/>
+          <circle cx="257" cy="160" r="12" fill="none" stroke="#22C55E" stroke-width="4"/>
+          <circle cx="257" cy="150" r="3" fill="#F43F5E"/>
+          <circle cx="257" cy="188" r="3.5" fill="#FDE047"/>
+
+          <rect x="295" y="175" width="40" height="55" rx="3" fill="#92400E"/>
+          <text x="315" y="172" font-size="22" text-anchor="middle">💐</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="40" y1="215" x2="360" y2="215" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="80" width="260" height="135" rx="8" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
+          <rect x="110" y="52" width="180" height="28" rx="6" fill="#15803D"/>
+          <text x="200" y="72" font-family="'Nunito', sans-serif" font-size="14" font-weight="900" fill="#DCFCE7" text-anchor="middle" letter-spacing="1.5">🌸 FLOWER SHOP</text>
+
+          <path d="M 60 82 L 70 108 L 95 108 L 90 82 Z" fill="#F43F5E"/>
+          <path d="M 90 82 L 95 108 L 120 108 L 115 82 Z" fill="#DCFCE7"/>
+          <path d="M 115 82 L 120 108 L 145 108 L 140 82 Z" fill="#F43F5E"/>
+          <path d="M 140 82 L 145 108 L 170 108 L 165 82 Z" fill="#DCFCE7"/>
+          <path d="M 165 82 L 170 108 L 195 108 L 190 82 Z" fill="#F43F5E"/>
+          <path d="M 190 82 L 195 108 L 220 108 L 215 82 Z" fill="#DCFCE7"/>
+          <path d="M 215 82 L 220 108 L 245 108 L 240 82 Z" fill="#F43F5E"/>
+          <path d="M 240 82 L 245 108 L 270 108 L 265 82 Z" fill="#DCFCE7"/>
+          <path d="M 265 82 L 270 108 L 295 108 L 290 82 Z" fill="#F43F5E"/>
+          <path d="M 290 82 L 295 108 L 320 108 L 315 82 Z" fill="#DCFCE7"/>
+          <path d="M 315 82 L 320 108 L 340 108 L 330 82 Z" fill="#F43F5E"/>
+
+          <rect x="85" y="118" width="125" height="85" rx="6" fill="#F8FAFC" stroke="#86EFAC" stroke-width="2"/>
+          <polygon points="98,172 122,172 118,198 102,198" fill="#EA580C"/>
+          <path d="M 110 172 Q 100 150 90 145 Q 110 160 110 172" fill="#16A34A"/>
+          <path d="M 110 172 Q 120 150 130 145 Q 110 160 110 172" fill="#22C55E"/>
+          <rect x="135" y="165" width="24" height="32" rx="4" fill="#0284C7"/>
+          <circle cx="138" cy="140" r="8" fill="#EC4899"/>
+          <circle cx="147" cy="135" r="9" fill="#F43F5E"/>
+          <circle cx="156" cy="140" r="8" fill="#FB7185"/>
+
+          <polygon points="175,170 198,170 194,198 179,198" fill="#D97706"/>
+          <circle cx="186" cy="140" r="12" fill="#FBBF24"/>
+          <circle cx="186" cy="140" r="5" fill="#78350F"/>
+
+          <rect x="230" y="118" width="55" height="97" rx="4" fill="#15803D"/>
+          <rect x="238" y="126" width="39" height="38" rx="3" fill="#DCFCE7" opacity="0.8"/>
+          <circle cx="257" cy="145" r="10" fill="none" stroke="#22C55E" stroke-width="3"/>
+          <circle cx="257" cy="170" r="3" fill="#FDE047"/>
+
+          <rect x="295" y="162" width="40" height="53" rx="3" fill="#92400E"/>
+          <text x="315" y="160" font-size="20" text-anchor="middle">💐</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">PLACES: FLOWER SHOP</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'bookstore' || lowerWord === 'book shop') {
+    // Dedicated illustration for "bookstore": Bookshop facade with large bookshelves lined with colorful books & open reading book
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="40" y1="230" x2="360" y2="230" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="80" width="260" height="150" rx="8" fill="#FEFCE8" stroke="#CA8A04" stroke-width="2"/>
+          <rect x="110" y="52" width="180" height="32" rx="6" fill="#1E3A8A"/>
+          <text x="200" y="74" font-family="'Nunito', sans-serif" font-size="16" font-weight="900" fill="#FEF08A" text-anchor="middle" letter-spacing="1.5">📚 BOOKSTORE 📖</text>
+
+          <rect x="85" y="98" width="165" height="120" rx="6" fill="#FFFBEB" stroke="#B45309" stroke-width="3"/>
+          <rect x="88" y="136" width="159" height="7" fill="#78350F"/>
+          <rect x="88" y="176" width="159" height="7" fill="#78350F"/>
+          
+          <rect x="96" y="106" width="12" height="30" fill="#DC2626" rx="2"/>
+          <rect x="110" y="103" width="15" height="33" fill="#2563EB" rx="2"/>
+          <rect x="127" y="108" width="11" height="28" fill="#16A34A" rx="2"/>
+          <rect x="140" y="104" width="14" height="32" fill="#D97706" rx="2"/>
+          <rect x="156" y="107" width="16" height="29" fill="#9333EA" rx="2"/>
+          <rect x="174" y="105" width="13" height="31" fill="#0891B2" rx="2"/>
+          <rect x="189" y="109" width="15" height="27" fill="#E11D48" rx="2"/>
+          <rect x="206" y="104" width="14" height="32" fill="#4B5563" rx="2"/>
+          <rect x="222" y="106" width="15" height="30" fill="#059669" rx="2"/>
+
+          <rect x="96" y="146" width="15" height="30" fill="#2563EB" rx="2"/>
+          <rect x="113" y="143" width="13" height="33" fill="#D97706" rx="2"/>
+          <rect x="128" y="148" width="14" height="28" fill="#DC2626" rx="2"/>
+          <rect x="144" y="145" width="16" height="31" fill="#16A34A" rx="2"/>
+          <rect x="162" y="144" width="13" height="32" fill="#7C3AED" rx="2"/>
+          <rect x="177" y="147" width="15" height="29" fill="#0284C7" rx="2"/>
+          <rect x="194" y="145" width="12" height="31" fill="#CA8A04" rx="2"/>
+          <rect x="208" y="143" width="14" height="33" fill="#BE123C" rx="2"/>
+          <rect x="224" y="146" width="13" height="30" fill="#1E293B" rx="2"/>
+
+          <path d="M 130 196 Q 165 190 200 196 L 205 212 Q 165 206 125 212 Z" fill="#F8FAFC" stroke="#475569" stroke-width="1.5"/>
+          <path d="M 200 196 Q 235 190 270 196 L 275 212 Q 235 206 195 212 Z" fill="#F8FAFC" stroke="#475569" stroke-width="1.5"/>
+          <line x1="200" y1="193" x2="200" y2="212" stroke="#B45309" stroke-width="2.5"/>
+
+          <rect x="260" y="105" width="55" height="125" rx="4" fill="#1E3A8A"/>
+          <rect x="268" y="115" width="39" height="50" rx="3" fill="#FEF08A" opacity="0.8"/>
+          <circle cx="295" cy="180" r="3.5" fill="#FDE047"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="40" y1="215" x2="360" y2="215" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="75" width="260" height="140" rx="8" fill="#FEFCE8" stroke="#CA8A04" stroke-width="2"/>
+          <rect x="110" y="48" width="180" height="28" rx="6" fill="#1E3A8A"/>
+          <text x="200" y="68" font-family="'Nunito', sans-serif" font-size="14" font-weight="900" fill="#FEF08A" text-anchor="middle" letter-spacing="1.5">📚 BOOKSTORE</text>
+
+          <rect x="85" y="90" width="165" height="112" rx="6" fill="#FFFBEB" stroke="#B45309" stroke-width="2.5"/>
+          <rect x="88" y="126" width="159" height="6" fill="#78350F"/>
+          <rect x="88" y="162" width="159" height="6" fill="#78350F"/>
+          
+          <rect x="96" y="98" width="12" height="28" fill="#DC2626" rx="2"/>
+          <rect x="110" y="95" width="15" height="31" fill="#2563EB" rx="2"/>
+          <rect x="127" y="100" width="11" height="26" fill="#16A34A" rx="2"/>
+          <rect x="140" y="96" width="14" height="30" fill="#D97706" rx="2"/>
+          <rect x="156" y="99" width="16" height="27" fill="#9333EA" rx="2"/>
+          <rect x="174" y="97" width="13" height="29" fill="#0891B2" rx="2"/>
+          <rect x="189" y="101" width="15" height="25" fill="#E11D48" rx="2"/>
+
+          <rect x="96" y="134" width="15" height="28" fill="#2563EB" rx="2"/>
+          <rect x="113" y="131" width="13" height="31" fill="#D97706" rx="2"/>
+          <rect x="128" y="136" width="14" height="26" fill="#DC2626" rx="2"/>
+          <rect x="144" y="133" width="16" height="29" fill="#16A34A" rx="2"/>
+          <rect x="162" y="132" width="13" height="30" fill="#7C3AED" rx="2"/>
+          <rect x="177" y="135" width="15" height="27" fill="#0284C7" rx="2"/>
+
+          <rect x="260" y="95" width="55" height="120" rx="4" fill="#1E3A8A"/>
+          <rect x="268" y="105" width="39" height="45" rx="3" fill="#FEF08A" opacity="0.8"/>
+          <circle cx="295" cy="165" r="3" fill="#FDE047"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">PLACES: BOOKSTORE</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'pharmacy' || lowerWord === 'drugstore') {
+    // Dedicated illustration for "pharmacy": Pharmacy building with green cross sign, medicine counter & prescription bottles
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="40" y1="230" x2="360" y2="230" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="85" width="260" height="145" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2"/>
+          <rect x="100" y="55" width="200" height="32" rx="6" fill="#047857"/>
+          <text x="200" y="77" font-family="'Nunito', sans-serif" font-size="16" font-weight="900" fill="#A7F3D0" text-anchor="middle" letter-spacing="1.5">⚕️ PHARMACY 🟢</text>
+
+          <circle cx="120" cy="130" r="24" fill="#10B981"/>
+          <rect x="114" y="116" width="12" height="28" rx="2" fill="#FFFFFF"/>
+          <rect x="106" y="124" width="28" height="12" rx="2" fill="#FFFFFF"/>
+
+          <rect x="160" y="120" width="150" height="95" rx="6" fill="#FFFFFF" stroke="#99F6E4" stroke-width="2"/>
+          <line x1="160" y1="155" x2="310" y2="155" stroke="#CCFBF1" stroke-width="2"/>
+          <line x1="160" y1="185" x2="310" y2="185" stroke="#CCFBF1" stroke-width="2"/>
+
+          <rect x="170" y="132" width="14" height="20" rx="3" fill="#0284C7"/>
+          <rect x="173" y="127" width="8" height="5" fill="#E2E8F0"/>
+          <rect x="190" y="130" width="16" height="22" rx="3" fill="#DC2626"/>
+          <rect x="193" y="125" width="10" height="5" fill="#FFFFFF"/>
+          <rect x="212" y="134" width="18" height="18" rx="3" fill="#F59E0B"/>
+          <rect x="236" y="128" width="14" height="24" rx="3" fill="#16A34A"/>
+          <rect x="256" y="131" width="20" height="21" rx="3" fill="#7C3AED"/>
+          <rect x="282" y="133" width="15" height="19" rx="3" fill="#0EA5E9"/>
+
+          <rect x="170" y="162" width="22" height="18" rx="3" fill="#F43F5E"/>
+          <rect x="198" y="160" width="16" height="20" rx="3" fill="#FBBF24"/>
+          <rect x="220" y="163" width="25" height="17" rx="3" fill="#3B82F6"/>
+          <rect x="252" y="160" width="18" height="20" rx="3" fill="#10B981"/>
+          <rect x="276" y="162" width="22" height="18" rx="3" fill="#8B5CF6"/>
+
+          <rect x="160" y="195" width="150" height="25" rx="3" fill="#0D9488"/>
+          <text x="235" y="213" font-family="'Nunito', sans-serif" font-size="14" font-weight="900" fill="#CCFBF1" text-anchor="middle">PRESCRIPTIONS 💊</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="40" y1="215" x2="360" y2="215" stroke="#CBD5E1" stroke-width="3"/>
+          <rect x="70" y="75" width="260" height="140" rx="8" fill="#F0FDFA" stroke="#0D9488" stroke-width="2"/>
+          <rect x="100" y="48" width="200" height="28" rx="6" fill="#047857"/>
+          <text x="200" y="68" font-family="'Nunito', sans-serif" font-size="14" font-weight="900" fill="#A7F3D0" text-anchor="middle" letter-spacing="1.5">⚕️ PHARMACY</text>
+
+          <circle cx="120" cy="120" r="22" fill="#10B981"/>
+          <rect x="114" y="108" width="12" height="24" rx="2" fill="#FFFFFF"/>
+          <rect x="108" y="114" width="24" height="12" rx="2" fill="#FFFFFF"/>
+
+          <rect x="160" y="110" width="150" height="90" rx="6" fill="#FFFFFF" stroke="#99F6E4" stroke-width="2"/>
+          <line x1="160" y1="142" x2="310" y2="142" stroke="#CCFBF1" stroke-width="2"/>
+          <line x1="160" y1="170" x2="310" y2="170" stroke="#CCFBF1" stroke-width="2"/>
+
+          <rect x="170" y="122" width="14" height="17" rx="3" fill="#0284C7"/>
+          <rect x="190" y="120" width="16" height="19" rx="3" fill="#DC2626"/>
+          <rect x="212" y="124" width="18" height="15" rx="3" fill="#F59E0B"/>
+          <rect x="236" y="118" width="14" height="21" rx="3" fill="#16A34A"/>
+          <rect x="256" y="121" width="20" height="18" rx="3" fill="#7C3AED"/>
+          <rect x="282" y="123" width="15" height="16" rx="3" fill="#0EA5E9"/>
+
+          <rect x="170" y="148" width="22" height="16" rx="3" fill="#F43F5E"/>
+          <rect x="198" y="146" width="16" height="18" rx="3" fill="#FBBF24"/>
+          <rect x="220" y="149" width="25" height="15" rx="3" fill="#3B82F6"/>
+          <rect x="252" y="146" width="18" height="18" rx="3" fill="#10B981"/>
+
+          <rect x="160" y="180" width="150" height="25" rx="3" fill="#0D9488"/>
+          <text x="235" y="197" font-family="'Nunito', sans-serif" font-size="12" font-weight="900" fill="#CCFBF1" text-anchor="middle">PRESCRIPTIONS 💊</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">PLACES: PHARMACY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'meet' || lowerWord === 'greeting' || lowerWord === 'meeting') {
+    // Dedicated illustration for "meet": Two friendly people meeting warmly, waving & shaking hands in greeting
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <line x1="50" y1="230" x2="350" y2="230" stroke="#CBD5E1" stroke-width="3"/>
+
+          <!-- Person 1 -->
+          <circle cx="130" cy="100" r="18" fill="#FDBA74"/>
+          <path d="M 112 96 C 112 78 148 78 148 96 L 156 96 L 156 100 L 130 100 Z" fill="#2563EB"/>
+          <circle cx="137" cy="100" r="2.2" fill="#431407"/>
+          <path d="M 134 107 Q 138 112 143 107" stroke="#431407" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M 115 122 L 145 122 L 150 175 L 110 175 Z" fill="#F59E0B" rx="4"/>
+          <rect x="115" y="175" width="13" height="48" rx="4" fill="#1E3A8A"/>
+          <rect x="132" y="175" width="13" height="48" rx="4" fill="#1E3A8A"/>
+          <ellipse cx="120" cy="225" rx="8" ry="4" fill="#334155"/>
+          <ellipse cx="140" cy="225" rx="8" ry="4" fill="#334155"/>
+          <path d="M 115 130 L 90 105 L 85 92" stroke="#FDBA74" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <text x="80" y="90" font-size="20">👋</text>
+
+          <!-- Person 2 -->
+          <circle cx="270" cy="100" r="18" fill="#FDBA74"/>
+          <circle cx="254" cy="94" r="7" fill="#78350F"/>
+          <circle cx="286" cy="94" r="7" fill="#78350F"/>
+          <path d="M 256 98 C 256 80 284 80 284 98 Z" fill="#78350F"/>
+          <circle cx="263" cy="100" r="2.2" fill="#431407"/>
+          <path d="M 260 107 Q 264 112 269 107" stroke="#431407" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M 256 122 Q 270 120 284 122 L 295 180 L 245 180 Z" fill="#EC4899"/>
+          <rect x="254" y="180" width="10" height="43" rx="3" fill="#FDBA74"/>
+          <rect x="276" y="180" width="10" height="43" rx="3" fill="#FDBA74"/>
+          <ellipse cx="258" cy="225" rx="7" ry="4" fill="#E11D48"/>
+          <ellipse cx="282" cy="225" rx="7" ry="4" fill="#E11D48"/>
+
+          <!-- Warm Handshake -->
+          <path d="M 145 135 L 180 148 L 195 148" stroke="#FDBA74" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M 256 135 L 220 148 L 205 148" stroke="#FDBA74" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <text x="200" y="158" font-size="34" text-anchor="middle">🤝</text>
+          
+          <rect x="175" y="70" width="50" height="26" rx="8" fill="#FFFFFF" stroke="#60A5FA" stroke-width="1.5"/>
+          <text x="200" y="88" font-family="'Nunito', sans-serif" font-size="13" font-weight="900" fill="#2563EB" text-anchor="middle">HELLO!</text>
+          <text x="200" y="60" font-size="22">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <line x1="50" y1="215" x2="350" y2="215" stroke="#CBD5E1" stroke-width="3"/>
+
+          <circle cx="130" cy="90" r="16" fill="#FDBA74"/>
+          <path d="M 114 86 C 114 70 146 70 146 86 L 154 86 L 154 90 L 130 90 Z" fill="#2563EB"/>
+          <circle cx="137" cy="90" r="2" fill="#431407"/>
+          <path d="M 134 96 Q 138 100 142 96" stroke="#431407" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M 116 110 L 144 110 L 148 160 L 112 160 Z" fill="#F59E0B" rx="4"/>
+          <rect x="116" y="160" width="12" height="48" rx="3" fill="#1E3A8A"/>
+          <rect x="132" y="160" width="12" height="48" rx="3" fill="#1E3A8A"/>
+          <ellipse cx="120" cy="210" rx="7" ry="3.5" fill="#334155"/>
+          <ellipse cx="138" cy="210" rx="7" ry="3.5" fill="#334155"/>
+          <path d="M 116 118 L 94 95 L 89 84" stroke="#FDBA74" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <text x="84" y="80" font-size="18">👋</text>
+
+          <circle cx="270" cy="90" r="16" fill="#FDBA74"/>
+          <circle cx="255" cy="84" r="6" fill="#78350F"/>
+          <circle cx="285" cy="84" r="6" fill="#78350F"/>
+          <path d="M 257 88 C 257 72 283 72 283 88 Z" fill="#78350F"/>
+          <circle cx="263" cy="90" r="2" fill="#431407"/>
+          <path d="M 260 96 Q 264 100 268 96" stroke="#431407" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M 256 110 Q 270 108 284 110 L 294 165 L 246 165 Z" fill="#EC4899"/>
+          <rect x="255" y="165" width="9" height="43" rx="3" fill="#FDBA74"/>
+          <rect x="275" y="165" width="9" height="43" rx="3" fill="#FDBA74"/>
+          <ellipse cx="259" cy="210" rx="7" ry="3.5" fill="#E11D48"/>
+          <ellipse cx="280" cy="210" rx="7" ry="3.5" fill="#E11D48"/>
+
+          <path d="M 144 122 L 180 135 L 195 135" stroke="#FDBA74" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M 256 122 L 220 135 L 205 135" stroke="#FDBA74" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <text x="200" y="145" font-size="30" text-anchor="middle">🤝</text>
+          
+          <rect x="175" y="62" width="50" height="24" rx="8" fill="#FFFFFF" stroke="#60A5FA" stroke-width="1.5"/>
+          <text x="200" y="78" font-family="'Nunito', sans-serif" font-size="12" font-weight="900" fill="#2563EB" text-anchor="middle">HELLO!</text>
+          <text x="200" y="52" font-size="18">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">ACTION: MEET / GREETING</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'sunny' || lowerWord === 'sun') {
+    // Dedicated illustration for "sunny": Radiant smiling golden sun with bright sunbeams
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <circle cx="200" cy="140" r="80" fill="#FEF08A" opacity="0.4"/>
+          <circle cx="200" cy="140" r="65" fill="#FDE047" opacity="0.5"/>
+          <circle cx="200" cy="140" r="48" fill="#F59E0B" stroke="#D97706" stroke-width="2.5"/>
+          <circle cx="200" cy="140" r="44" fill="#FBBF24"/>
+
+          <line x1="200" y1="80" x2="200" y2="60" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
+          <line x1="200" y1="200" x2="200" y2="220" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
+          <line x1="140" y1="140" x2="120" y2="140" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
+          <line x1="260" y1="140" x2="280" y2="140" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
+          <line x1="158" y1="98" x2="144" y2="84" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="242" y1="98" x2="256" y2="84" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="158" y1="182" x2="144" y2="196" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="242" y1="182" x2="256" y2="196" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="172" y1="87" x2="164" y2="72" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="228" y1="87" x2="236" y2="72" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="172" y1="193" x2="164" y2="208" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="228" y1="193" x2="236" y2="208" stroke="#FBBF24" stroke-width="4.5" stroke-linecap="round"/>
+
+          <ellipse cx="185" cy="132" rx="4.5" ry="6" fill="#78350F"/>
+          <circle cx="187" cy="130" r="1.8" fill="#FFFFFF"/>
+          <ellipse cx="215" cy="132" rx="4.5" ry="6" fill="#78350F"/>
+          <circle cx="217" cy="130" r="1.8" fill="#FFFFFF"/>
+          <ellipse cx="174" cy="144" rx="7" ry="4" fill="#F43F5E" opacity="0.4"/>
+          <ellipse cx="226" cy="144" rx="7" ry="4" fill="#F43F5E" opacity="0.4"/>
+          <path d="M 186 145 Q 200 162 214 145" stroke="#78350F" stroke-width="3" fill="#DC2626" stroke-linecap="round"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <circle cx="200" cy="125" r="70" fill="#FEF08A" opacity="0.4"/>
+          <circle cx="200" cy="125" r="42" fill="#F59E0B" stroke="#D97706" stroke-width="2.5"/>
+          <circle cx="200" cy="125" r="38" fill="#FBBF24"/>
+
+          <line x1="200" y1="73" x2="200" y2="55" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="200" y1="177" x2="200" y2="195" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="148" y1="125" x2="130" y2="125" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="252" y1="125" x2="270" y2="125" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+          <line x1="163" y1="88" x2="151" y2="76" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+          <line x1="237" y1="88" x2="249" y2="76" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+          <line x1="163" y1="162" x2="151" y2="174" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+          <line x1="237" y1="162" x2="249" y2="174" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+
+          <ellipse cx="187" cy="118" rx="4" ry="5.5" fill="#78350F"/>
+          <ellipse cx="213" cy="118" rx="4" ry="5.5" fill="#78350F"/>
+          <ellipse cx="178" cy="128" rx="6" ry="3.5" fill="#F43F5E" opacity="0.4"/>
+          <ellipse cx="222" cy="128" rx="6" ry="3.5" fill="#F43F5E" opacity="0.4"/>
+          <path d="M 188 129 Q 200 144 212 129" stroke="#78350F" stroke-width="2.5" fill="#DC2626" stroke-linecap="round"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">WEATHER: SUNNY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'rainy' || lowerWord === 'rain') {
+    // Dedicated illustration for "rainy": Rain cloud pouring glistening raindrops onto a colorful open umbrella
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 140 100 A 24 24 0 0 1 176 80 A 34 34 0 0 1 234 82 A 26 26 0 0 1 268 105 A 22 22 0 0 1 258 135 L 140 135 A 22 22 0 0 1 140 100 Z" fill="#64748B" opacity="0.9"/>
+          
+          <line x1="135" y1="145" x2="125" y2="165" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="160" y1="148" x2="150" y2="168" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="185" y1="145" x2="175" y2="165" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="210" y1="148" x2="200" y2="168" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="235" y1="145" x2="225" y2="165" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="260" y1="148" x2="250" y2="168" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+
+          <line x1="115" y1="175" x2="105" y2="195" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="140" y1="180" x2="130" y2="200" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="270" y1="175" x2="260" y2="195" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="290" y1="180" x2="280" y2="200" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+
+          <path d="M 145 190 Q 200 135 255 190 Q 227 185 200 190 Q 172 185 145 190 Z" fill="#EF4444"/>
+          <path d="M 175 187 Q 200 145 225 187 Q 212 185 200 187 Q 188 185 175 187 Z" fill="#FACC15"/>
+          <line x1="200" y1="144" x2="200" y2="138" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="200" y1="187" x2="200" y2="222" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 200 222 C 200 230 188 230 188 222" stroke="#334155" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          
+          <ellipse cx="120" cy="225" rx="14" ry="4" fill="#38BDF8" opacity="0.6"/>
+          <ellipse cx="280" cy="225" rx="14" ry="4" fill="#38BDF8" opacity="0.6"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 140 85 A 22 22 0 0 1 176 68 A 32 32 0 0 1 234 70 A 24 24 0 0 1 268 90 A 20 20 0 0 1 258 116 L 140 116 A 20 20 0 0 1 140 85 Z" fill="#64748B" opacity="0.9"/>
+          
+          <line x1="135" y1="126" x2="125" y2="144" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="160" y1="128" x2="150" y2="146" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="185" y1="126" x2="175" y2="144" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="210" y1="128" x2="200" y2="146" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="235" y1="126" x2="225" y2="144" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="260" y1="128" x2="250" y2="146" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+
+          <path d="M 145 174 Q 200 125 255 174 Q 227 170 200 174 Q 172 170 145 174 Z" fill="#EF4444"/>
+          <path d="M 175 172 Q 200 134 225 172 Q 212 170 200 172 Q 188 170 175 172 Z" fill="#FACC15"/>
+          <line x1="200" y1="133" x2="200" y2="127" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+          <line x1="200" y1="172" x2="200" y2="204" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+          <path d="M 200 204 C 200 212 188 212 188 204" stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round"/>
+          
+          <ellipse cx="120" cy="208" rx="12" ry="3.5" fill="#38BDF8" opacity="0.6"/>
+          <ellipse cx="280" cy="208" rx="12" ry="3.5" fill="#38BDF8" opacity="0.6"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">WEATHER: RAINY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'cloudy' || lowerWord === 'clouds') {
+    // Dedicated illustration for "cloudy": Scenic sky filled with billowing cumulus clouds with sun peaking behind
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <circle cx="255" cy="95" r="38" fill="#FBBF24"/>
+          <circle cx="255" cy="95" r="48" fill="#FDE047" opacity="0.35"/>
+
+          <path d="M 120 120 A 28 28 0 0 1 165 95 A 40 40 0 0 1 235 98 A 30 30 0 0 1 275 125 A 25 25 0 0 1 265 160 L 120 160 A 25 25 0 0 1 120 120 Z" fill="#94A3B8" opacity="0.7"/>
+
+          <path d="M 95 155 A 32 32 0 0 1 142 122 A 46 46 0 0 1 228 125 A 35 35 0 0 1 278 160 A 28 28 0 0 1 268 200 L 95 200 A 28 28 0 0 1 95 155 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2.5"/>
+
+          <path d="M 148 135 A 30 30 0 0 1 205 137" stroke="#F1F5F9" stroke-width="3" fill="none"/>
+          <path d="M 105 170 A 20 20 0 0 1 135 155" stroke="#F1F5F9" stroke-width="3" fill="none"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <circle cx="255" cy="85" r="32" fill="#FBBF24"/>
+          <circle cx="255" cy="85" r="42" fill="#FDE047" opacity="0.35"/>
+
+          <path d="M 120 108 A 24 24 0 0 1 165 85 A 36 36 0 0 1 235 88 A 26 26 0 0 1 275 112 A 22 22 0 0 1 265 142 L 120 142 A 22 22 0 0 1 120 108 Z" fill="#94A3B8" opacity="0.7"/>
+
+          <path d="M 95 138 A 28 28 0 0 1 142 108 A 42 42 0 0 1 228 110 A 32 32 0 0 1 278 142 A 25 25 0 0 1 268 180 L 95 180 A 25 25 0 0 1 95 138 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">WEATHER: CLOUDY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'windy' || lowerWord === 'wind') {
+    // Dedicated illustration for "windy": Tree bending gracefully under strong wind gusts with flying swirling leaves
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 40 230 Q 150 215 360 225" stroke="#15803D" stroke-width="4" fill="none"/>
+
+          <path d="M 125 225 Q 130 170 170 135 Q 155 170 145 225 Z" fill="#78350F"/>
+          <path d="M 160 140 Q 185 125 220 120" stroke="#78350F" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M 150 155 Q 180 145 210 145" stroke="#78350F" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+          <path d="M 150 135 C 150 100 185 90 220 95 C 255 100 275 120 265 145 C 255 165 220 170 180 165 C 155 160 150 150 150 135 Z" fill="#16A34A"/>
+          <path d="M 180 115 C 195 85 235 80 260 95 C 285 110 290 135 270 150 C 250 165 215 155 190 140 Z" fill="#22C55E" opacity="0.85"/>
+
+          <path d="M 50 100 Q 130 90 180 110 Q 220 125 215 140 Q 205 150 190 140 Q 185 130 200 120 Q 230 105 320 95" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 65 130 Q 120 120 160 135 Q 200 150 250 145 Q 290 140 340 130" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 80 165 Q 140 155 210 170 Q 270 180 330 165" stroke="#38BDF8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <path d="M 235 90 Q 248 85 255 95 Q 242 100 235 90 Z" fill="#EAB308" transform="rotate(25, 245, 90)"/>
+          <path d="M 285 115 Q 298 110 305 120 Q 292 125 285 115 Z" fill="#EA580C" transform="rotate(-15, 295, 115)"/>
+          <path d="M 265 160 Q 278 155 285 165 Q 272 170 265 160 Z" fill="#16A34A" transform="rotate(35, 275, 160)"/>
+          <path d="M 315 135 Q 328 130 335 140 Q 322 145 315 135 Z" fill="#EAB308" transform="rotate(20, 325, 135)"/>
+          <path d="M 195 80 Q 205 75 212 83 Q 202 88 195 80 Z" fill="#EA580C" transform="rotate(-30, 203, 80)"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 40 215 Q 150 200 360 210" stroke="#15803D" stroke-width="3.5" fill="none"/>
+
+          <path d="M 125 210 Q 130 158 170 125 Q 155 158 145 210 Z" fill="#78350F"/>
+          <path d="M 160 130 Q 185 116 220 112" stroke="#78350F" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+          <path d="M 150 125 C 150 92 185 82 220 87 C 255 92 275 112 265 135 C 255 155 220 160 180 155 C 155 150 150 140 150 125 Z" fill="#16A34A"/>
+          <path d="M 180 105 C 195 78 235 73 260 87 C 285 102 290 125 270 138 C 250 152 215 142 190 128 Z" fill="#22C55E" opacity="0.85"/>
+
+          <path d="M 50 90 Q 130 80 180 100 Q 220 115 215 130 Q 205 140 190 130 Q 185 120 200 110 Q 230 95 320 85" stroke="#38BDF8" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <path d="M 65 120 Q 120 110 160 125 Q 200 140 250 135 Q 290 130 340 120" stroke="#38BDF8" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+
+          <path d="M 235 80 Q 248 75 255 85 Q 242 90 235 80 Z" fill="#EAB308" transform="rotate(25, 245, 80)"/>
+          <path d="M 285 105 Q 298 100 305 110 Q 292 115 285 105 Z" fill="#EA580C" transform="rotate(-15, 295, 105)"/>
+          <path d="M 265 148 Q 278 143 285 153 Q 272 158 265 148 Z" fill="#16A34A" transform="rotate(35, 275, 148)"/>
+          <path d="M 315 122 Q 328 117 335 127 Q 322 132 315 122 Z" fill="#EAB308" transform="rotate(20, 325, 122)"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">WEATHER: WINDY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'stormy' || lowerWord === 'storm') {
+    // Dedicated illustration for "stormy": Dark ominous thunderclouds, bright electric lightning bolts & heavy storm rain
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 115 110 A 32 32 0 0 1 168 78 A 45 45 0 0 1 248 80 A 36 36 0 0 1 292 115 A 30 30 0 0 1 280 152 L 115 152 A 28 28 0 0 1 115 110 Z" fill="#334155"/>
+          <path d="M 140 115 A 26 26 0 0 1 185 88 A 38 38 0 0 1 250 90 A 30 30 0 0 1 285 120 L 140 120 Z" fill="#1E293B" opacity="0.5"/>
+
+          <polygon points="205,120 185,160 202,160 178,210 225,150 205,150" fill="#FACC15" stroke="#F59E0B" stroke-width="2"/>
+          <polygon points="255,130 242,158 253,158 238,190 268,152 255,152" fill="#FDE047"/>
+
+          <line x1="120" y1="162" x2="105" y2="195" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="140" y1="168" x2="125" y2="202" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="165" y1="165" x2="150" y2="200" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="225" y1="172" x2="210" y2="208" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="275" y1="165" x2="260" y2="200" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="295" y1="162" x2="280" y2="196" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          
+          <path d="M 100 215 Q 105 210 110 215" stroke="#38BDF8" stroke-width="2" fill="none"/>
+          <path d="M 145 220 Q 150 215 155 220" stroke="#38BDF8" stroke-width="2" fill="none"/>
+          <path d="M 260 218 Q 265 213 270 218" stroke="#38BDF8" stroke-width="2" fill="none"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 115 95 A 28 28 0 0 1 168 68 A 40 40 0 0 1 248 70 A 32 32 0 0 1 292 100 A 26 26 0 0 1 280 132 L 115 132 A 25 25 0 0 1 115 95 Z" fill="#334155"/>
+
+          <polygon points="205,102 185,142 202,142 178,190 225,134 205,134" fill="#FACC15" stroke="#F59E0B" stroke-width="2"/>
+          <polygon points="255,110 242,136 253,136 238,168 268,132 255,132" fill="#FDE047"/>
+
+          <line x1="120" y1="142" x2="105" y2="175" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="140" y1="148" x2="125" y2="182" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="165" y1="145" x2="150" y2="178" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="225" y1="152" x2="210" y2="188" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+          <line x1="275" y1="145" x2="260" y2="178" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">WEATHER: STORMY</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'snowy' || lowerWord === 'snow') {
+    // Dedicated illustration for "snowy": Snow-covered pine tree, falling snowflakes & cheerful snowman
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 40 230 Q 150 215 250 225 Q 310 220 360 230" stroke="#E2E8F0" stroke-width="6" fill="#F8FAFC"/>
+
+          <!-- Pine tree -->
+          <rect x="112" y="190" width="16" height="38" rx="3" fill="#78350F"/>
+          <polygon points="75,195 165,195 120,160" fill="#047857"/>
+          <path d="M 75 195 Q 120 185 165 195 L 160 190 Q 120 182 80 190 Z" fill="#F8FAFC"/>
+          <polygon points="85,165 155,165 120,135" fill="#059669"/>
+          <path d="M 85 165 Q 120 157 155 165 L 150 160 Q 120 154 90 160 Z" fill="#F8FAFC"/>
+          <polygon points="95,140 145,140 120,110" fill="#10B981"/>
+          <path d="M 95 140 Q 120 133 145 140 L 140 136 Q 120 130 100 136 Z" fill="#F8FAFC"/>
+
+          <!-- Snowman -->
+          <circle cx="255" cy="190" r="32" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+          <circle cx="255" cy="140" r="22" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+          <circle cx="248" cy="136" r="2.2" fill="#1E293B"/>
+          <circle cx="262" cy="136" r="2.2" fill="#1E293B"/>
+          <polygon points="255,140 272,143 255,146" fill="#EA580C"/>
+          <circle cx="249" cy="149" r="1.5" fill="#1E293B"/>
+          <circle cx="255" cy="151" r="1.5" fill="#1E293B"/>
+          <circle cx="261" cy="149" r="1.5" fill="#1E293B"/>
+          <path d="M 240 158 Q 255 163 270 158" stroke="#DC2626" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <rect x="260" y="160" width="8" height="22" rx="2" fill="#DC2626"/>
+          <ellipse cx="255" cy="122" rx="18" ry="4" fill="#334155"/>
+          <rect x="245" y="104" width="20" height="18" rx="2" fill="#1E293B"/>
+
+          <text x="70" y="110" font-size="22">❄️</text>
+          <text x="175" y="95" font-size="28">❄️</text>
+          <text x="210" y="145" font-size="18">❄️</text>
+          <text x="315" y="115" font-size="24">❄️</text>
+          <text x="325" y="180" font-size="20">❄️</text>
+          <circle cx="150" cy="80" r="3.5" fill="#FFFFFF"/>
+          <circle cx="280" cy="90" r="3" fill="#FFFFFF"/>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 40 215 Q 150 200 250 210 Q 310 205 360 215" stroke="#E2E8F0" stroke-width="5" fill="#F8FAFC"/>
+
+          <rect x="112" y="175" width="16" height="38" rx="3" fill="#78350F"/>
+          <polygon points="75,182 165,182 120,148" fill="#047857"/>
+          <path d="M 75 182 Q 120 172 165 182 L 160 178 Q 120 170 80 178 Z" fill="#F8FAFC"/>
+          <polygon points="85,152 155,152 120,124" fill="#059669"/>
+          <polygon points="95,128 145,128 120,100" fill="#10B981"/>
+
+          <circle cx="255" cy="176" r="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.8"/>
+          <circle cx="255" cy="132" r="19" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.8"/>
+          <circle cx="249" cy="128" r="2" fill="#1E293B"/>
+          <circle cx="261" cy="128" r="2" fill="#1E293B"/>
+          <polygon points="255,132 270,135 255,138" fill="#EA580C"/>
+          <path d="M 242 148 Q 255 153 268 148" stroke="#DC2626" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <rect x="260" y="150" width="7" height="18" rx="2" fill="#DC2626"/>
+          <ellipse cx="255" cy="116" rx="16" ry="3.5" fill="#334155"/>
+          <rect x="246" y="100" width="18" height="16" rx="2" fill="#1E293B"/>
+
+          <text x="70" y="98" font-size="20">❄️</text>
+          <text x="175" y="85" font-size="24">❄️</text>
+          <text x="315" y="105" font-size="22">❄️</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">WEATHER: SNOWY</text>
         <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
