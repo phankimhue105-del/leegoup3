@@ -4001,6 +4001,7 @@
         "/images/unit7/lesson1/hotel.png"
       ],
       "correctAnswer": "aquarium",
+      "hideOptionLabels": true,
       "explanation_vi": "Đúng. 'aquarium' nghĩa là thủy cung.",
       "vietnameseExplanation": "Đúng. 'aquarium' nghĩa là thủy cung."
     },
@@ -4241,6 +4242,7 @@
         "/images/unit7/lesson2/pharmacy.png"
       ],
       "correctAnswer": "coffee shop",
+      "hideOptionLabels": true,
       "explanation_vi": "Đúng. Hình ảnh thể hiện 'coffee shop'.",
       "vietnameseExplanation": "Đúng. Hình ảnh thể hiện 'coffee shop'."
     },
@@ -4455,6 +4457,7 @@
         "/images/unit7/lesson4/stormy.png"
       ],
       "correctAnswer": "windy",
+      "hideOptionLabels": true,
       "explanation_vi": "Đúng. Bức tranh thể hiện thời tiết nhiều gió.",
       "vietnameseExplanation": "Đúng. Bức tranh thể hiện thời tiết nhiều gió."
     },
