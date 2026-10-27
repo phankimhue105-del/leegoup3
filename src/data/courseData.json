@@ -7790,13 +7790,13 @@
               "hideOptionLabels": true,
               "questionText": "Picture -> Word: Choose the correct word for making bed:",
               "options": [
-                "make my bed",
                 "clean my room",
+                "make my bed",
                 "do laundry"
               ],
               "optionImages": [
-                "/images/unit6/lesson1/make_my_bed.png",
                 "/images/unit6/lesson1/clean_my_room.png",
+                "/images/unit6/lesson1/make_my_bed.png",
                 "/images/unit6/lesson1/do_laundry.png"
               ],
               "correctAnswer": "make my bed",
@@ -7808,14 +7808,14 @@
               "type": "picture-select",
               "questionText": "Word -> Picture: Choose the picture for 'wash the dishes':",
               "options": [
-                "wash the dishes",
                 "set the table",
-                "walk the dog"
+                "walk the dog",
+                "wash the dishes"
               ],
               "optionImages": [
-                "/images/unit6/lesson1/wash_the_dishes.png",
                 "/images/unit6/lesson1/set_the_table.png",
-                "/images/unit6/lesson1/walk_the_dog.png"
+                "/images/unit6/lesson1/walk_the_dog.png",
+                "/images/unit6/lesson1/wash_the_dishes.png"
               ],
               "correctAnswer": "wash the dishes",
               "explanation_vi": "Đúng. Bức tranh thể hiện rửa bát đĩa ('wash the dishes').",
@@ -7826,10 +7826,10 @@
               "type": "multiple-choice",
               "questionText": "Vocabulary Meaning: What does 'set the table' mean?",
               "options": [
-                "Dọn bàn ăn",
                 "Rửa bát đĩa",
                 "Lau phòng",
-                "Gấp chăn mền"
+                "Gấp chăn mền",
+                "Dọn bàn ăn"
               ],
               "correctAnswer": "Dọn bàn ăn",
               "explanation_vi": "Đúng. 'set the table' nghĩa là dọn bàn ăn.",
@@ -7890,8 +7890,8 @@
               "type": "multiple-choice",
               "questionText": "Dialogue MCQ: A: 'When does she clean her room?' B: '_____'",
               "options": [
-                "She cleans her room before school.",
                 "Yes, she does.",
+                "She cleans her room before school.",
                 "No, she doesn't.",
                 "She make her bed."
               ],
@@ -7904,9 +7904,9 @@
               "type": "multiple-choice",
               "questionText": "Sentence MCQ: 'He _____ his bed before school.'",
               "options": [
-                "makes",
                 "make",
                 "making",
+                "makes",
                 "is make"
               ],
               "correctAnswer": "makes",
@@ -7937,10 +7937,10 @@
               "type": "multiple-choice",
               "questionText": "Mixed Review: Which question is correct?",
               "options": [
-                "When does he make his bed?",
                 "When do he make his bed?",
                 "When he makes his bed?",
-                "When is he make his bed?"
+                "When is he make his bed?",
+                "When does he make his bed?"
               ],
               "correctAnswer": "When does he make his bed?",
               "explanation_vi": "Đúng. Cấu trúc câu hỏi: 'When + does + he + V-bare...?'.",
@@ -8162,14 +8162,14 @@
               "hideOptionLabels": true,
               "questionText": "Vocabulary Review: Choose the picture for 'water the plants':",
               "options": [
-                "water the plants",
                 "sweep the floor",
-                "wash the car"
+                "wash the car",
+                "water the plants"
               ],
               "optionImages": [
-                "/images/unit6/lesson2/water_plants.png",
                 "/images/unit6/lesson2/sweep_the_floor.png",
-                "/images/unit6/lesson2/wash_car.png"
+                "/images/unit6/lesson2/wash_car.png",
+                "/images/unit6/lesson2/water_plants.png"
               ],
               "correctAnswer": "water the plants",
               "explanation_vi": "Đúng. Bức tranh miêu tả tưới cây ('water the plants').",
@@ -8180,8 +8180,8 @@
               "type": "multiple-choice",
               "questionText": "Grammar MCQ: 'I always _____ the floor.'",
               "options": [
-                "sweep",
                 "sweeps",
+                "sweep",
                 "sweeping",
                 "sweept"
               ],
@@ -8194,10 +8194,10 @@
               "type": "multiple-choice",
               "questionText": "Grammar MCQ: 'What are his chores? He always _____ out the garbage.'",
               "options": [
-                "takes",
                 "take",
                 "taking",
-                "is take"
+                "is take",
+                "takes"
               ],
               "correctAnswer": "takes",
               "explanation_vi": "Đúng. Chủ ngữ 'He' đi với động từ chia 'takes'.",
@@ -8222,9 +8222,9 @@
               "type": "multiple-choice",
               "questionText": "Dialogue: A: 'What are her chores?' B: '_____'",
               "options": [
-                "She always waters the plants.",
                 "Yes, she does.",
                 "No, she doesn't.",
+                "She always waters the plants.",
                 "She is at home."
               ],
               "correctAnswer": "She always waters the plants.",
@@ -8258,9 +8258,9 @@
               "type": "multiple-choice",
               "questionText": "Conversation: A: 'Do you sweep the floor?' B: 'Yes, I _____ sweep the floor.'",
               "options": [
+                "never",
                 "always",
                 "is",
-                "never",
                 "am"
               ],
               "correctAnswer": "always",
@@ -8273,13 +8273,13 @@
               "hideOptionLabels": true,
               "questionText": "Picture Application: Choose the picture for 'clean the bathroom':",
               "options": [
-                "clean the bathroom",
                 "vacuum the carpet",
+                "clean the bathroom",
                 "take out the garbage"
               ],
               "optionImages": [
-                "/images/unit6/lesson2/clean_bathroom.png",
                 "/images/unit6/lesson2/vacuum_carpet.png",
+                "/images/unit6/lesson2/clean_bathroom.png",
                 "/images/unit6/lesson2/take_out_garbage.png"
               ],
               "correctAnswer": "clean the bathroom",
@@ -8291,10 +8291,10 @@
               "type": "multiple-choice",
               "questionText": "Mixed Review: Which verb goes with 'the carpet'?",
               "options": [
-                "vacuum",
                 "wash",
                 "sweep",
-                "water"
+                "water",
+                "vacuum"
               ],
               "correctAnswer": "vacuum",
               "explanation_vi": "Đúng. Động từ 'vacuum' đi với 'the carpet'.",
@@ -8494,9 +8494,9 @@
               "type": "multiple-choice",
               "questionText": "Story Comprehension: What does Danny ask Mike in the story?",
               "options": [
-                "Do you want to come over?",
                 "Where is your house?",
                 "Do you do laundry?",
+                "Do you want to come over?",
                 "What time is it?"
               ],
               "correctAnswer": "Do you want to come over?",
@@ -8522,13 +8522,13 @@
               "type": "picture-select",
               "questionText": "Vocabulary: Choose the picture for 'come over':",
               "options": [
-                "come over",
                 "after school",
+                "come over",
                 "friendly"
               ],
               "optionImages": [
-                "/images/unit6/lesson3/come_over.png",
                 "/images/unit6/lesson3/after_school.png",
+                "/images/unit6/lesson3/come_over.png",
                 "/images/unit6/lesson3/friendly.png"
               ],
               "correctAnswer": "come over",
@@ -8540,10 +8540,10 @@
               "type": "multiple-choice",
               "questionText": "Vocabulary: What does 'sure' mean in the dialogue?",
               "options": [
-                "Chắc chắn / Đồng ý",
                 "Không đời nào",
                 "Tạm biệt",
-                "Cảm ơn"
+                "Cảm ơn",
+                "Chắc chắn / Đồng ý"
               ],
               "correctAnswer": "Chắc chắn / Đồng ý",
               "explanation_vi": "Đúng. 'sure' thể hiện sự đồng ý hào hứng.",
@@ -8554,8 +8554,8 @@
               "type": "multiple-choice",
               "questionText": "Reference Question: What value do we learn from Lesson 3?",
               "options": [
-                "Be friendly.",
                 "Be quiet.",
+                "Be friendly.",
                 "Be strong.",
                 "Be clean."
               ],
@@ -8568,8 +8568,8 @@
               "type": "multiple-choice",
               "questionText": "True / False: Mike accepts Danny's invitation. Is this statement true or false?",
               "options": [
-                "True",
-                "False"
+                "False",
+                "True"
               ],
               "correctAnswer": "True",
               "explanation_vi": "Đúng. Mike hào hứng nhận lời 'Sure! When?'.",
@@ -8603,9 +8603,9 @@
               "questionText": "Listening: Listen and choose what you hear:",
               "promptAudioUrl": "/audio/unit6/lesson3/come_over.mp3",
               "options": [
-                "Do you want to come over?",
                 "Do you want to play games?",
-                "Do you make your bed?"
+                "Do you make your bed?",
+                "Do you want to come over?"
               ],
               "correctAnswer": "Do you want to come over?",
               "explanation_vi": "Đúng. Băng phát âm câu 'Do you want to come over?'.",
@@ -8616,10 +8616,10 @@
               "type": "multiple-choice",
               "questionText": "Story Review: Complete the invitation: 'Do you want to _____ over?'",
               "options": [
-                "come",
                 "go",
                 "make",
-                "take"
+                "take",
+                "come"
               ],
               "correctAnswer": "come",
               "explanation_vi": "Đúng. Cụm từ là 'come over'.",
@@ -8812,8 +8812,8 @@
               "type": "multiple-choice",
               "questionText": "Grammar: 'I always _____ the cows before school.'",
               "options": [
-                "milk",
                 "milks",
+                "milk",
                 "milking",
                 "is milk"
               ],
@@ -8826,14 +8826,14 @@
               "type": "picture-select",
               "questionText": "Vocabulary: Choose the picture for 'feed the chickens':",
               "options": [
-                "feed the chickens",
                 "milk the cows",
-                "collect eggs"
+                "collect eggs",
+                "feed the chickens"
               ],
               "optionImages": [
-                "/images/unit6/lesson4/feed_chickens.png",
                 "/images/unit6/lesson4/milk_cows.png",
-                "/images/unit6/lesson4/collect_eggs.png"
+                "/images/unit6/lesson4/collect_eggs.png",
+                "/images/unit6/lesson4/feed_chickens.png"
               ],
               "correctAnswer": "feed the chickens",
               "explanation_vi": "Đúng. Bức tranh cho gà ăn ('feed the chickens').",
@@ -8844,10 +8844,10 @@
               "type": "multiple-choice",
               "questionText": "Dialogue: A: 'What do you do in the morning?' B: '_____'",
               "options": [
-                "I always collect eggs.",
                 "Yes, I am.",
                 "She is a farmer.",
-                "It's milk."
+                "It's milk.",
+                "I always collect eggs."
               ],
               "correctAnswer": "I always collect eggs.",
               "explanation_vi": "Đúng. Trả lời việc làm vào buổi sáng 'I always collect eggs.'",
@@ -8872,13 +8872,13 @@
               "type": "picture-select",
               "questionText": "Picture: Choose the picture for 'collecting eggs':",
               "options": [
-                "collect eggs",
                 "pick vegetables",
+                "collect eggs",
                 "milk the cows"
               ],
               "optionImages": [
-                "/images/unit6/lesson4/collect_eggs.png",
                 "/images/unit6/lesson4/pick_vegetables.png",
+                "/images/unit6/lesson4/collect_eggs.png",
                 "/images/unit6/lesson4/milk_cows.png"
               ],
               "correctAnswer": "collect eggs",
@@ -8898,9 +8898,9 @@
               "type": "multiple-choice",
               "questionText": "Sentence Completion: 'He always feeds the _____ in the morning.'",
               "options": [
-                "chickens",
                 "cows",
                 "vegetables",
+                "chickens",
                 "eggs"
               ],
               "correctAnswer": "chickens",
@@ -8926,10 +8926,10 @@
               "type": "multiple-choice",
               "questionText": "Mixed Review: Which action means gathering eggs from hens?",
               "options": [
-                "collect eggs",
                 "milk cows",
                 "feed chickens",
-                "pick vegetables"
+                "pick vegetables",
+                "collect eggs"
               ],
               "correctAnswer": "collect eggs",
               "explanation_vi": "Đúng. 'collect eggs' có nghĩa là thu gom trứng.",
@@ -8940,8 +8940,8 @@
               "type": "multiple-choice",
               "questionText": "Unit Review: 'I always milk the cows _____ school.'",
               "options": [
-                "before",
                 "under",
+                "before",
                 "next",
                 "between"
               ],
@@ -9448,13 +9448,13 @@
               "type": "picture-select",
               "questionText": "Look at the picture and choose the word for 'bãi biển':",
               "options": [
-                "beach",
                 "aquarium",
+                "beach",
                 "museum"
               ],
               "optionImages": [
-                "/images/unit7/lesson1/beach.png",
                 "/images/unit7/lesson1/aquarium.png",
+                "/images/unit7/lesson1/beach.png",
                 "/images/unit7/lesson1/museum.png"
               ],
               "correctAnswer": "beach",
@@ -9466,14 +9466,14 @@
               "type": "picture-select",
               "questionText": "Select the correct picture for 'aquarium':",
               "options": [
-                "aquarium",
                 "pool",
-                "hotel"
+                "hotel",
+                "aquarium"
               ],
               "optionImages": [
-                "/images/unit7/lesson1/aquarium.png",
                 "/images/unit7/lesson1/pool.png",
-                "/images/unit7/lesson1/hotel.png"
+                "/images/unit7/lesson1/hotel.png",
+                "/images/unit7/lesson1/aquarium.png"
               ],
               "correctAnswer": "aquarium",
               "hideOptionLabels": true,
@@ -9485,10 +9485,10 @@
               "type": "multiple-choice",
               "questionText": "What does 'amusement park' mean?",
               "options": [
-                "Công viên giải trí",
                 "Bãi biển",
                 "Bảo tàng",
-                "Khách sạn"
+                "Khách sạn",
+                "Công viên giải trí"
               ],
               "correctAnswer": "Công viên giải trí",
               "explanation_vi": "Đúng. 'amusement park' có nghĩa là công viên giải trí.",
@@ -9549,8 +9549,8 @@
               "type": "multiple-choice",
               "questionText": "Dialogue: A: 'Where was she yesterday?' B: '_____' (ở bể bơi)",
               "options": [
-                "She was at the pool.",
                 "She is at the pool.",
+                "She was at the pool.",
                 "He was at the pool."
               ],
               "correctAnswer": "She was at the pool.",
@@ -9562,9 +9562,9 @@
               "type": "multiple-choice",
               "questionText": "Was he at the hotel yesterday? No, he _____.",
               "options": [
-                "wasn't",
                 "isn't",
-                "don't"
+                "don't",
+                "wasn't"
               ],
               "correctAnswer": "wasn't",
               "explanation_vi": "Đúng. Phủ định quá khứ của 'was' là 'wasn't'.",
@@ -9588,9 +9588,9 @@
               "type": "multiple-choice",
               "questionText": "Was she at the aquarium yesterday? Yes, she _____.",
               "options": [
+                "were",
                 "was",
-                "is",
-                "were"
+                "is"
               ],
               "correctAnswer": "was",
               "explanation_vi": "Đúng. Trả lời khẳng định ngắn 'Yes, she was.'",
@@ -9800,9 +9800,9 @@
               "type": "multiple-choice",
               "questionText": "What is 'pharmacy' in Vietnamese?",
               "options": [
-                "Hiệu thuốc",
                 "Cửa hàng đồ chơi",
                 "Quán cà phê",
+                "Hiệu thuốc",
                 "Hiệu sách"
               ],
               "correctAnswer": "Hiệu thuốc",
@@ -9828,10 +9828,10 @@
               "type": "multiple-choice",
               "questionText": "They _____ at the coffee shop yesterday.",
               "options": [
-                "were",
                 "was",
                 "is",
-                "are"
+                "are",
+                "were"
               ],
               "correctAnswer": "were",
               "explanation_vi": "Đúng. 'They' đi với 'were' ở thì quá khứ.",
@@ -9843,8 +9843,8 @@
               "questionText": "Listen and choose the store name:",
               "promptAudioUrl": "/audio/unit7/lesson2/toy_store.mp3",
               "options": [
-                "toy store",
                 "hair salon",
+                "toy store",
                 "flower shop"
               ],
               "correctAnswer": "toy store",
@@ -9856,8 +9856,8 @@
               "type": "multiple-choice",
               "questionText": "Were they at the hair salon? Yes, they _____.",
               "options": [
-                "were",
                 "was",
+                "were",
                 "are",
                 "do"
               ],
@@ -9878,9 +9878,9 @@
               "type": "multiple-choice",
               "questionText": "Choose the correct sentence structure:",
               "options": [
-                "They were at the bookstore.",
                 "They at the bookstore were.",
-                "Were they at bookstore."
+                "Were they at bookstore.",
+                "They were at the bookstore."
               ],
               "correctAnswer": "They were at the bookstore.",
               "explanation_vi": "Đúng. Cấu trúc câu khẳng định đúng ngữ pháp.",
@@ -9904,14 +9904,14 @@
               "type": "picture-select",
               "questionText": "Select the picture for 'coffee shop':",
               "options": [
-                "coffee shop",
                 "bookstore",
-                "pharmacy"
+                "pharmacy",
+                "coffee shop"
               ],
               "optionImages": [
-                "/images/unit7/lesson2/coffee_shop.png",
                 "/images/unit7/lesson2/bookstore.png",
-                "/images/unit7/lesson2/pharmacy.png"
+                "/images/unit7/lesson2/pharmacy.png",
+                "/images/unit7/lesson2/coffee_shop.png"
               ],
               "correctAnswer": "coffee shop",
               "hideOptionLabels": true,
@@ -9923,10 +9923,10 @@
               "type": "multiple-choice",
               "questionText": "Where were they yesterday? They _____ at the hair salon.",
               "options": [
-                "were",
-                "was",
                 "are",
-                "don't"
+                "was",
+                "don't",
+                "were"
               ],
               "correctAnswer": "were",
               "explanation_vi": "Đúng. 'They' đi với 'were' trong câu miêu tả quá khứ.",
@@ -10113,8 +10113,8 @@
               "type": "multiple-choice",
               "questionText": "What time do Mike and Danny agree to meet?",
               "options": [
-                "At five o'clock",
                 "At four o'clock",
+                "At five o'clock",
                 "At six o'clock"
               ],
               "correctAnswer": "At five o'clock",
@@ -10139,9 +10139,9 @@
               "type": "multiple-choice",
               "questionText": "What does 'watch' mean in this lesson?",
               "options": [
-                "Đồng hồ đeo tay",
                 "Tivi",
-                "Máy ảnh"
+                "Máy ảnh",
+                "Đồng hồ đeo tay"
               ],
               "correctAnswer": "Đồng hồ đeo tay",
               "explanation_vi": "Đúng. 'watch' nghĩa là đồng hồ đeo tay.",
@@ -10152,8 +10152,8 @@
               "type": "multiple-choice",
               "questionText": "What does 'meet' mean?",
               "options": [
-                "Gặp mặt",
                 "Chạy bộ",
+                "Gặp mặt",
                 "Ăn uống"
               ],
               "correctAnswer": "Gặp mặt",
@@ -10165,9 +10165,9 @@
               "type": "multiple-choice",
               "questionText": "What does 'See you then' mean?",
               "options": [
-                "Hẹn gặp lại bạn lúc đó.",
                 "Rất vui gặp bạn.",
-                "Chào buổi sáng."
+                "Chào buổi sáng.",
+                "Hẹn gặp lại bạn lúc đó."
               ],
               "correctAnswer": "Hẹn gặp lại bạn lúc đó.",
               "explanation_vi": "Đúng. 'See you then' nghĩa là hẹn gặp lại lúc đó.",
@@ -10178,8 +10178,8 @@
               "type": "multiple-choice",
               "questionText": "'Let's meet here at five o'clock.' - Is this making an appointment?",
               "options": [
-                "True",
-                "False"
+                "False",
+                "True"
               ],
               "correctAnswer": "True",
               "explanation_vi": "Đúng. Đây là câu đưa ra lời hẹn gặp.",
@@ -10212,9 +10212,9 @@
               "questionText": "Listen to the response line:",
               "promptAudioUrl": "/audio/unit7/lesson3/see_you_then.mp3",
               "options": [
-                "See you then",
                 "See you tomorrow",
-                "Good night"
+                "Good night",
+                "See you then"
               ],
               "correctAnswer": "See you then",
               "explanation_vi": "Đúng. Mẫu câu phát ra là 'See you then'.",
@@ -10438,9 +10438,9 @@
               "type": "multiple-choice",
               "questionText": "How _____ the weather yesterday?",
               "options": [
-                "was",
                 "is",
-                "were"
+                "were",
+                "was"
               ],
               "correctAnswer": "was",
               "explanation_vi": "Đúng. Thì quá khứ hỏi thời tiết số ít dùng 'was'.",
@@ -10451,8 +10451,8 @@
               "type": "multiple-choice",
               "questionText": "What is 'stormy' in Vietnamese?",
               "options": [
-                "Có bão",
                 "Có tuyết",
+                "Có bão",
                 "Có nắng"
               ],
               "correctAnswer": "Có bão",
@@ -10478,9 +10478,9 @@
               "questionText": "Listen and choose the weather type:",
               "promptAudioUrl": "/audio/unit7/lesson4/snowy.mp3",
               "options": [
-                "snowy",
                 "rainy",
-                "windy"
+                "windy",
+                "snowy"
               ],
               "correctAnswer": "snowy",
               "explanation_vi": "Đúng. Bạn nghe thấy từ 'snowy'.",
@@ -10491,13 +10491,13 @@
               "type": "picture-select",
               "questionText": "Select the picture for 'windy':",
               "options": [
-                "windy",
                 "sunny",
+                "windy",
                 "stormy"
               ],
               "optionImages": [
-                "/images/unit7/lesson4/windy.png",
                 "/images/unit7/lesson4/sunny.png",
+                "/images/unit7/lesson4/windy.png",
                 "/images/unit7/lesson4/stormy.png"
               ],
               "correctAnswer": "windy",
@@ -10531,8 +10531,8 @@
               "type": "multiple-choice",
               "questionText": "A: How's the weather today? B: It's _____.",
               "options": [
-                "sunny",
                 "was sunny",
+                "sunny",
                 "were sunny"
               ],
               "correctAnswer": "sunny",
@@ -10544,9 +10544,9 @@
               "type": "multiple-choice",
               "questionText": "Yesterday it was _____, so I took an umbrella.",
               "options": [
-                "rainy",
                 "sunny",
-                "dry"
+                "dry",
+                "rainy"
               ],
               "correctAnswer": "rainy",
               "explanation_vi": "Đúng. 'rainy' (có mưa) nên cần mang dù.",
