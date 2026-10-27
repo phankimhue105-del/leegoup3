@@ -112,12 +112,17 @@ const COMPOSITE_ILLUSTRATIONS: Record<string, { emojis: string[]; label: string 
   'snowy': { emojis: ['❄️', '⛄', '🌨️'], label: 'Snowy Weather' },
   
   // Unit 8 - Things We Use
+  'lunchbox': { emojis: ['🍱', '🥪', '🎒'], label: 'Lunchbox' },
+  'water bottle': { emojis: ['🍶', '🥤', '💧'], label: 'Water Bottle' },
+  'calculator': { emojis: ['🔢', '🖩', '📐'], label: 'Calculator' },
+  'stapler': { emojis: ['📎', '📌', '📑'], label: 'Stapler' },
   'folder': { emojis: ['📁', '📄', '📎'], label: 'Document Folder' },
   'magazine': { emojis: ['📰', '📖', '🎨'], label: 'Magazine' },
   'poster': { emojis: ['📜', '🖼️', '🎨'], label: 'Poster' },
   'pencil sharpener': { emojis: ['✏️', '⚙️', '📝'], label: 'Pencil Sharpener' },
   'glue stick': { emojis: ['🖍️', '🧴', '📄'], label: 'Glue Stick' },
   'clean up': { emojis: ['🧹', '🧼', '✨'], label: 'Cleaning Up' },
+  'saturday': { emojis: ['📅', '🌟', '🏖️'], label: 'Saturday' },
   'digital tv': { emojis: ['📺', '📡', '🎬'], label: 'Digital TV' },
 
   // Specific Food/Clothing Corrections
@@ -164,6 +169,10 @@ export function extractCoreWord(text: string): string {
 
   // Unit 8 Things We Use
   if (lower.includes('digital tv') || lower.includes('digital_tv') || (lower.includes('digital') && lower.includes('tv'))) return 'digital tv';
+  if (lower.includes('lunchbox') || lower.includes('lunch_box')) return 'lunchbox';
+  if (lower.includes('water bottle') || lower.includes('water_bottle')) return 'water bottle';
+  if (lower.includes('calculator')) return 'calculator';
+  if (lower.includes('stapler')) return 'stapler';
   if (lower.includes('pencil sharpener') || lower.includes('pencil_sharpener') || lower.includes('sharpener')) return 'pencil sharpener';
   if (lower.includes('glue stick') || lower.includes('glue_stick')) return 'glue stick';
   if (lower.includes('magazine')) return 'magazine';
@@ -1662,6 +1671,258 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
         <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
       `;
     }
+  } else if (lowerWord === 'lunchbox' || lowerWord === 'lunch_box') {
+    // Dedicated illustration for "lunchbox": Primary school lunchbox / bento container with latch and handle
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <path d="M 160 95 L 160 70 C 160 58 240 58 240 70 L 240 95" fill="none" stroke="#FDA4AF" stroke-width="12" stroke-linecap="round" />
+          <rect x="180" y="60" width="40" height="12" rx="5" fill="#F43F5E" />
+          <rect x="105" y="95" width="190" height="115" rx="20" fill="#F43F5E" stroke="#E11D48" stroke-width="2" />
+          <path d="M 105 136 L 295 136 L 295 190 C 295 201 286 210 275 210 L 125 210 C 114 210 105 201 105 190 Z" fill="#E11D48" />
+          <rect x="100" y="127" width="200" height="13" rx="5" fill="#FFE4E6" stroke="#FDA4AF" stroke-width="2" />
+          <rect x="130" y="120" width="24" height="26" rx="4" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+          <circle cx="142" cy="133" r="3" fill="#D97706" />
+          <rect x="246" y="120" width="24" height="26" rx="4" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+          <circle cx="258" cy="133" r="3" fill="#D97706" />
+          <circle cx="200" cy="173" r="22" fill="#FFFFFF" opacity="0.95" />
+          <circle cx="196" cy="174" r="11" fill="#EF4444" />
+          <circle cx="204" cy="174" r="11" fill="#EF4444" />
+          <path d="M 200 164 Q 202 156 206 155" stroke="#78350F" stroke-width="2.5" fill="none" stroke-linecap="round" />
+          <ellipse cx="208" cy="158" rx="4" ry="2.2" fill="#22C55E" transform="rotate(-30, 208, 158)" />
+          <text x="120" y="80" font-size="20">✨</text>
+          <text x="260" y="80" font-size="20">🍱</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <path d="M 160 95 L 160 70 C 160 58 240 58 240 70 L 240 95" fill="none" stroke="#FDA4AF" stroke-width="12" stroke-linecap="round" />
+          <rect x="180" y="60" width="40" height="12" rx="5" fill="#F43F5E" />
+          <rect x="105" y="95" width="190" height="115" rx="20" fill="#F43F5E" stroke="#E11D48" stroke-width="2" />
+          <path d="M 105 136 L 295 136 L 295 190 C 295 201 286 210 275 210 L 125 210 C 114 210 105 201 105 190 Z" fill="#E11D48" />
+          <rect x="100" y="127" width="200" height="13" rx="5" fill="#FFE4E6" stroke="#FDA4AF" stroke-width="2" />
+          <rect x="130" y="120" width="24" height="26" rx="4" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+          <circle cx="142" cy="133" r="3" fill="#D97706" />
+          <rect x="246" y="120" width="24" height="26" rx="4" fill="#FBBF24" stroke="#D97706" stroke-width="2" />
+          <circle cx="258" cy="133" r="3" fill="#D97706" />
+          <circle cx="200" cy="173" r="22" fill="#FFFFFF" opacity="0.95" />
+          <circle cx="196" cy="174" r="11" fill="#EF4444" />
+          <circle cx="204" cy="174" r="11" fill="#EF4444" />
+          <path d="M 200 164 Q 202 156 206 155" stroke="#78350F" stroke-width="2.5" fill="none" stroke-linecap="round" />
+          <ellipse cx="208" cy="158" rx="4" ry="2.2" fill="#22C55E" transform="rotate(-30, 208, 158)" />
+          <text x="120" y="80" font-size="20">✨</text>
+          <text x="260" y="80" font-size="20">🍱</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">THINGS WE USE: LUNCHBOX</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'water bottle' || lowerWord === 'water_bottle') {
+    // Dedicated illustration for "water bottle": Reusable school sports bottle with spout cap, volume marks and carry strap
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="145" y="88" width="110" height="120" rx="22" fill="#0EA5E9" stroke="#0284C7" stroke-width="2" />
+          <rect x="151" y="94" width="98" height="108" rx="18" fill="#38BDF8" />
+          <path d="M 151 126 Q 175 120 200 126 Q 225 132 249 126 L 249 184 C 249 194 241 202 231 202 L 169 202 C 159 202 151 194 151 184 Z" fill="#0284C7" opacity="0.75" />
+          <line x1="160" y1="135" x2="178" y2="135" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+          <text x="183" y="138" font-family="'Nunito', sans-serif" font-size="8" font-weight="900" fill="#FFFFFF">500ml</text>
+          <line x1="160" y1="155" x2="173" y2="155" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="160" y1="175" x2="178" y2="175" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+          <text x="183" y="178" font-family="'Nunito', sans-serif" font-size="8" font-weight="900" fill="#FFFFFF">250ml</text>
+          <rect x="172" y="74" width="56" height="16" rx="4" fill="#0369A1" />
+          <rect x="165" y="62" width="70" height="14" rx="4" fill="#0F172A" />
+          <path d="M 172 62 L 178 44 L 212 44 L 218 62 Z" fill="#334155" />
+          <rect x="193" y="65" width="14" height="8" rx="2" fill="#22C55E" />
+          <path d="M 235 68 C 265 68 265 100 235 100" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+          <circle cx="215" cy="155" r="14" fill="#FFFFFF" opacity="0.4" />
+          <text x="215" y="161" font-size="16" text-anchor="middle">💧</text>
+          <text x="125" y="80" font-size="20">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="145" y="88" width="110" height="120" rx="22" fill="#0EA5E9" stroke="#0284C7" stroke-width="2" />
+          <rect x="151" y="94" width="98" height="108" rx="18" fill="#38BDF8" />
+          <path d="M 151 126 Q 175 120 200 126 Q 225 132 249 126 L 249 184 C 249 194 241 202 231 202 L 169 202 C 159 202 151 194 151 184 Z" fill="#0284C7" opacity="0.75" />
+          <line x1="160" y1="135" x2="178" y2="135" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+          <text x="183" y="138" font-family="'Nunito', sans-serif" font-size="8" font-weight="900" fill="#FFFFFF">500ml</text>
+          <line x1="160" y1="155" x2="173" y2="155" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="160" y1="175" x2="178" y2="175" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+          <text x="183" y="178" font-family="'Nunito', sans-serif" font-size="8" font-weight="900" fill="#FFFFFF">250ml</text>
+          <rect x="172" y="74" width="56" height="16" rx="4" fill="#0369A1" />
+          <rect x="165" y="62" width="70" height="14" rx="4" fill="#0F172A" />
+          <path d="M 172 62 L 178 44 L 212 44 L 218 62 Z" fill="#334155" />
+          <rect x="193" y="65" width="14" height="8" rx="2" fill="#22C55E" />
+          <path d="M 235 68 C 265 68 265 100 235 100" fill="none" stroke="#0F172A" stroke-width="6" stroke-linecap="round" />
+          <circle cx="215" cy="155" r="14" fill="#FFFFFF" opacity="0.4" />
+          <text x="215" y="161" font-size="16" text-anchor="middle">💧</text>
+          <text x="125" y="80" font-size="20">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">THINGS WE USE: WATER BOTTLE</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'calculator') {
+    // Dedicated illustration for "calculator": Handheld digital pocket calculator with LCD screen & numeric keypad
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="125" y="55" width="150" height="160" rx="18" fill="#1E293B" stroke="#334155" stroke-width="3" />
+          <rect x="142" y="66" width="46" height="12" rx="2" fill="#78350F" stroke="#92400E" stroke-width="1" />
+          <line x1="157" y1="66" x2="157" y2="78" stroke="#B45309" stroke-width="1" />
+          <line x1="172" y1="66" x2="172" y2="78" stroke="#B45309" stroke-width="1" />
+          <rect x="220" y="69" width="38" height="7" rx="1.5" fill="#475569" />
+          <rect x="138" y="84" width="124" height="32" rx="6" fill="#CCFBF1" stroke="#5EEAD4" stroke-width="2" />
+          <text x="254" y="107" font-family="'Courier New', monospace" font-size="20" font-weight="900" fill="#0F766E" text-anchor="end" letter-spacing="2">12345</text>
+          <rect x="138" y="122" width="26" height="17" rx="4" fill="#EF4444" />
+          <text x="151" y="134" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle">C</text>
+          <rect x="171" y="122" width="26" height="17" rx="4" fill="#475569" />
+          <text x="184" y="134" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle">±</text>
+          <rect x="204" y="122" width="26" height="17" rx="4" fill="#475569" />
+          <text x="217" y="134" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle">%</text>
+          <rect x="236" y="122" width="26" height="17" rx="4" fill="#F97316" />
+          <text x="249" y="135" font-family="'Nunito', sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">÷</text>
+          <rect x="138" y="143" width="26" height="17" rx="4" fill="#334155" />
+          <text x="151" y="155" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">7</text>
+          <rect x="171" y="143" width="26" height="17" rx="4" fill="#334155" />
+          <text x="184" y="155" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">8</text>
+          <rect x="204" y="143" width="26" height="17" rx="4" fill="#334155" />
+          <text x="217" y="155" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">9</text>
+          <rect x="236" y="143" width="26" height="17" rx="4" fill="#F97316" />
+          <text x="249" y="155" font-family="'Nunito', sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">×</text>
+          <rect x="138" y="164" width="26" height="17" rx="4" fill="#334155" />
+          <text x="151" y="176" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">4</text>
+          <rect x="171" y="164" width="26" height="17" rx="4" fill="#334155" />
+          <text x="184" y="176" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">5</text>
+          <rect x="204" y="164" width="26" height="17" rx="4" fill="#334155" />
+          <text x="217" y="176" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">6</text>
+          <rect x="236" y="164" width="26" height="17" rx="4" fill="#F97316" />
+          <text x="249" y="176" font-family="'Nunito', sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">-</text>
+          <rect x="138" y="185" width="26" height="17" rx="4" fill="#334155" />
+          <text x="151" y="197" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">1</text>
+          <rect x="171" y="185" width="26" height="17" rx="4" fill="#334155" />
+          <text x="184" y="197" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">2</text>
+          <rect x="204" y="185" width="26" height="17" rx="4" fill="#334155" />
+          <text x="217" y="197" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">3</text>
+          <rect x="236" y="185" width="26" height="17" rx="4" fill="#0EA5E9" />
+          <text x="249" y="197" font-family="'Nunito', sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">=</text>
+          <text x="285" y="75" font-size="18">🔢</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="125" y="55" width="150" height="160" rx="18" fill="#1E293B" stroke="#334155" stroke-width="3" />
+          <rect x="142" y="66" width="46" height="12" rx="2" fill="#78350F" stroke="#92400E" stroke-width="1" />
+          <line x1="157" y1="66" x2="157" y2="78" stroke="#B45309" stroke-width="1" />
+          <line x1="172" y1="66" x2="172" y2="78" stroke="#B45309" stroke-width="1" />
+          <rect x="220" y="69" width="38" height="7" rx="1.5" fill="#475569" />
+          <rect x="138" y="84" width="124" height="32" rx="6" fill="#CCFBF1" stroke="#5EEAD4" stroke-width="2" />
+          <text x="254" y="107" font-family="'Courier New', monospace" font-size="20" font-weight="900" fill="#0F766E" text-anchor="end" letter-spacing="2">12345</text>
+          <rect x="138" y="122" width="26" height="17" rx="4" fill="#EF4444" />
+          <text x="151" y="134" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle">C</text>
+          <rect x="171" y="122" width="26" height="17" rx="4" fill="#475569" />
+          <text x="184" y="134" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle">±</text>
+          <rect x="204" y="122" width="26" height="17" rx="4" fill="#475569" />
+          <text x="217" y="134" font-family="'Nunito', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle">%</text>
+          <rect x="236" y="122" width="26" height="17" rx="4" fill="#F97316" />
+          <text x="249" y="135" font-family="'Nunito', sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">÷</text>
+          <rect x="138" y="143" width="26" height="17" rx="4" fill="#334155" />
+          <text x="151" y="155" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">7</text>
+          <rect x="171" y="143" width="26" height="17" rx="4" fill="#334155" />
+          <text x="184" y="155" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">8</text>
+          <rect x="204" y="143" width="26" height="17" rx="4" fill="#334155" />
+          <text x="217" y="155" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">9</text>
+          <rect x="236" y="143" width="26" height="17" rx="4" fill="#F97316" />
+          <text x="249" y="155" font-family="'Nunito', sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">×</text>
+          <rect x="138" y="164" width="26" height="17" rx="4" fill="#334155" />
+          <text x="151" y="176" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">4</text>
+          <rect x="171" y="164" width="26" height="17" rx="4" fill="#334155" />
+          <text x="184" y="176" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">5</text>
+          <rect x="204" y="164" width="26" height="17" rx="4" fill="#334155" />
+          <text x="217" y="176" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">6</text>
+          <rect x="236" y="164" width="26" height="17" rx="4" fill="#F97316" />
+          <text x="249" y="176" font-family="'Nunito', sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">-</text>
+          <rect x="138" y="185" width="26" height="17" rx="4" fill="#334155" />
+          <text x="151" y="197" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">1</text>
+          <rect x="171" y="185" width="26" height="17" rx="4" fill="#334155" />
+          <text x="184" y="197" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">2</text>
+          <rect x="204" y="185" width="26" height="17" rx="4" fill="#334155" />
+          <text x="217" y="197" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="#F8FAFC" text-anchor="middle">3</text>
+          <rect x="236" y="185" width="26" height="17" rx="4" fill="#0EA5E9" />
+          <text x="249" y="197" font-family="'Nunito', sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">=</text>
+          <text x="285" y="75" font-size="18">🔢</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">THINGS WE USE: CALCULATOR</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
+  } else if (lowerWord === 'stapler') {
+    // Dedicated illustration for "stapler": Classic desktop office stapler with steel anvil & pressing arm
+    if (hideText) {
+      svgContent = `
+        <g filter="url(#shadow)">
+          <rect x="85" y="175" width="230" height="24" rx="6" fill="#334155" stroke="#1E293B" stroke-width="2" />
+          <rect x="120" y="172" width="36" height="6" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" />
+          <line x1="130" y1="174" x2="136" y2="174" stroke="#475569" stroke-width="1.5" />
+          <line x1="140" y1="174" x2="146" y2="174" stroke="#475569" stroke-width="1.5" />
+          <rect x="95" y="198" width="26" height="6" rx="2" fill="#0F172A" />
+          <rect x="275" y="198" width="26" height="6" rx="2" fill="#0F172A" />
+          <circle cx="282" cy="160" r="15" fill="#475569" stroke="#1E293B" stroke-width="2.5" />
+          <circle cx="282" cy="160" r="6" fill="#CBD5E1" />
+          <path d="M 280 160 L 125 160 L 125 173 L 280 173 Z" fill="#94A3B8" stroke="#64748B" stroke-width="2" />
+          <rect x="145" y="162" width="40" height="9" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+          <line x1="155" y1="162" x2="155" y2="171" stroke="#94A3B8" stroke-width="1" />
+          <line x1="165" y1="162" x2="165" y2="171" stroke="#94A3B8" stroke-width="1" />
+          <line x1="175" y1="162" x2="175" y2="171" stroke="#94A3B8" stroke-width="1" />
+          <path d="M 286 156 C 286 130 255 122 195 125 L 118 132 C 108 133 102 140 102 150 L 102 165 L 128 165 L 128 147 L 198 143 C 255 140 272 146 272 156 Z" fill="#2563EB" stroke="#1D4ED8" stroke-width="2" />
+          <rect x="110" y="127" width="38" height="9" rx="3" fill="#1D4ED8" />
+          <rect x="105" y="146" width="20" height="18" rx="2" fill="#CBD5E1" stroke="#64748B" stroke-width="1.5" />
+          <path d="M 85 160 L 115 160 L 115 174 L 85 174 Z" fill="#F8FAFC" opacity="0.9" />
+          <line x1="95" y1="167" x2="105" y2="167" stroke="#475569" stroke-width="2" />
+          <text x="295" y="115" font-size="22">📎</text>
+          <text x="135" y="95" font-size="20">✨</text>
+        </g>
+      `;
+    } else {
+      svgContent = `
+        <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
+        <g filter="url(#shadow)">
+          <rect x="85" y="175" width="230" height="24" rx="6" fill="#334155" stroke="#1E293B" stroke-width="2" />
+          <rect x="120" y="172" width="36" height="6" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5" />
+          <line x1="130" y1="174" x2="136" y2="174" stroke="#475569" stroke-width="1.5" />
+          <line x1="140" y1="174" x2="146" y2="174" stroke="#475569" stroke-width="1.5" />
+          <rect x="95" y="198" width="26" height="6" rx="2" fill="#0F172A" />
+          <rect x="275" y="198" width="26" height="6" rx="2" fill="#0F172A" />
+          <circle cx="282" cy="160" r="15" fill="#475569" stroke="#1E293B" stroke-width="2.5" />
+          <circle cx="282" cy="160" r="6" fill="#CBD5E1" />
+          <path d="M 280 160 L 125 160 L 125 173 L 280 173 Z" fill="#94A3B8" stroke="#64748B" stroke-width="2" />
+          <rect x="145" y="162" width="40" height="9" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+          <line x1="155" y1="162" x2="155" y2="171" stroke="#94A3B8" stroke-width="1" />
+          <line x1="165" y1="162" x2="165" y2="171" stroke="#94A3B8" stroke-width="1" />
+          <line x1="175" y1="162" x2="175" y2="171" stroke="#94A3B8" stroke-width="1" />
+          <path d="M 286 156 C 286 130 255 122 195 125 L 118 132 C 108 133 102 140 102 150 L 102 165 L 128 165 L 128 147 L 198 143 C 255 140 272 146 272 156 Z" fill="#2563EB" stroke="#1D4ED8" stroke-width="2" />
+          <rect x="110" y="127" width="38" height="9" rx="3" fill="#1D4ED8" />
+          <rect x="105" y="146" width="20" height="18" rx="2" fill="#CBD5E1" stroke="#64748B" stroke-width="1.5" />
+          <path d="M 85 160 L 115 160 L 115 174 L 85 174 Z" fill="#F8FAFC" opacity="0.9" />
+          <line x1="95" y1="167" x2="105" y2="167" stroke="#475569" stroke-width="2" />
+          <text x="295" y="115" font-size="22">📎</text>
+          <text x="135" y="95" font-size="20">✨</text>
+        </g>
+        <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">THINGS WE USE: STAPLER</text>
+        <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
+        <text x="200" y="263" font-family="'Nunito', 'Fredoka', sans-serif" font-size="20" font-weight="800" fill="${scheme.text}" text-anchor="middle">${cleanWord}</text>
+      `;
+    }
   } else if (lowerWord === 'magazine') {
     // Dedicated illustration for "magazine": Glossy printed magazine with headlines and feature image
     if (hideText) {
@@ -1767,40 +2028,64 @@ export function generateSVGPlaceholder(word: string, hideText: boolean = false):
       `;
     }
   } else if (lowerWord === 'pencil sharpener' || lowerWord === 'pencil_sharpener' || lowerWord === 'sharpener') {
-    // Dedicated illustration for "pencil sharpener": Compact sharpener with metal blade, screw, entry hole & wooden shaving
+    // Dedicated illustration for "pencil sharpener": Kid-friendly handheld wedge sharpener with entry hole, screw-held metal blade & pencil shaving
     if (hideText) {
       svgContent = `
         <g filter="url(#shadow)">
-          <path d="M 130 90 L 250 80 L 260 175 L 120 185 Z" fill="#0EA5E9" stroke="#0284C7" stroke-width="3" />
-          <line x1="125" y1="120" x2="123" y2="155" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
-          <line x1="254" y1="110" x2="257" y2="145" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
-          <rect x="150" y="95" width="80" height="70" rx="3" fill="#0284C7" />
-          <rect x="158" y="90" width="64" height="65" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2" />
-          <line x1="160" y1="150" x2="220" y2="150" stroke="#64748B" stroke-width="3" />
-          <circle cx="190" cy="118" r="7" fill="#CBD5E1" stroke="#64748B" stroke-width="2" />
-          <line x1="185" y1="118" x2="195" y2="118" stroke="#334155" stroke-width="2" />
-          <ellipse cx="190" cy="177" rx="22" ry="10" fill="#0F172A" />
-          <ellipse cx="190" cy="177" rx="16" ry="6" fill="#1E293B" />
-          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round" />
-          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#1E293B" stroke-width="2" fill="none" stroke-linecap="round" />
+          <path d="M 125 105 L 255 85 L 265 190 L 115 180 Z" fill="#06B6D4" stroke="#0891B2" stroke-width="3" />
+          <path d="M 125 105 L 140 102 L 132 178 L 115 180 Z" fill="#0891B2" opacity="0.4" />
+          
+          <line x1="120" y1="125" x2="118" y2="160" stroke="#0891B2" stroke-width="4" stroke-linecap="round" />
+          <line x1="126" y1="120" x2="124" y2="165" stroke="#0891B2" stroke-width="4" stroke-linecap="round" />
+
+          <circle cx="155" cy="145" r="20" fill="#0F172A" stroke="#0891B2" stroke-width="2" />
+          <circle cx="155" cy="145" r="14" fill="#020617" />
+
+          <polygon points="180,97 252,87 257,165 185,175" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2" />
+          <line x1="183" y1="97" x2="188" y2="175" stroke="#475569" stroke-width="3" />
+          
+          <circle cx="220" cy="130" r="7" fill="#CBD5E1" stroke="#64748B" stroke-width="1.5" />
+          <line x1="216" y1="130" x2="224" y2="130" stroke="#334155" stroke-width="2" />
+          <line x1="220" y1="126" x2="220" y2="134" stroke="#334155" stroke-width="2" />
+
+          <polygon points="65,138 135,145 65,152" fill="#FDE047" stroke="#CA8A04" stroke-width="1.5" />
+          <polygon points="118,143 135,145 118,147" fill="#1E293B" />
+          <rect x="35" y="138" width="30" height="14" fill="#EF4444" stroke="#DC2626" stroke-width="1.5" />
+
+          <path d="M 235 150 C 265 130 290 145 280 170 C 270 195 245 185 252 165" stroke="#D97706" stroke-width="7" fill="none" stroke-linecap="round" />
+          <path d="M 235 150 C 265 130 290 145 280 170 C 270 195 245 185 252 165" stroke="#FDE047" stroke-width="3" fill="none" stroke-linecap="round" />
+
+          <text x="245" y="75" font-size="20">✨</text>
         </g>
       `;
     } else {
       svgContent = `
         <text x="35" y="60" font-size="36" fill="${scheme.text}" opacity="0.25">🎓</text>
         <g filter="url(#shadow)">
-          <path d="M 130 90 L 250 80 L 260 175 L 120 185 Z" fill="#0EA5E9" stroke="#0284C7" stroke-width="3" />
-          <line x1="125" y1="120" x2="123" y2="155" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
-          <line x1="254" y1="110" x2="257" y2="145" stroke="#0284C7" stroke-width="4" stroke-linecap="round" />
-          <rect x="150" y="95" width="80" height="70" rx="3" fill="#0284C7" />
-          <rect x="158" y="90" width="64" height="65" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2" />
-          <line x1="160" y1="150" x2="220" y2="150" stroke="#64748B" stroke-width="3" />
-          <circle cx="190" cy="118" r="7" fill="#CBD5E1" stroke="#64748B" stroke-width="2" />
-          <line x1="185" y1="118" x2="195" y2="118" stroke="#334155" stroke-width="2" />
-          <ellipse cx="190" cy="177" rx="22" ry="10" fill="#0F172A" />
-          <ellipse cx="190" cy="177" rx="16" ry="6" fill="#1E293B" />
-          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round" />
-          <path d="M 235 140 C 260 120 285 135 275 160 C 265 185 240 175 248 155" stroke="#1E293B" stroke-width="2" fill="none" stroke-linecap="round" />
+          <path d="M 125 105 L 255 85 L 265 190 L 115 180 Z" fill="#06B6D4" stroke="#0891B2" stroke-width="3" />
+          <path d="M 125 105 L 140 102 L 132 178 L 115 180 Z" fill="#0891B2" opacity="0.4" />
+          
+          <line x1="120" y1="125" x2="118" y2="160" stroke="#0891B2" stroke-width="4" stroke-linecap="round" />
+          <line x1="126" y1="120" x2="124" y2="165" stroke="#0891B2" stroke-width="4" stroke-linecap="round" />
+
+          <circle cx="155" cy="145" r="20" fill="#0F172A" stroke="#0891B2" stroke-width="2" />
+          <circle cx="155" cy="145" r="14" fill="#020617" />
+
+          <polygon points="180,97 252,87 257,165 185,175" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2" />
+          <line x1="183" y1="97" x2="188" y2="175" stroke="#475569" stroke-width="3" />
+          
+          <circle cx="220" cy="130" r="7" fill="#CBD5E1" stroke="#64748B" stroke-width="1.5" />
+          <line x1="216" y1="130" x2="224" y2="130" stroke="#334155" stroke-width="2" />
+          <line x1="220" y1="126" x2="220" y2="134" stroke="#334155" stroke-width="2" />
+
+          <polygon points="65,138 135,145 65,152" fill="#FDE047" stroke="#CA8A04" stroke-width="1.5" />
+          <polygon points="118,143 135,145 118,147" fill="#1E293B" />
+          <rect x="35" y="138" width="30" height="14" fill="#EF4444" stroke="#DC2626" stroke-width="1.5" />
+
+          <path d="M 235 150 C 265 130 290 145 280 170 C 270 195 245 185 252 165" stroke="#D97706" stroke-width="7" fill="none" stroke-linecap="round" />
+          <path d="M 235 150 C 265 130 290 145 280 170 C 270 195 245 185 252 165" stroke="#FDE047" stroke-width="3" fill="none" stroke-linecap="round" />
+
+          <text x="245" y="75" font-size="20">✨</text>
         </g>
         <text x="200" y="222" font-family="'Nunito', sans-serif" font-size="10" font-weight="900" fill="${scheme.text}" opacity="0.6" text-anchor="middle" letter-spacing="1.5">ART SUPPLIES: PENCIL SHARPENER</text>
         <rect x="30" y="235" width="340" height="42" rx="14" fill="white" filter="url(#shadow)"/>
