@@ -124,7 +124,7 @@ export const VOCABULARY_IMAGE_MAP: Record<string, string> = {
   'scarf': '🧣',
   'gloves': '🧤',
 
-  // Places (Unit 5)
+  // Places (Unit 5 / Unit 7)
   'amusement park': '🎡',
   'aquarium': '🐠',
   'beach': '🏖️',
@@ -138,7 +138,19 @@ export const VOCABULARY_IMAGE_MAP: Record<string, string> = {
   'flower shop': '💐',
   'hair salon': '💇',
   'toy store': '🧸',
-  'pharmacy': '💊',
+  'pharmacy': '⚕️',
+  'pool': '🏊',
+  'coffee shop': '☕',
+  'meet': '🤝',
+
+  // Weather (Unit 7 Lesson 4)
+  'sunny': '☀️',
+  'rainy': '🌧️',
+  'cloudy': '☁️',
+  'windy': '🌬️',
+  'stormy': '⛈️',
+  'snowy': '❄️',
+  'weather': '🌤️',
 
   // Household / Objects (Unit 6 / Unit 7)
   'bowl': '🥣',
