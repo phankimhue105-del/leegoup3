@@ -687,6 +687,18 @@ class CourseService {
       });
     }
 
+    // Direct synchronization for Unit 8 Practice Questions from practiceDict
+    const unit8 = this.courseData.units.find((u) => u.id === 'unit-8');
+    if (unit8) {
+      const pDict = practiceDict as Record<string, PracticeQuestion[]>;
+      unit8.lessons.forEach((lesson) => {
+        const dictKey = `unit8_lesson${lesson.id.replace('u8-l', '')}`;
+        if (pDict[dictKey]) {
+          lesson.practiceQuestions = [...pDict[dictKey]];
+        }
+      });
+    }
+
     // Build global lookup maps of English words to Vietnamese meanings and images
     const vocabToVietnamese: Record<string, string> = {};
     const vocabToImage: Record<string, string> = {};
@@ -718,8 +730,8 @@ class CourseService {
     };
 
     this.courseData.units.forEach((unit) => {
-      // For Unit 1, Unit 3, Unit 4, Unit 5, Unit 6 and Unit 7, preserve the authoritative questions directly
-      if (unit.id === 'unit-1' || unit.id === 'unit-3' || unit.id === 'unit-4' || unit.id === 'unit-5' || unit.id === 'unit-6' || unit.id === 'unit-7') {
+      // For Unit 1, Unit 3, Unit 4, Unit 5, Unit 6, Unit 7 and Unit 8, preserve the authoritative questions directly
+      if (unit.id === 'unit-1' || unit.id === 'unit-3' || unit.id === 'unit-4' || unit.id === 'unit-5' || unit.id === 'unit-6' || unit.id === 'unit-7' || unit.id === 'unit-8') {
         return;
       }
 
