@@ -408,6 +408,10 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
 
   // Filter illustration cleanly: only render image container if a valid image asset exists
   const shouldRenderImage = () => {
+    // For Check Up 1, 2, 3, 4: Never render illustration in Speaking as per requirement
+    if (unit.type === 'checkup' || unit.id.startsWith('checkup') || lesson.unitId?.startsWith('checkup')) {
+      return false;
+    }
     if (currentQuestion.type === 'communicative') return false;
     const fallback = currentQuestion.targetText || currentQuestion.vocabularyRefs?.[0] || currentQuestion.expectedAnswer;
     return ImageService.hasValidImage(currentQuestion.image, fallback);
