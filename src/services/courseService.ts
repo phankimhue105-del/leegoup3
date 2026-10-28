@@ -699,6 +699,18 @@ class CourseService {
       });
     }
 
+    // Direct synchronization for Check Up 1-4 Practice Questions from practiceDict
+    ['checkup-1', 'checkup-2', 'checkup-3', 'checkup-4'].forEach((cuId) => {
+      const cuUnit = this.courseData.units.find((u) => u.id === cuId);
+      if (cuUnit && cuUnit.lessons && cuUnit.lessons[0]) {
+        const dictKey = cuId.replace('-', '_');
+        const pDict = practiceDict as Record<string, PracticeQuestion[]>;
+        if (pDict[dictKey]) {
+          cuUnit.lessons[0].practiceQuestions = [...pDict[dictKey]];
+        }
+      }
+    });
+
     // Build global lookup maps of English words to Vietnamese meanings and images
     const vocabToVietnamese: Record<string, string> = {};
     const vocabToImage: Record<string, string> = {};
@@ -730,8 +742,8 @@ class CourseService {
     };
 
     this.courseData.units.forEach((unit) => {
-      // For Unit 1, Unit 3, Unit 4, Unit 5, Unit 6, Unit 7 and Unit 8, preserve the authoritative questions directly
-      if (unit.id === 'unit-1' || unit.id === 'unit-3' || unit.id === 'unit-4' || unit.id === 'unit-5' || unit.id === 'unit-6' || unit.id === 'unit-7' || unit.id === 'unit-8') {
+      // For Unit 1, Unit 3, Unit 4, Unit 5, Unit 6, Unit 7, Unit 8, and Check Ups 1-4, preserve the authoritative questions directly
+      if (unit.id === 'unit-1' || unit.id === 'unit-3' || unit.id === 'unit-4' || unit.id === 'unit-5' || unit.id === 'unit-6' || unit.id === 'unit-7' || unit.id === 'unit-8' || unit.type === 'checkup' || unit.id.startsWith('checkup')) {
         return;
       }
 
