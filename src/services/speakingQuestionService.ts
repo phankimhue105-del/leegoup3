@@ -323,7 +323,7 @@ export class SpeakingQuestionService {
     const v1 = l1.vocabulary?.[0] || { word: 'apple', image: '/images/fallback.png' };
     const v2 = l2.vocabulary?.[1] || { word: 'banana', image: '/images/fallback.png' };
 
-    // Q1-Q2: 2 vocabulary pronunciation questions
+    // Q1-Q2: 2 vocabulary pronunciation questions (no illustration image for Check Ups)
     questions.push({
       id: `${lesson.id}-q1`,
       type: 'vocabulary',
@@ -335,7 +335,7 @@ export class SpeakingQuestionService {
       vocabularyRefs: [v1.word],
       lessonContext: `Checkup word review of "${v1.word}"`,
       difficulty: 1,
-      image: v1.image,
+      image: '',
       feedbackContext: `Pronounce the vocabulary word "${v1.word}".`
     });
 
@@ -350,7 +350,7 @@ export class SpeakingQuestionService {
       vocabularyRefs: [v2.word],
       lessonContext: `Checkup word review of "${v2.word}"`,
       difficulty: 1,
-      image: v2.image,
+      image: '',
       feedbackContext: `Pronounce the vocabulary word "${v2.word}".`
     });
 
@@ -367,7 +367,7 @@ export class SpeakingQuestionService {
       vocabularyRefs: [l3.vocabulary?.[0]?.word || 'apple'],
       lessonContext: `Checkup sentence reading from ${l3.title}`,
       difficulty: 2,
-      image: l3.vocabulary?.[0]?.image || '/images/fallback.png',
+      image: '',
       feedbackContext: `Read the full sentence: "${p3}".`
     });
 
@@ -383,7 +383,7 @@ export class SpeakingQuestionService {
       vocabularyRefs: [l4.vocabulary?.[0]?.word || 'banana'],
       lessonContext: `Checkup sentence reading from ${l4.title}`,
       difficulty: 2,
-      image: l4.vocabulary?.[0]?.image || '/images/fallback.png',
+      image: '',
       feedbackContext: `Read the full sentence: "${p4}".`
     });
 
@@ -400,7 +400,7 @@ export class SpeakingQuestionService {
       vocabularyRefs: [l5.vocabulary?.[0]?.word || 'school'],
       lessonContext: `Checkup roleplay response practice`,
       difficulty: 3,
-      image: l5.vocabulary?.[0]?.image || '/images/fallback.png',
+      image: '',
       feedbackContext: `Answer the question: "${rp1.prompt}" in your own words.`
     });
 
@@ -416,7 +416,7 @@ export class SpeakingQuestionService {
       vocabularyRefs: [l6.vocabulary?.[0]?.word || 'chores'],
       lessonContext: `Checkup roleplay response practice`,
       difficulty: 3,
-      image: l6.vocabulary?.[0]?.image || '/images/fallback.png',
+      image: '',
       feedbackContext: `Answer the question: "${rp2.prompt}" in your own words.`
     });
 
