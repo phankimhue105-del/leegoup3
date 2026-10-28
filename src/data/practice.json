@@ -4528,50 +4528,55 @@
       "type": "picture-select",
       "questionText": "Look at the picture and choose 'calculator':",
       "options": [
-        "calculator",
         "dictionary",
+        "calculator",
         "stapler"
       ],
       "optionImages": [
-        "/images/unit8/lesson1/calculator.png",
         "/images/unit8/lesson1/dictionary.png",
+        "/images/unit8/lesson1/calculator.png",
         "/images/unit8/lesson1/stapler.png"
       ],
       "correctAnswer": "calculator",
       "explanation_vi": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
-      "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay."
+      "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
+      "hideOptionLabels": true,
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l1-q2",
       "type": "picture-select",
       "questionText": "Select the picture for 'lunchbox':",
       "options": [
-        "lunchbox",
         "folder",
-        "water bottle"
+        "water bottle",
+        "lunchbox"
       ],
       "optionImages": [
-        "/images/unit8/lesson1/lunchbox.png",
         "/images/unit8/lesson1/folder.png",
-        "/images/unit8/lesson1/water_bottle.png"
+        "/images/unit8/lesson1/water_bottle.png",
+        "/images/unit8/lesson1/lunchbox.png"
       ],
       "correctAnswer": "lunchbox",
       "explanation_vi": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa.",
-      "vietnameseExplanation": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa."
+      "vietnameseExplanation": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa.",
+      "hideOptionLabels": true,
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l1-q3",
       "type": "multiple-choice",
       "questionText": "What does 'dictionary' mean in Vietnamese?",
       "options": [
-        "Từ điển",
         "Hộp cơm",
-        "Cái dập ghim",
-        "Bình nước"
+        "Bình nước",
+        "Từ điển",
+        "Cái dập ghim"
       ],
       "correctAnswer": "Từ điển",
       "explanation_vi": "Đúng. 'dictionary' nghĩa là từ điển.",
-      "vietnameseExplanation": "Đúng. 'dictionary' nghĩa là từ điển."
+      "vietnameseExplanation": "Đúng. 'dictionary' nghĩa là từ điển.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l1-q4",
@@ -4585,7 +4590,8 @@
       ],
       "correctAnswer": "water bottle",
       "explanation_vi": "Đúng. Âm thanh đọc từ 'water bottle'.",
-      "vietnameseExplanation": "Đúng. Âm thanh đọc từ 'water bottle'."
+      "vietnameseExplanation": "Đúng. Âm thanh đọc từ 'water bottle'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l1-q5",
@@ -4628,13 +4634,14 @@
       "type": "multiple-choice",
       "questionText": "A: Where was the folder? B: It _____ on the desk.",
       "options": [
-        "was",
         "is",
+        "was",
         "were"
       ],
       "correctAnswer": "was",
       "explanation_vi": "Đúng. Quá khứ danh từ số ít dùng 'was'.",
-      "vietnameseExplanation": "Đúng. Quá khứ danh từ số ít dùng 'was'."
+      "vietnameseExplanation": "Đúng. Quá khứ danh từ số ít dùng 'was'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l1-q8",
@@ -4647,33 +4654,36 @@
       ],
       "correctAnswer": "calculator",
       "explanation_vi": "Đúng. Sau 'A' cần danh từ số ít 'calculator'.",
-      "vietnameseExplanation": "Đúng. Sau 'A' cần danh từ số ít 'calculator'."
+      "vietnameseExplanation": "Đúng. Sau 'A' cần danh từ số ít 'calculator'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l1-q9",
       "type": "multiple-choice",
-      "questionText": "Where was the stapler? It was on the desk.",
+      "questionText": "Where was the stapler?",
       "options": [
-        "It was on the desk.",
         "It is on the desk.",
+        "It was on the desk.",
         "It were on the desk."
       ],
       "correctAnswer": "It was on the desk.",
       "explanation_vi": "Đúng. Cấu trúc câu trả lời vị trí quá khứ đúng.",
-      "vietnameseExplanation": "Đúng. Cấu trúc câu trả lời vị trí quá khứ đúng."
+      "vietnameseExplanation": "Đúng. Cấu trúc câu trả lời vị trí quá khứ đúng.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l1-q10",
       "type": "multiple-choice",
       "questionText": "A dictionary _____ on the chair yesterday.",
       "options": [
-        "was",
         "were",
-        "are"
+        "are",
+        "was"
       ],
       "correctAnswer": "was",
       "explanation_vi": "Đúng. 'A dictionary' là số ít nên đi với 'was'.",
-      "vietnameseExplanation": "Đúng. 'A dictionary' là số ít nên đi với 'was'."
+      "vietnameseExplanation": "Đúng. 'A dictionary' là số ít nên đi với 'was'.",
+      "correctAnswerIndex": 2
     }
   ],
   "unit8_lesson2": [
@@ -4682,14 +4692,15 @@
       "type": "multiple-choice",
       "questionText": "What does 'scissors' mean?",
       "options": [
-        "Cái kéo",
         "Cọ vẽ",
+        "Cái kéo",
         "Keo dán thỏi",
         "Tranh áp phích"
       ],
       "correctAnswer": "Cái kéo",
       "explanation_vi": "Đúng. 'scissors' nghĩa là cái kéo.",
-      "vietnameseExplanation": "Đúng. 'scissors' nghĩa là cái kéo."
+      "vietnameseExplanation": "Đúng. 'scissors' nghĩa là cái kéo.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l2-q2",
@@ -4702,20 +4713,22 @@
       ],
       "correctAnswer": "were",
       "explanation_vi": "Đúng. 'posters' là số nhiều quá khứ nên đi với 'were'.",
-      "vietnameseExplanation": "Đúng. 'posters' là số nhiều quá khứ nên đi với 'were'."
+      "vietnameseExplanation": "Đúng. 'posters' là số nhiều quá khứ nên đi với 'were'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l2-q3",
       "type": "multiple-choice",
       "questionText": "There weren't _____ magazines on the table.",
       "options": [
-        "any",
         "some",
-        "a"
+        "a",
+        "any"
       ],
       "correctAnswer": "any",
       "explanation_vi": "Đúng. Trong câu phủ định dùng 'any'.",
-      "vietnameseExplanation": "Đúng. Trong câu phủ định dùng 'any'."
+      "vietnameseExplanation": "Đúng. Trong câu phủ định dùng 'any'.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l2-q4",
@@ -4723,26 +4736,28 @@
       "questionText": "Listen and select art supply:",
       "promptAudioUrl": "/audio/unit8/lesson2/paintbrush.mp3",
       "options": [
-        "paintbrush",
         "glue stick",
+        "paintbrush",
         "scissors"
       ],
       "correctAnswer": "paintbrush",
       "explanation_vi": "Đúng. Bạn nghe thấy từ 'paintbrush'.",
-      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'paintbrush'."
+      "vietnameseExplanation": "Đúng. Bạn nghe thấy từ 'paintbrush'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l2-q5",
       "type": "multiple-choice",
       "questionText": "Were there any glue sticks? Yes, there _____.",
       "options": [
-        "were",
         "was",
-        "are"
+        "are",
+        "were"
       ],
       "correctAnswer": "were",
       "explanation_vi": "Đúng. Khẳng định số nhiều ngắn là 'Yes, there were.'",
-      "vietnameseExplanation": "Đúng. Khẳng định số nhiều ngắn là 'Yes, there were.'"
+      "vietnameseExplanation": "Đúng. Khẳng định số nhiều ngắn là 'Yes, there were.'",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l2-q6",
@@ -4763,38 +4778,42 @@
       ],
       "correctAnswer": "There were some magazines on the table.",
       "explanation_vi": "Đúng. Thứ tự câu khẳng định 'There were some + N_plural + place'.",
-      "vietnameseExplanation": "Đúng. Thứ tự câu khẳng định 'There were some + N_plural + place'."
+      "vietnameseExplanation": "Đúng. Thứ tự câu khẳng định 'There were some + N_plural + place'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l2-q8",
       "type": "multiple-choice",
       "questionText": "A: Were there any pencil sharpeners? B: No, there _____.",
       "options": [
-        "weren't.",
         "wasn't.",
-        "don't."
+        "don't.",
+        "weren't."
       ],
       "correctAnswer": "weren't.",
       "explanation_vi": "Đúng. Phủ định số nhiều ngắn là 'No, there weren't.'",
-      "vietnameseExplanation": "Đúng. Phủ định số nhiều ngắn là 'No, there weren't.'"
+      "vietnameseExplanation": "Đúng. Phủ định số nhiều ngắn là 'No, there weren't.'",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l2-q9",
       "type": "picture-select",
       "questionText": "Select picture for 'paintbrush':",
       "options": [
-        "paintbrush",
         "poster",
+        "paintbrush",
         "magazine"
       ],
       "optionImages": [
-        "/images/unit8/lesson2/paintbrush.png",
         "/images/unit8/lesson2/poster.png",
+        "/images/unit8/lesson2/paintbrush.png",
         "/images/unit8/lesson2/magazine.png"
       ],
       "correctAnswer": "paintbrush",
       "explanation_vi": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ.",
-      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ."
+      "vietnameseExplanation": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ.",
+      "hideOptionLabels": true,
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l2-q10",
@@ -4807,7 +4826,8 @@
       ],
       "correctAnswer": "there were",
       "explanation_vi": "Đúng. Trả lời đầy đủ 'Yes, there were.'",
-      "vietnameseExplanation": "Đúng. Trả lời đầy đủ 'Yes, there were.'"
+      "vietnameseExplanation": "Đúng. Trả lời đầy đủ 'Yes, there were.'",
+      "correctAnswerIndex": 0
     }
   ],
   "unit8_lesson3": [
@@ -4816,13 +4836,14 @@
       "type": "multiple-choice",
       "questionText": "How do you spell 'Saturday'?",
       "options": [
-        "S-A-T-U-R-D-A-Y",
         "S-U-N-D-A-Y",
-        "M-O-N-D-A-Y"
+        "M-O-N-D-A-Y",
+        "S-A-T-U-R-D-A-Y"
       ],
       "correctAnswer": "S-A-T-U-R-D-A-Y",
       "explanation_vi": "Đúng. Đánh vần từng chữ cái từ 'Saturday'.",
-      "vietnameseExplanation": "Đúng. Đánh vần từng chữ cái từ 'Saturday'."
+      "vietnameseExplanation": "Đúng. Đánh vần từng chữ cái từ 'Saturday'.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l3-q2",
@@ -4835,33 +4856,36 @@
       ],
       "correctAnswer": "Be helpful.",
       "explanation_vi": "Đúng. Giá trị bài học mang lại là hãy biết giúp đỡ (Be helpful).",
-      "vietnameseExplanation": "Đúng. Giá trị bài học mang lại là hãy biết giúp đỡ (Be helpful)."
+      "vietnameseExplanation": "Đúng. Giá trị bài học mang lại là hãy biết giúp đỡ (Be helpful).",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l3-q3",
       "type": "multiple-choice",
       "questionText": "What does 'spell' mean?",
       "options": [
-        "Đánh vần",
         "Viết thư",
+        "Đánh vần",
         "Đọc sách"
       ],
       "correctAnswer": "Đánh vần",
       "explanation_vi": "Đúng. 'spell' nghĩa là đánh vần.",
-      "vietnameseExplanation": "Đúng. 'spell' nghĩa là đánh vần."
+      "vietnameseExplanation": "Đúng. 'spell' nghĩa là đánh vần.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l3-q4",
       "type": "multiple-choice",
       "questionText": "What does 'clean up' mean?",
       "options": [
-        "Dọn dẹp",
         "Làm bẩn",
-        "Sơn tường"
+        "Sơn tường",
+        "Dọn dẹp"
       ],
       "correctAnswer": "Dọn dẹp",
       "explanation_vi": "Đúng. 'clean up' nghĩa là dọn dẹp.",
-      "vietnameseExplanation": "Đúng. 'clean up' nghĩa là dọn dẹp."
+      "vietnameseExplanation": "Đúng. 'clean up' nghĩa là dọn dẹp.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l3-q5",
@@ -4874,7 +4898,8 @@
       ],
       "correctAnswer": "Thứ Bảy",
       "explanation_vi": "Đúng. 'Saturday' nghĩa là Thứ Bảy.",
-      "vietnameseExplanation": "Đúng. 'Saturday' nghĩa là Thứ Bảy."
+      "vietnameseExplanation": "Đúng. 'Saturday' nghĩa là Thứ Bảy.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l3-q6",
@@ -4886,20 +4911,22 @@
       ],
       "correctAnswer": "True",
       "explanation_vi": "Đúng. Mẫu câu dùng để hỏi các chữ cái cấu thành từ.",
-      "vietnameseExplanation": "Đúng. Mẫu câu dùng để hỏi các chữ cái cấu thành từ."
+      "vietnameseExplanation": "Đúng. Mẫu câu dùng để hỏi các chữ cái cấu thành từ.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l3-q7",
       "type": "multiple-choice",
       "questionText": "A: How do you spell 'Saturday'? B: _____",
       "options": [
-        "S-A-T-U-R-D-A-Y",
         "It is on Saturday.",
+        "S-A-T-U-R-D-A-Y",
         "Yes, I can."
       ],
       "correctAnswer": "S-A-T-U-R-D-A-Y",
       "explanation_vi": "Đúng. Trả lời bằng cách đọc các chữ cái.",
-      "vietnameseExplanation": "Đúng. Trả lời bằng cách đọc các chữ cái."
+      "vietnameseExplanation": "Đúng. Trả lời bằng cách đọc các chữ cái.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l3-q8",
@@ -4915,26 +4942,28 @@
       "questionText": "Listen to the spelled word:",
       "promptAudioUrl": "/audio/unit8/lesson3/saturday.mp3",
       "options": [
-        "Saturday",
         "Sunday",
-        "Friday"
+        "Friday",
+        "Saturday"
       ],
       "correctAnswer": "Saturday",
       "explanation_vi": "Đúng. Âm thanh đọc đánh vần từ 'Saturday'.",
-      "vietnameseExplanation": "Đúng. Âm thanh đọc đánh vần từ 'Saturday'."
+      "vietnameseExplanation": "Đúng. Âm thanh đọc đánh vần từ 'Saturday'.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l3-q10",
       "type": "multiple-choice",
       "questionText": "Being helpful means:",
       "options": [
-        "Assisting others when they need help",
         "Sitting alone",
+        "Assisting others when they need help",
         "Leaving trash"
       ],
       "correctAnswer": "Assisting others when they need help",
       "explanation_vi": "Đúng. 'helpful' là biết giúp đỡ mọi người.",
-      "vietnameseExplanation": "Đúng. 'helpful' là biết giúp đỡ mọi người."
+      "vietnameseExplanation": "Đúng. 'helpful' là biết giúp đỡ mọi người.",
+      "correctAnswerIndex": 1
     }
   ],
   "unit8_lesson4": [
@@ -4943,13 +4972,14 @@
       "type": "multiple-choice",
       "questionText": "There _____ any cell phones in 1940.",
       "options": [
-        "weren't",
         "wasn't",
+        "weren't",
         "isn't"
       ],
       "correctAnswer": "weren't",
       "explanation_vi": "Đúng. 'cell phones' số nhiều trong quá khứ phủ định là 'weren't'.",
-      "vietnameseExplanation": "Đúng. 'cell phones' số nhiều trong quá khứ phủ định là 'weren't'."
+      "vietnameseExplanation": "Đúng. 'cell phones' số nhiều trong quá khứ phủ định là 'weren't'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l4-q2",
@@ -4962,20 +4992,22 @@
       ],
       "correctAnswer": "Máy tính xách tay",
       "explanation_vi": "Đúng. 'laptop' nghĩa là máy tính xách tay.",
-      "vietnameseExplanation": "Đúng. 'laptop' nghĩa là máy tính xách tay."
+      "vietnameseExplanation": "Đúng. 'laptop' nghĩa là máy tính xách tay.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l4-q3",
       "type": "multiple-choice",
       "questionText": "A: Were there laptops in 1940? B: No, there _____.",
       "options": [
-        "weren't",
         "wasn't",
-        "don't"
+        "don't",
+        "weren't"
       ],
       "correctAnswer": "weren't",
       "explanation_vi": "Đúng. Phủ định ngắn số nhiều: 'No, there weren't.'",
-      "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều: 'No, there weren't.'"
+      "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều: 'No, there weren't.'",
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l4-q4",
@@ -4983,31 +5015,34 @@
       "questionText": "Listen and choose device:",
       "promptAudioUrl": "/audio/unit8/lesson4/digital_camera.mp3",
       "options": [
-        "digital camera",
         "digital TV",
+        "digital camera",
         "laptop"
       ],
       "correctAnswer": "digital camera",
       "explanation_vi": "Đúng. Âm thanh đọc từ 'digital camera'.",
-      "vietnameseExplanation": "Đúng. Âm thanh đọc từ 'digital camera'."
+      "vietnameseExplanation": "Đúng. Âm thanh đọc từ 'digital camera'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l4-q5",
       "type": "picture-select",
       "questionText": "Select picture for 'cell phone':",
       "options": [
-        "cell phone",
         "laptop",
-        "digital TV"
+        "digital TV",
+        "cell phone"
       ],
       "optionImages": [
-        "/images/unit8/lesson4/cell_phone.png",
         "/images/unit8/lesson4/laptop.png",
-        "/images/unit8/lesson4/digital_tv.png"
+        "/images/unit8/lesson4/digital_tv.png",
+        "/images/unit8/lesson4/cell_phone.png"
       ],
       "correctAnswer": "cell phone",
       "explanation_vi": "Đúng. Bức tranh hiển thị điện thoại di động.",
-      "vietnameseExplanation": "Đúng. Bức tranh hiển thị điện thoại di động."
+      "vietnameseExplanation": "Đúng. Bức tranh hiển thị điện thoại di động.",
+      "hideOptionLabels": true,
+      "correctAnswerIndex": 2
     },
     {
       "id": "u8l4-q6",
@@ -5028,20 +5063,22 @@
       ],
       "correctAnswer": "weren't any",
       "explanation_vi": "Đúng. Chưa có TV kỹ thuật số năm 1940: 'weren't any'.",
-      "vietnameseExplanation": "Đúng. Chưa có TV kỹ thuật số năm 1940: 'weren't any'."
+      "vietnameseExplanation": "Đúng. Chưa có TV kỹ thuật số năm 1940: 'weren't any'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l4-q8",
       "type": "multiple-choice",
       "questionText": "A: Were there phones in 1940? B: Yes, _____.",
       "options": [
-        "there were",
         "they were",
+        "there were",
         "there was"
       ],
       "correctAnswer": "there were",
       "explanation_vi": "Đúng. Đã có điện thoại bàn năm 1940: 'Yes, there were.'",
-      "vietnameseExplanation": "Đúng. Đã có điện thoại bàn năm 1940: 'Yes, there were.'"
+      "vietnameseExplanation": "Đúng. Đã có điện thoại bàn năm 1940: 'Yes, there were.'",
+      "correctAnswerIndex": 1
     },
     {
       "id": "u8l4-q9",
@@ -5054,20 +5091,22 @@
       ],
       "correctAnswer": "were",
       "explanation_vi": "Đúng. 'books' số nhiều quá khứ dùng 'were'.",
-      "vietnameseExplanation": "Đúng. 'books' số nhiều quá khứ dùng 'were'."
+      "vietnameseExplanation": "Đúng. 'books' số nhiều quá khứ dùng 'were'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "u8l4-q10",
       "type": "multiple-choice",
       "questionText": "Unit Review: Which device is used to take photos?",
       "options": [
-        "digital camera",
         "digital TV",
-        "calculator"
+        "calculator",
+        "digital camera"
       ],
       "correctAnswer": "digital camera",
       "explanation_vi": "Đúng. 'digital camera' dùng để chụp ảnh.",
-      "vietnameseExplanation": "Đúng. 'digital camera' dùng để chụp ảnh."
+      "vietnameseExplanation": "Đúng. 'digital camera' dùng để chụp ảnh.",
+      "correctAnswerIndex": 2
     }
   ],
   "checkup_4": [
