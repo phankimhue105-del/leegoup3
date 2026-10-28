@@ -1,114 +1,276 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'motion/react';
 import { useAuth } from '../context/AuthContext';
-import { AppButton } from '../components/common/AppButton';
-import { Card } from '../components/common/Card';
-import { User, Sparkles, Check, BookOpen } from 'lucide-react';
-
-const AVATAR_OPTIONS = [
-  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
-  'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&q=80',
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
-  'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
-  'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=200&q=80',
-];
+import {
+  User,
+  Lock,
+  Eye,
+  EyeOff,
+  LogIn,
+  Loader2,
+  AlertCircle,
+  Info,
+  BookOpen,
+  Sparkles,
+  ArrowLeft,
+  Star,
+} from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
-  const { user, login } = useAuth();
+  const { login, isLoading } = useAuth();
   const navigate = useNavigate();
 
-  const [studentName, setStudentName] = useState<string>(user?.name || 'Bảo Nam');
-  const [selectedAvatar, setSelectedAvatar] = useState<string>(
-    user?.avatarUrl || AVATAR_OPTIONS[0]
-  );
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [noticeMessage, setNoticeMessage] = useState<string>('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (studentName.trim()) {
-      login(studentName.trim(), selectedAvatar);
+    setErrorMessage('');
+    setNoticeMessage('');
+
+    const trimmedUser = username.trim();
+    const trimmedPass = password.trim();
+
+    // Friendly validation checks
+    if (!trimmedUser && !trimmedPass) {
+      setErrorMessage(
+        'Vui lòng nhập Tên đăng nhập và Mật khẩu. (Please enter both username and password.)'
+      );
+      return;
+    }
+
+    if (!trimmedUser) {
+      setErrorMessage(
+        'Vui lòng nhập Tên đăng nhập của bạn. (Please enter your username.)'
+      );
+      return;
+    }
+
+    if (!trimmedPass) {
+      setErrorMessage(
+        'Vui lòng nhập Mật khẩu của bạn. (Please enter your password.)'
+      );
+      return;
+    }
+
+    // Call authentication service
+    const result = await login({ username: trimmedUser, password: trimmedPass });
+
+    if (result.success) {
+      // Future phase when Google Apps Script API is connected
       navigate('/home');
+    } else {
+      if (result.isPendingSetup) {
+        setNoticeMessage(result.message);
+      } else {
+        setErrorMessage(result.message);
+      }
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-center items-center p-4 sm:p-8">
-      <div className="max-w-md w-full space-y-6">
-        {/* Brand Header */}
-        <div className="text-center space-y-2">
-          <div className="w-16 h-16 rounded-3xl bg-indigo-600 text-white flex items-center justify-center mx-auto shadow-lg">
-            <BookOpen className="w-8 h-8" />
-          </div>
-          <h1 className="text-3xl font-extrabold font-heading text-slate-800">
-            Hồ Sơ Học Sinh
-          </h1>
-          <p className="text-sm font-semibold text-slate-500">
-            Nhập tên và chọn hình đại diện yêu thích của bạn
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-700 via-purple-700 to-pink-600 flex flex-col justify-center items-center p-4 sm:p-6 relative overflow-hidden select-none">
+      {/* Decorative ambient background glowing shapes */}
+      <div className="w-96 h-96 rounded-full bg-indigo-400/20 blur-3xl absolute -top-20 -left-20 pointer-events-none" />
+      <div className="w-96 h-96 rounded-full bg-pink-400/20 blur-3xl absolute -bottom-20 -right-20 pointer-events-none" />
+
+      {/* Floating playful elements */}
+      <motion.div
+        animate={{ y: [0, -12, 0], rotate: [0, 15, 0] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute top-10 right-12 text-amber-300/40 hidden md:block pointer-events-none"
+      >
+        <Star className="w-12 h-12 fill-amber-300" />
+      </motion.div>
+
+      <motion.div
+        animate={{ y: [0, 12, 0], rotate: [0, -12, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute bottom-12 left-10 text-pink-300/40 hidden md:block pointer-events-none"
+      >
+        <Sparkles className="w-14 h-14" />
+      </motion.div>
+
+      <div className="max-w-md w-full space-y-4 relative z-10">
+        {/* Back navigation button */}
+        <div className="flex justify-start">
+          <button
+            type="button"
+            onClick={() => navigate('/splash')}
+            className="inline-flex items-center gap-2 text-white/85 hover:text-white text-xs font-extrabold uppercase tracking-wider transition-colors cursor-pointer bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded-full backdrop-blur-sm"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Quay lại (Back)</span>
+          </button>
         </div>
 
-        {/* Profile Form Card */}
-        <Card className="space-y-6 p-6 sm:p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Student Name Field */}
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
-                Tên của bạn (Student Name)
+        {/* Central Login Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 border border-white/50 space-y-6"
+        >
+          {/* Card Header & Brand */}
+          <div className="text-center space-y-2">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center mx-auto shadow-lg shadow-indigo-500/30">
+              <BookOpen className="w-8 h-8 stroke-[2.5]" />
+            </div>
+
+            <div className="flex items-center justify-center gap-1.5 pt-1">
+              <span className="bg-rose-500 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase tracking-wider">
+                LeeGo
+              </span>
+              <span className="text-xs font-black text-indigo-700 uppercase tracking-wider font-heading">
+                English Explorer AI
+              </span>
+            </div>
+
+            <h1 className="text-2xl sm:text-3xl font-black font-heading text-slate-800">
+              Đăng Nhập Học Sinh
+            </h1>
+
+            <p className="text-xs font-bold text-slate-500">
+              Học sinh đăng nhập để vào bài học Everybody Up 3
+              <br />
+              <span className="text-slate-400 font-semibold">
+                (Student Login to access Everybody Up 3)
+              </span>
+            </p>
+          </div>
+
+          {/* Login Form */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Username Field */}
+            <div className="space-y-1.5">
+              <label className="block text-xs font-black text-slate-700 uppercase tracking-wider">
+                Tên đăng nhập{' '}
+                <span className="text-slate-400 font-bold lowercase text-[11px]">
+                  (Username)
+                </span>
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-indigo-500">
                   <User className="w-5 h-5" />
                 </div>
                 <input
                   type="text"
-                  required
-                  value={studentName}
-                  onChange={(e) => setStudentName(e.target.value)}
-                  placeholder="Ví dụ: Bảo Nam, Minh Anh..."
-                  className="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-slate-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 font-bold text-base outline-none transition-all"
+                  value={username}
+                  onChange={(e) => {
+                    setUsername(e.target.value);
+                    if (errorMessage) setErrorMessage('');
+                    if (noticeMessage) setNoticeMessage('');
+                  }}
+                  placeholder="Ví dụ: leego_nam (Enter username)"
+                  disabled={isLoading}
+                  autoComplete="username"
+                  className="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-slate-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 font-bold text-slate-800 text-sm outline-none transition-all placeholder:font-medium placeholder:text-slate-400 disabled:bg-slate-100 disabled:cursor-not-allowed"
                 />
               </div>
             </div>
 
-            {/* Avatar Selector */}
-            <div className="space-y-3">
-              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
-                Chọn hình đại diện (Avatar)
+            {/* Password Field */}
+            <div className="space-y-1.5">
+              <label className="block text-xs font-black text-slate-700 uppercase tracking-wider">
+                Mật khẩu{' '}
+                <span className="text-slate-400 font-bold lowercase text-[11px]">
+                  (Password)
+                </span>
               </label>
-              <div className="flex justify-between gap-2">
-                {AVATAR_OPTIONS.map((url, idx) => (
-                  <button
-                    type="button"
-                    key={idx}
-                    onClick={() => setSelectedAvatar(url)}
-                    className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden border-3 transition-all cursor-pointer ${
-                      selectedAvatar === url
-                        ? 'border-indigo-600 scale-110 shadow-md ring-4 ring-indigo-100'
-                        : 'border-transparent opacity-75 hover:opacity-100'
-                    }`}
-                  >
-                    <img src={url} alt="Avatar" className="w-full h-full object-cover" />
-                    {selectedAvatar === url && (
-                      <div className="absolute inset-0 bg-indigo-600/30 flex items-center justify-center text-white">
-                        <Check className="w-5 h-5 stroke-[3]" />
-                      </div>
-                    )}
-                  </button>
-                ))}
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-indigo-500">
+                  <Lock className="w-5 h-5" />
+                </div>
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                    if (errorMessage) setErrorMessage('');
+                    if (noticeMessage) setNoticeMessage('');
+                  }}
+                  placeholder="Nhập mật khẩu (Enter password)"
+                  disabled={isLoading}
+                  autoComplete="current-password"
+                  className="w-full pl-11 pr-12 py-3.5 rounded-2xl border-2 border-slate-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 font-bold text-slate-800 text-sm outline-none transition-all placeholder:font-medium placeholder:text-slate-400 disabled:bg-slate-100 disabled:cursor-not-allowed"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  tabIndex={-1}
+                  className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-indigo-600 transition-colors cursor-pointer"
+                  title={showPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                >
+                  {showPassword ? (
+                    <EyeOff className="w-5 h-5" />
+                  ) : (
+                    <Eye className="w-5 h-5" />
+                  )}
+                </button>
               </div>
             </div>
 
-            {/* Submit Action */}
-            <AppButton
-              onClick={() => {}}
-              variant="primary"
-              size="lg"
-              fullWidth
-              icon={<Sparkles className="w-5 h-5" />}
+            {/* Error Message Box */}
+            {errorMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold flex items-start gap-2.5"
+              >
+                <AlertCircle className="w-4 h-4 shrink-0 text-rose-500 mt-0.5" />
+                <span>{errorMessage}</span>
+              </motion.div>
+            )}
+
+            {/* System Info / Pending Setup Notice Box */}
+            {noticeMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold flex items-start gap-2.5"
+              >
+                <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
+                <span>{noticeMessage}</span>
+              </motion.div>
+            )}
+
+            {/* Submit Button */}
+            <motion.button
+              type="submit"
+              disabled={isLoading}
+              whileHover={isLoading ? undefined : { scale: 1.015 }}
+              whileTap={isLoading ? undefined : { scale: 0.985 }}
+              className="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 hover:from-indigo-700 hover:to-purple-700 text-white font-black text-base shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed border-b-4 border-indigo-900 active:border-b-0"
             >
-              Vào lớp học ngay
-            </AppButton>
+              {isLoading ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                  <span>Đang kiểm tra... (Checking...)</span>
+                </>
+              ) : (
+                <>
+                  <LogIn className="w-5 h-5" />
+                  <span>Đăng Nhập / Log In</span>
+                </>
+              )}
+            </motion.button>
           </form>
-        </Card>
+
+          {/* Friendly Guidance Footer */}
+          <div className="pt-2 text-center border-t border-slate-100 space-y-1">
+            <p className="text-[11px] font-bold text-slate-500">
+              💡 Gợi ý: Hãy nhờ thầy cô hoặc phụ huynh trợ giúp nếu bạn quên thông tin đăng nhập.
+            </p>
+            <p className="text-[10px] font-medium text-slate-400">
+              (Tip: Ask your teacher or parents if you need help with your account.)
+            </p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
