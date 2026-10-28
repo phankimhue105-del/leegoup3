@@ -2911,42 +2911,45 @@
               "type": "multiple-choice",
               "questionText": "Unit 1 Vocabulary: What does 'popcorn' mean?",
               "options": [
-                "Bỏng ngô",
                 "Sô-cô-la",
+                "Bỏng ngô",
                 "Kẹo cao su",
                 "Đậu phộng"
               ],
               "correctAnswer": "Bỏng ngô",
               "explanation_vi": "Đúng. 'popcorn' nghĩa là bỏng ngô.",
-              "vietnameseExplanation": "Đúng. 'popcorn' nghĩa là bỏng ngô."
+              "vietnameseExplanation": "Đúng. 'popcorn' nghĩa là bỏng ngô.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu1-q2",
               "type": "multiple-choice",
               "questionText": "Unit 2 Vocabulary: Where do you borrow books?",
               "options": [
-                "Library",
                 "Park",
                 "Supermarket",
+                "Library",
                 "Movie theater"
               ],
               "correctAnswer": "Library",
               "explanation_vi": "Đúng. Bạn mượn sách ở 'library' (thư viện).",
-              "vietnameseExplanation": "Đúng. Bạn mượn sách ở 'library' (thư viện)."
+              "vietnameseExplanation": "Đúng. Bạn mượn sách ở 'library' (thư viện).",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu1-q3",
               "type": "multiple-choice",
               "questionText": "Unit 1 Grammar: Choose the correct verb form: 'He _____ some chocolate.'",
               "options": [
-                "wants",
                 "want",
                 "wanting",
-                "is want"
+                "is want",
+                "wants"
               ],
               "correctAnswer": "wants",
               "explanation_vi": "Đúng. Chủ ngữ 'He' cần động từ 'wants'.",
-              "vietnameseExplanation": "Đúng. Chủ ngữ 'He' cần động từ 'wants'."
+              "vietnameseExplanation": "Đúng. Chủ ngữ 'He' cần động từ 'wants'.",
+              "correctAnswerIndex": 3
             },
             {
               "id": "cu1-q4",
@@ -2960,7 +2963,8 @@
               ],
               "correctAnswer": "is",
               "explanation_vi": "Đúng. 'park' là danh từ số ít nên dùng 'is'.",
-              "vietnameseExplanation": "Đúng. 'park' là danh từ số ít nên dùng 'is'."
+              "vietnameseExplanation": "Đúng. 'park' là danh từ số ít nên dùng 'is'.",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu1-q5",
@@ -2968,27 +2972,29 @@
               "questionText": "Listen and choose the food item:",
               "promptAudioUrl": "/audio/checkup1/omelet.mp3",
               "options": [
-                "omelet",
                 "smoothie",
+                "omelet",
                 "spaghetti"
               ],
               "correctAnswer": "omelet",
               "explanation_vi": "Đúng. Đoạn băng đọc tên món 'omelet'.",
-              "vietnameseExplanation": "Đúng. Đoạn băng đọc tên món 'omelet'."
+              "vietnameseExplanation": "Đúng. Đoạn băng đọc tên món 'omelet'.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu1-q6",
               "type": "multiple-choice",
-              "questionText": "Reading: 'Tom is at the park. He is kicking a ball. The park is across from the library.' Where is Tom?",
+              "questionText": "Reading: Read the story and answer the question.\n\n\"On Sunday, Leo goes to the supermarket across from the park. He needs some carrots and onions to help his mom make soup. After shopping, he walks to the library to borrow a book with his sister.\"\n\nWhy does Leo go to the supermarket?",
               "options": [
-                "At the park",
-                "At the library",
-                "At the supermarket",
-                "At home"
+                "To borrow a book with his sister",
+                "To kick a ball in the park",
+                "To buy some carrots and onions for soup",
+                "To mail a letter at the post office"
               ],
-              "correctAnswer": "At the park",
-              "explanation_vi": "Đúng. Theo bài đọc, Tom đang ở 'park'.",
-              "vietnameseExplanation": "Đúng. Theo bài đọc, Tom đang ở 'park'."
+              "correctAnswer": "To buy some carrots and onions for soup",
+              "explanation_vi": "Đúng. Trong đoạn văn: 'He needs some carrots and onions to help his mom make soup.'",
+              "vietnameseExplanation": "Đúng. Trong đoạn văn: 'He needs some carrots and onions to help his mom make soup.'",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu1-q7",
@@ -3002,28 +3008,30 @@
               ],
               "correctAnswer": "They need some carrots.",
               "explanation_vi": "Đúng. Câu trả lời đúng cấu trúc 'They need...'.",
-              "vietnameseExplanation": "Đúng. Câu trả lời đúng cấu trúc 'They need...'."
+              "vietnameseExplanation": "Đúng. Câu trả lời đúng cấu trúc 'They need...'.",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu1-q8",
               "type": "multiple-choice",
               "questionText": "Mixed Review: Complete instructions: 'First, color the picture. Next, _____ the paper.'",
               "options": [
-                "cut",
                 "eat",
                 "run",
-                "sleep"
+                "sleep",
+                "cut"
               ],
               "correctAnswer": "cut",
               "explanation_vi": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy.",
-              "vietnameseExplanation": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy."
+              "vietnameseExplanation": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy.",
+              "correctAnswerIndex": 3
             }
           ],
           "speakingTask": {
             "id": "cu1-s",
             "promptText": "1. Vocabulary: chocolate | 2. Sentence: He wants some popcorn. | 3. Question: Where's the park? -> It's across from the movie theater. | 4. Dialogue: Do you need any carrots? -> Yes, we do. | 5. Role-play: Excuse me. Where's the post office? -> It's over there.",
             "vietnamesePrompt": "Ôn tập tổng hợp 5 bài tập nói từ Unit 1 và Unit 2.",
-            "image": "/images/checkup1/speaking.png",
+            "image": "",
             "referenceAudioUrl": "/audio/checkup1/speaking.mp3",
             "sampleAnswer": "chocolate. He wants some popcorn. It's across from the movie theater. Yes, we do. It's over there.",
             "keywordsToDetect": [
@@ -3040,7 +3048,7 @@
                 "type": "vocabulary-review",
                 "promptText": "Read review word: 'chocolate'",
                 "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'chocolate'",
-                "image": "/images/checkup1/chocolate.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup1/chocolate.mp3",
                 "sampleAnswer": "chocolate",
                 "keywordsToDetect": [
@@ -3053,7 +3061,7 @@
                 "type": "sentence-review",
                 "promptText": "Read sentence: 'He wants some popcorn.'",
                 "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu 'He wants some popcorn.'",
-                "image": "/images/checkup1/speaking.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup1/sentence.mp3",
                 "sampleAnswer": "He wants some popcorn.",
                 "keywordsToDetect": [
@@ -3068,7 +3076,7 @@
                 "type": "answer-review",
                 "promptText": "Answer: 'Where's the park?'",
                 "vietnamesePrompt": "Nhiệm vụ 3: Trả lời vị trí công viên",
-                "image": "/images/checkup1/park.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup1/question.mp3",
                 "sampleAnswer": "It's across from the movie theater.",
                 "keywordsToDetect": [
@@ -3083,7 +3091,7 @@
                 "type": "dialogue-review",
                 "promptText": "Dialogue: 'Do you need any carrots?' -> 'Yes, we do.'",
                 "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'Yes, we do.'",
-                "image": "/images/checkup1/carrot.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup1/dialogue.mp3",
                 "sampleAnswer": "Yes, we do.",
                 "keywordsToDetect": [
@@ -3098,7 +3106,7 @@
                 "type": "roleplay-review",
                 "promptText": "Role-play: 'Excuse me. Where's the post office?' -> 'It's over there.'",
                 "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai chỉ đường 'It's over there.'",
-                "image": "/images/checkup1/post_office.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup1/roleplay.mp3",
                 "sampleAnswer": "It's over there.",
                 "keywordsToDetect": [
@@ -6048,14 +6056,15 @@
               "type": "multiple-choice",
               "questionText": "Unit 3 Vocabulary: What does 'cashier' mean?",
               "options": [
-                "Nhân viên thu ngân",
                 "Bác sĩ thú y",
                 "Đầu bếp",
+                "Nhân viên thu ngân",
                 "Thủ thư"
               ],
               "correctAnswer": "Nhân viên thu ngân",
               "explanation_vi": "Đúng. 'cashier' là nhân viên thu ngân.",
-              "vietnameseExplanation": "Đúng. 'cashier' là nhân viên thu ngân."
+              "vietnameseExplanation": "Đúng. 'cashier' là nhân viên thu ngân.",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu2-q2",
@@ -6069,35 +6078,38 @@
               ],
               "correctAnswer": "Đôi đũa",
               "explanation_vi": "Đúng. 'chopsticks' nghĩa là đôi đũa.",
-              "vietnameseExplanation": "Đúng. 'chopsticks' nghĩa là đôi đũa."
+              "vietnameseExplanation": "Đúng. 'chopsticks' nghĩa là đôi đũa.",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu2-q3",
               "type": "multiple-choice",
               "questionText": "Unit 3 Grammar: 'Where does the cashier work? He _____ at the supermarket.'",
               "options": [
-                "works",
                 "work",
+                "works",
                 "working",
                 "is work"
               ],
               "correctAnswer": "works",
               "explanation_vi": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'.",
-              "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'."
+              "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu2-q4",
               "type": "multiple-choice",
               "questionText": "Unit 4 Grammar: 'Whose fork is that? It's _____.'",
               "options": [
-                "mine",
                 "my",
                 "I",
-                "me"
+                "me",
+                "mine"
               ],
               "correctAnswer": "mine",
               "explanation_vi": "Đúng. Đại từ sở hữu thích hợp là 'mine'.",
-              "vietnameseExplanation": "Đúng. Đại từ sở hữu thích hợp là 'mine'."
+              "vietnameseExplanation": "Đúng. Đại từ sở hữu thích hợp là 'mine'.",
+              "correctAnswerIndex": 3
             },
             {
               "id": "cu2-q5",
@@ -6105,27 +6117,29 @@
               "questionText": "Listen and choose the illness:",
               "promptAudioUrl": "/audio/checkup2/headache.mp3",
               "options": [
-                "headache",
                 "fever",
-                "cold"
+                "cold",
+                "headache"
               ],
               "correctAnswer": "headache",
               "explanation_vi": "Đúng. Băng phát âm từ 'headache'.",
-              "vietnameseExplanation": "Đúng. Băng phát âm từ 'headache'."
+              "vietnameseExplanation": "Đúng. Băng phát âm từ 'headache'.",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu2-q6",
               "type": "multiple-choice",
-              "questionText": "Reading: 'Excuse me. How much is this sweater? It's $30.' How much is the sweater?",
+              "questionText": "Reading: Read the passage and answer the question.\n\n\"Dr. Green is a veterinarian at the animal clinic next to the park. Today, Toby brings his puppy to the clinic because the puppy is sick. Dr. Green checks the puppy carefully and gives Toby some medicine for it. Toby says thank you to the kind doctor.\"\n\nWhy does Toby take his puppy to Dr. Green?",
               "options": [
-                "Thirty dollars",
-                "Twenty dollars",
-                "Ten dollars",
-                "Fifty dollars"
+                "Because Toby has a stomachache",
+                "Because his puppy is sick",
+                "Because he wants to buy a sweater",
+                "Because Dr. Green is a firefighter"
               ],
-              "correctAnswer": "Thirty dollars",
-              "explanation_vi": "Đúng. Theo đoạn đối thoại, giá là $30 (thirty dollars).",
-              "vietnameseExplanation": "Đúng. Theo đoạn đối thoại, giá là $30 (thirty dollars)."
+              "correctAnswer": "Because his puppy is sick",
+              "explanation_vi": "Đúng. Toby đưa cún cưng đến bác sĩ thú y vì cún bị ốm: 'because the puppy is sick'.",
+              "vietnameseExplanation": "Đúng. Toby đưa cún cưng đến bác sĩ thú y vì cún bị ốm: 'because the puppy is sick'.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu2-q7",
@@ -6139,28 +6153,30 @@
               ],
               "correctAnswer": "He has a cold.",
               "explanation_vi": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'",
-              "vietnameseExplanation": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'"
+              "vietnameseExplanation": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu2-q8",
               "type": "multiple-choice",
               "questionText": "Mixed Review: 'This is our flag. It's _____.'",
               "options": [
-                "ours",
                 "theirs",
                 "mine",
-                "his"
+                "his",
+                "ours"
               ],
               "correctAnswer": "ours",
               "explanation_vi": "Đúng. 'our flag' tương ứng với 'ours'.",
-              "vietnameseExplanation": "Đúng. 'our flag' tương ứng với 'ours'."
+              "vietnameseExplanation": "Đúng. 'our flag' tương ứng với 'ours'.",
+              "correctAnswerIndex": 3
             }
           ],
           "speakingTask": {
             "id": "cu2-s",
             "promptText": "1. Vocabulary: cashier | 2. Sentence: The cashier works at the supermarket. | 3. Question: What's the matter with him? -> He has a cold. | 4. Dialogue: How much is this sweater? -> It's $30. | 5. Role-play: Whose fork is that? -> It's mine.",
             "vietnamesePrompt": "Ôn tập tổng hợp 5 bài tập nói từ Unit 3 và Unit 4.",
-            "image": "/images/checkup2/speaking.png",
+            "image": "",
             "referenceAudioUrl": "/audio/checkup2/speaking.mp3",
             "sampleAnswer": "cashier. The cashier works at the supermarket. He has a cold. It's thirty dollars. It's mine.",
             "keywordsToDetect": [
@@ -6179,7 +6195,7 @@
                 "type": "read-review",
                 "promptText": "Read vocabulary word: 'cashier'",
                 "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ vựng 'cashier'",
-                "image": "/images/checkup2/cashier.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup2/cashier.mp3",
                 "sampleAnswer": "cashier",
                 "keywordsToDetect": [
@@ -6192,7 +6208,7 @@
                 "type": "sentence-review",
                 "promptText": "Read sentence: 'The cashier works at the supermarket.'",
                 "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu 'The cashier works at the supermarket.'",
-                "image": "/images/checkup2/speaking.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup2/sentence.mp3",
                 "sampleAnswer": "The cashier works at the supermarket.",
                 "keywordsToDetect": [
@@ -6207,7 +6223,7 @@
                 "type": "answer-review",
                 "promptText": "Answer: 'What's the matter with him?'",
                 "vietnamesePrompt": "Nhiệm vụ 3: Trả lời 'He has a cold.'",
-                "image": "/images/checkup2/cold.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup2/question.mp3",
                 "sampleAnswer": "He has a cold.",
                 "keywordsToDetect": [
@@ -6222,7 +6238,7 @@
                 "type": "dialogue-review",
                 "promptText": "Dialogue: 'How much is this sweater?' -> 'It's $30.'",
                 "vietnamesePrompt": "Nhiệm vụ 4: Trả lời 'It's thirty dollars.'",
-                "image": "/images/checkup2/sweater.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup2/dialogue.mp3",
                 "sampleAnswer": "It's thirty dollars.",
                 "keywordsToDetect": [
@@ -6236,7 +6252,7 @@
                 "type": "roleplay-review",
                 "promptText": "Role-play: 'Whose fork is that?' -> 'It's mine.'",
                 "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai 'It's mine.'",
-                "image": "/images/checkup2/fork.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup2/roleplay.mp3",
                 "sampleAnswer": "It's mine.",
                 "keywordsToDetect": [
@@ -9123,28 +9139,30 @@
               "type": "multiple-choice",
               "questionText": "Unit 5 Vocabulary: What does 'strong' mean?",
               "options": [
-                "Khỏe mạnh",
                 "Yếu ớt",
+                "Khỏe mạnh",
                 "Cao lớn",
                 "Xinh đẹp"
               ],
               "correctAnswer": "Khỏe mạnh",
               "explanation_vi": "Đúng. 'strong' có nghĩa là khỏe mạnh.",
-              "vietnameseExplanation": "Đúng. 'strong' có nghĩa là khỏe mạnh."
+              "vietnameseExplanation": "Đúng. 'strong' có nghĩa là khỏe mạnh.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu3-q2",
               "type": "multiple-choice",
               "questionText": "Unit 6 Vocabulary: What does 'vacuum the carpet' mean?",
               "options": [
-                "Hút bụi thảm",
                 "Rửa xe ô tô",
                 "Tưới cây cảnh",
-                "Đi đổ rác"
+                "Đi đổ rác",
+                "Hút bụi thảm"
               ],
               "correctAnswer": "Hút bụi thảm",
               "explanation_vi": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm.",
-              "vietnameseExplanation": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm."
+              "vietnameseExplanation": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm.",
+              "correctAnswerIndex": 3
             },
             {
               "id": "cu3-q3",
@@ -9158,21 +9176,23 @@
               ],
               "correctAnswer": "thicker",
               "explanation_vi": "Đúng. So sánh hơn tính từ ngắn 'thicker'.",
-              "vietnameseExplanation": "Đúng. So sánh hơn tính từ ngắn 'thicker'."
+              "vietnameseExplanation": "Đúng. So sánh hơn tính từ ngắn 'thicker'.",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu3-q4",
               "type": "multiple-choice",
               "questionText": "Unit 6 Grammar: 'When _____ he make his bed?'",
               "options": [
-                "does",
                 "do",
+                "does",
                 "is",
                 "doing"
               ],
               "correctAnswer": "does",
               "explanation_vi": "Đúng. Trợ động từ đi với 'he' là 'does'.",
-              "vietnameseExplanation": "Đúng. Trợ động từ đi với 'he' là 'does'."
+              "vietnameseExplanation": "Đúng. Trợ động từ đi với 'he' là 'does'.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu3-q5",
@@ -9186,56 +9206,60 @@
               ],
               "correctAnswer": "taller",
               "explanation_vi": "Đúng. Đoạn âm thanh phát từ 'taller'.",
-              "vietnameseExplanation": "Đúng. Đoạn âm thanh phát từ 'taller'."
+              "vietnameseExplanation": "Đúng. Đoạn âm thanh phát từ 'taller'.",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu3-q6",
               "type": "multiple-choice",
-              "questionText": "Reading: 'Which one is harder, the marble or the ball? The marble is harder.' Which item is harder?",
+              "questionText": "Reading: Read the story and answer the question.\n\n\"On Saturday, Emma and her brother Nick help their parents on the farm. Emma feeds the chickens and collects the eggs into a small basket. Nick carries a large bag of corn to feed the cows. The basket of eggs is light, but the bag of corn is much heavier.\"\n\nWhich item is heavier on the farm?",
               "options": [
-                "The marble",
-                "The ball",
-                "The rock",
-                "The pillow"
+                "The small basket of eggs",
+                "The little yellow chicken",
+                "The large bag of corn",
+                "The farmer's straw hat"
               ],
-              "correctAnswer": "The marble",
-              "explanation_vi": "Đúng. Theo đoạn văn, viên bi ('marble') cứng hơn.",
-              "vietnameseExplanation": "Đúng. Theo đoạn văn, viên bi ('marble') cứng hơn."
+              "correctAnswer": "The large bag of corn",
+              "explanation_vi": "Đúng. Theo bài đọc: 'The basket of eggs is light, but the bag of corn is much heavier.'",
+              "vietnameseExplanation": "Đúng. Theo bài đọc: 'The basket of eggs is light, but the bag of corn is much heavier.'",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu3-q7",
               "type": "multiple-choice",
-              "questionText": "Dialogue: A: 'Do you want to come over?' B: '_____'",
+              "questionText": "Dialogue: A: 'Do you want to come over?' B: '_____' ",
               "options": [
-                "Sure. When?",
                 "Yes, I do laundry.",
                 "No, it is thick.",
+                "Sure. When?",
                 "I am taller."
               ],
               "correctAnswer": "Sure. When?",
               "explanation_vi": "Đúng. Phản hồi lời mời 'Sure. When?'.",
-              "vietnameseExplanation": "Đúng. Phản hồi lời mời 'Sure. When?'."
+              "vietnameseExplanation": "Đúng. Phản hồi lời mời 'Sure. When?'.",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu3-q8",
               "type": "multiple-choice",
               "questionText": "Mixed Review: 'I always _____ the cows in the morning.'",
               "options": [
-                "milk",
                 "milks",
                 "milking",
-                "is milk"
+                "is milk",
+                "milk"
               ],
               "correctAnswer": "milk",
               "explanation_vi": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'.",
-              "vietnameseExplanation": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'."
+              "vietnameseExplanation": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'.",
+              "correctAnswerIndex": 3
             }
           ],
           "speakingTask": {
             "id": "cu3-s",
             "promptText": "1. Vocabulary: taller | 2. Sentence: The boy is taller than the girl. | 3. Question: When do you make your bed? -> Before school. | 4. Dialogue: Do you want to come over? -> Sure. After school. | 5. Role-play: Which one is harder? -> The marble is harder.",
             "vietnamesePrompt": "Ôn tập tổng hợp 5 bài tập nói từ Unit 5 và Unit 6.",
-            "image": "/images/checkup3/speaking.png",
+            "image": "",
             "referenceAudioUrl": "/audio/checkup3/speaking.mp3",
             "sampleAnswer": "taller. The boy is taller than the girl. Before school. Sure. After school. The marble is harder.",
             "keywordsToDetect": [
@@ -9252,7 +9276,7 @@
                 "type": "read-word",
                 "promptText": "Read vocabulary: 'taller'",
                 "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'taller'",
-                "image": "/images/checkup3/taller.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup3/taller.mp3",
                 "sampleAnswer": "taller",
                 "keywordsToDetect": [
@@ -9265,7 +9289,7 @@
                 "type": "read-sentence",
                 "promptText": "Read sentence: 'The boy is taller than the girl.'",
                 "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu so sánh",
-                "image": "/images/checkup3/speaking.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup3/sentence.mp3",
                 "sampleAnswer": "The boy is taller than the girl.",
                 "keywordsToDetect": [
@@ -9280,7 +9304,7 @@
                 "type": "answer-question",
                 "promptText": "Answer: 'When do you make your bed?'",
                 "vietnamesePrompt": "Nhiệm vụ 3: Trả lời thời điểm dọn giường",
-                "image": "/images/unit6/lesson1/make_my_bed.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup3/question.mp3",
                 "sampleAnswer": "Before school.",
                 "keywordsToDetect": [
@@ -9294,7 +9318,7 @@
                 "type": "role-play",
                 "promptText": "Role-play: 'Do you want to come over?' -> 'Sure. After school.'",
                 "vietnamesePrompt": "Nhiệm vụ 4: Đóng vai trả lời lời mời",
-                "image": "/images/unit6/lesson3/come_over.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup3/roleplay.mp3",
                 "sampleAnswer": "Sure. After school.",
                 "keywordsToDetect": [
@@ -9309,7 +9333,7 @@
                 "type": "role-play",
                 "promptText": "Role-play: 'Which one is harder?' -> 'The marble is harder.'",
                 "vietnamesePrompt": "Nhiệm vụ 5: Trả lời so sánh độ cứng",
-                "image": "/images/unit5/lesson4/hard.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup3/roleplay2.mp3",
                 "sampleAnswer": "The marble is harder.",
                 "keywordsToDetect": [
@@ -10790,7 +10814,8 @@
               ],
               "correctAnswer": "calculator",
               "explanation_vi": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
-              "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay."
+              "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
+              "hideOptionLabels": true
             },
             {
               "id": "u8l1-q2",
@@ -10808,7 +10833,8 @@
               ],
               "correctAnswer": "lunchbox",
               "explanation_vi": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa.",
-              "vietnameseExplanation": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa."
+              "vietnameseExplanation": "Đúng. 'lunchbox' nghĩa là hộp cơm trưa.",
+              "hideOptionLabels": true
             },
             {
               "id": "u8l1-q3",
@@ -11242,7 +11268,8 @@
               ],
               "correctAnswer": "paintbrush",
               "explanation_vi": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ.",
-              "vietnameseExplanation": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ."
+              "vietnameseExplanation": "Đúng. Hình ảnh hiển thị chiếc cọ vẽ.",
+              "hideOptionLabels": true
             },
             {
               "id": "u8l2-q10",
@@ -11803,7 +11830,8 @@
               ],
               "correctAnswer": "cell phone",
               "explanation_vi": "Đúng. Bức tranh hiển thị điện thoại di động.",
-              "vietnameseExplanation": "Đúng. Bức tranh hiển thị điện thoại di động."
+              "vietnameseExplanation": "Đúng. Bức tranh hiển thị điện thoại di động.",
+              "hideOptionLabels": true
             },
             {
               "id": "u8l4-q6",
@@ -12035,42 +12063,45 @@
               "type": "multiple-choice",
               "questionText": "Unit 7 Vocabulary: What does 'amusement park' mean?",
               "options": [
-                "Công viên giải trí",
                 "Bãi biển",
                 "Bảo tàng",
+                "Công viên giải trí",
                 "Hiệu thuốc"
               ],
               "correctAnswer": "Công viên giải trí",
               "explanation_vi": "Đúng. 'amusement park' nghĩa là công viên giải trí.",
-              "vietnameseExplanation": "Đúng. 'amusement park' nghĩa là công viên giải trí."
+              "vietnameseExplanation": "Đúng. 'amusement park' nghĩa là công viên giải trí.",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu4-q2",
               "type": "multiple-choice",
               "questionText": "Unit 8 Vocabulary: What is 'calculator' in Vietnamese?",
               "options": [
-                "Máy tính cầm tay",
                 "Từ điển",
+                "Máy tính cầm tay",
                 "Hộp cơm trưa",
                 "Cái dập ghim"
               ],
               "correctAnswer": "Máy tính cầm tay",
               "explanation_vi": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
-              "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay."
+              "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu4-q3",
               "type": "multiple-choice",
               "questionText": "Unit 7 Grammar: 'Where _____ he yesterday? He was at the museum.'",
               "options": [
-                "was",
                 "were",
                 "is",
-                "are"
+                "are",
+                "was"
               ],
               "correctAnswer": "was",
               "explanation_vi": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'.",
-              "vietnameseExplanation": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'."
+              "vietnameseExplanation": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'.",
+              "correctAnswerIndex": 3
             },
             {
               "id": "cu4-q4",
@@ -12084,7 +12115,8 @@
               ],
               "correctAnswer": "were",
               "explanation_vi": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'.",
-              "vietnameseExplanation": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'."
+              "vietnameseExplanation": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'.",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu4-q5",
@@ -12092,32 +12124,34 @@
               "questionText": "Listen and choose the location:",
               "promptAudioUrl": "/audio/checkup4/bookstore.mp3",
               "options": [
-                "bookstore",
                 "pharmacy",
+                "bookstore",
                 "coffee shop"
               ],
               "correctAnswer": "bookstore",
               "explanation_vi": "Đúng. Đoạn âm thanh đọc từ 'bookstore'.",
-              "vietnameseExplanation": "Đúng. Đoạn âm thanh đọc từ 'bookstore'."
+              "vietnameseExplanation": "Đúng. Đoạn âm thanh đọc từ 'bookstore'.",
+              "correctAnswerIndex": 1
             },
             {
               "id": "cu4-q6",
               "type": "multiple-choice",
-              "questionText": "Reading: 'How was the weather yesterday? It was sunny.' How was the weather yesterday?",
+              "questionText": "Reading: Read the diary and answer the question.\n\n\"Yesterday morning, the weather was stormy and rainy, so Kevin stayed inside his house. In the afternoon, the rain stopped and the sun came out. Kevin and his sister went to the aquarium to see the penguins and dolphins. They took many wonderful photos with their digital camera.\"\n\nWhy did Kevin stay inside his house yesterday morning?",
               "options": [
-                "It was sunny.",
-                "It was rainy.",
-                "It was cloudy.",
-                "It was snowy."
+                "Because he wanted to watch digital TV",
+                "Because the aquarium was closed",
+                "Because the weather was stormy and rainy",
+                "Because he could not find his camera"
               ],
-              "correctAnswer": "It was sunny.",
-              "explanation_vi": "Đúng. Theo đoạn văn thời tiết hôm qua trời nắng (sunny).",
-              "vietnameseExplanation": "Đúng. Theo đoạn văn thời tiết hôm qua trời nắng (sunny)."
+              "correctAnswer": "Because the weather was stormy and rainy",
+              "explanation_vi": "Đúng. Kevin phải ở trong nhà vào buổi sáng vì thời tiết mưa bão: 'the weather was stormy and rainy, so Kevin stayed inside his house'.",
+              "vietnameseExplanation": "Đúng. Kevin phải ở trong nhà vào buổi sáng vì thời tiết mưa bão: 'the weather was stormy and rainy, so Kevin stayed inside his house'.",
+              "correctAnswerIndex": 2
             },
             {
               "id": "cu4-q7",
               "type": "multiple-choice",
-              "questionText": "Dialogue: A: 'Were there cell phones in 1940?' B: '_____'",
+              "questionText": "Dialogue: A: 'Were there cell phones in 1940?' B: '_____' ",
               "options": [
                 "No, there weren't.",
                 "Yes, there is.",
@@ -12126,28 +12160,30 @@
               ],
               "correctAnswer": "No, there weren't.",
               "explanation_vi": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'",
-              "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'"
+              "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'",
+              "correctAnswerIndex": 0
             },
             {
               "id": "cu4-q8",
               "type": "multiple-choice",
               "questionText": "Mixed Review: 'Where was the stapler yesterday? It _____ on the desk.'",
               "options": [
-                "was",
                 "were",
                 "is",
-                "are"
+                "are",
+                "was"
               ],
               "correctAnswer": "was",
               "explanation_vi": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'.",
-              "vietnameseExplanation": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'."
+              "vietnameseExplanation": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'.",
+              "correctAnswerIndex": 3
             }
           ],
           "speakingTask": {
             "id": "cu4-s",
             "promptText": "1. Vocabulary: amusement park | 2. Sentence Pattern: They were at the bookstore yesterday. | 3. Question & Answer: Where was the calculator? -> It was on the desk. | 4. Dialogue: Were there any scissors? -> Yes, there were. | 5. Role-play: How was the weather yesterday? -> It was sunny.",
             "vietnamesePrompt": "Thực hành 5 bài tập nói tổng hợp cho Check Up 4.",
-            "image": "/images/checkup4/speaking.png",
+            "image": "",
             "referenceAudioUrl": "/audio/checkup4/speaking.mp3",
             "sampleAnswer": "amusement park. They were at the bookstore yesterday. It was on the desk. Yes, there were. It was sunny.",
             "keywordsToDetect": [
@@ -12164,7 +12200,7 @@
                 "type": "read-word",
                 "promptText": "Read vocabulary: 'amusement park'",
                 "vietnamesePrompt": "Nhiệm vụ 1: Đọc từ 'amusement park'",
-                "image": "/images/checkup4/amusement_park.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup4/amusement_park.mp3",
                 "sampleAnswer": "amusement park",
                 "keywordsToDetect": [
@@ -12178,7 +12214,7 @@
                 "type": "read-sentence",
                 "promptText": "Read sentence: 'They were at the bookstore yesterday.'",
                 "vietnamesePrompt": "Nhiệm vụ 2: Đọc câu vị trí quá khứ",
-                "image": "/images/checkup4/bookstore.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup4/sentence.mp3",
                 "sampleAnswer": "They were at the bookstore yesterday.",
                 "keywordsToDetect": [
@@ -12192,7 +12228,7 @@
                 "type": "answer-question",
                 "promptText": "Answer: 'Where was the calculator?'",
                 "vietnamesePrompt": "Nhiệm vụ 3: Trả lời vị trí máy tính",
-                "image": "/images/checkup4/calculator.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup4/question.mp3",
                 "sampleAnswer": "It was on the desk.",
                 "keywordsToDetect": [
@@ -12206,7 +12242,7 @@
                 "type": "role-play",
                 "promptText": "Role-play: 'Were there any scissors?' -> 'Yes, there were.'",
                 "vietnamesePrompt": "Nhiệm vụ 4: Đóng vai trả lời sự tồn tại đồ vật",
-                "image": "/images/checkup4/scissors.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup4/roleplay.mp3",
                 "sampleAnswer": "Yes, there were.",
                 "keywordsToDetect": [
@@ -12220,7 +12256,7 @@
                 "type": "role-play",
                 "promptText": "Role-play: 'How was the weather yesterday?' -> 'It was sunny.'",
                 "vietnamesePrompt": "Nhiệm vụ 5: Đóng vai trả lời thời tiết",
-                "image": "/images/checkup4/sunny.png",
+                "image": "",
                 "referenceAudioUrl": "/audio/checkup4/roleplay2.mp3",
                 "sampleAnswer": "It was sunny.",
                 "keywordsToDetect": [
