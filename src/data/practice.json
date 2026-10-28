@@ -1212,42 +1212,45 @@
       "type": "multiple-choice",
       "questionText": "Unit 1 Vocabulary: What does 'popcorn' mean?",
       "options": [
-        "Bỏng ngô",
         "Sô-cô-la",
+        "Bỏng ngô",
         "Kẹo cao su",
         "Đậu phộng"
       ],
       "correctAnswer": "Bỏng ngô",
       "explanation_vi": "Đúng. 'popcorn' nghĩa là bỏng ngô.",
-      "vietnameseExplanation": "Đúng. 'popcorn' nghĩa là bỏng ngô."
+      "vietnameseExplanation": "Đúng. 'popcorn' nghĩa là bỏng ngô.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu1-q2",
       "type": "multiple-choice",
       "questionText": "Unit 2 Vocabulary: Where do you borrow books?",
       "options": [
-        "Library",
         "Park",
         "Supermarket",
+        "Library",
         "Movie theater"
       ],
       "correctAnswer": "Library",
       "explanation_vi": "Đúng. Bạn mượn sách ở 'library' (thư viện).",
-      "vietnameseExplanation": "Đúng. Bạn mượn sách ở 'library' (thư viện)."
+      "vietnameseExplanation": "Đúng. Bạn mượn sách ở 'library' (thư viện).",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu1-q3",
       "type": "multiple-choice",
       "questionText": "Unit 1 Grammar: Choose the correct verb form: 'He _____ some chocolate.'",
       "options": [
-        "wants",
         "want",
         "wanting",
-        "is want"
+        "is want",
+        "wants"
       ],
       "correctAnswer": "wants",
       "explanation_vi": "Đúng. Chủ ngữ 'He' cần động từ 'wants'.",
-      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' cần động từ 'wants'."
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' cần động từ 'wants'.",
+      "correctAnswerIndex": 3
     },
     {
       "id": "cu1-q4",
@@ -1261,7 +1264,8 @@
       ],
       "correctAnswer": "is",
       "explanation_vi": "Đúng. 'park' là danh từ số ít nên dùng 'is'.",
-      "vietnameseExplanation": "Đúng. 'park' là danh từ số ít nên dùng 'is'."
+      "vietnameseExplanation": "Đúng. 'park' là danh từ số ít nên dùng 'is'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu1-q5",
@@ -1269,27 +1273,29 @@
       "questionText": "Listen and choose the food item:",
       "promptAudioUrl": "/audio/checkup1/omelet.mp3",
       "options": [
-        "omelet",
         "smoothie",
+        "omelet",
         "spaghetti"
       ],
       "correctAnswer": "omelet",
       "explanation_vi": "Đúng. Đoạn băng đọc tên món 'omelet'.",
-      "vietnameseExplanation": "Đúng. Đoạn băng đọc tên món 'omelet'."
+      "vietnameseExplanation": "Đúng. Đoạn băng đọc tên món 'omelet'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu1-q6",
       "type": "multiple-choice",
-      "questionText": "Reading: 'Tom is at the park. He is kicking a ball. The park is across from the library.' Where is Tom?",
+      "questionText": "Reading: Read the story and answer the question.\n\n\"On Sunday, Leo goes to the supermarket across from the park. He needs some carrots and onions to help his mom make soup. After shopping, he walks to the library to borrow a book with his sister.\"\n\nWhy does Leo go to the supermarket?",
       "options": [
-        "At the park",
-        "At the library",
-        "At the supermarket",
-        "At home"
+        "To borrow a book with his sister",
+        "To kick a ball in the park",
+        "To buy some carrots and onions for soup",
+        "To mail a letter at the post office"
       ],
-      "correctAnswer": "At the park",
-      "explanation_vi": "Đúng. Theo bài đọc, Tom đang ở 'park'.",
-      "vietnameseExplanation": "Đúng. Theo bài đọc, Tom đang ở 'park'."
+      "correctAnswer": "To buy some carrots and onions for soup",
+      "explanation_vi": "Đúng. Trong đoạn văn: 'He needs some carrots and onions to help his mom make soup.'",
+      "vietnameseExplanation": "Đúng. Trong đoạn văn: 'He needs some carrots and onions to help his mom make soup.'",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu1-q7",
@@ -1303,21 +1309,23 @@
       ],
       "correctAnswer": "They need some carrots.",
       "explanation_vi": "Đúng. Câu trả lời đúng cấu trúc 'They need...'.",
-      "vietnameseExplanation": "Đúng. Câu trả lời đúng cấu trúc 'They need...'."
+      "vietnameseExplanation": "Đúng. Câu trả lời đúng cấu trúc 'They need...'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu1-q8",
       "type": "multiple-choice",
       "questionText": "Mixed Review: Complete instructions: 'First, color the picture. Next, _____ the paper.'",
       "options": [
-        "cut",
         "eat",
         "run",
-        "sleep"
+        "sleep",
+        "cut"
       ],
       "correctAnswer": "cut",
       "explanation_vi": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy.",
-      "vietnameseExplanation": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy."
+      "vietnameseExplanation": "Đúng. Bước tiếp theo là 'cut' (cắt) giấy.",
+      "correctAnswerIndex": 3
     }
   ],
   "unit3_lesson1": [
@@ -2570,14 +2578,15 @@
       "type": "multiple-choice",
       "questionText": "Unit 3 Vocabulary: What does 'cashier' mean?",
       "options": [
-        "Nhân viên thu ngân",
         "Bác sĩ thú y",
         "Đầu bếp",
+        "Nhân viên thu ngân",
         "Thủ thư"
       ],
       "correctAnswer": "Nhân viên thu ngân",
       "explanation_vi": "Đúng. 'cashier' là nhân viên thu ngân.",
-      "vietnameseExplanation": "Đúng. 'cashier' là nhân viên thu ngân."
+      "vietnameseExplanation": "Đúng. 'cashier' là nhân viên thu ngân.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu2-q2",
@@ -2591,35 +2600,38 @@
       ],
       "correctAnswer": "Đôi đũa",
       "explanation_vi": "Đúng. 'chopsticks' nghĩa là đôi đũa.",
-      "vietnameseExplanation": "Đúng. 'chopsticks' nghĩa là đôi đũa."
+      "vietnameseExplanation": "Đúng. 'chopsticks' nghĩa là đôi đũa.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu2-q3",
       "type": "multiple-choice",
       "questionText": "Unit 3 Grammar: 'Where does the cashier work? He _____ at the supermarket.'",
       "options": [
-        "works",
         "work",
+        "works",
         "working",
         "is work"
       ],
       "correctAnswer": "works",
       "explanation_vi": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'.",
-      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'."
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'He' đi với động từ chia 'works'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu2-q4",
       "type": "multiple-choice",
       "questionText": "Unit 4 Grammar: 'Whose fork is that? It's _____.'",
       "options": [
-        "mine",
         "my",
         "I",
-        "me"
+        "me",
+        "mine"
       ],
       "correctAnswer": "mine",
       "explanation_vi": "Đúng. Đại từ sở hữu thích hợp là 'mine'.",
-      "vietnameseExplanation": "Đúng. Đại từ sở hữu thích hợp là 'mine'."
+      "vietnameseExplanation": "Đúng. Đại từ sở hữu thích hợp là 'mine'.",
+      "correctAnswerIndex": 3
     },
     {
       "id": "cu2-q5",
@@ -2627,27 +2639,29 @@
       "questionText": "Listen and choose the illness:",
       "promptAudioUrl": "/audio/checkup2/headache.mp3",
       "options": [
-        "headache",
         "fever",
-        "cold"
+        "cold",
+        "headache"
       ],
       "correctAnswer": "headache",
       "explanation_vi": "Đúng. Băng phát âm từ 'headache'.",
-      "vietnameseExplanation": "Đúng. Băng phát âm từ 'headache'."
+      "vietnameseExplanation": "Đúng. Băng phát âm từ 'headache'.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu2-q6",
       "type": "multiple-choice",
-      "questionText": "Reading: 'Excuse me. How much is this sweater? It's $30.' How much is the sweater?",
+      "questionText": "Reading: Read the passage and answer the question.\n\n\"Dr. Green is a veterinarian at the animal clinic next to the park. Today, Toby brings his puppy to the clinic because the puppy is sick. Dr. Green checks the puppy carefully and gives Toby some medicine for it. Toby says thank you to the kind doctor.\"\n\nWhy does Toby take his puppy to Dr. Green?",
       "options": [
-        "Thirty dollars",
-        "Twenty dollars",
-        "Ten dollars",
-        "Fifty dollars"
+        "Because Toby has a stomachache",
+        "Because his puppy is sick",
+        "Because he wants to buy a sweater",
+        "Because Dr. Green is a firefighter"
       ],
-      "correctAnswer": "Thirty dollars",
-      "explanation_vi": "Đúng. Theo đoạn đối thoại, giá là $30 (thirty dollars).",
-      "vietnameseExplanation": "Đúng. Theo đoạn đối thoại, giá là $30 (thirty dollars)."
+      "correctAnswer": "Because his puppy is sick",
+      "explanation_vi": "Đúng. Toby đưa cún cưng đến bác sĩ thú y vì cún bị ốm: 'because the puppy is sick'.",
+      "vietnameseExplanation": "Đúng. Toby đưa cún cưng đến bác sĩ thú y vì cún bị ốm: 'because the puppy is sick'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu2-q7",
@@ -2661,21 +2675,23 @@
       ],
       "correctAnswer": "He has a cold.",
       "explanation_vi": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'",
-      "vietnameseExplanation": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'"
+      "vietnameseExplanation": "Đúng. Trả lời triệu chứng sức khỏe 'He has a cold.'",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu2-q8",
       "type": "multiple-choice",
       "questionText": "Mixed Review: 'This is our flag. It's _____.'",
       "options": [
-        "ours",
         "theirs",
         "mine",
-        "his"
+        "his",
+        "ours"
       ],
       "correctAnswer": "ours",
       "explanation_vi": "Đúng. 'our flag' tương ứng với 'ours'.",
-      "vietnameseExplanation": "Đúng. 'our flag' tương ứng với 'ours'."
+      "vietnameseExplanation": "Đúng. 'our flag' tương ứng với 'ours'.",
+      "correctAnswerIndex": 3
     }
   ],
   "unit5_lesson1": [
@@ -3859,28 +3875,30 @@
       "type": "multiple-choice",
       "questionText": "Unit 5 Vocabulary: What does 'strong' mean?",
       "options": [
-        "Khỏe mạnh",
         "Yếu ớt",
+        "Khỏe mạnh",
         "Cao lớn",
         "Xinh đẹp"
       ],
       "correctAnswer": "Khỏe mạnh",
       "explanation_vi": "Đúng. 'strong' có nghĩa là khỏe mạnh.",
-      "vietnameseExplanation": "Đúng. 'strong' có nghĩa là khỏe mạnh."
+      "vietnameseExplanation": "Đúng. 'strong' có nghĩa là khỏe mạnh.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu3-q2",
       "type": "multiple-choice",
       "questionText": "Unit 6 Vocabulary: What does 'vacuum the carpet' mean?",
       "options": [
-        "Hút bụi thảm",
         "Rửa xe ô tô",
         "Tưới cây cảnh",
-        "Đi đổ rác"
+        "Đi đổ rác",
+        "Hút bụi thảm"
       ],
       "correctAnswer": "Hút bụi thảm",
       "explanation_vi": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm.",
-      "vietnameseExplanation": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm."
+      "vietnameseExplanation": "Đúng. 'vacuum the carpet' có nghĩa là hút bụi thảm.",
+      "correctAnswerIndex": 3
     },
     {
       "id": "cu3-q3",
@@ -3894,21 +3912,23 @@
       ],
       "correctAnswer": "thicker",
       "explanation_vi": "Đúng. So sánh hơn tính từ ngắn 'thicker'.",
-      "vietnameseExplanation": "Đúng. So sánh hơn tính từ ngắn 'thicker'."
+      "vietnameseExplanation": "Đúng. So sánh hơn tính từ ngắn 'thicker'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu3-q4",
       "type": "multiple-choice",
       "questionText": "Unit 6 Grammar: 'When _____ he make his bed?'",
       "options": [
-        "does",
         "do",
+        "does",
         "is",
         "doing"
       ],
       "correctAnswer": "does",
       "explanation_vi": "Đúng. Trợ động từ đi với 'he' là 'does'.",
-      "vietnameseExplanation": "Đúng. Trợ động từ đi với 'he' là 'does'."
+      "vietnameseExplanation": "Đúng. Trợ động từ đi với 'he' là 'does'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu3-q5",
@@ -3922,49 +3942,53 @@
       ],
       "correctAnswer": "taller",
       "explanation_vi": "Đúng. Đoạn âm thanh phát từ 'taller'.",
-      "vietnameseExplanation": "Đúng. Đoạn âm thanh phát từ 'taller'."
+      "vietnameseExplanation": "Đúng. Đoạn âm thanh phát từ 'taller'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu3-q6",
       "type": "multiple-choice",
-      "questionText": "Reading: 'Which one is harder, the marble or the ball? The marble is harder.' Which item is harder?",
+      "questionText": "Reading: Read the story and answer the question.\n\n\"On Saturday, Emma and her brother Nick help their parents on the farm. Emma feeds the chickens and collects the eggs into a small basket. Nick carries a large bag of corn to feed the cows. The basket of eggs is light, but the bag of corn is much heavier.\"\n\nWhich item is heavier on the farm?",
       "options": [
-        "The marble",
-        "The ball",
-        "The rock",
-        "The pillow"
+        "The small basket of eggs",
+        "The little yellow chicken",
+        "The large bag of corn",
+        "The farmer's straw hat"
       ],
-      "correctAnswer": "The marble",
-      "explanation_vi": "Đúng. Theo đoạn văn, viên bi ('marble') cứng hơn.",
-      "vietnameseExplanation": "Đúng. Theo đoạn văn, viên bi ('marble') cứng hơn."
+      "correctAnswer": "The large bag of corn",
+      "explanation_vi": "Đúng. Theo bài đọc: 'The basket of eggs is light, but the bag of corn is much heavier.'",
+      "vietnameseExplanation": "Đúng. Theo bài đọc: 'The basket of eggs is light, but the bag of corn is much heavier.'",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu3-q7",
       "type": "multiple-choice",
-      "questionText": "Dialogue: A: 'Do you want to come over?' B: '_____'",
+      "questionText": "Dialogue: A: 'Do you want to come over?' B: '_____' ",
       "options": [
-        "Sure. When?",
         "Yes, I do laundry.",
         "No, it is thick.",
+        "Sure. When?",
         "I am taller."
       ],
       "correctAnswer": "Sure. When?",
       "explanation_vi": "Đúng. Phản hồi lời mời 'Sure. When?'.",
-      "vietnameseExplanation": "Đúng. Phản hồi lời mời 'Sure. When?'."
+      "vietnameseExplanation": "Đúng. Phản hồi lời mời 'Sure. When?'.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu3-q8",
       "type": "multiple-choice",
       "questionText": "Mixed Review: 'I always _____ the cows in the morning.'",
       "options": [
-        "milk",
         "milks",
         "milking",
-        "is milk"
+        "is milk",
+        "milk"
       ],
       "correctAnswer": "milk",
       "explanation_vi": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'.",
-      "vietnameseExplanation": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'."
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'I' đi với động từ nguyên mẫu 'milk'.",
+      "correctAnswerIndex": 3
     }
   ],
   "unit7_lesson1": [
@@ -5115,42 +5139,45 @@
       "type": "multiple-choice",
       "questionText": "Unit 7 Vocabulary: What does 'amusement park' mean?",
       "options": [
-        "Công viên giải trí",
         "Bãi biển",
         "Bảo tàng",
+        "Công viên giải trí",
         "Hiệu thuốc"
       ],
       "correctAnswer": "Công viên giải trí",
       "explanation_vi": "Đúng. 'amusement park' nghĩa là công viên giải trí.",
-      "vietnameseExplanation": "Đúng. 'amusement park' nghĩa là công viên giải trí."
+      "vietnameseExplanation": "Đúng. 'amusement park' nghĩa là công viên giải trí.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu4-q2",
       "type": "multiple-choice",
       "questionText": "Unit 8 Vocabulary: What is 'calculator' in Vietnamese?",
       "options": [
-        "Máy tính cầm tay",
         "Từ điển",
+        "Máy tính cầm tay",
         "Hộp cơm trưa",
         "Cái dập ghim"
       ],
       "correctAnswer": "Máy tính cầm tay",
       "explanation_vi": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
-      "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay."
+      "vietnameseExplanation": "Đúng. 'calculator' nghĩa là máy tính cầm tay.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu4-q3",
       "type": "multiple-choice",
       "questionText": "Unit 7 Grammar: 'Where _____ he yesterday? He was at the museum.'",
       "options": [
-        "was",
         "were",
         "is",
-        "are"
+        "are",
+        "was"
       ],
       "correctAnswer": "was",
       "explanation_vi": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'.",
-      "vietnameseExplanation": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'."
+      "vietnameseExplanation": "Đúng. Chủ ngữ 'he' ở quá khứ đi với 'was'.",
+      "correctAnswerIndex": 3
     },
     {
       "id": "cu4-q4",
@@ -5164,7 +5191,8 @@
       ],
       "correctAnswer": "were",
       "explanation_vi": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'.",
-      "vietnameseExplanation": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'."
+      "vietnameseExplanation": "Đúng. 'magazines' danh từ số nhiều quá khứ đi với 'were'.",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu4-q5",
@@ -5172,32 +5200,34 @@
       "questionText": "Listen and choose the location:",
       "promptAudioUrl": "/audio/checkup4/bookstore.mp3",
       "options": [
-        "bookstore",
         "pharmacy",
+        "bookstore",
         "coffee shop"
       ],
       "correctAnswer": "bookstore",
       "explanation_vi": "Đúng. Đoạn âm thanh đọc từ 'bookstore'.",
-      "vietnameseExplanation": "Đúng. Đoạn âm thanh đọc từ 'bookstore'."
+      "vietnameseExplanation": "Đúng. Đoạn âm thanh đọc từ 'bookstore'.",
+      "correctAnswerIndex": 1
     },
     {
       "id": "cu4-q6",
       "type": "multiple-choice",
-      "questionText": "Reading: 'How was the weather yesterday? It was sunny.' How was the weather yesterday?",
+      "questionText": "Reading: Read the diary and answer the question.\n\n\"Yesterday morning, the weather was stormy and rainy, so Kevin stayed inside his house. In the afternoon, the rain stopped and the sun came out. Kevin and his sister went to the aquarium to see the penguins and dolphins. They took many wonderful photos with their digital camera.\"\n\nWhy did Kevin stay inside his house yesterday morning?",
       "options": [
-        "It was sunny.",
-        "It was rainy.",
-        "It was cloudy.",
-        "It was snowy."
+        "Because he wanted to watch digital TV",
+        "Because the aquarium was closed",
+        "Because the weather was stormy and rainy",
+        "Because he could not find his camera"
       ],
-      "correctAnswer": "It was sunny.",
-      "explanation_vi": "Đúng. Theo đoạn văn thời tiết hôm qua trời nắng (sunny).",
-      "vietnameseExplanation": "Đúng. Theo đoạn văn thời tiết hôm qua trời nắng (sunny)."
+      "correctAnswer": "Because the weather was stormy and rainy",
+      "explanation_vi": "Đúng. Kevin phải ở trong nhà vào buổi sáng vì thời tiết mưa bão: 'the weather was stormy and rainy, so Kevin stayed inside his house'.",
+      "vietnameseExplanation": "Đúng. Kevin phải ở trong nhà vào buổi sáng vì thời tiết mưa bão: 'the weather was stormy and rainy, so Kevin stayed inside his house'.",
+      "correctAnswerIndex": 2
     },
     {
       "id": "cu4-q7",
       "type": "multiple-choice",
-      "questionText": "Dialogue: A: 'Were there cell phones in 1940?' B: '_____'",
+      "questionText": "Dialogue: A: 'Were there cell phones in 1940?' B: '_____' ",
       "options": [
         "No, there weren't.",
         "Yes, there is.",
@@ -5206,21 +5236,23 @@
       ],
       "correctAnswer": "No, there weren't.",
       "explanation_vi": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'",
-      "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'"
+      "vietnameseExplanation": "Đúng. Phủ định ngắn số nhiều quá khứ: 'No, there weren't.'",
+      "correctAnswerIndex": 0
     },
     {
       "id": "cu4-q8",
       "type": "multiple-choice",
       "questionText": "Mixed Review: 'Where was the stapler yesterday? It _____ on the desk.'",
       "options": [
-        "was",
         "were",
         "is",
-        "are"
+        "are",
+        "was"
       ],
       "correctAnswer": "was",
       "explanation_vi": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'.",
-      "vietnameseExplanation": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'."
+      "vietnameseExplanation": "Đúng. 'the stapler' danh từ số ít quá khứ đi với 'was'.",
+      "correctAnswerIndex": 3
     }
   ],
   "yle_practice": [
