@@ -1,30 +1,23 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { UserProfile, AuthState } from '../types/user';
-import { PLACEHOLDER_IMAGES } from '../data/placeholderMedia';
-
-interface AuthContextType extends AuthState {
-  login: (name: string, avatarUrl?: string) => void;
-  logout: () => void;
-  updateProfile: (updates: Partial<UserProfile>) => void;
-}
-
-const DEFAULT_USER: UserProfile = {
-  id: 'student-001',
-  name: 'Bảo Nam', // Vietnamese student default name
-  avatarUrl: PLACEHOLDER_IMAGES.avatarDefault,
-  grade: 'Lớp 3 / Grade 3',
-  schoolName: 'Trường Tiểu Học Nguyễn Du',
-  joinedDate: '2026-08-01',
-};
+import { UserProfile } from '../types/user';
+import { LoginCredentials, AuthResult, AuthContextType } from '../types/auth';
+import { authService } from '../services/authService';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<UserProfile | null>(() => {
-    const saved = localStorage.getItem('ebu3_user_profile');
-    return saved ? JSON.parse(saved) : DEFAULT_USER;
+    try {
+      const saved = localStorage.getItem('ebu3_user_profile');
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      return null;
+    }
   });
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  // Sync user profile (without password) to localStorage
   useEffect(() => {
     if (user) {
       localStorage.setItem('ebu3_user_profile', JSON.stringify(user));
@@ -33,21 +26,34 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [user]);
 
-  const login = (name: string, avatarUrl?: string) => {
-    const newUser: UserProfile = {
-      id: `student-${Date.now()}`,
-      name: name || 'Bảo Nam',
-      avatarUrl: avatarUrl || PLACEHOLDER_IMAGES.avatarDefault,
-      grade: 'Lớp 3 / Grade 3',
-      joinedDate: new Date().toISOString().split('T')[0],
-    };
-    setUser(newUser);
+  /**
+   * Login method delegates to authService.
+   * Does NOT auto-grant access or use mock credentials.
+   */
+  const login = async (credentials: LoginCredentials): Promise<AuthResult> => {
+    setIsLoading(true);
+    try {
+      const result = await authService.login(credentials);
+      if (result.success && result.user) {
+        setUser(result.user);
+      }
+      return result;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
+  /**
+   * Clear session & profile
+   */
   const logout = () => {
     setUser(null);
+    localStorage.removeItem('ebu3_user_profile');
   };
 
+  /**
+   * Update student profile fields
+   */
   const updateProfile = (updates: Partial<UserProfile>) => {
     if (user) {
       setUser({ ...user, ...updates });
@@ -59,6 +65,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       value={{
         isAuthenticated: !!user,
         user,
+        isLoading,
         login,
         logout,
         updateProfile,
