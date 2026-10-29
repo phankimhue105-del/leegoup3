@@ -9,9 +9,9 @@ import { LoginCredentials, AuthResult } from '../types/auth';
 class AuthService {
   /**
    * Google Apps Script Web App API URL
-   * Will be assigned in the next phase when the Apps Script endpoint is deployed.
    */
-  private apiEndpoint: string | null = null;
+  private apiEndpoint: string =
+    'https://script.google.com/macros/s/AKfycbymR5CS1KgzuBwRp2bHXMPWv56N3CmWKL44fV5zWkyF7XkLH_38H0x9o_ldqPcXjklS/exec';
 
   /**
    * Configure API Endpoint URL
@@ -23,7 +23,7 @@ class AuthService {
   /**
    * Get current API Endpoint URL
    */
-  public getApiEndpoint(): string | null {
+  public getApiEndpoint(): string {
     return this.apiEndpoint;
   }
 
@@ -31,9 +31,9 @@ class AuthService {
    * Process student login request
    * 
    * Strict guidelines:
-   * - No mock accounts
-   * - No auto-granting access without real verification
+   * - Real Google Apps Script verification against 'up3login' sheet
    * - Never stores password in localStorage / sessionStorage
+   * - Preserves user credentials on server, maps to safe UserProfile
    */
   public async login(credentials: LoginCredentials): Promise<AuthResult> {
     const trimmedUsername = credentials.username.trim();
@@ -61,20 +61,7 @@ class AuthService {
       };
     }
 
-    // 2. Simulate processing delay (800ms) to display loading state & prevent double submission
-    await new Promise((resolve) => setTimeout(resolve, 800));
-
-    // 3. Phase 1 Check: Google Apps Script API endpoint is not yet configured
-    if (!this.apiEndpoint) {
-      return {
-        success: false,
-        isPendingSetup: true,
-        message:
-          'Dịch vụ xác thực Google Apps Script đang được chuẩn bị để kết nối ở bước tiếp theo. Tài khoản sẽ được kích hoạt khi liên kết API hoàn tất!',
-      };
-    }
-
-    // 4. Future implementation: Live Google Apps Script Web App request
+    // 2. Real Google Apps Script Web App authentication request
     try {
       const response = await fetch(this.apiEndpoint, {
         method: 'POST',
@@ -92,16 +79,63 @@ class AuthService {
         throw new Error(`HTTP Error ${response.status}`);
       }
 
-      const data = await response.json();
+      const rawText = await response.text();
+      let data: any;
+
+      try {
+        data = JSON.parse(rawText);
+      } catch {
+        // Detect Google Apps Script HTML error page
+        if (
+          rawText.includes('TypeError:') ||
+          rawText.includes('Google Apps Script') ||
+          rawText.includes('<html')
+        ) {
+          return {
+            success: false,
+            message:
+              'Máy chủ Google Apps Script đang gặp sự cố mã nguồn (Lỗi cú pháp tại tệp Mã). Vui lòng cập nhật script trên Google Sheets theo hướng dẫn!',
+          };
+        }
+
+        return {
+          success: false,
+          message: 'Phản hồi từ máy chủ Google Apps Script không hợp lệ.',
+        };
+      }
+
+      if (data && data.success) {
+        const userProfile = {
+          id: String(data.user?.id || trimmedUsername),
+          name: String(data.user?.name || data.user?.studentName || trimmedUsername),
+          avatarUrl:
+            data.user?.avatarUrl ||
+            'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
+          grade: String(data.user?.grade || data.user?.class || 'Lớp 3 / Grade 3'),
+          schoolName: data.user?.schoolName,
+          joinedDate: String(
+            data.user?.joinedDate || new Date().toISOString().split('T')[0]
+          ),
+        };
+
+        return {
+          success: true,
+          user: userProfile,
+          message: data.message || 'Đăng nhập thành công!',
+        };
+      }
+
       return {
-        success: !!data.success,
-        user: data.user,
-        message: data.message || (data.success ? 'Đăng nhập thành công!' : 'Tên đăng nhập hoặc mật khẩu không đúng.'),
+        success: false,
+        message:
+          data?.message ||
+          'Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại!',
       };
     } catch (error) {
       return {
         success: false,
-        message: 'Không thể kết nối đến máy chủ xác thực Google Sheets. Vui lòng thử lại sau.',
+        message:
+          'Không thể kết nối đến máy chủ xác thực Google Sheets. Vui lòng kiểm tra kết nối mạng và thử lại!',
       };
     }
   }
