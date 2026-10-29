@@ -60,9 +60,9 @@ export const LoginPage: React.FC = () => {
     const result = await login({ username: trimmedUser, password: trimmedPass });
 
     if (result.success) {
-      // Future phase when Google Apps Script API is connected
       navigate('/home');
     } else {
+      setPassword(''); // Bảo mật: Chỉ xóa mật khẩu, giữ nguyên tên đăng nhập đã nhập
       if (result.isPendingSetup) {
         setNoticeMessage(result.message);
       } else {
