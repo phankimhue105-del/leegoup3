@@ -13,7 +13,6 @@ import {
   Info,
   BookOpen,
   Sparkles,
-  ArrowLeft,
   Star,
 } from 'lucide-react';
 
@@ -96,18 +95,6 @@ export const LoginPage: React.FC = () => {
       </motion.div>
 
       <div className="max-w-md w-full space-y-4 relative z-10">
-        {/* Back navigation button */}
-        <div className="flex justify-start">
-          <button
-            type="button"
-            onClick={() => navigate('/splash')}
-            className="inline-flex items-center gap-2 text-white/85 hover:text-white text-xs font-extrabold uppercase tracking-wider transition-colors cursor-pointer bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded-full backdrop-blur-sm"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Quay lại (Back)</span>
-          </button>
-        </div>
-
         {/* Central Login Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -133,14 +120,6 @@ export const LoginPage: React.FC = () => {
             <h1 className="text-2xl sm:text-3xl font-black font-heading text-slate-800">
               Đăng Nhập Học Sinh
             </h1>
-
-            <p className="text-xs font-bold text-slate-500">
-              Học sinh đăng nhập để vào bài học Everybody Up 3
-              <br />
-              <span className="text-slate-400 font-semibold">
-                (Student Login to access Everybody Up 3)
-              </span>
-            </p>
           </div>
 
           {/* Login Form */}
