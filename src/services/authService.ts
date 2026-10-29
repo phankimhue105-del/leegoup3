@@ -63,23 +63,48 @@ class AuthService {
 
     // 2. Real Google Apps Script Web App authentication request
     try {
-      const response = await fetch(this.apiEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
-        },
-        body: JSON.stringify({
-          action: 'login',
-          username: trimmedUsername,
-          password: trimmedPassword,
-        }),
-      });
+      let rawText = '';
+      let responseOk = false;
 
-      if (!response.ok) {
-        throw new Error(`HTTP Error ${response.status}`);
+      // Strategy 1: Attempt POST with text/plain (CORS preflight-free)
+      try {
+        const postResponse = await fetch(this.apiEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+          },
+          body: JSON.stringify({
+            action: 'login',
+            username: trimmedUsername,
+            password: trimmedPassword,
+          }),
+        });
+
+        if (postResponse.ok) {
+          rawText = await postResponse.text();
+          responseOk = true;
+        }
+      } catch (postError) {
+        // Strategy 2: Fallback to GET if POST encounters browser redirect/CORS issues
+        const getUrl = new URL(this.apiEndpoint);
+        getUrl.searchParams.set('action', 'login');
+        getUrl.searchParams.set('username', trimmedUsername);
+        getUrl.searchParams.set('password', trimmedPassword);
+
+        const getResponse = await fetch(getUrl.toString(), {
+          method: 'GET',
+        });
+
+        if (getResponse.ok) {
+          rawText = await getResponse.text();
+          responseOk = true;
+        }
       }
 
-      const rawText = await response.text();
+      if (!responseOk && !rawText) {
+        throw new Error('Máy chủ không phản hồi.');
+      }
+
       let data: any;
 
       try {
@@ -100,7 +125,7 @@ class AuthService {
 
         return {
           success: false,
-          message: 'Phản hồi từ máy chủ Google Apps Script không hợp lệ.',
+          message: 'Phản hồi từ máy chủ Google Apps Script không đúng định dạng JSON.',
         };
       }
 
@@ -131,11 +156,19 @@ class AuthService {
           data?.message ||
           'Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại!',
       };
-    } catch (error) {
+    } catch (error: any) {
+      if (typeof navigator !== 'undefined' && !navigator.onLine) {
+        return {
+          success: false,
+          message:
+            'Thiết bị của bạn đang mất kết nối Internet. Vui lòng kiểm tra lại đường truyền mạng!',
+        };
+      }
+
       return {
         success: false,
         message:
-          'Không thể kết nối đến máy chủ xác thực Google Sheets. Vui lòng kiểm tra kết nối mạng và thử lại!',
+          'Không thể kết nối đến máy chủ Google Apps Script (Máy chủ bị chặn hoặc gặp lỗi cú pháp tại tệp Mã). Vui lòng cập nhật script trên Google Sheets!',
       };
     }
   }
