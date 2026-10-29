@@ -59,14 +59,17 @@ export const LoginPage: React.FC = () => {
     // Call authentication service
     const result = await login({ username: trimmedUser, password: trimmedPass });
 
-    if (result.success) {
+    if (result && result.success === true) {
       navigate('/home');
     } else {
       setPassword(''); // Bảo mật: Chỉ xóa mật khẩu, giữ nguyên tên đăng nhập đã nhập
-      if (result.isPendingSetup) {
+      if (result?.isPendingSetup) {
         setNoticeMessage(result.message);
       } else {
-        setErrorMessage(result.message);
+        setErrorMessage(
+          result?.message ||
+            'Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng kiểm tra lại!'
+        );
       }
     }
   };
