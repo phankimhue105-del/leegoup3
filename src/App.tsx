@@ -7,7 +7,6 @@ import { CourseProvider } from './context/CourseContext';
 import { AudioProvider } from './context/AudioContext';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 
-import { SplashScreen } from './pages/SplashScreen';
 import { LoginPage } from './pages/LoginPage';
 import { HomePage } from './pages/HomePage';
 import { UnitsPage } from './pages/UnitsPage';
@@ -35,7 +34,8 @@ export default function App() {
               <CourseProvider>
                 <BrowserRouter>
                   <Routes>
-                    <Route path="/splash" element={<SplashScreen />} />
+                    <Route path="/" element={<Navigate to="/login" replace />} />
+                    <Route path="/splash" element={<Navigate to="/login" replace />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route
                       path="/home"
@@ -78,7 +78,7 @@ export default function App() {
                       element={<LearningReportPage onOpenSettings={handleOpenSettings} />}
                     />
                     {/* Default fallback route */}
-                    <Route path="*" element={<Navigate to="/splash" replace />} />
+                    <Route path="*" element={<Navigate to="/login" replace />} />
                   </Routes>
 
                   {/* Centralized Settings Modal */}
