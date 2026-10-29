@@ -64,28 +64,9 @@ class AuthService {
     // 2. Real Google Apps Script Web App authentication request
     try {
       let rawText = '';
-      let responseOk = false;
 
-      // Strategy 1: Attempt POST with text/plain (CORS preflight-free)
+      // Strategy 1: Attempt GET request with query params (recommended for Google Apps Script 302 redirects)
       try {
-        const postResponse = await fetch(this.apiEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'text/plain;charset=utf-8',
-          },
-          body: JSON.stringify({
-            action: 'login',
-            username: trimmedUsername,
-            password: trimmedPassword,
-          }),
-        });
-
-        if (postResponse.ok) {
-          rawText = await postResponse.text();
-          responseOk = true;
-        }
-      } catch (postError) {
-        // Strategy 2: Fallback to GET if POST encounters browser redirect/CORS issues
         const getUrl = new URL(this.apiEndpoint);
         getUrl.searchParams.set('action', 'login');
         getUrl.searchParams.set('username', trimmedUsername);
@@ -93,33 +74,73 @@ class AuthService {
 
         const getResponse = await fetch(getUrl.toString(), {
           method: 'GET',
+          redirect: 'follow',
         });
 
         if (getResponse.ok) {
           rawText = await getResponse.text();
-          responseOk = true;
+        }
+      } catch (getErr) {
+        // Fallback to Strategy 2 if GET is blocked or fails
+        rawText = '';
+      }
+
+      // Strategy 2: If GET produced no text or failed, try POST with text/plain (CORS preflight-free)
+      if (!rawText) {
+        try {
+          const postResponse = await fetch(this.apiEndpoint, {
+            method: 'POST',
+            redirect: 'follow',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8',
+            },
+            body: JSON.stringify({
+              action: 'login',
+              username: trimmedUsername,
+              password: trimmedPassword,
+            }),
+          });
+
+          if (postResponse.ok) {
+            rawText = await postResponse.text();
+          }
+        } catch (postErr) {
+          rawText = '';
         }
       }
 
-      if (!responseOk && !rawText) {
-        throw new Error('Máy chủ không phản hồi.');
+      // If both network requests failed to get a response
+      if (!rawText) {
+        if (typeof navigator !== 'undefined' && !navigator.onLine) {
+          return {
+            success: false,
+            message:
+              'Thiết bị của bạn đang mất kết nối Internet. Vui lòng kiểm tra lại đường truyền mạng!',
+          };
+        }
+
+        return {
+          success: false,
+          message:
+            'Không thể kết nối đến máy chủ Google Apps Script (Máy chủ bị chặn hoặc gặp lỗi cú pháp tại tệp Mã). Vui lòng cập nhật script trên Google Sheets theo hướng dẫn!',
+        };
       }
 
+      // Check if response is HTML error page from Google Apps Script
       let data: any;
-
       try {
         data = JSON.parse(rawText);
       } catch {
-        // Detect Google Apps Script HTML error page
         if (
           rawText.includes('TypeError:') ||
           rawText.includes('Google Apps Script') ||
-          rawText.includes('<html')
+          rawText.includes('<html') ||
+          rawText.includes('<!DOCTYPE')
         ) {
           return {
             success: false,
             message:
-              'Máy chủ Google Apps Script đang gặp sự cố mã nguồn (Lỗi cú pháp tại tệp Mã). Vui lòng cập nhật script trên Google Sheets theo hướng dẫn!',
+              'Máy chủ Google Apps Script đang gặp lỗi mã nguồn nội bộ (TypeError tại dòng 1 tệp Mã). Bản triển khai Web App chưa được cập nhật phiên bản mới trên Google Sheets!',
           };
         }
 
@@ -129,6 +150,7 @@ class AuthService {
         };
       }
 
+      // Check validation result from Google Sheets
       if (data && data.success) {
         const userProfile = {
           id: String(data.user?.id || trimmedUsername),
@@ -168,7 +190,7 @@ class AuthService {
       return {
         success: false,
         message:
-          'Không thể kết nối đến máy chủ Google Apps Script (Máy chủ bị chặn hoặc gặp lỗi cú pháp tại tệp Mã). Vui lòng cập nhật script trên Google Sheets!',
+          'Không thể kết nối đến máy chủ xác thực Google Sheets. Vui lòng kiểm tra lại cấu hình Web App!',
       };
     }
   }
