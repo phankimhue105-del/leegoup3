@@ -34,8 +34,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
     try {
       const result = await authService.login(credentials);
-      if (result.success && result.user) {
+      if (result && result.success === true && result.user) {
         setUser(result.user);
+      } else {
+        setUser(null);
+        localStorage.removeItem('ebu3_user_profile');
       }
       return result;
     } finally {
