@@ -61,107 +61,77 @@ class AuthService {
       };
     }
 
-    // 2. Real Google Apps Script Web App authentication request
+    // 2. Real Google Apps Script Web App authentication request (POST only)
     try {
-      let rawText = '';
+      const response = await fetch(this.apiEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify({
+          action: 'login',
+          username: trimmedUsername,
+          password: trimmedPassword,
+        }),
+      });
 
-      // Strategy 1: Attempt GET request with query params (recommended for Google Apps Script 302 redirects)
-      try {
-        const getUrl = new URL(this.apiEndpoint);
-        getUrl.searchParams.set('action', 'login');
-        getUrl.searchParams.set('username', trimmedUsername);
-        getUrl.searchParams.set('password', trimmedPassword);
-
-        const getResponse = await fetch(getUrl.toString(), {
-          method: 'GET',
-          redirect: 'follow',
-        });
-
-        if (getResponse.ok) {
-          rawText = await getResponse.text();
-        }
-      } catch (getErr) {
-        // Fallback to Strategy 2 if GET is blocked or fails
-        rawText = '';
+      if (!response.ok) {
+        throw new Error(`HTTP Error ${response.status}`);
       }
 
-      // Strategy 2: If GET produced no text or failed, try POST with text/plain (CORS preflight-free)
-      if (!rawText) {
-        try {
-          const postResponse = await fetch(this.apiEndpoint, {
-            method: 'POST',
-            redirect: 'follow',
-            headers: {
-              'Content-Type': 'text/plain;charset=utf-8',
-            },
-            body: JSON.stringify({
-              action: 'login',
-              username: trimmedUsername,
-              password: trimmedPassword,
-            }),
-          });
-
-          if (postResponse.ok) {
-            rawText = await postResponse.text();
-          }
-        } catch (postErr) {
-          rawText = '';
-        }
-      }
-
-      // If both network requests failed to get a response
-      if (!rawText) {
-        if (typeof navigator !== 'undefined' && !navigator.onLine) {
-          return {
-            success: false,
-            message:
-              'Thiết bị của bạn đang mất kết nối Internet. Vui lòng kiểm tra lại đường truyền mạng!',
-          };
-        }
-
+      const rawText = await response.text();
+      if (!rawText || !rawText.trim()) {
         return {
           success: false,
-          message:
-            'Không thể kết nối đến máy chủ Google Apps Script (Máy chủ bị chặn hoặc gặp lỗi cú pháp tại tệp Mã). Vui lòng cập nhật script trên Google Sheets theo hướng dẫn!',
+          message: 'Máy chủ phản hồi rỗng. Vui lòng thử lại sau.',
         };
       }
 
-      // Check if response is HTML error page from Google Apps Script
       let data: any;
       try {
         data = JSON.parse(rawText);
       } catch {
-        if (
-          rawText.includes('TypeError:') ||
-          rawText.includes('Google Apps Script') ||
-          rawText.includes('<html') ||
-          rawText.includes('<!DOCTYPE')
-        ) {
-          return {
-            success: false,
-            message:
-              'Máy chủ Google Apps Script đang gặp lỗi mã nguồn nội bộ (TypeError tại dòng 1 tệp Mã). Bản triển khai Web App chưa được cập nhật phiên bản mới trên Google Sheets!',
-          };
-        }
-
         return {
           success: false,
-          message: 'Phản hồi từ máy chủ Google Apps Script không đúng định dạng JSON.',
+          message: 'Phản hồi từ máy chủ Google Apps Script không hợp lệ.',
         };
       }
 
       // Check validation result from Google Sheets
-      if (data && data.success) {
+      // Requires explicit data.success === true AND valid student object matching the sent username
+      const studentData = data?.student || data?.user;
+      const returnedUsername = String(
+        studentData?.username || studentData?.id || ''
+      )
+        .trim()
+        .toLowerCase();
+
+      if (
+        data &&
+        data.success === true &&
+        studentData &&
+        typeof studentData === 'object' &&
+        returnedUsername === trimmedUsername.toLowerCase()
+      ) {
         const userProfile = {
-          id: String(data.user?.id || trimmedUsername),
-          name: String(data.user?.name || data.user?.studentName || trimmedUsername),
+          id: String(
+            studentData.username || studentData.id || trimmedUsername
+          ).trim(),
+          name: String(
+            studentData.studentName ||
+              studentData.name ||
+              studentData.username ||
+              trimmedUsername
+          ).trim(),
           avatarUrl:
-            data.user?.avatarUrl ||
+            studentData.avatarUrl ||
             'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
-          grade: String(data.user?.grade || data.user?.class || 'Lớp 3 / Grade 3'),
-          schoolName: data.user?.schoolName,
+          grade: String(
+            studentData.className || studentData.grade || 'Lớp 3 / Grade 3'
+          ),
+          schoolName: studentData.schoolName,
           joinedDate: String(
-            data.user?.joinedDate || new Date().toISOString().split('T')[0]
+            studentData.joinedDate || new Date().toISOString().split('T')[0]
           ),
         };
 
@@ -190,7 +160,7 @@ class AuthService {
       return {
         success: false,
         message:
-          'Không thể kết nối đến máy chủ xác thực Google Sheets. Vui lòng kiểm tra lại cấu hình Web App!',
+          'Không thể kết nối đến máy chủ xác thực Google Sheets. Vui lòng kiểm tra lại kết nối mạng!',
       };
     }
   }
