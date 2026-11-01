@@ -69,9 +69,9 @@ function getRoleplayQuestion(unitId: string, index: number, fallbackWord: string
       };
     } else {
       return {
-        prompt: "Where does your teacher work?",
-        promptVi: "Giáo viên của con làm việc ở đâu?",
-        expected: "The teacher works at the school."
+        prompt: "What do you need to make a milkshake?",
+        promptVi: "Con cần gì để làm món sữa lắc?",
+        expected: "I need milk, ice cream and fruit."
       };
     }
   } else if (normalizedId.includes('unit-3')) {
@@ -405,19 +405,42 @@ export class SpeakingQuestionService {
     });
 
     const rp2 = getRoleplayQuestion(l6.unitId, 1, l6.vocabulary?.[0]?.word || 'chores');
+    let q6Instruction = rp2.prompt;
+    let q6PromptVi = rp2.promptVi;
+    let q6Expected = rp2.expected;
+    let q6Acceptable: string[] = [];
+    let q6VocabRefs = [l6.vocabulary?.[0]?.word || 'chores'];
+
+    // Requirement 2: Check Up 1 Question 6 is "What do you need to make a milkshake?"
+    if (unit.id === 'checkup-1' || lesson.id === 'cu1-l1') {
+      q6Instruction = "What do you need to make a milkshake?";
+      q6PromptVi = "Con cần gì để làm món sữa lắc?";
+      q6Expected = "I need milk, ice cream and fruit.";
+      q6Acceptable = [
+        "I need milk, ice cream and fruit.",
+        "I need milk, ice cream, and fruit.",
+        "I need milk, ice cream and bananas.",
+        "I need milk, ice cream and strawberries.",
+        "I need milk and ice cream.",
+        "We need milk, ice cream and fruit.",
+        "Milk, ice cream and fruit."
+      ];
+      q6VocabRefs = ["milk", "ice cream", "fruit", "milkshake", "need"];
+    }
+
     questions.push({
       id: `${lesson.id}-q6`,
       type: 'communicative',
-      instruction: rp2.prompt,
-      vietnameseInstruction: rp2.promptVi,
-      targetText: rp2.expected,
-      expectedAnswer: rp2.expected,
-      acceptableAnswers: [],
-      vocabularyRefs: [l6.vocabulary?.[0]?.word || 'chores'],
+      instruction: q6Instruction,
+      vietnameseInstruction: q6PromptVi,
+      targetText: q6Expected,
+      expectedAnswer: q6Expected,
+      acceptableAnswers: q6Acceptable,
+      vocabularyRefs: q6VocabRefs,
       lessonContext: `Checkup roleplay response practice`,
       difficulty: 3,
       image: '',
-      feedbackContext: `Answer the question: "${rp2.prompt}" in your own words.`
+      feedbackContext: `Answer the question: "${q6Instruction}" in your own words.`
     });
 
     return questions;
