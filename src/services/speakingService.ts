@@ -137,6 +137,69 @@ export class SpeakingService {
       };
     }
 
+    // --- SPECIALIZED EVALUATION FOR CHECK UP 1 QUESTION 6 (What do you need to make a milkshake?) ---
+    const isMilkshakeQ = (
+      questionContext?.questionId === 'cu1-l1-q6' ||
+      expectedClean.includes('ice cream and fruit') ||
+      expectedClean.includes('milkshake') ||
+      (questionContext?.instruction?.toLowerCase().includes('make a milkshake') && qType === 'communicative')
+    );
+
+    if (isMilkshakeQ) {
+      const studentWords = studentClean.split(' ').filter(Boolean);
+      const labelStr = isTextMode ? 'typed' : 'said';
+      const labelVi = isTextMode ? 'nhập' : 'nói';
+      let stars = 1;
+      let aiCommentEn = '';
+      let aiCommentVi = '';
+
+      // Unit 1 Cooking lesson ingredients: milk, ice cream, fruit, bananas, strawberries, sugar, etc.
+      const ingredientTerms = ['milk', 'ice cream', 'fruit', 'banana', 'bananas', 'strawberry', 'strawberries', 'chocolate', 'sugar'];
+      const matchedIngredients = ingredientTerms.filter(ing => studentClean.includes(ing));
+      const hasIngredients = matchedIngredients.length >= 2 || (matchedIngredients.length >= 1 && (studentClean.includes('milk') || studentClean.includes('ice cream')));
+      const hasSentencePattern = /^(i need|we need|you need|they need)\b/i.test(studentClean);
+
+      if (hasSentencePattern && hasIngredients) {
+        // Complete sentence with valid ingredients: "I need milk, ice cream and fruit", "We need milk and ice cream", etc.
+        score = 95 + randomMod; // 95 - 99
+        stars = 3;
+        aiCommentEn = `Excellent! You answered with the correct sentence and ingredients: "${studentRaw}". High accuracy!`;
+        aiCommentVi = `Xuất sắc! Con đã trả lời rất chính xác và đầy đủ các nguyên liệu làm sữa lắc: "${studentRaw}"!`;
+      } else if (hasIngredients) {
+        // Mentioned ingredients without full sentence: "milk, ice cream and fruit", "milk and ice cream"
+        score = 85 + randomMod; // 85 - 89
+        stars = 2;
+        aiCommentEn = `Great! You named the right ingredients: "${studentRaw}". For full points, practice saying the full sentence: "I need milk, ice cream and fruit."`;
+        aiCommentVi = `Rất tốt! Con đã kể đúng các nguyên liệu cần thiết: "${studentRaw}". Để đạt điểm tối đa, con hãy luyện nói cả câu: "I need milk, ice cream and fruit." nhé!`;
+      } else if (hasSentencePattern) {
+        // Pattern "I need..." without milkshake ingredients
+        score = 75 + randomMod; // 75 - 79
+        stars = 2;
+        aiCommentEn = `Good sentence structure! You ${labelStr}: "${studentRaw}". To make a milkshake, remember we need milk, ice cream, and fruit!`;
+        aiCommentVi = `Con đã dùng đúng mẫu câu "I need..."! Để làm món sữa lắc (milkshake), chúng ta cần sữa (milk), kem (ice cream) và hoa quả (fruit) nhé.`;
+      } else if (studentWords.length <= 1) {
+        score = 35 + randomMod; // 35 - 39
+        stars = 1;
+        aiCommentEn = `"${studentRaw}" doesn't answer what you need to make a milkshake. Try practicing the model answer: "I need milk, ice cream and fruit."`;
+        aiCommentVi = `Câu trả lời chưa đủ ý để làm món sữa lắc. Con hãy thử luyện nói câu mẫu sau: "I need milk, ice cream and fruit." nhé!`;
+      } else {
+        score = 60 + randomMod; // 60 - 64
+        stars = 1;
+        aiCommentEn = `Good effort! You ${labelStr}: "${studentRaw}". Remember to answer what ingredients you need: "I need milk, ice cream and fruit."`;
+        aiCommentVi = `Cố gắng lên nhé! Con đã ${labelVi}: "${studentRaw}". Con hãy trả lời câu hỏi bằng cách nói các nguyên liệu cần thiết: "I need milk, ice cream and fruit." nhé.`;
+      }
+
+      return {
+        score: Math.min(100, Math.max(0, score)),
+        stars,
+        transcription: studentRaw,
+        pronunciationAccuracy: isTextMode ? 100 : Math.min(100, score + 2),
+        fluencyScore: isTextMode ? 100 : Math.max(60, score - 3),
+        aiCommentEn,
+        aiCommentVi,
+      };
+    }
+
     // --- ALGORITHMIC EVALUATION BY QUESTION TYPE ---
     if (qType === 'vocabulary') {
       // Single word pronunciation check
