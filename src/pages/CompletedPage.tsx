@@ -8,7 +8,7 @@ import { Header } from '../components/common/Header';
 import { Card } from '../components/common/Card';
 import { AppButton } from '../components/common/AppButton';
 import { StarRating } from '../components/common/StarRating';
-import { Trophy, CheckCircle2, Home, BarChart3, ArrowRight } from 'lucide-react';
+import { Trophy, CheckCircle2, Home, BarChart3, ArrowRight, Award } from 'lucide-react';
 
 interface CompletedPageProps {
   onOpenSettings?: () => void;
@@ -25,21 +25,22 @@ export const CompletedPage: React.FC<CompletedPageProps> = ({ onOpenSettings }) 
   const nextTarget = unitId && lessonId ? getNextLesson(unitId, lessonId) : undefined;
 
   const lessonProg = lessonId ? getLessonProgress(lessonId) : undefined;
-  const isCheckup = lessonData?.unit.type === 'checkup';
+  const isCheckup = lessonData?.unit.type === 'checkup' || unitId?.startsWith('checkup');
+  const isCourseCompleted = unitId === 'checkup-4' || (!nextTarget && isCheckup);
 
   useEffect(() => {
     // Fire celebration confetti & fanfare audio
     playEffect('fanfare');
     try {
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: isCourseCompleted ? 120 : 80,
+        spread: 80,
         origin: { y: 0.6 },
       });
     } catch {
       // Confetti fallback
     }
-  }, []);
+  }, [isCourseCompleted]);
 
   const practiceScore = lessonProg?.practiceScore || 90;
   const speakingScore = lessonProg?.speakingScore || 88;
@@ -53,18 +54,26 @@ export const CompletedPage: React.FC<CompletedPageProps> = ({ onOpenSettings }) 
         {/* Celebration Banner Card */}
         <Card className="bg-gradient-to-b from-indigo-600 to-purple-700 text-white p-8 sm:p-10 space-y-6 shadow-xl">
           <div className="w-20 h-20 rounded-3xl bg-amber-400 text-amber-950 flex items-center justify-center mx-auto shadow-lg animate-bounce">
-            <Trophy className="w-10 h-10" />
+            {isCourseCompleted ? <Award className="w-10 h-10" /> : <Trophy className="w-10 h-10" />}
           </div>
 
           <div className="space-y-2">
             <span className="inline-block bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-indigo-100">
-              Xuất Sắc! Hoàn Thành Bài Học
+              {isCourseCompleted
+                ? 'Xuất Sắc! Hoàn Thành Toàn Bộ Khóa Học'
+                : 'Xuất Sắc! Hoàn Thành Bài Học'}
             </span>
             <h1 className="text-3xl sm:text-4xl font-black font-heading tracking-tight">
-              {isCheckup ? 'Check-Up Completed!' : 'Lesson Completed!'}
+              {isCourseCompleted
+                ? 'Course Completed!'
+                : isCheckup
+                ? 'Check-Up Completed!'
+                : 'Lesson Completed!'}
             </h1>
             <p className="text-sm font-semibold text-indigo-100">
-              {isCheckup
+              {isCourseCompleted
+                ? 'Chúc mừng bạn đã hoàn thành xuất sắc toàn bộ khóa học Everybody Up 3 🎉'
+                : isCheckup
                 ? 'Bạn đã hoàn tất xuất sắc bài kiểm tra hôm nay 🎉'
                 : 'Bạn đã hoàn tất xuất sắc cả 4 phần học của bài hôm nay 🎉'}
             </p>
@@ -105,7 +114,7 @@ export const CompletedPage: React.FC<CompletedPageProps> = ({ onOpenSettings }) 
 
         {/* Action Buttons */}
         <div className="space-y-3 pt-4">
-          {nextTarget && (
+          {!isCourseCompleted && nextTarget && (
             <AppButton
               onClick={() => navigate(`/units/${nextTarget.unitId}`)}
               variant="success"
