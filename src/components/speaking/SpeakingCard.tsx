@@ -472,7 +472,7 @@ export const SpeakingCard: React.FC<SpeakingCardProps> = ({ lesson, unit, onComp
           <p className="text-2xl font-black text-slate-850 font-heading leading-snug">
             {currentQuestion.instruction}
           </p>
-          {currentQuestion.type === 'vocabulary' && (
+          {currentQuestion.type === 'vocabulary' && !unit.id.startsWith('checkup') && unit.type !== 'checkup' && (
             <span className="text-sm font-semibold text-slate-500">
               ({lesson.vocabulary[currentIndex % lesson.vocabulary.length]?.vietnameseMeaning})
             </span>
