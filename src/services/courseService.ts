@@ -601,7 +601,7 @@ class CourseService {
     // Next unit's first lesson
     if (unitIndex < this.courseData.units.length - 1) {
       const nextUnit = this.courseData.units[unitIndex + 1];
-      if (nextUnit.lessons.length > 0) {
+      if (nextUnit && nextUnit.type !== 'yle' && nextUnit.id !== 'yle-practice' && nextUnit.lessons.length > 0) {
         return { unitId: nextUnit.id, lessonId: nextUnit.lessons[0].id };
       }
     }
@@ -758,9 +758,7 @@ class CourseService {
           const processedQuestions = lesson.practiceQuestions.map((q, qIdx) => {
             // Normalise type mapping & prompts
             if (q.type === 'multiple-choice') {
-              if (q.questionImage && unit.id === 'yle-practice') {
-                q.questionText = "Look at the picture and choose the correct word:";
-              } else if (q.questionImage && !q.questionText) {
+              if (q.questionImage && !q.questionText) {
                 q.questionText = "Look at the picture and choose the correct word:";
               } else if (q.questionText && q.questionText.toLowerCase().includes('choose the picture')) {
                 q.type = 'picture-select';
